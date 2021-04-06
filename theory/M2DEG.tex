@@ -485,7 +485,21 @@ and using Green function method the solution can be write as
 \begin{equation} \label{1.51}
   \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
 \end{equation}
-form this solution we are able to derive the final solution for the forced harmonic oscillator. \hfill$\blacksquare$
+form this solutions we are able to derive the final solutions $(n=0,1,...)$ would be
+\begin{equation} \label{1.52}
+  \begin{aligned}
+    \phi_n(x,y,t)  = & \frac{1}{\sqrt{L_x}} \chi_n\big(y - \zeta(t)\big) \\
+    & \times
+      \exp(
+     \frac{i}{\hbar}\bigg[- E_nt +
+    p_x x +
+    \frac{eEy}{\omega}\cos(\omega t)+
+    m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
+     + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
+  \end{aligned}
+\end{equation}
+and the exponential phase shifts represent the effect done by the stationary magnetic field and strong dressing field.Therefore we can assume that the magnetitranport properties of 2DEG will be renormalized by the magnetic field as well as the dressing field.
+\hfill$\blacksquare$
 
 
 
