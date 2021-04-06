@@ -153,7 +153,7 @@ and then this becomes
 \end{equation}
 Now assume that the solution for the time-dependent schrödinger equation
 \begin{equation} \label{1.18}
-    i \hbar \pdv{\psi}{t} = \hat{H}_e(t)\psi
+    i \hbar \dv{\psi}{t} = \hat{H}_e(t)\psi
 \end{equation}
 can be represent by the following form
 \begin{equation} \label{1.19}
@@ -183,15 +183,15 @@ we can simply the the Eq. \eqref{1.20} as
 Let's subtitue Eq. \eqref{1.20} and Eq. \eqref{1.17} into Eq. \eqref{1.18} and we can observe that
 \begin{equation} \label{1.23}
   \begin{aligned}
-    \text{L.H.S} & = i \hbar \pdv{\psi}{t} =
-    i \hbar \bigg( \pdv{\varphi}{t} \phi + \pdv{\phi}{t} \varphi \bigg) =
+    \text{L.H.S} & = i \hbar \dv{\psi}{t} =
+    i \hbar \bigg( \dv{\varphi}{t} \phi + \dv{\phi}{t} \varphi \bigg) =
     i \hbar \bigg(
       \Big[\frac{-ieEy}{\hbar}\sin(\omega t)\Big]\varphi\phi +
-      \varphi  \pdv{\phi}{t}
+      \varphi  \dv{\phi}{t}
     \bigg) \\
     & =
     \big[{eEy}\sin(\omega t)\big]\varphi\phi +
-    i \hbar\varphi  \pdv{\phi}{t}
+    i \hbar\varphi  \dv{\phi}{t}
   \end{aligned}
 \end{equation}
 and
@@ -261,7 +261,7 @@ To satisfy the condition L.H.S$=$R.H.S we need to find a function $\phi(y,t)$ su
 \begin{equation} \label{1.28}
   \begin{aligned}
     \big[{eEy}\sin(\omega t)\big]\varphi\phi +
-    i \hbar\varphi  \pdv{\phi}{t}
+    i \hbar\varphi  \dv{\phi}{t}
     =
     \bigg[
     \frac{m_e \omega_0^2}{2}y^2
@@ -280,11 +280,213 @@ which can be simplyfied as
     -
     \frac{\hbar^2}{2m_e}
     \pdv[2]{y}
-    - i \hbar \pdv{t}
+    - i \hbar \dv{t}
+    \bigg]
+    \phi(y,t) = 0.
+  \end{aligned}
+\end{equation}
+If we turn off the external dressing field, this equation leads to simple harmonic oscillator Hamiltonian as follows
+\begin{equation} \label{1.30}
+  \begin{aligned}
+    \bigg[
+    \frac{m_e \omega_0^2}{2}y^2
+    -
+    \frac{\hbar^2}{2m_e}
+    \pdv[2]{y}
+    - i \hbar \dv{t}
     \bigg]
     \phi(y,t) = 0
   \end{aligned}
 \end{equation}
+\begin{equation} \label{1.31}
+  \begin{aligned}
+     i \hbar \dv{\phi(y,t)}{t} =
+    \bigg[
+    \frac{\hat{p}_y^2}{2m_e} +
+    \frac{1}{2}m_e \omega_0^2y^2
+    \bigg]
+    \phi(y,t).
+  \end{aligned}
+\end{equation}
+Therefore we can identify the $S(t) \equiv eE\sin(\omega t)$ part as a external force act on the harmonic oscillator and we can solve this as a forced harmonic oscillator in $y$ axis.
+\begin{equation} \label{1.32}
+  \begin{aligned}
+    i \hbar \dv{\phi(y,t)}{t} =
+    \bigg[
+    -
+    \frac{\hbar^2}{2m_e}
+    \pdv[2]{y} +
+    \frac{1}{2}m_e \omega_0^2y^2
+    - yS(t)]
+    \bigg]
+    \phi(y,t).
+  \end{aligned}
+\end{equation}
+This system can be extacly solvable and we can solve this equation using the methods explained by Husimi [*1] as follows.
+
+\noindent
+First we can introduce the time dependent shifted corrdinte as
+\begin{equation} \label{1.33}
+    y \rightarrow y' = y - \zeta(t) \quad \Rightarrow \quad
+    y = y' + \zeta(t)
+\end{equation}
+and this implies that
+\begin{equation} \label{1.34}
+    \dv{\phi(y',t)}{t} = \pdv{\phi(y',t)}{t} + \pdv{\phi(y',t)}{y'}\pdv{y'}{t} =
+    \pdv{\phi(y',t)}{t} - \dot{\zeta}(t)\pdv{\phi(y',t)}{y'}
+\end{equation}
+where $\dot{\zeta}(t) = \pdv{\zeta(t)}{t}$.
+Therefore, Eq. \eqref{1.32} will be modified to
+\begin{equation} \label{1.35}
+  \begin{aligned}
+    i \hbar \pdv{\phi(y',t)}{t}  =
+    \bigg[
+    i \hbar\dot{\zeta}\pdv{y'}
+    -
+    \frac{\hbar^2}{2m_e}
+    \pdv[2]{{y'}} +
+    \frac{1}{2}m_e \omega_0^2(y' + \zeta)^2
+    - (y' + \zeta) S(t)
+    \bigg]
+    \phi(y',t).
+  \end{aligned}
+\end{equation}
+Let's tranform the wave function using following unitary trasnform
+\begin{equation} \label{1.36}
+    \phi(y',t) = \exp(\frac{im_e\dot{\zeta}y'}{\hbar})\varphi(y',t)
+\end{equation}
+and subtitte this into the Eq. \eqref{1.35} and we will get the following
+\begin{equation} \label{1.37}
+  \text{R.H.S} =  \bigg[ i \hbar \pdv{t} -
+i \hbar \Big(\frac{im_e \ddot{\zeta} y'}{\hbar}\Big)\bigg]  \exp(\frac{-im_e\dot{\zeta}y'}{\hbar})\varphi(y',t)
+\end{equation}
+and
+\begin{equation} \label{1.38}
+  \begin{aligned}
+    \text{L.H.S} & =  \bigg[
+      i \hbar \dot{\zeta}  \Big(\frac{im_e \dot{\zeta}}{\hbar}\Big)  +
+      i \hbar \dot{\zeta} \pdv{y'} \\
+      &
+      -
+      \frac{\hbar^2}{2m_e}\Big[
+        \Big(\frac{im_e \dot{\zeta}}{\hbar}\Big)^2
+        + \Big(\frac{2im_e \dot{\zeta}}{\hbar}\Big) \pdv{{y'}}
+        + \pdv[2]{{y'}}
+      \Big] \\
+      &
+      +\frac{1}{2}m_e\omega_0^2 {y'}^2 + \frac{1}{2}m_e\omega_0^2 \zeta^2 +
+      m_e\omega_0^2 y'\zeta \\
+      & -
+      y'S(t) - \zeta S(t)
+    \bigg]  \exp(\frac{-im_e\dot{\zeta}y'}{\hbar})\varphi(y',t).
+  \end{aligned}
+\end{equation}
+Combining these two we get derive that
+\begin{equation} \label{1.39}
+  \begin{aligned}
+    i \hbar \pdv{\varphi(y',t)}{t}   =
+    \bigg[
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        & + \frac{1}{2} m_e \omega_0^2 y'^2 +
+        \Big[
+            m_e\ddot{\zeta} + m_e\omega_0^2\zeta - S(t)
+        \Big]y' \\
+        &
+        +
+        \Big[
+            - \frac{1}{2} m_e\dot{\zeta}^2 + \frac{1}{2}m_e\omega_0^2 \zeta^2 - \zeta S(t)
+        \Big]
+    \bigg]\varphi(y',t).
+  \end{aligned}
+\end{equation}
+Then we can restrict our $\zeta(t)$ function such that
+\begin{equation} \label{1.40}
+  m_e\ddot{\zeta} + m_e\omega_0^2\zeta = S(t)
+\end{equation}
+and that leads to
+\begin{equation} \label{1.41}
+  \begin{aligned}
+    i \hbar \pdv{\varphi(y',t)}{t}   =
+    \bigg[
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        + \frac{1}{2} m_e \omega_0^2 {y'}^2
+        - L(\zeta,\dot{\zeta},t)
+    \bigg]\varphi(y',t)
+  \end{aligned}
+\end{equation}
+where
+\begin{equation} \label{1.42}
+  L(\zeta,\dot{\zeta},t) \equiv \frac{1}{2} m_e\dot{\zeta}^2 - \frac{1}{2}m_e\omega_0^2 \zeta^2 + \zeta S(t)
+\end{equation}
+is the largrangian of a driven oscillator.
+
+\noindent
+Now introduce new unitary transormation for the wavefunction as follows
+\begin{equation} \label{1.43}
+    \varphi(y',t) = \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \chi(y',t)
+\end{equation}
+and subtite this into the Eq. \eqref{1.41} and gets
+\begin{equation} \label{1.44}
+  \begin{aligned}
+    i \hbar \bigg[
+      & \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \pdv{t}
+      +
+      i \hbar L(\zeta,\dot{\zeta},t) \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t'))
+    \bigg]\chi(y',t) \\
+    & =
+    \bigg[
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        + \frac{1}{2} m_e \omega_0^2 {y'}^2
+        - L(\zeta,\dot{\zeta},t)
+    \bigg] \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \chi(y',t)
+  \end{aligned}
+\end{equation}
+and finally we can derive that
+\begin{equation} \label{1.45}
+  \begin{aligned}
+    i \hbar \pdv{t} \chi(y',t)  =
+    \bigg[
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        + \frac{1}{2} m_e \omega_0^2 {y'}^2
+    \bigg] \chi(y',t).
+  \end{aligned}
+\end{equation}
+This is the well known Schrodinger equation of a stationary harmonic oscillator.
+In terms of the eigenvalues
+\begin{equation} \label{1.46}
+  E_n = \hbar \omega_0 \big(n + \frac{1}{2}\big)
+\end{equation}
+of well-known harmonic eigenfucntions
+\begin{equation} \label{1.47}
+  \chi_n(y') = \frac{1}{\sqrt{2^{n}n!}}  \cdot
+  \bigg(\frac{m_e\omega_0}{\pi \hbar}\bigg)^{1/4}
+  \cdot e^{-\frac{m_e\omega_0 y'^2}{2\hbar}} \cdot
+  \mathcal{H}_n \bigg(\sqrt{\frac{m_e \omega_0}{\hbar}}y'\bigg)
+\end{equation}
+being propositional to the Hermite functions $\mathcal{H}_n$, the solutions of Eq. \eqref{1.32} can be represent as
+\begin{equation} \label{1.48}
+  \phi_n(y,t) = \chi_n(y - \zeta(t))
+  \exp(\frac{i}{\hbar}\bigg[- E_nt +
+  m_e\dot{\zeta(t)}\big(y-\zeta(t)\big)
+   + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
+\end{equation}
+The set $\chi(y)$ forms a complete set and thus ay general solution $\phi_(y,t)$ can be expaned in terms of the solutions in Eq. \eqref{1.48}.
+
+\noindent
+Next we consider special case where we assumed
+\begin{equation} \label{1.49}
+  S(t) = eE\sin(\omega t)
+\end{equation}
+and one can derive the Eq. \eqref{1.40} for $\zeta(t)$
+\begin{equation} \label{1.50}
+  m_e\ddot{\zeta} + m_e\omega_0^2\zeta = eE\sin(\omega t)
+\end{equation}
+and using Green function method the solution can be write as
+\begin{equation} \label{1.51}
+  \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
+\end{equation}
+form this solution we are able to derive the final solution for the forced harmonic oscillator. \hfill$\blacksquare$
+
 
 
 
