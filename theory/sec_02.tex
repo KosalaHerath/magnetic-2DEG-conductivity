@@ -1,0 +1,152 @@
+\section{Scattering theory}
+
+Since in a real metal there would be many scatters that can be behave as obstacles for electron that have free wave functions. Therefore we need to calculate them to analyse the real behaviour of the electrons.
+
+\noindent
+Then the wave function of the electron in a real matel $\Psi(\vb{r},t)$ should satisfy the following time-dependet Schrodinger equation
+\begin{equation} \label{2.1}
+  i \hbar \pdv{\Psi(\vb{r},t)}{t} = [H_e(t) + U(\vb{r})] \Psi(\vb{r},t)
+\end{equation}
+where $U(\vb{r})$ is the total scattering potential. We have represented the all scatters using this potential. Since the solutions \eqref{1.52} are create a complete orthonormal basis we can represent this wave function using those as follows
+\begin{equation} \label{2.2}
+  \Psi(\vb{r},t) = \sum_j a_j(t) \ket{\psi_j(t)}
+\end{equation}
+where the difference inidces j corresponding to the different sets of all quantum numbers $p_x$ and $n$
+\begin{equation} \label{2.3}
+  j \rightarrow (m,n) \quad \text{where} \quad
+  m,n =0,1,2,...
+\end{equation}
+with $m$ is defined for quantized momentum in $x$ direction
+\begin{equation} \label{2.4}
+  p_x = m \frac{2\pi \hbar}{L_x}
+\end{equation}
+
+\noindent
+Now we can use the conventional pertubation theory to calculate scattering process of electron at a state $\ket{\psi_j}$ to a state $\ket{\psi_j'}$. For that assume an electron be in the $j$ state at the time $t=0$ and corresponding $a_j'(0) = \delta_{j,j'}$.
+
+\noindent
+First subtitute a general electron state $\Psi(\vb{r},t)$ at time $t$ as the incoming electron to the Schrodinger equation given in Eq. \eqref{2.1}
+\begin{equation} \label{2.5}
+  i \hbar \pdv{t} \sum_j a_j(t) \ket{\psi_j(t)}= [H_e(t) + U(\vb{r})] \sum_j a_j(t) \ket{\psi_j(t)}
+\end{equation}
+\begin{equation} \label{2.6}
+  i \hbar\sum_j   \dot{a_j}(t) \ket{\psi_j(t)} + a_j(t)\pdv{t}\ket{\psi_j(t)}= [H_e(t) + U(\vb{r})] \sum_j a_j(t) \ket{\psi_j(t)}
+\end{equation}
+since all the ${\ket{\psi(t)}}$ staistfy the Schrodinger equation \eqref{1.18}
+\begin{equation} \label{2.7}
+  i \hbar\sum_j   \dot{a_j}(t) \ket{\psi_j(t)} = \sum_j U(\vb{r}) a_j(t) \ket{\psi_j(t)}.
+\end{equation}
+Then take inner product with state with the state $\ket{\psi_{j'}(t)}$
+\begin{equation} \label{2.8}
+  i \hbar\sum_j   \dot{a_j}(t) \braket{\psi_{j'}(t)}{\psi_j(t)} = \sum_j
+  a_j(t) \bra{\psi_{j'}(t)} U(\vb{r}) \ket{\psi_j(t)}
+\end{equation}
+But using the \textit{Born approximation} we can assume that this incoming wave have the initial state of the electron at $t=0$ and therefore this equation will modified to
+\begin{equation} \label{2.9}
+  i \hbar\sum_j   \dot{a_j}(t) \braket{\psi_{j'}(t)}{\psi_j(t)} =
+  \bra{\psi_{j'}(t)} U(\vb{r}) \ket{\psi_j(t)}
+\end{equation}
+due to orthonormality this becomes
+\begin{equation} \label{2.10}
+  i \hbar \dot{a_{j'}}(t) =
+  \bra{\psi_{j'}(t)} U(\vb{r}) \ket{\psi_j(t)}
+\end{equation}
+and finally this leads to first order pertubation theory for Sscattering as follows
+\begin{equation} \label{2.11}
+   \dot{a_{j'}}(t) =
+  -\frac{i}{\hbar}\bra{\psi_{j'}(t)} U(\vb{r}) \ket{\psi_j(t)}
+\end{equation}
+where
+\begin{equation} \label{2.12}
+   a_{j'}(t) =
+  -\frac{i}{\hbar}
+  \int_0^t dt' \int_S d\vb{r} \;
+  \psi_{j'}^{*} (\vb{r},t') U(\vb{r}) {\psi_j(\vb{r},t')}
+\end{equation}
+where the integration should be performed over the 2DEG area $S=L_xL_y$. Then we can calculate this using the eqution we derived in \eqref{1.52} as follows
+\begin{equation} \label{2.13}
+  \begin{aligned}
+    a_{j'}(t) & =
+   -\frac{i}{\hbar}
+   \int_0^t dt' \int_S d\vb{r} \;
+   \bigg[
+   \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t)\big) \\
+   & \times
+     \exp(
+    \frac{i}{\hbar}\bigg[- E_{n'}t + m'\frac{2\pi \hbar x}{L_x} +
+   \frac{eE(y-{y'}_0)}{\omega}\cos(\omega t)+
+   m_e\dot{\zeta(t)}\big[y - {y'}_0 -\zeta(t)\big]
+    + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]) \\
+    & \times
+    U(\vb{r}) \\
+    & \times
+    \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t)\big) \\
+    & \times
+      \exp(
+     \frac{i}{\hbar}\bigg[ E_{n}t - m\frac{2\pi \hbar x}{L_x} -
+    \frac{eE(y-y_0)}{\omega}\cos(\omega t) -
+    m_e\dot{\zeta(t)}\big[y - y_0 -\zeta(t)\big]
+     - \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
+    \bigg]
+  \end{aligned}
+\end{equation}
+then this will be simplified to
+\begin{equation} \label{2.14}
+  \begin{aligned}
+    a_{j'}(t) & =
+   -\frac{i}{\hbar}
+   \int_0^t dt' \int_S d\vb{r} \;
+   \bigg[
+   \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t)\big)
+   U(\vb{r})
+   \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t)\big)  \\
+   & \times
+     \exp(
+    \frac{i}{\hbar}\bigg[- E_{n'}t + m'\frac{2\pi \hbar x}{L_x} +
+   \frac{eE(y-{y'}_0)}{\omega}\cos(\omega t)+
+   m_e\dot{\zeta(t)}\big[y - {y'}_0 -\zeta(t)\big]
+    + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]) \\
+    & \times
+      \exp(
+     \frac{i}{\hbar}\bigg[ E_{n}t - m\frac{2\pi \hbar x}{L_x} -
+    \frac{eE(y-y_0)}{\omega}\cos(\omega t) -
+    m_e\dot{\zeta(t)}\big[y - y_0 -\zeta(t)\big]
+     - \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
+    \bigg]
+  \end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xx
