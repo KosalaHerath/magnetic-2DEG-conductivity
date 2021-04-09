@@ -73,20 +73,20 @@ where the integration should be performed over the 2DEG area $S=L_xL_y$. Then we
    \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t)\big) \\
    & \times
      \exp(
-    \frac{i}{\hbar}\bigg[- E_{n'}t + m'\frac{2\pi \hbar x}{L_x} +
-   \frac{eE(y-{y'}_0)}{\omega}\cos(\omega t)+
-   m_e\dot{\zeta(t)}\big[y - {y'}_0 -\zeta(t)\big]
-    + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]) \\
+    \frac{i}{\hbar}\bigg[E_{n'}t' - m'\frac{2\pi \hbar x}{L_x} -
+   \frac{eE(y-{y'}_0)}{\omega}\cos(\omega t')-
+   m_e\dot{\zeta}(t)\big[y - {y'}_0 -\zeta(t')\big]
+    - \int_0^{t'}dt'L(\zeta,\dot{\zeta},t")\bigg]) \\
     & \times
     U(\vb{r}) \\
     & \times
-    \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t)\big) \\
+    \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t')\big) \\
     & \times
       \exp(
-     \frac{i}{\hbar}\bigg[ E_{n}t - m\frac{2\pi \hbar x}{L_x} -
-    \frac{eE(y-y_0)}{\omega}\cos(\omega t) -
-    m_e\dot{\zeta(t)}\big[y - y_0 -\zeta(t)\big]
-     - \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
+     \frac{i}{\hbar}\bigg[ - E_{n}t' + m\frac{2\pi \hbar x}{L_x} -
+    \frac{eE(y-y_0)}{\omega}\cos(\omega t') -
+    m_e\dot{\zeta}(t')\big[y - y_0 -\zeta(t')\big]
+     - \int_0^{t'}d\tilde{t}L(\zeta,\dot{\zeta},\tilde{t})\bigg])
     \bigg]
   \end{aligned}
 \end{equation}
@@ -97,38 +97,170 @@ then this will be simplified to
    -\frac{i}{\hbar}
    \int_0^t dt' \int_S d\vb{r} \;
    \bigg[
-   \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t)\big)
+   \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t')\big)
    U(\vb{r})
-   \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t)\big)  \\
+   \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t')\big)  \\
    & \times
      \exp(
-    \frac{i}{\hbar}\bigg[- E_{n'}t + m'\frac{2\pi \hbar x}{L_x} +
-   \frac{eE(y-{y'}_0)}{\omega}\cos(\omega t)+
-   m_e\dot{\zeta(t)}\big[y - {y'}_0 -\zeta(t)\big]
-    + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]) \\
+    \frac{i}{\hbar}\bigg[ E_{n'}t' - m'\frac{2\pi \hbar x}{L_x} -
+   \frac{eE(y-{y'}_0)}{\omega}\cos(\omega t') -
+   m_e\dot{\zeta}(t')\big[y - {y'}_0 -\zeta(t')\big]
+    - \int_0^{t'}d\tilde{t}L(\zeta,\dot{\zeta},\tilde{t})\bigg]) \\
     & \times
       \exp(
-     \frac{i}{\hbar}\bigg[ E_{n}t - m\frac{2\pi \hbar x}{L_x} -
-    \frac{eE(y-y_0)}{\omega}\cos(\omega t) -
-    m_e\dot{\zeta(t)}\big[y - y_0 -\zeta(t)\big]
-     - \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
+     \frac{i}{\hbar}\bigg[ - E_{n}t' + m\frac{2\pi \hbar x}{L_x} +
+    \frac{eE(y-y_0)}{\omega}\cos(\omega t') +
+    m_e\dot{\zeta}(t')\big[y - y_0 -\zeta(t')\big]
+     + \int_0^{t'}d\tilde{t}L(\zeta,\dot{\zeta},\tilde{t})\bigg])
     \bigg]
   \end{aligned}
 \end{equation}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{equation} \label{2.15}
+  \begin{aligned}
+    a_{j'}(t) & =
+   -\frac{i}{\hbar}
+   \int_0^t dt' \int_S d\vb{r} \;
+   \bigg[
+   \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t')\big)
+   U(\vb{r})
+   \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t')\big)
+   \exp(\frac{2\pi i(m-m') \hbar x}{L_x})
+   \\
+   & \times
+     \exp(
+    \frac{i}{\hbar}\bigg[ E_{n'}t' +
+   \frac{eE{y'}_0}{\omega}\cos(\omega t') +
+   m_e\dot{\zeta}(t'){y'}_0
+    \bigg])
+      \exp(
+     \frac{i}{\hbar}\bigg[ - E_{n}t' -
+    \frac{eEy_0}{\omega}\cos(\omega t') -
+    m_e\dot{\zeta}(t)y_0
+    \bigg])
+    \bigg].
+  \end{aligned}
+\end{equation}
+The time dependence of the $chi_n(y)$ can neglect since it is integrate over all the values of the $y$ and we can write this as
+\begin{equation} \label{2.16}
+  \begin{aligned}
+    a_{j'}(t) & =
+   -\frac{i}{\hbar}
+   \int_S d\vb{r} \;
+   \frac{1}{\sqrt{L_x}} \chi_{n'}^*\big(y - {y'}_0 -\zeta(t')\big)
+   U(\vb{r})
+   \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 -\zeta(t')\big)
+   \exp(\frac{2\pi i(m-m') \hbar x}{L_x})
+   \\ & \times
+   \int_0^t dt' \;
+   \bigg[
+     \exp(
+    \frac{i}{\hbar}\bigg[ (E_{n'} -E_{n}) t' +
+   \frac{eE({y'}_0 - y_0)\omega_0^2}{\omega(\omega_0^2-\omega^2)}\cos(\omega t')
+    \bigg])
+    \bigg].
+  \end{aligned}
+\end{equation}
+Using Jacobi-Anger expansion
+\begin{equation} \label{2.17}
+  e^{iz\cos(\theta)} = \sum_{l=-\infty}^{\infty} i^l J_j(z)e^{in\theta}
+\end{equation}
+above eqution can be modified as
+\begin{equation} \label{2.18}
+  \begin{aligned}
+    a_{j'}(t)  =
+   -\frac{i}{\hbar}
+   U_{j'j}
+   \int_0^t dt' \;
+   \bigg[
+   \sum_{l=-\infty}^{\infty} i^l J_l\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+     \exp(
+    \frac{i}{\hbar} (E_{n'} -E_{n} + l\hbar\omega) t')
+    \bigg]
+  \end{aligned}
+\end{equation}
+where
+\begin{equation} \label{2.19}
+  U{j'j} \equiv \mel{\Phi_{j'}(\vb{r})}{U(\vb{r})}{\Phi_j(\vb{r})}
+\end{equation}
+with bare electron eigen states (without dressing field)
+\begin{equation} \label{2.20}
+  \Phi_{j}(\vb{r}) = \frac{1}{\sqrt{L_x}}\exp(\frac{2\pi im \hbar x}{L_x}) \chi_{n}(y).
+\end{equation}
+Considering time evalution from negative values we can write the same expression as follows
+\begin{equation} \label{2.21}
+  \begin{aligned}
+    a_{j'}(t)  =
+   -\frac{i}{\hbar}
+   U_{j'j}
+   \int_{-t/2}^{t/2} dt' \;
+   \bigg[
+   \sum_{l=-\infty}^{\infty} i^l J_l\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+     \exp(
+    \frac{i}{\hbar} (E_{n'} -E_{n} + l\hbar\omega) t')
+    \bigg].
+  \end{aligned}
+\end{equation}
+To calculate scattering probability we can use this scattering amplitude's squre value
+\begin{equation} \label{2.22}
+  \begin{aligned}
+    |a_{j'}(t)|^2  =
+   \frac{|U_{j'j}|^2}{\hbar^2} &
+   \int_{-t/2}^{t/2} dt' \;
+   \bigg[
+   \sum_{l=-\infty}^{\infty} {-i}^l J_l\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+     \exp(
+    \frac{-i}{\hbar} (E_{n'} -E_{n} + l\hbar\omega) t')
+    \bigg] \\
+    & \times
+    \int_{-t/2}^{t/2} dt^{''} \;
+    \bigg[
+    \sum_{k=-\infty}^{\infty} i^k J_k\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \exp(
+     \frac{i}{\hbar} (E_{n'} -E_{n} + k\hbar\omega) t^{''})
+     \bigg]
+  \end{aligned}
+\end{equation}
+Considering long time $t\rightarrow \infty$ we can make the integral into a delta function as follows
+\begin{equation} \label{2.22}
+  \begin{aligned}
+    |a_{j'}(t)|^2  =
+   4\pi^2|U_{j'j}|^2 &
+   \bigg[
+   \sum_{l=-\infty}^{\infty} {-i}^l J_l\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+     \delta(-E_{n'} +E_{n} - l\hbar\omega)
+     \bigg] \\
+    & \times
+    \bigg[
+    \sum_{k=-\infty}^{\infty} i^k J_k\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \delta(E_{n'} - E_{n} + k\hbar\omega)
+     \bigg]
+  \end{aligned}
+\end{equation}
+and this implies $l=k$ and this leads to
+\begin{equation} \label{2.22}
+  \begin{aligned}
+    |a_{j'}(t)|^2  =
+   4\pi^2|U_{j'j}|^2
+   \bigg[
+   \sum_{l=-\infty}^{\infty} J_l^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+     \delta^2(E_{n'} - E_{n} + l\hbar\omega).
+  \end{aligned}
+\end{equation}
+Then using the famous the square $\delta$ function transormation method
+\begin{equation} \label{2.22}
+  \begin{aligned}
+     \delta^2(\epsilon ) = \delta(\epsilon )\delta^2(0)
+     \lim_{t\rightarrow\infty} \int_{-t/2}^{t/2} e^{i0\times t' /\hbar} dt' =
+     \frac{\delta(\epsilon) t}{2\pi \hbar}
+  \end{aligned}
+\end{equation}
+we can calculatre the probability of electron scattering between states $j$ and $j'$ per unit time as
+\begin{equation} \label{2.22}
+    \mathcal{W}_{j'j} \equiv \dv{|a_{j'}(t)|^2}{t} =
+    |U_{j'j}|^2 \sum_{l=-\infty}^{\infty} J_l^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    \times
+    \frac{2\pi}{\hbar} \delta(E_{n'} - E_{n} + l\hbar\omega)
+\end{equation}
 
 
 
