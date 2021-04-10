@@ -326,22 +326,174 @@ Now lets specify more on the scattering potential where we can model them as ran
 \begin{equation} \label{2.35}
     U(\vb{r}) \equiv \sum_{i=1}^{N_s} U_0 \delta(\vb{r} - \vb{r}_i)
 \end{equation}
-where $N_s$ is the total number of scatters in the considering matel.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-xx
+where $N_s$ is the total number of scatters in the considering matel. Now we can calculate $|U_{j'j}|^2$ as follows
+\begin{equation} \label{2.36}
+  \begin{aligned}
+    |U_{j'j}|^2 = &
+    \sum_{i =1}^{N_s}
+    \frac{1}{L_x^2}
+    \int \int  dx_1 dy_1
+      \exp(\frac{-{p'}_x x_1}{\hbar})
+      \chi_n^* (y_1 - {y'}_0)
+      U_0 \delta(x_1-x_i)\delta(y_1-y_i)
+      \exp(\frac{{p}_x x_1}{\hbar})
+      \chi_n (y_1 - {y}_0) \\
+    & \times
+    \int \int  dx_2 dy_2
+      \exp(\frac{{p'}_x x_2}{\hbar})
+      \chi_n (y_2 - {y'}_0)
+      U_0 \delta(x_2 - x_i)\delta(y_2 - y_i)
+      \exp(\frac{-{p}_x x_2}{\hbar})
+      \chi_n^* (y_2 - {y}_0)
+  \end{aligned}
+\end{equation}
+and considering only non-zero values for $x_1$ and $x_2$ integrals we can re-write this as
+\begin{equation} \label{2.37}
+  \begin{aligned}
+    |U_{j'j}|^2 = &
+    \sum_{i =1}^{N_s}
+    \frac{U_0^2}{L_x^2}
+    \int dy_1
+      \exp(\frac{-{p'}_x x_i}{\hbar})
+      \chi_n^* (y_1 - {y'}_0)
+      \delta(y_1-y_i)
+      \exp(\frac{{p}_x x_i}{\hbar})
+      \chi_n (y_1 - {y}_0) \\
+    & \times
+    \int dy_2
+      \exp(\frac{{p'}_x x_i}{\hbar})
+      \chi_n (y_2 - {y'}_0)
+      \delta(y_2 - y_i)
+      \exp(\frac{-{p}_x x_i}{\hbar})
+      \chi_n^* (y_2 - {y}_0)
+  \end{aligned}
+\end{equation}
+and this will be simplified to
+\begin{equation} \label{2.38}
+  \begin{aligned}
+    |U_{j'j}|^2 = &
+    \sum_{i =1}^{N_s}
+    \frac{U_0^2}{L_x^2}
+    \int dy_1
+      \chi_n^* (y_1 - {y'}_0)
+      \delta(y_1-y_i)
+      \chi_n (y_1 - {y}_0) \\
+    & \times
+    \int dy_2
+      \chi_n (y_2 - {y'}_0)
+      \delta(y_2 - y_i)
+      \chi_n^* (y_2 - {y}_0).
+  \end{aligned}
+\end{equation}
+Again considering only non-zero values for $y_1$ and $y_2$ integrals we can re-write this as
+\begin{equation} \label{2.39}
+  \begin{aligned}
+    |U_{j'j}|^2 = &
+    \sum_{i =1}^{N_s}
+    \frac{U_0^2}{L_x^2}
+      \chi_n^* (y_i - {y'}_0)
+      \chi_n (y_i - {y}_0)
+      \chi_n (y_i - {y'}_0)
+      \chi_n^* (y_i - {y}_0).
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{2.40}
+  \begin{aligned}
+    |U_{j'j}|^2 =
+    \frac{U_0^2}{L_x^2}
+    \sum_{i =1}^{N_s}
+      \chi_n^2 (y_i - {y'}_0)
+      \chi_n^2 (y_i - {y}_0).
+  \end{aligned}
+\end{equation}
+Now subtituting this derivation into the Eq. \eqref{2.34} we will get
+\begin{equation} \label{2.41}
+    \frac{1}{\tau} =
+    \bigg[
+    \frac{2U_0^2}{\hbar^2 L_x^2}
+    \sum_{{y'}_0}
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    \sum_{i =1}^{N_s}
+      \chi_n^2 (y_i - {y'}_0)
+      \chi_n^2 (y_i - {y}_0)
+    \bigg]^{1/2}
+\end{equation}
+where $j'$ reduced to ${p'}_x$ (since $n'=n$)and we can represent it by ${y'}_0$. Then this will modified to
+\begin{equation} \label{2.42}
+    \frac{1}{\tau} =
+    \bigg[
+    \frac{2U_0^2}{\hbar^2 L_x^2}
+    \sum_{{y'}_0}
+    \sum_{i =1}^{N_s}
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \chi_n^2 (y_i - {y'}_0)
+      \chi_n^2 (y_i - {y}_0)
+    \bigg]^{1/2}.
+\end{equation}
+Now considering large size of sample and a macroscopically large $N_s$ scatters we can promate the summation to integrations as follows
+\begin{equation} \label{2.43}
+    \frac{1}{\tau} =
+    \bigg[
+    \frac{2U_0^2}{\hbar^2 L_x^2}
+    \frac{eB L_x}{2\pi\hbar}\int d{y'}_0
+    \frac{N_s} {L_x}\int dy_i
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \chi_n^2 (y_i - {y'}_0)
+      \chi_n^2 (y_i - {y}_0)
+    \bigg]^{1/2}.
+\end{equation}
+Assuming $L_x = L_y$ we can define the area of the 2D material as
+\begin{equation} \label{2.44}
+    S \equiv L_xL_x = L_xL_y
+\end{equation}
+and then we can re-write the above as
+\begin{equation} \label{2.45}
+    \frac{1}{\tau} =
+    \bigg[
+    \frac{eBN_sU_0^2}{\pi\hbar^3 S}
+    \int d{y'}_0
+    \int dy_i
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \chi_n^2 (y_i - {y'}_0)
+      \chi_n^2 (y_i - {y}_0)
+    \bigg]^{1/2}.
+\end{equation}
+Define the \textit{density of scatters} per unit area of 2DEG
+\begin{equation} \label{2.46}
+    n_s \equiv \frac{N_s}{S}
+\end{equation}
+and the \textit{magnetic length} as
+\begin{equation} \label{2.47}
+    l_0 \equiv \sqrt{\frac{\hbar}{eB}}.
+\end{equation}
+Now our Eq. \eqref{2.45} leads to
+\begin{equation} \label{2.48}
+    \frac{1}{\tau} =
+    \sqrt{
+    \frac{n_sU_0^2}{\pi l_0^2 \hbar^2}}
+    \bigg[
+    \int d{y'}_0
+    \int dy_i
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \chi_n^2 (y_i - {y'}_0)
+      \chi_n^2 (y_i - {y}_0)
+    \bigg]^{1/2}
+\end{equation}
+and now define new dummy variables as follows (since $y_0$ is a paramter)
+\begin{equation} \label{2.49}
+    ({y'}_0 - y_0) \rightarrow  y  \quad \text{and} \quad
+    ({y}_i- {y'}_0) \rightarrow y'
+\end{equation}
+and finally we will get the eqution for the dressed electron lifetime at the $n$th Landau level as
+\begin{equation} \label{2.50}
+    \frac{1}{\tau} =
+    \sqrt{
+    \frac{n_sU_0^2}{\pi l_0^2 \hbar^2}}
+    \bigg[
+    \int \int  dy dy'\;
+    J_0^2\bigg[\frac{eEy\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+      \chi_n^2 (y')
+      \chi_n^2 (y+y')
+    \bigg]^{1/2}
+\end{equation}
+\hfill$\blacksquare$
