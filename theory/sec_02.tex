@@ -221,7 +221,7 @@ To calculate scattering probability we can use this scattering amplitude's squre
   \end{aligned}
 \end{equation}
 Considering long time $t\rightarrow \infty$ we can make the integral into a delta function as follows
-\begin{equation} \label{2.22}
+\begin{equation} \label{2.23}
   \begin{aligned}
     |a_{j'}(t)|^2  =
    4\pi^2|U_{j'j}|^2 &
@@ -237,7 +237,7 @@ Considering long time $t\rightarrow \infty$ we can make the integral into a delt
   \end{aligned}
 \end{equation}
 and this implies $l=k$ and this leads to
-\begin{equation} \label{2.22}
+\begin{equation} \label{2.24}
   \begin{aligned}
     |a_{j'}(t)|^2  =
    4\pi^2|U_{j'j}|^2
@@ -247,7 +247,7 @@ and this implies $l=k$ and this leads to
   \end{aligned}
 \end{equation}
 Then using the famous the square $\delta$ function transormation method
-\begin{equation} \label{2.22}
+\begin{equation} \label{2.25}
   \begin{aligned}
      \delta^2(\epsilon ) = \delta(\epsilon )\delta^2(0)
      \lim_{t\rightarrow\infty} \int_{-t/2}^{t/2} e^{i0\times t' /\hbar} dt' =
@@ -255,15 +255,78 @@ Then using the famous the square $\delta$ function transormation method
   \end{aligned}
 \end{equation}
 we can calculatre the probability of electron scattering between states $j$ and $j'$ per unit time as
-\begin{equation} \label{2.22}
+\begin{equation} \label{2.26}
     \mathcal{W}_{j'j} \equiv \dv{|a_{j'}(t)|^2}{t} =
-    |U_{j'j}|^2 \sum_{l=-\infty}^{\infty} J_l^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    |U_{j'j}|^2
+     \sum_{l=-\infty}^{\infty} J_l^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
     \times
     \frac{2\pi}{\hbar} \delta(E_{n'} - E_{n} + l\hbar\omega)
 \end{equation}
 
+\noindent
+To avoid thee energy echange betwen a high-frequency field and electrons, the field should be purely dressing. We can achieve that by using the field with off-resonant and high frequency. Therefore, the only effect of the dressing field on 2DEG is the renormalization of the probability of elastic electron scattering within the same Landau level $(E_{n'}=E_n)$, which described by the term with $l=0$ the Eq. \eqref{2.26} leads to
+\begin{equation} \label{2.27}
+    \mathcal{W}_{j'j} = J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    \mathcal{W}_{j'j}^{(0)}
+\end{equation}
+where
+\begin{equation} \label{2.28}
+    \mathcal{W}_{j'j}^{(0)} = \frac{2\pi}{\hbar} |U_{j'j}|^2
+    \delta(E_{n'} - E_{n})
+\end{equation}
+is the probability of scattering of a \textit{bare electron}. It is important to notice that the Bessel function factor depend on both the dressing field and stationaty magnetic field. This factor is responcible for all the effcts discussed in thisarticle.
 
+\noindent
+One can define the lifetime of the dressed electron at the Landau level $\tau$ is renormalized by the Bessel function as below
+\begin{equation} \label{2.29}
+    \frac{1}{\tau} \equiv \sum_{j'} \mathcal{W}_{j'j} =
+    \sum_{j'}
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    \mathcal{W}_{j'j}^{(0)}
+\end{equation}
+where we have consider all posibilities that electron can jump to the state $j'$. Then rewrite the delat function as follows
+\begin{equation} \label{2.30}
+    \delta(\epsilon) =
+    \frac{1}{\pi} \lim_{\Gamma \rightarrow 0 } \frac{\Gamma}{\Gamma^2 + \epsilon^2}
+\end{equation}
+where in this study we can assume that the paramater $\Gamma \equiv \hbar/\tau$ as scattering induced broading of the Landau level. But for the elestic scatteing within the same Landau level, we can write the $\delta$ function as
+\begin{equation} \label{2.31}
+    \delta(E_{n'} - E_{n}) \approx
+    \frac{1}{\pi \Gamma}.
+\end{equation}
+Therefore Eq. \eqref{2.29} will change to
+\begin{equation} \label{2.32}
+    \frac{1}{\tau} =
+    \sum_{j'}
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    \times
+    \frac{2\pi}{\hbar} |U_{j'j}|^2 \times \frac{1}{\pi \Gamma}
+\end{equation}
+\begin{equation} \label{2.33}
+    \frac{1}{\tau} =
+    \sum_{j'}
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    \times
+    \frac{2}{\hbar} |U_{j'j}|^2 \times \frac{\tau}{\hbar}
+\end{equation}
+and finally this can be modified to
+\begin{equation} \label{2.34}
+    \frac{1}{\tau} =
+    \bigg[
+    \frac{2}{\hbar^2}
+    \sum_{j'}
+    J_0^2\bigg[\frac{eE({y'}_0 - y_0)\omega_0^2}{\hbar\omega(\omega_0^2-\omega^2)}\bigg]
+    |U_{j'j}|^2
+    \bigg]^{1/2}
+\end{equation}
+where the summation is performed over electron states $j'$ within the same Landau level.
 
+\noindent
+Now lets specify more on the scattering potential where we can model them as randomly distributed delta fucntions as follows
+\begin{equation} \label{2.35}
+    U(\vb{r}) \equiv \sum_{i=1}^{N_s} U_0 \delta(\vb{r} - \vb{r}_i)
+\end{equation}
+where $N_s$ is the total number of scatters in the considering matel.
 
 
 
