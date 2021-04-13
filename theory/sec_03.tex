@@ -1,0 +1,201 @@
+\section{Floquet theory}
+
+Since we describe the lifetime of an electron in certain Landau level using conventianal perturbation theeory, now we can apply the Floquet theory to identify the difference of these methods.
+
+\noindent
+First we need to identify the \textit{quasienergies} and periodic \textit{Floquet modes} for derived wavefunctions \eqref{1.52} for a 2DEG system with both stationary magnetic field and strong dressing filed.
+
+\noindent
+Let's consider the following paramter which is lineraly increasing in time
+\begin{equation} \label{3.1}
+  \Delta_E \equiv \frac{t}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t')
+\end{equation}
+where we can calculate this using Eq. \eqref{1.42} and \eqref{1.51} as follows
+\begin{equation} \label{3.2}
+  \begin{aligned}
+    \Delta_E =
+    \frac{t}{T} \int_0^T dt' \;
+    \frac{1}{2}m_e \frac{(eE\omega)^2}{m_e^2(\omega_0^2 - \omega^2)^2} \cos[2](\omega t')
+    & - \frac{1}{2}m_e\omega_0^2 \frac{(eE)^2}{m_e^2(\omega_0^2 - \omega^2)^2} \sin[2](\omega t') \\
+    & +
+    \frac{eE}{m_e(\omega_0^2 - \omega^2)} \sin(\omega t') eE \sin(\omega t')
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{3.3}
+  \begin{aligned}
+    \Delta_E =
+    \frac{t\omega}{2\pi} \times
+    \frac{(eE)^2}{2m_e(\omega_0^2 - \omega^2)^2}
+    \bigg[
+    \omega^2
+    \int_0^T dt' \; \cos[2](\omega t')
+    & -
+    \omega_0^2
+    \int_0^T dt'\; \sin[2](\omega t') \\
+    & +
+    2(\omega_0^2 - \omega^2) \int_0^T dt'\; \sin[2](\omega t')
+    \bigg]
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{3.4}
+  \begin{aligned}
+    \Delta_E =
+    \frac{t\omega}{2\pi} \times
+    \frac{(eE)^2}{2m_e(\omega_0^2 - \omega^2)^2}
+    \bigg[
+    \omega^2
+    \frac{\pi}{\omega}
+    -
+    \omega_0^2
+    \frac{\pi}{\omega}
+    +
+    2(\omega_0^2 - \omega^2) \frac{\pi}{\omega}
+    \bigg]
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{3.5}
+  \begin{aligned}
+    \Delta_E =
+    \frac{t\omega}{2} \times
+    \frac{(eE)^2}{2m_e(\omega_0^2 - \omega^2)^2}
+    (\omega_0^2 - \omega^2) =
+    \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)} t
+  \end{aligned}
+\end{equation}
+Since this is the continuous increasing part of the Laggrangian integral in Eq. \eqref{1.52} we can make this as $2\omega$ periodic function as follows
+\begin{equation} \label{3.6}
+    \Lambda\equiv
+    \int_0^t dt' \; L(\zeta,\dot{\zeta},t') -
+    \frac{t}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t')
+\end{equation}
+which can be proved as follows. First consider the first term of the $\Lambda$
+\begin{equation} \label{3.7}
+  \begin{aligned}
+    \int_0^t dt' \; L(\zeta,\dot{\zeta},t') =
+    \frac{(eE)^2}{2m_e(\omega_0^2 - \omega^2)^2}
+    \bigg[
+    \omega^2
+    \int_0^t dt' \; \cos[2](\omega t')
+    & -
+    \omega_0^2
+    \int_0^t dt'\; \sin[2](\omega t') \\
+    & +
+    2(\omega_0^2 - \omega^2) \int_0^t dt'\; \sin[2](\omega t')
+    \bigg]
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{3.8}
+  \begin{aligned}
+    \int_0^t dt' \; L(\zeta,\dot{\zeta},t') =
+    \frac{(eE)^2}{2m_e(\omega_0^2 - \omega^2)^2}
+    \bigg[
+    \omega^2
+    \qty[\frac{t}{2} + \frac{\sin(2\omega t)}{4\omega}]
+    & -
+    \omega_0^2
+    \qty[\frac{t}{2} - \frac{\sin(2\omega t)}{4\omega}] \\
+    & +
+    2(\omega_0^2 - \omega^2)
+    \qty[\frac{t}{2} - \frac{\sin(2\omega t)}{4\omega}]
+    \bigg]
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{3.9}
+  \begin{aligned}
+    \int_0^t dt' \; L(\zeta,\dot{\zeta},t')  =
+    \frac{(eE)^2}{2m_e(\omega_0^2 - \omega^2)^2}
+    \bigg[&
+    \frac{t}{2}
+    \qty[\omega^2 - \omega_0^2 + 2\omega_0^2 - 2\omega^2] \\
+    & +
+    \frac{\sin(2\omega t)}{4\omega}
+    \qty[\omega^2 + \omega_0^2 + 2\omega_0^2 - 2\omega^2]
+    \bigg]
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{3.10}
+    \int_0^t dt' \; L(\zeta,\dot{\zeta},t')  =
+    \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)}t
+    +
+    \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2}
+    \sin(2\omega t)
+\end{equation}
+then using Eq.\eqref{3.5} we can write this as
+\begin{equation} \label{3.11}
+    \int_0^t dt' \; L(\zeta,\dot{\zeta},t')  =
+    \Delta_E
+    +
+    \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2}
+    \sin(2\omega t).
+\end{equation}
+Now we can express
+\begin{equation} \label{3.12}
+    \Lambda  =
+    \Delta_E
+    +
+    \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2}
+    \sin(2\omega t) - \Delta_E
+    =
+    \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t)
+\end{equation}
+which is a periodic function in time with $2\omega$ frequency.
+
+\noindent
+Now using this parmaters we can factorize the wavefunction \eqref{1.52} as linearly time dependend part and periodic time dependend part as follows
+\begin{equation} \label{3.13}
+  \begin{aligned}
+    \psi_n(x,y,t)  = &
+    \exp(\frac{i}{\hbar}\qty[-E_nt + \Delta_E])
+    \frac{1}{\sqrt{L_x}} \chi_n\big(y - \zeta(t)\big)
+    \\
+    & \times
+    \exp(
+     \frac{i}{\hbar}\bigg[
+     p_x x +
+     \frac{eEy}{\omega}\cos(\omega t)+
+     m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
+     + \int_0^{t}dt'L(\zeta,\dot{\zeta},t') - \Delta_E \bigg])
+  \end{aligned}
+\end{equation}
+where we can identify(let $n \rightarrow \alpha$) the \textit{quasienergies} as
+\begin{equation} \label{3.14}
+  \varepsilon_{\alpha} \equiv
+  \hbar \omega_0\qty(\alpha + \frac{1}{2}) - \Delta_E
+\end{equation}
+and \textit{Floquet modes} as
+\begin{equation} \label{3.15}
+  \begin{aligned}
+    \Phi_{\alpha} \equiv &
+    \frac{1}{\sqrt{L_x}} \chi_n\big(y - \zeta(t)\big)
+    \exp(
+     \frac{i}{\hbar}\bigg[
+     p_x x +
+     \frac{eEy}{\omega}\cos(\omega t)+
+     m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
+     + \Lambda \bigg])
+  \end{aligned}
+\end{equation}
+with
+\begin{equation} \label{3.16}
+  \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
+\end{equation}
+where  \textit{Floquet modes} are time-periodic functions that also create a complete orthonormal set.
+\hfill$\blacksquare$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xx
