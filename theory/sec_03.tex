@@ -221,19 +221,18 @@ and
 \end{equation}
 
 \noindent
-Now we can write this by more simplying and considering spacial dependencies
-\textcolor{red}{change y to y0 from here}
+Now we can write this by more simplying and considering spacial dependencies and using previous subtituting done in Eq. \eqref{1.16} we can derive that
 \begin{equation} \label{3.20}
   \begin{aligned}
     \Phi_{\alpha}(x,y,t)  \equiv
     \frac{1}{\sqrt{L_x}}
-    \chi_{\alpha}\qty(y - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} ) &
+    \chi_{\alpha}\qty(y - y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} ) &
     \exp( \frac{i p_x }{\hbar}x )
     \exp(
      \frac{i}{\hbar}
      \qty[
      \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
-     y)\\
+     \qty(y - y_0 ))\\
      & \times
      \exp(\frac{-i}{\hbar}
      \qty[
@@ -253,7 +252,7 @@ Now we can transform this solution in spacial variable into the momentum space u
     \int_{-\infty}^{\infty} dy\; \exp(-ik_y y)
     \qty[
     \frac{1}{\sqrt{L_x}}
-    \chi_{\alpha}\qty(y - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
+    \chi_{\alpha}\qty(y - y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
     \exp(
      \frac{i}{\hbar}
      \qty[
@@ -264,8 +263,14 @@ Now we can transform this solution in spacial variable into the momentum space u
      \int_{-\infty}^{\infty} dx\; \exp(-ik_x x)
      \qty[
      \exp( \frac{i p_x }{\hbar}x )
-     ]
+     ] \\
+     &
      \times
+     \exp(
+      \frac{-i}{\hbar}
+      \qty[
+      \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]y_0)
+      \times
      \exp(\frac{-i}{\hbar}
      \qty[
      \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
@@ -273,9 +278,13 @@ Now we can transform this solution in spacial variable into the momentum space u
      )
   \end{aligned}
 \end{equation}
-Then this can be we-etite as follows
+Then this can be re-write as follows
 \begin{equation} \label{3.22}
     \Phi_{\alpha}(k_x,k_y,t)  =
+    \exp(
+     \frac{-i}{\hbar}
+     \qty[
+     \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]y_0)
     \exp(\frac{-i}{\hbar}
     \qty[
     \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
@@ -296,7 +305,7 @@ and
   \int_{-\infty}^{\infty} dy\; \exp(-ik_y y)
   \qty[
   \frac{1}{\sqrt{L_x}}
-  \chi_{\alpha}\qty(y - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
+  \chi_{\alpha}\qty(y -y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
   \exp(
    \frac{i}{\hbar}
    \qty[
@@ -308,7 +317,7 @@ and this can be simplied as
   \Theta(k_y,t) =
   \frac{1}{\sqrt{L_x}}
   \int_{-\infty}^{\infty} dy\;
-  \chi_{\alpha}\qty(y - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
+  \chi_{\alpha}\qty(y -y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
   \exp(
     -ik_y y +
    \frac{i}{\hbar}
@@ -317,13 +326,12 @@ and this can be simplied as
 \end{equation}
 Then by defining
 \begin{equation} \label{3.26}
-  \mu(t) \equiv \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)}
+  \mu(t) \equiv \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0
 \end{equation}
 and
 \begin{equation} \label{3.27}
   \gamma(t) \equiv
-  \frac{1}{\hbar}
-  \qty[ \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
+  \frac{eE\omega_0^2\cos(\omega t)}{\hbar\omega(\omega_0^2 - \omega^2)}
 \end{equation}
 we can re-write this by neglecting time dependencies as
 \begin{equation} \label{3.28}
@@ -368,50 +376,81 @@ where
 \end{equation}
 Using Eq. \eqref{3.32} and Eq. \eqref{3.22} we can derive that
 \begin{equation} \label{3.34}
+  \begin{aligned}
     \Phi_{\alpha}(k_x,k_y,t)  =
-    \frac{e^{-i \qty(k_y -\gamma)\mu}}{\sqrt{L_x}}
-    \exp(\frac{-i}{\hbar}
-    \qty[
-    \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
-    ]\sin(2\omega t))
+    \exp(
+      \frac{-i}{\hbar}
+      \qty[
+      \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]y_0
+    )&
+    \exp(
+      \frac{-i}{\hbar}
+      \qty[
+      \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
+      ]\sin(2\omega t)
+    )
     \delta\qty(k_x -\frac{p_x}{\hbar})
+    \\
+    & \times
+    \frac{e^{-i \qty(k_y -\gamma)\mu}}{\sqrt{L_x}}
     \tilde{\chi}_{\alpha}\qty(k_y -\gamma)
+  \end{aligned}
 \end{equation}
 and this can be re-write subtituting $\mu$ and $\gamma$ values as follows
 \begin{equation} \label{3.35}
   \begin{aligned}
-    \Phi_{\alpha}(k_x,k_y,t) =
-    \frac{1}{\sqrt{L_x}} &
+    \Phi_{\alpha}(k_x,k_y,t) & =
     \exp(
-        \frac{i}{\hbar} \qty[
-        \frac{(eE)^2 \omega_0^2 }{2 \omega m_e (\omega_0^2 - \omega^2)^2}
+      \frac{-i}{\hbar}
+      \qty[
+      \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]y_0
+    )
+    \exp(
+      \frac{-i}{\hbar}
+      \qty[
+      \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
       ]\sin(2\omega t)
     )
-    \exp(\frac{-i}{\hbar}
-    \qty[
-    \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
-    ]\sin(2\omega t)) \\
+    \delta\qty(k_x -\frac{p_x}{\hbar})\\
     & \times
-    \delta\qty(k_x -\frac{p_x}{\hbar})
-    \exp(-i\qty[\frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)}] k_y)
-    \tilde{\chi}_{\alpha}\qty(k_y - \gamma)
+    \exp(
+      -ik_y  \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)}
+    )
+    \exp(
+      \frac{i}{\hbar}
+      \qty[ \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
+      \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)}
+    )
+    \exp(
+      -i k_y y_0
+    ) \\
+    & \times
+    \exp(
+      i \frac{1}{\hbar}
+      \qty[ \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
+      y_0
+    )
+    \frac{1}{\sqrt{L_x}}
+    \tilde{\chi}_{\alpha}\qty(k_y -\gamma)
   \end{aligned}
 \end{equation}
 and
-\begin{equation} \label{3.34}
+\begin{equation} \label{3.36}
   \begin{aligned}
-    \Phi_{\alpha}(k_x,k_y,t) =
-    \frac{1}{\sqrt{L_x}} &
+    \Phi_{\alpha}(k_x,k_y,t) & =
     \exp(
-        \frac{i}{\hbar} \qty[
-        \frac{(eE)^2 \qty(3\omega_0^2 - \omega^2) }{8 \omega m_e (\omega_0^2 - \omega^2)^2}
+      \frac{i}{\hbar}
+      \qty[
+      \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
       ]\sin(2\omega t)
     )
-    \\
+    \delta\qty(k_x -\frac{p_x}{\hbar})\\
     & \times
-    \delta\qty(k_x -\frac{p_x}{\hbar})
-    \exp(-i\qty[\frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)}] k_y)
-    \tilde{\chi}_{\alpha}\qty(k_y - \gamma)
+    \exp(
+      -ik_y  \qty[\frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0]
+    )
+    \frac{1}{\sqrt{L_x}}
+    \tilde{\chi}_{\alpha}\qty(k_y -\gamma)
   \end{aligned}
 \end{equation}
 
