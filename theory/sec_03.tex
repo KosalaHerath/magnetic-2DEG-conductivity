@@ -350,8 +350,8 @@ We can subtitute following variables
 and this leads to
 \begin{equation} \label{3.30}
   \Theta_{\alpha}({k_y}' ,t) =
-  \frac{\sqrt{2}e^{-i {k_y}'\mu}}{\sqrt{L_x}}
-  \frac{1}{\sqrt{2}}
+  \frac{\sqrt{2\pi}e^{-i {k_y}'\mu}}{\sqrt{L_x}}
+  \frac{1}{\sqrt{2\pi}}
   \int_{-\infty}^{\infty} dy'\;
   \chi_{n}\qty(y')
   \exp(-i{k_y}' y').
@@ -363,7 +363,7 @@ We know that $\{\chi_{\alpha}\}$ are well-known harmonic eigenfunctions(Gauss-He
 Therefore
 \begin{equation} \label{3.32}
   \Theta_{\alpha}({k_y}' ,t) =
-  \frac{\sqrt{2}e^{-i {k_y}'\mu}}{\sqrt{L_x}}
+  \frac{\sqrt{2\pi}e^{-i {k_y}'\mu}}{\sqrt{L_x}}
   \tilde{\chi}_{n}\qty({k_y}')
 \end{equation}
 where
@@ -392,7 +392,7 @@ Using Eq. \eqref{3.32} and Eq. \eqref{3.22} we can derive that
     \delta\qty(k_x -\frac{p_x}{\hbar})
     \\
     & \times
-    \frac{i^n\sqrt{2}e^{-i \qty(k_y -\gamma)\mu}}{\sqrt{L_x}}
+    \frac{i^n\sqrt{2\pi}e^{-i \qty(k_y -\gamma)\mu}}{\sqrt{L_x}}
     \tilde{\chi}_{n}\qty(k_y -\gamma)
   \end{aligned}
 \end{equation}
@@ -430,7 +430,7 @@ and this can be re-write subtituting $\mu$ and $\gamma$ values as follows
       \qty[ \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
       y_0
     )
-    \frac{i^n\sqrt{2}}{\sqrt{L_x}}
+    \frac{i^n\sqrt{2\pi}}{\sqrt{L_x}}
     \tilde{\chi}_{n}\qty(k_y -\gamma)
   \end{aligned}
 \end{equation}
@@ -449,15 +449,40 @@ and
     \exp(
       -ik_y  \qty[\frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0]
     )
-    \frac{i^n\sqrt{2}}{\sqrt{L_x}}
-    \tilde{\chi}_{n}\qty(k_y -\gamma)
+    \frac{i^n\sqrt{2\pi}}{\sqrt{L_x}}
+    \tilde{\chi}_{n}\qty(k_y -\gamma).
   \end{aligned}
 \end{equation}
-
-
-
-
-
+For notation convinient we can introduce few constant as follows
+\begin{equation} \label{3.37}
+  b \equiv
+  \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8\hbar \omega m_e(\omega_0^2 - \omega^2)^2}
+\end{equation}
+and
+\begin{equation} \label{3.38}
+  d \equiv
+  \frac{eE}{m_e(\omega_0^2 - \omega^2)}
+\end{equation}
+with
+\begin{equation} \label{3.39}
+  g \equiv
+  \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)}.
+\end{equation}
+Therefore we can write Eq. \eqref{3.36} as
+\begin{equation} \label{3.40}
+  \begin{aligned}
+    \phi_{\alpha}(k_x,k_y,t) & =
+    \frac{i^n\sqrt{2\pi}}{\sqrt{L_x}}
+    \delta\qty(k_x -\frac{p_x}{\hbar})
+    \exp(
+      ib\sin(2\omega t)
+    )
+    \exp(
+      -ik_y  \qty[d\sin(\omega t) + y_0]
+    )
+    \tilde{\chi}_{n}\qty(k_y -g\cos(\omega t)).
+  \end{aligned}
+\end{equation}
 
 
 
