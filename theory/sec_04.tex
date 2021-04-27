@@ -23,7 +23,7 @@ Now for the Eq. \eqref{4.1} corresponding time evolution operator satisfy the Sc
 \begin{equation} \label{4.4}
   U_0(t,t_0;t') = \exp(-\frac{i}{\hbar}H_F(t')\qty[t-t_0])
 \end{equation}
-Consider a time-independent total perturbation $V(\mb{r})$ switched on at the reference time $t-=t_0$, then Schrödinger equation becomes
+Consider a time-independent total perturbation $V(\mb{r})$ switched on at the reference time $t=t_0$, then Schrödinger equation becomes
 \begin{equation} \label{4.5}
   i \hbar \pdv{t}\ket{\Psi_{\alpha}(t,t')} =
   \qty[H_F(t') + V(\mb{r})]\ket{\Psi_{\alpha}(t,t')}
@@ -492,12 +492,12 @@ Then we can identified the Fourier series component as
     \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
 \end{equation}
 Now one can introduce the definition of the \textit{transition probability matrix} as
-\begin{equation} \label{4.49}
+\begin{equation} \label{4.50}
     \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} \equiv
     a^l_{\alpha\beta}({k'}_x,k_x)\qty[a^{l'}_{\alpha\beta}({k'}_x,k_x)]^{*}
 \end{equation}
 and this becomes
-\begin{equation} \label{4.50}
+\begin{equation} \label{4.51}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} & =
       \qty[\frac { 32\pi^5 N_{imp}^2 |V_{{k'}_x,k_x}|^2}{L_x^2 L_y^4}]
@@ -513,7 +513,7 @@ and this becomes
   \end{aligned}
 \end{equation}
 Considering orthonormality of Gusee-Hermite functions we can reduce these intragal into one variable and derive
-\begin{equation} \label{4.51}
+\begin{equation} \label{4.52}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
       \qty[\frac { 32\pi^5 N_{imp}^2 |V_{{k'}_x,k_x}|^2}{L_x^2 L_y^4}] &
@@ -526,7 +526,7 @@ Considering orthonormality of Gusee-Hermite functions we can reduce these intrag
   \end{aligned}
 \end{equation}
 Then desribing the square of the delta distribution using following procedure
-\begin{equation} \label{4.52}
+\begin{equation} \label{4.53}
     \delta^2(\varepsilon) =
     \delta(\varepsilon)\delta(0) =
     \frac{\delta(\varepsilon)}{2\pi \hbar}
@@ -534,7 +534,7 @@ Then desribing the square of the delta distribution using following procedure
     \frac{\delta(\varepsilon)t}{2\pi \hbar}
 \end{equation}
 one can modify our derivation in Eq. \eqref{4.51} as
-\begin{equation} \label{4.53}
+\begin{equation} \label{4.54}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
       \qty[\frac { 32\pi^5 N_{imp}^2 |V_{{k'}_x,k_x}|^2}{L_x^2 L_y^4}] &
@@ -548,7 +548,7 @@ one can modify our derivation in Eq. \eqref{4.51} as
   \end{aligned}
 \end{equation}
 Then performing thetime derivation of each matrix element yeild the \textit{transition amplitude matrix} as folllows
-\begin{equation} \label{4.54}
+\begin{equation} \label{4.55}
   \begin{aligned}
     \Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x) &  \equiv
     \frac{d \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'}}{dt} \\
@@ -562,21 +562,21 @@ Then performing thetime derivation of each matrix element yeild the \textit{tran
   \end{aligned}
 \end{equation}
 where
-\begin{equation} \label{4.55}
+\begin{equation} \label{4.56}
     \Lambda \equiv
     \frac { 16\pi^4 N_{imp}^2}{L_x^2 L_y^4 \hbar}
 \end{equation}
 
 \noindent
 Now using defintion of $y_0$ given in Eq. \eqref{1.11} we can write that
-\begin{equation} \label{4.56}
+\begin{equation} \label{4.57}
     y_0 - {y'}_0 =
     - \frac{p_{x_{\alpha}}}{eB} + \frac{p_{x_{\beta}}}{eB} =
     \frac{\hbar {k'}_x}{eB} - \frac{\hbar {k}_x}{eB} =
     \frac{\hbar}{eB} \qty[{k'}_x - {k}_x]
 \end{equation}
-and this leads Eq. \eqref{1.55} to
-\begin{equation} \label{4.54}
+and this leads Eq. \eqref{1.56} to
+\begin{equation} \label{4.58}
   \begin{aligned}
     \Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x) =
     \Lambda |V_{{k'}_x,k_x}|^2
@@ -589,6 +589,108 @@ and this leads Eq. \eqref{1.55} to
     \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)
   \end{aligned}
 \end{equation}
+
+\noindent
+An impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2} = V_{imp}$ and the inverse scattering time matrix is the sum over all momentum over the transition probability matrix
+\begin{equation} \label{4.59}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} \equiv
+    \frac{1}{L_x L_y} \sum_{{k'}_x}
+    \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp}
+\end{equation}
+and this implies
+\begin{equation} \label{4.60}
+  \begin{aligned}
+    \Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x) =
+    \frac{\Lambda V_{imp}}{L_x L_y} \sum_{{k'}_x}
+    \delta(\varepsilon_{\beta} - \varepsilon) &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    \int_{-\infty}^{\infty} dy \;
+    \tilde{\chi}^2_{n_{\beta}}\qty(y)
+    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)
+  \end{aligned}
+\end{equation}
+For the 2-dimentional case introduce the momentum continuum limit as folllows
+\begin{equation} \label{4.61}
+    \frac{1}{L_x L_y} \sum_{{k'}_x} \longrightarrow
+    \frac{1}{4\pi^2}\int d {k'}_x
+\end{equation}
+and this leads to
+\begin{equation} \label{4.62}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
+    \frac{\Lambda V_{imp}}{4\pi^2}
+    \delta(\varepsilon_{\beta} - \varepsilon)
+    \int_{-\infty}^{\infty} d {k'}_x
+    &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    \int_{-\infty}^{\infty} dy \;
+    \tilde{\chi}^2_{n_{\beta}}\qty(y)
+    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)
+  \end{aligned}
+\end{equation}
+Using following subtitution
+\begin{equation} \label{4.63}
+    y = \frac{\hbar \bar{k}}{eB} \longrightarrow
+    dy = \frac{\hbar }{eB} d\bar{k}
+\end{equation}
+we can modify above derivation as
+\begin{equation} \label{4.64}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
+    \frac{\Lambda V_{imp}}{4\pi^2}
+    \delta(\varepsilon_{\beta} - \varepsilon)
+    \int_{-\infty}^{\infty} d {k'}_x
+    &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    \frac{\hbar }{eB}
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
+    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}]).
+  \end{aligned}
+\end{equation}
+Since squared Guess-Hermite functions are even function around zero we can re-write above derived expression as
+\begin{equation} \label{4.65}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
+    \frac{\Lambda V_{imp}}{4\pi^2}
+    \delta(\varepsilon_{\beta} - \varepsilon)
+    \int_{-\infty}^{\infty} d {k'}_x
+    &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    \frac{\hbar }{eB}
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
+    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}
+    \qty[\bar{k} - ({k}_x  - {k'}_x)])
+  \end{aligned}
+\end{equation}
+and finally we can derive our expression for the \textit{inverse
+scattering time matrix} for $N$th Landau level (let $n_{\alpha} = n_{\beta} = N$)
+\begin{equation} \label{4.66}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
+    \frac { 4\pi^2 N_{imp}^2 V_{imp}}{eB L_x^2 L_y^4}
+    \delta(\varepsilon - \varepsilon_{N})
+    \int_{-\infty}^{\infty} d {k'}_x
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    \tilde{\chi}^2_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    \tilde{\chi}^2_{N}\qty(\frac{\hbar}{eB}
+    \qty[\bar{k} - ({k}_x  - {k'}_x)]).
+  \end{aligned}
+\end{equation}
+
 
 
 
