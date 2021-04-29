@@ -1,0 +1,153 @@
+\section{Inverse Scattering Time Analysis}
+
+We hace derived the inverse scattering time matrix element from previous section as follows
+\begin{equation} \label{5.1}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
+    \frac { 4\pi^2 N_{imp}^2 V_{imp}}{eB L_x^2 L_y^4}
+    \delta(\varepsilon - \varepsilon_{N})
+    \int_{-\infty}^{\infty} d {k'}_x
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    {\chi}^2_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}^2_{N}\qty(\frac{\hbar}{eB}
+    \qty[\bar{k} - ({k}_x  - {k'}_x)]).
+  \end{aligned}
+\end{equation}
+
+\noindent
+THe disorder in the system is not supposed to change the eigenenergies of the bare system, hence all off0diogonal elements of the self-energy were neglected. Thesefore we can consider only the diagonal elements of the inverse scattering time matrix
+\begin{equation} \label{5.2}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll}_{N} =
+    \frac { 4\pi^2 N_{imp}^2 V_{imp}}{eB L_x^2 L_y^4}
+    \delta(\varepsilon - \varepsilon_{N}) &
+    \int_{-\infty}^{\infty} d {k'}_x
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    J_l^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    \\
+    & \times
+    {\chi}^2_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}^2_{N}\qty(\frac{\hbar}{eB}
+    \qty[\bar{k} - ({k}_x  - {k'}_x)])
+  \end{aligned}
+\end{equation}
+and introduce new variable as follows
+\begin{equation} \label{5.3}
+    y_1 = \frac{\hbar}{eB}[{k'}_x - k_x] \longrightarrow
+    d{k'}_x = \frac{eB}{\hbar}dy_1
+\end{equation}
+and
+\begin{equation} \label{5.4}
+    y_2 = \frac{\hbar}{eB}\bar{k} \longrightarrow
+    d\bar{k} = \frac{eB}{\hbar}dy_2
+\end{equation}
+then above equation modified to
+\begin{equation} \label{5.5}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll}_{N} =
+    \frac { 4\pi^2 N_{imp}^2 V_{imp} eB}{\hbar^2 L_x^2 L_y^4}
+    \delta(\varepsilon - \varepsilon_{N}) &
+    \int_{-\infty}^{\infty} dy_1
+    \int_{-\infty}^{\infty} dy_2 \;
+    J_l^2\qty({gy_1})
+    {\chi}^2_{N}\qty(y_2)
+    {\chi}^2_{N}\qty(y_1 + y_2).
+  \end{aligned}
+\end{equation}
+
+\noindent
+Lets consider how this expression change when we have turn off the dressing field ($E = 0$). Thesefore the inverse scattering time becomes valid for only $l=0$
+\begin{equation} \label{5.6}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N}\Bigg|_{E=0} & =
+    \frac { 4\pi^2 N_{imp}^2 V_{imp} eB}{\hbar^2 L_x^2 L_y^4}
+    \delta(\varepsilon - \varepsilon_{N})
+    \int_{-\infty}^{\infty} dy_1
+    \int_{-\infty}^{\infty} dy_2 \;
+    J_0^2\qty(0)
+    {\chi}^2_{N}\qty(y_2)
+    {\chi}^2_{N}\qty(y_1 + y_2) \\
+    & =
+    \frac { 4\pi^2 N_{imp}^2 V_{imp} eB}{\hbar^2 L_x^2 L_y^4}
+    \delta(\varepsilon - \varepsilon_{N})
+    \int_{-\infty}^{\infty} dy_1
+    \int_{-\infty}^{\infty} dy_2 \;
+    {\chi}^2_{N}\qty(y_2)
+    {\chi}^2_{N}\qty(y_1 + y_2)
+  \end{aligned}
+\end{equation}
+
+
+\noindent
+Thesefore we can analyze the behaviour of the inverse scattering time with
+$l=0$ central element of the matrix.
+\begin{equation} \label{5.7}
+    \Lambda_{00} \equiv
+    \frac{\qty(1/\tau)^{00}_{N}}{\qty(1/\tau)^{00}_{N}\big|_{E=0}}
+\end{equation}
+and this will be
+\begin{equation} \label{5.8}
+    \Lambda_{00}(k_x) =
+    \frac
+    {\int_{-\infty}^{\infty} dy_1
+    \int_{-\infty}^{\infty} dy_2 \;
+    J_0^2\qty({gy_1})
+    {\chi}^2_{N}\qty(y_2)
+    {\chi}^2_{N}\qty(y_1 + y_2)}
+    {\int_{-\infty}^{\infty} dy_1
+    \int_{-\infty}^{\infty} dy_2 \;
+    {\chi}^2_{N}\qty(y_2)
+    {\chi}^2_{N}\qty(y_1 + y_2)}
+\end{equation}
+where
+\begin{equation} \label{5.9}
+    g = \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)}
+\end{equation}
+and
+\begin{equation} \label{5.10}
+  \chi_N(y) = \frac{\sqrt{\mu}}{\sqrt{2^{N}N!\sqrt{\pi}}}
+  \exp(-\frac{\mu^2 y^2}{2})
+  \mathcal{H}_N\qty(\mu y) \quad \text{with} \quad
+  \mu \equiv \sqrt{\frac{m_e \omega_0}{\hbar}}
+\end{equation}
+and this implies
+\begin{equation} \label{5.11}
+  \chi^2_N(y) = \frac{{\mu}}{{2^{N}N!\sqrt{\pi}}}
+  \exp(-{\mu^2 y^2})
+  \mathcal{H}^2_N\qty(\mu y).
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xx
