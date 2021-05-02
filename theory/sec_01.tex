@@ -1,6 +1,15 @@
 \section{Schrödinger problem for Landau levels in dressed 2DEG}
 
-Our analysis is consider on 2 dimentional electronic gas which has distrubuted in $(x,y)$ plane in configuration space. We are going to examine the properties of 2DEG with stationary magnetic field
+Our analysis start with considering 2 dimentional free electronic gas which has been distrubuted in confined $(x,y)$ plane in configuration space.
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/fig0.pdf}
+  \caption{Confined 2DEG in configuration space with the size of $A=L_xL_y$.}
+  \label{fig:1.0}
+\end{figure}
+
+\noindent
+We are going to examine the properties of 2DEG with stationary magnetic field
 \begin{equation} \label{1.1}
   \vb{B} = (0,0,B)^T
 \end{equation}
@@ -43,7 +52,9 @@ where $\vb{e}_x$ and $\vb{e}_y$ are unit vectors along $x$ and $y$ directions re
     (\hat{p}_y - \frac{eE}{\omega}\cos(\omega t))^2
   \Big]
 \end{equation}
-Since $[\hat{H}_e(t),\hat{p}_x] =0$ both operators share same eigenvalue and eigen functions which are free electron wave functions. Therefore we can modify the Hamiltonian as follows
+Since $[\hat{H}_e(t),\hat{p}_x] =0$ both operators share same (simultaneous) eigen functions which are free electron wave functions
+($\frac{1}{\sqrt{L_x}}\exp(\frac{ip_x x}{\hbar})$).
+Therefore we can modify the Hamiltonian as follows
 \begin{equation} \label{1.8}
   \hat{H}_e(t) = \frac{1}{2m_e}\Big[
     ({p}_x + eBy)^2 +
@@ -75,6 +86,14 @@ and the \textit{cyclotron frequency} as
 \begin{equation} \label{1.12}
   \omega_0 \equiv \frac{eB}{m_e}.
 \end{equation}
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/fig02.pdf}
+  \caption{Paramters of the cyclotron orbits in the classical interpretation.}
+  \label{fig:1.02}
+\end{figure}
+
+\noindent
 Then the Hamiltonian will leads to
 \begin{equation} \label{1.13}
     \hat{H}_e(t) =
@@ -106,16 +125,16 @@ Then the Hamiltonian will leads to
 \end{equation}
 Let
 \begin{equation} \label{1.16}
-    (y - y_0) \rightarrow y
+    \tilde{y} = (y - y_0) \longrightarrow dy = d\tilde{y}
 \end{equation}
 and then this becomes
 \begin{equation} \label{1.17}
   \begin{aligned}
     \hat{H}_e(t) =
-      \frac{m_e \omega_0^2}{2}y^2 +
+      \frac{m_e \omega_0^2}{2}\tilde{y}^2 +
       \frac{1}{2m_e}\Big(
-      -\hbar^2 \pdv[2]{y} +
-      \frac{2i\hbar eE}{\omega}\cos(\omega t) \pdv{y}+
+      -\hbar^2 \pdv[2]{\tilde{y}} +
+      \frac{2i\hbar eE}{\omega}\cos(\omega t) \pdv{\tilde{y}}+
       \frac{e^2E^2}{\omega^2}\cos[2](\omega t)
       \Big).
   \end{aligned}
@@ -133,21 +152,21 @@ can be represent by the following form
 \end{equation}
 Using the same subtution from Eq. \eqref{1.16} this becomes
 \begin{equation} \label{1.20}
-    \psi(x,y,t) = \frac{1}{\sqrt{L_x}} \exp\bigg(
+    \psi(x,\tilde{y},t) = \frac{1}{\sqrt{L_x}} \exp\bigg(
       \frac{ip_x x}{\hbar} +
-      \frac{ieEy}{\hbar \omega}\cos(\omega t)
-    \bigg) \phi(y,t).
+      \frac{ieE\tilde{y}}{\hbar \omega}\cos(\omega t)
+    \bigg) \phi(\tilde{y},t).
 \end{equation}
 Defining
 \begin{equation} \label{1.21}
-    \varphi(x,y,t) \equiv \frac{1}{\sqrt{L_x}} \exp\bigg(
+    \varphi(x,\tilde{y},t) \equiv \frac{1}{\sqrt{L_x}} \exp\bigg(
       \frac{ip_x x}{\hbar} +
-      \frac{ieEy}{\hbar \omega}\cos(\omega t)
+      \frac{ieE\tilde{y}}{\hbar \omega}\cos(\omega t)
     \bigg)
 \end{equation}
 we can simply the the Eq. \eqref{1.20} as
 \begin{equation} \label{1.22}
-    \psi(x,y,t) = \varphi(x,y,t) \phi(y,t).
+    \psi(x,\tilde{y},t) = \varphi(x,\tilde{y},t) \phi(\tilde{y},t).
 \end{equation}
 Let's subtitue Eq. \eqref{1.20} and Eq. \eqref{1.17} into Eq. \eqref{1.18} and we can observe that
 \begin{equation} \label{1.23}
@@ -155,11 +174,11 @@ Let's subtitue Eq. \eqref{1.20} and Eq. \eqref{1.17} into Eq. \eqref{1.18} and w
     \text{L.H.S} & = i \hbar \dv{\psi}{t} =
     i \hbar \bigg( \dv{\varphi}{t} \phi + \dv{\phi}{t} \varphi \bigg) =
     i \hbar \bigg(
-      \Big[\frac{-ieEy}{\hbar}\sin(\omega t)\Big]\varphi\phi +
+      \Big[\frac{-ieE\tilde{y}}{\hbar}\sin(\omega t)\Big]\varphi\phi +
       \varphi  \dv{\phi}{t}
     \bigg) \\
     & =
-    \big[{eEy}\sin(\omega t)\big]\varphi\phi +
+    \big[{eE\tilde{y}}\sin(\omega t)\big]\varphi\phi +
     i \hbar\varphi  \dv{\phi}{t}
   \end{aligned}
 \end{equation}
@@ -169,10 +188,10 @@ and
     \text{R.H.S} & = \hat{H}_e(t)\psi \\
     & =
     \bigg[
-    \frac{m_e \omega_0^2}{2}y^2 +
+    \frac{m_e \omega_0^2}{2}\tilde{y}^2 +
     \frac{1}{2m_e}\Big(
-    -\hbar^2 \pdv[2]{y} +
-    \frac{2i\hbar eE}{\omega}\cos(\omega t) \pdv{y}+
+    -\hbar^2 \pdv[2]{\tilde{y}} +
+    \frac{2i\hbar eE}{\omega}\cos(\omega t) \pdv{\tilde{y}}+
     \frac{e^2E^2}{\omega^2}\cos[2](\omega t)
     \Big) \bigg]
     \varphi\phi
@@ -181,37 +200,37 @@ and
 where we will can calculate this part by part as follows:
 \begin{equation} \label{1.25}
   \begin{aligned}
-    \frac{-\hbar^2}{2m_e}\pdv[2]{y}(\varphi\phi) & =
-    \frac{-\hbar^2}{2m_e} \pdv{y}\bigg[
+    \frac{-\hbar^2}{2m_e}\pdv[2]{\tilde{y}}(\varphi\phi) & =
+    \frac{-\hbar^2}{2m_e} \pdv{\tilde{y}}\bigg[
       \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)\varphi\phi +
-      \varphi\pdv{\phi}{y}
+      \varphi\pdv{\phi}{\tilde{y}}
     \bigg] \\
     & =
     \frac{-\hbar^2}{2m_e} \bigg[
       \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)^2\varphi\phi +
-      \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)\varphi\pdv{\phi}{y} +
-      \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)\varphi\pdv{\phi}{y} +
-      \varphi\pdv[2]{\phi}{y}
+      \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)\varphi\pdv{\phi}{\tilde{y}} +
+      \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)\varphi\pdv{\phi}{\tilde{y}} +
+      \varphi\pdv[2]{\phi}{\tilde{y}}
     \bigg] \\
     & =
     \Big(\frac{e^2E^2}{ 2m_e\omega^2} \cos[2](\omega)t\Big)\varphi\phi -
-    \Big(\frac{ieE \hbar}{m_e\omega} \cos(\omega)t\Big)\varphi\pdv{\phi}{y} -
+    \Big(\frac{ieE \hbar}{m_e\omega} \cos(\omega)t\Big)\varphi\pdv{\phi}{\tilde{y}} -
     \frac{\hbar^2}{2m_e}
-    \varphi\pdv[2]{\phi}{y}
+    \varphi\pdv[2]{\phi}{\tilde{y}}
   \end{aligned}
 \end{equation}
 and
 \begin{equation} \label{1.26}
   \begin{aligned}
-    \frac{2i\hbar eE}{2m_e\omega}\cos(\omega t) \pdv{y} (\varphi\phi)& =
+    \frac{2i\hbar eE}{2m_e\omega}\cos(\omega t) \pdv{\tilde{y}} (\varphi\phi)& =
     \frac{i\hbar eE}{m_e\omega}\cos(\omega t)
     \bigg[
       \Big(\frac{ieE}{\hbar \omega} \cos(\omega)t\Big)\varphi\phi +
-      \varphi\pdv{\phi}{y}
+      \varphi\pdv{\phi}{\tilde{y}}
     \bigg] \\
     & =
     \Big(\frac{-e^2E^2}{m_e\omega^2} \cos(\omega)t\Big)\varphi\phi +
-    \frac{i\hbar eE}{m_e\omega}\cos(\omega t)\varphi\pdv{\phi}{y}.
+    \frac{i\hbar eE}{m_e\omega}\cos(\omega t)\varphi\pdv{\phi}{\tilde{y}}.
   \end{aligned}
 \end{equation}
 Therefore we can derive that
@@ -219,85 +238,83 @@ Therefore we can derive that
   \begin{aligned}
     \text{R.H.S} =
     \bigg[
-    \frac{m_e \omega_0^2}{2}y^2
+    \frac{m_e \omega_0^2}{2}\tilde{y}^2 \varphi\phi
     -
     \frac{\hbar^2}{2m_e}
-    \varphi\pdv[2]{\phi}{y} \bigg]
-    \varphi\phi.
+    \varphi\pdv[2]{\phi}{\tilde{y}} \bigg].
   \end{aligned}
 \end{equation}
-To satisfy the condition L.H.S$=$R.H.S we need to find a function $\phi(y,t)$ such that
+To satisfy the condition L.H.S$=$R.H.S we need to find a function $\phi(\tilde{y},t)$ such that
 \begin{equation} \label{1.28}
   \begin{aligned}
-    \big[{eEy}\sin(\omega t)\big]\varphi\phi +
+    \big[{eE\tilde{y}}\sin(\omega t)\big]\varphi\phi +
     i \hbar\varphi  \dv{\phi}{t}
     =
     \bigg[
-    \frac{m_e \omega_0^2}{2}y^2
+    \frac{m_e \omega_0^2}{2}\tilde{y}^2 \varphi\phi
     -
     \frac{\hbar^2}{2m_e}
-    \varphi\pdv[2]{\phi}{y} \bigg]
-    \varphi\phi
+    \varphi\pdv[2]{\phi}{\tilde{y}} \bigg]
   \end{aligned}
 \end{equation}
-which can be simplyfied as
+by removing $\varphi$ this can be simplyfied as
 \begin{equation} \label{1.29}
   \begin{aligned}
     \bigg[
-    \frac{m_e \omega_0^2}{2}y^2
-    - {eEy}\sin(\omega t)
+    \frac{m_e \omega_0^2}{2}\tilde{y}^2
+    - {eE\tilde{y}}\sin(\omega t)
     -
     \frac{\hbar^2}{2m_e}
-    \pdv[2]{y}
+    \pdv[2]{\tilde{y}}
     - i \hbar \dv{t}
     \bigg]
-    \phi(y,t) = 0.
+    \phi(\tilde{y},t) = 0.
   \end{aligned}
 \end{equation}
 If we turn off the external dressing field, this equation leads to simple harmonic oscillator Hamiltonian as follows
 \begin{equation} \label{1.30}
   \begin{aligned}
     \bigg[
-    \frac{m_e \omega_0^2}{2}y^2
+    \frac{m_e \omega_0^2}{2}\tilde{y}^2
     -
     \frac{\hbar^2}{2m_e}
-    \pdv[2]{y}
+    \pdv[2]{\tilde{y}}
     - i \hbar \dv{t}
     \bigg]
-    \phi(y,t) = 0
+    \phi(\tilde{y},t) = 0
   \end{aligned}
 \end{equation}
 \begin{equation} \label{1.31}
   \begin{aligned}
-     i \hbar \dv{\phi(y,t)}{t} =
+     i \hbar \dv{\phi(\tilde{y},t)}{t} =
     \bigg[
-    \frac{\hat{p}_y^2}{2m_e} +
-    \frac{1}{2}m_e \omega_0^2y^2
+    \frac{\hat{p}_{\tilde{y}}^2}{2m_e} +
+    \frac{1}{2}m_e \omega_0^2\tilde{y}^2
     \bigg]
-    \phi(y,t).
+    \phi(\tilde{y},t).
   \end{aligned}
 \end{equation}
-Therefore we can identify the $S(t) \equiv eE\sin(\omega t)$ part as a external force act on the harmonic oscillator and we can solve this as a forced harmonic oscillator in $y$ axis.
+Therefore we can identify the $S(t) \equiv eE\sin(\omega t)$ part as a external force act on the harmonic oscillator and we can solve this as a forced harmonic oscillator in $\tilde{y}$ axis.
 \begin{equation} \label{1.32}
   \begin{aligned}
-    i \hbar \dv{\phi(y,t)}{t} =
+    i \hbar \dv{\phi(\tilde{y},t)}{t} =
     \bigg[
     -
     \frac{\hbar^2}{2m_e}
-    \pdv[2]{y} +
-    \frac{1}{2}m_e \omega_0^2y^2
-    - yS(t)]
+    \pdv[2]{\tilde{y}} +
+    \frac{1}{2}m_e \omega_0^2\tilde{y}^2
+    - \tilde{y}S(t)]
     \bigg]
-    \phi(y,t).
+    \phi(\tilde{y},t).
   \end{aligned}
 \end{equation}
-This system can be extacly solvable and we can solve this equation using the methods explained by Husimi [*1] as follows.
+This system can be extacly solvable and we can solve this equation using the methods explained by Husimi [*Ref:1] as follows.
 
 \noindent
 First we can introduce the time dependent shifted corrdinte as
 \begin{equation} \label{1.33}
-    y \rightarrow y' = y - \zeta(t) \quad \Rightarrow \quad
-    y = y' + \zeta(t)
+    \tilde{y} \rightarrow y' = \tilde{y} - \zeta(t) \quad \Rightarrow \quad
+    \tilde{y} = y' + \zeta(t)
 \end{equation}
 and this implies that
 \begin{equation} \label{1.34}
@@ -326,13 +343,13 @@ Let's tranform the wave function using following unitary trasnform
 \end{equation}
 and subtitte this into the Eq. \eqref{1.35} and we will get the following
 \begin{equation} \label{1.37}
-  \text{R.H.S} =  \bigg[ i \hbar \pdv{t} -
+  \text{L.H.S} =  \bigg[ i \hbar \pdv{t} -
 i \hbar \Big(\frac{im_e \ddot{\zeta} y'}{\hbar}\Big)\bigg]  \exp(\frac{-im_e\dot{\zeta}y'}{\hbar})\varphi(y',t)
 \end{equation}
 and
 \begin{equation} \label{1.38}
   \begin{aligned}
-    \text{L.H.S} & =  \bigg[
+    \text{R.H.S} & =  \bigg[
       i \hbar \dot{\zeta}  \Big(\frac{im_e \dot{\zeta}}{\hbar}\Big)  +
       i \hbar \dot{\zeta} \pdv{y'} \\
       &
@@ -350,7 +367,7 @@ and
     \bigg]  \exp(\frac{-im_e\dot{\zeta}y'}{\hbar})\varphi(y',t).
   \end{aligned}
 \end{equation}
-Combining these two we get derive that
+Combining these two and removing exponential terms we can derive that
 \begin{equation} \label{1.39}
   \begin{aligned}
     i \hbar \pdv{\varphi(y',t)}{t}   =
@@ -387,8 +404,9 @@ where
 \begin{equation} \label{1.42}
   L(\zeta,\dot{\zeta},t) \equiv \frac{1}{2} m_e\dot{\zeta}^2 - \frac{1}{2}m_e\omega_0^2 \zeta^2 + \zeta S(t)
 \end{equation}
-is the largrangian of a driven oscillator.
+is the largrangian of a classical driven oscillator.
 
+\vspace{5mm}
 \noindent
 Now introduce new unitary transormation for the wavefunction as follows
 \begin{equation} \label{1.43}
@@ -410,7 +428,7 @@ and subtite this into the Eq. \eqref{1.41} and gets
     \bigg] \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \chi(y',t)
   \end{aligned}
 \end{equation}
-and finally we can derive that
+removing exponential terms finally we can derive that
 \begin{equation} \label{1.45}
   \begin{aligned}
     i \hbar \pdv{t} \chi(y',t)  =
@@ -420,27 +438,29 @@ and finally we can derive that
     \bigg] \chi(y',t).
   \end{aligned}
 \end{equation}
-This is the well known Schrodinger equation of a stationary harmonic oscillator.
+This is the well known Schrodinger equation of a stationary quantum harmonic oscillator.
 In terms of the eigenvalues
 \begin{equation} \label{1.46}
   E_n = \hbar \omega_0 \big(n + \frac{1}{2}\big)
 \end{equation}
-of well-known harmonic eigenfucntions
+of well-known harmonic eigenfucntions (Gauss-Hermite functions)
 \begin{equation} \label{1.47}
-  \chi_n(y') = \frac{1}{\sqrt{2^{n}n!}}  \cdot
-  \bigg(\frac{m_e\omega_0}{\pi \hbar}\bigg)^{1/4}
-  \cdot e^{-\frac{m_e\omega_0 y'^2}{2\hbar}} \cdot
-  \mathcal{H}_n \bigg(\sqrt{\frac{m_e \omega_0}{\hbar}}y'\bigg)
+  \chi_n(x) \equiv \frac{\sqrt{\kappa}}{\sqrt{2^{n}n!}}
+  e^{-\kappa^2 x^2}
+  \mathcal{H}_n \qty(\kappa x) \quad \text{where}
+  \quad
+  \kappa = \sqrt{\frac{m_e \omega_0}{\hbar}}
 \end{equation}
 being propositional to the Hermite functions $\mathcal{H}_n$, the solutions of Eq. \eqref{1.32} can be represent as
 \begin{equation} \label{1.48}
-  \phi_n(y,t) = \chi_n(y - \zeta(t))
+  \phi_n(\tilde{y},t) = \chi_n(\tilde{y} - \zeta(t))
   \exp(\frac{i}{\hbar}\bigg[- E_nt +
-  m_e\dot{\zeta(t)}\big(y-\zeta(t)\big)
+  m_e\dot{\zeta(t)}\big(\tilde{y}-\zeta(t)\big)
    + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
 \end{equation}
-The set $\chi(y)$ forms a complete set and thus ay general solution $\phi_(y,t)$ can be expaned in terms of the solutions in Eq. \eqref{1.48}.
+The set $\{\chi_n(x)\}$ forms a complete set and thus any general solution $\phi_(\tilde{y},t)$ can be expaned in terms of the solutions in Eq. \eqref{1.48}.
 
+\vspace{5mm}
 \noindent
 Next we consider special case where we assumed
 \begin{equation} \label{1.49}
@@ -454,18 +474,18 @@ and using Green function method the solution can be write as
 \begin{equation} \label{1.51}
   \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
 \end{equation}
-form this solutions we are able to derive the final solutions $\alpha=(n,m)$ where $n,m \in \mathbb{Z}^{+}$ are two quantum numbers that describe the state of the electron, can be present as
+form this solutions we are able to derive the final solutions $\alpha=(n,m)$ where $n,m \in \mathbb{Z}^{+}_0$ are two quantum numbers that describe the state of the electron, can be present as
 \begin{equation} \label{1.52}
   \begin{aligned}
-    \psi_{\alpha}(x,y,t)  = & \frac{1}{\sqrt{L_x}} \chi_n\big(y - \zeta(t)\big) \\
+    \psi_{\alpha}(x,\tilde{y},t)  = & \frac{1}{\sqrt{L_x}} \chi_n\big(\tilde{y} - \zeta(t)\big) \\
     & \times
       \exp(
      \frac{i}{\hbar}\bigg[- E_nt +
     p_x x +
-    \frac{eEy}{\omega}\cos(\omega t)+
-    m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
+    \frac{eE\tilde{y}}{\omega}\cos(\omega t)+
+    m_e\dot{\zeta(t)}\big[\tilde{y}-\zeta(t)\big]
      + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
   \end{aligned}
 \end{equation}
-and the exponential phase shifts represent the effect done by the stationary magnetic field and strong dressing field.Therefore we can assume that the magnetitranport properties of 2DEG will be renormalized by the magnetic field as well as the dressing field.
+and the exponential phase shifts represent the effect done by the stationary magnetic field and strong dressing field. In here $p_x$ is qunatized with the quantum number $m$ due to the spacial confinemnet in $x$ direction. Therefore we can assume that the magnetitranport properties of 2DEG will be renormalized by the magnetic field as well as the dressing field.
 \hfill$\blacksquare$
