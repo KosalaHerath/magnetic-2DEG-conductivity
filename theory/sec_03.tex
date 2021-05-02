@@ -157,22 +157,23 @@ Now using this parmaters we can factorize the wavefunction \eqref{1.52} as linea
      + \int_0^{t}dt'L(\zeta,\dot{\zeta},t') - \Delta_E t  \bigg])
   \end{aligned}
 \end{equation}
-where we can identify(let $n \rightarrow \alpha$) the \textit{quasienergies} as
+where we can identify(let $\alpha \rightarrow (n,m)$) the \textit{quasienergies} as
 \begin{equation} \label{3.14}
   \varepsilon_{\alpha} \equiv
+  \varepsilon_{n} =
   \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_E \quad \text{where} \quad
-  \alpha = 0,1,2, ...
+  n = 0,1,2, ... \quad \text{for any given } m
 \end{equation}
 which is only depend on one quantum number ($n$) and \textit{Floquet modes} as
 \begin{equation} \label{3.15}
   \begin{aligned}
-    \phi_{\alpha}(x,y,t) \equiv &
-    \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - \zeta(t)\big)
+    \phi_{\alpha}(x,\tilde{y},t) \equiv &
+    \frac{1}{\sqrt{L_x}} \chi_{n}\big(\tilde{y} - \zeta(t)\big)
     \exp(
      \frac{i}{\hbar}\bigg[
      p_x x +
-     \frac{eEy}{\omega}\cos(\omega t)+
-     m_e\dot{\zeta}(t)\big[y-\zeta(t)\big]
+     \frac{eE\tilde{y}}{\omega}\cos(\omega t)+
+     m_e\dot{\zeta}(t)\big[\tilde{y}-\zeta(t)\big]
      + \Lambda \bigg])
   \end{aligned}
 \end{equation}
@@ -183,13 +184,19 @@ with
 \end{equation}
 where  \textit{Floquet modes} are time-periodic functions that also create a complete orthonormal set.
 \hfill$\blacksquare$
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/fig03.pdf}
+  \caption{Quasienergies for each Landau levels against magnitude of momentum.}
+  \label{fig:1.0}
+\end{figure}
 
 \vspace{5mm}
 \noindent
-Therefore the solutions (Floquet states) for the periodic Hamiltonian \eqref{1.5} can be writting in position space as
+Therefore using Floquet theory, the solutions (Floquet states) for the periodic Hamiltonian \eqref{1.5} can be written in position space as
 \begin{equation} \label{3.17}
-  \psi_{\alpha}(x,y,t) =
-  \exp(-\frac{i}{\hbar}\varepsilon_{\alpha}t)   \phi_{\alpha} (x,y,t)
+  \psi_{\alpha}(x,\tilde{y},t) =
+  \exp(-\frac{i}{\hbar}\varepsilon_{\alpha}t)   \phi_{\alpha} (x,\tilde{y},t)
 \end{equation}
 where
 \begin{equation} \label{3.18}
@@ -202,15 +209,15 @@ where
 and
 \begin{equation} \label{3.19}
   \begin{aligned}
-    \phi_{\alpha}(x,y,t) \equiv &
+    \phi_{\alpha}(x,\tilde{y},t) \equiv &
     \frac{1}{\sqrt{L_x}}
-    \chi_{n}\qty(y - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} ) \\
+    \chi_{n}\qty(\tilde{y} - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} ) \\
     & \times
     \exp(
      \frac{i}{\hbar}\qty[
      p_x x +
-     \frac{eEy}{\omega}\cos(\omega t)+
-     \frac{eE\omega y }{(\omega_0^2 - \omega^2)}\cos(\omega t)
+     \frac{eE\tilde{y}}{\omega}\cos(\omega t)+
+     \frac{eE\omega \tilde{y} }{(\omega_0^2 - \omega^2)}\cos(\omega t)
      ])\\
      & \times
      \exp(\frac{i}{\hbar}\qty[
@@ -242,14 +249,12 @@ Now we can write this by more simplying and considering spacial dependencies and
   \end{aligned}
 \end{equation}
 
-\vspace{5mm}
 \noindent
-Now we can transform this solution in spacial variable into the momentum space using Fourier trasform over the considering space.
+Now we can transform this solution in spacial variable into the momentum space using Fourier trasform over the considering confined space $A=L_xL_y$.
 \begin{equation} \label{3.21}
   \begin{aligned}
     \phi_{\alpha}(k_x,k_y,t)  &=
-    \frac{1}{\sqrt{2\pi}}
-    \int_{-\infty}^{\infty} dy\; \exp(-ik_y y)
+    \int_{-L_y/2}^{L_y/2} dy\; \exp(-ik_y y)
     \qty[
     \frac{1}{\sqrt{L_x}}
     \chi_{n}\qty(y - y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
@@ -259,8 +264,7 @@ Now we can transform this solution in spacial variable into the momentum space u
      \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
      y)] \\
      & \times
-     \frac{1}{\sqrt{2\pi}}
-     \int_{-\infty}^{\infty} dx\; \exp(-ik_x x)
+     \int_{-L_x/2}^{L_x/2} dx\; \exp(-ik_x x)
      \qty[
      \exp( \frac{i p_x }{\hbar}x )
      ] \\
@@ -289,22 +293,21 @@ Then this can be re-write as follows
     \qty[
     \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
     ]\sin(2\omega t))
-    \delta\qty(k_x -\frac{p_x}{\hbar})
     \Theta_{\alpha}(k_y,t)
+    \delta_{k_x,\frac{p_x}{\hbar}}
 \end{equation}
 where we used
 \begin{equation} \label{3.23}
-  \frac{1}{\sqrt{2\pi}}
-  \int_{-\infty}^{\infty} dx\;
+  \int_{L_x} dx\;
   \exp( -ik_x x + \frac{i p_x }{\hbar}x ) =
-  \sqrt{2\pi} \delta\qty(k_x -\frac{p_x}{\hbar})
+  L_x \delta_{k_x,\frac{p_x}{\hbar}}
 \end{equation}
 and
 \begin{equation} \label{3.24}
   \Theta_{\alpha}(k_y,t) \equiv
-  \int_{-\infty}^{\infty} dy\; \exp(-ik_y y)
+  \int_{-L_y/2}^{L_y/2}  dy\; \exp(-ik_y y)
   \qty[
-  \frac{1}{\sqrt{L_x}}
+  \sqrt{L_x}
   \chi_{n}\qty(y -y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
   \exp(
    \frac{i}{\hbar}
@@ -315,8 +318,8 @@ and
 and this can be simplied as
 \begin{equation} \label{3.25}
   \Theta_{\alpha}(k_y,t) =
-  \frac{1}{\sqrt{L_x}}
-  \int_{-\infty}^{\infty} dy\;
+  \sqrt{L_x}
+  \int_{-L_y/2}^{L_y/2} dy\;
   \chi_{n}\qty(y -y_0 - \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} )
   \exp(
     -ik_y y +
@@ -336,7 +339,7 @@ and
 we can re-write this by neglecting time dependencies as
 \begin{equation} \label{3.28}
   \Theta_{\alpha}(k_y,t) =
-  \frac{1}{\sqrt{L_x}}
+  \sqrt{L_x}
   \int_{-\infty}^{\infty} dy\;
   \chi_{n}\qty(y - \mu )
   \exp(
@@ -347,37 +350,43 @@ We can subtitute following variables
 \begin{equation} \label{3.29}
   {k_y}' = k_y -\gamma \quad \text{and} \quad y' = y -\mu
 \end{equation}
-and this leads to
+and for $L_y \rightarrow \infty$ this leads to
 \begin{equation} \label{3.30}
   \Theta_{\alpha}({k_y}' ,t) =
-  \frac{\sqrt{2\pi}e^{-i {k_y}'\mu}}{\sqrt{L_x}}
-  \frac{1}{\sqrt{2\pi}}
+  {\sqrt{L_x}} e^{-i {k_y}'\mu}
   \int_{-\infty}^{\infty} dy'\;
   \chi_{n}\qty(y')
-  \exp(-i{k_y}' y').
+  \exp(-i{k_y}' y')
+  =
+  {\sqrt{L_x}} e^{-i {k_y}'\mu}
+  \sqrt{\kappa}
+  \int_{-\infty}^{\infty} dy'\;
+  \vartheta_n \qty(\kappa y')
+  \exp(-i{k_y}' y')
 \end{equation}
-We know that $\{\chi_{\alpha}\}$ are well-known harmonic eigenfunctions(Gauss-Hermite functions) as given in the Eq. \eqref{1.47}. However, the equation in \eqref{3.30} represents the Fourier transform of the these Gauss-Hermite functions. Due to the symmetric condition [*Ref:E.Celeghini] the Fourier transform of these functions can be represent as
+We know that $\{\chi_{\alpha}\}$ are well-known harmonic eigenfunctions(with Gauss-Hermite functions) as given in the Eq. \eqref{1.47}. However, the equation in \eqref{3.30} represents the Fourier transform of the these Gauss-Hermite functions. Due to the symmetric condition [*Ref:E.Celeghini] the Fourier transform of these functions can be represent as
 \begin{equation} \label{3.31}
-  \mathcal{FT}[\Theta_n(ax+b),x,k] = \frac{i^n}{|a|}\exp(-\frac{ibk}{a})\Theta_n(k/a)
+  \mathcal{FT}[\vartheta_n(\kappa x),x,k] = \frac{i^n}{|\kappa|}\vartheta_n(k/\kappa)
 \end{equation}
 Therefore
 \begin{equation} \label{3.32}
   \Theta_{\alpha}({k_y}' ,t) =
-  \frac{\sqrt{2\pi}e^{-i {k_y}'\mu}}{\sqrt{L_x}}
-  \tilde{\chi}_{n}\qty({k_y}')
+  \sqrt{L_x}e^{-i {k_y}'\mu} \times \frac{i^n}{\sqrt{\kappa}} \vartheta_n \qty(\frac{{k_y}'}{\kappa}) =
+    \sqrt{L_x}e^{-i {k_y}'\mu}
+    \tilde{\chi}_{n}\qty({k_y}')
 \end{equation}
 where
 \begin{equation} \label{3.33}
-  \tilde{\chi}_{n}\qty({k_y}') \equiv
-  \frac{1}{\sqrt{2^{n}{\alpha}!}}  \cdot
-  \bigg(\frac{\hbar}{\pi m_e\omega_0}\bigg)^{1/4}
-  \cdot e^{-\frac{\hbar}{2 m_e\omega_0 } ({k_y}')^2} \cdot
-  \mathcal{H}_{\alpha} \bigg(\sqrt{\frac{\hbar}{m_e \omega_0}}{k_y}'\bigg)
+  \tilde{\chi}_{n}\qty(k) =
+  \frac{i^n}{\sqrt{2^{n} n! \sqrt{\pi}}}
+  \qty(\frac{1}{\kappa})^{1/2}
+  e^{-\frac{k^2}{\kappa^2}}
+  \mathcal{H}_{\alpha} \qty(\frac{k}{\kappa}).
 \end{equation}
 Using Eq. \eqref{3.32} and Eq. \eqref{3.22} we can derive that
 \begin{equation} \label{3.34}
   \begin{aligned}
-    \phi_{\alpha}(k_x,k_y,t)  =
+    \phi_{\alpha}(k_y,t)  =
     \exp(
       \frac{-i}{\hbar}
       \qty[
@@ -389,17 +398,17 @@ Using Eq. \eqref{3.32} and Eq. \eqref{3.22} we can derive that
       \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
       ]\sin(2\omega t)
     )
-    \delta\qty(k_x -\frac{p_x}{\hbar})
     \\
     & \times
-    \frac{i^n\sqrt{2\pi}e^{-i \qty(k_y -\gamma)\mu}}{\sqrt{L_x}}
+    {\sqrt{L_x}} e^{-i \qty(k_y -\gamma)\mu}
     \tilde{\chi}_{n}\qty(k_y -\gamma)
   \end{aligned}
 \end{equation}
-and this can be re-write subtituting $\mu$ and $\gamma$ values as follows
+where we included the $k_x$ dependence into $\alpha$ quantum number using $m$ value and this can be re-write subtituting $\mu$ and $\gamma$ values as follows
 \begin{equation} \label{3.35}
   \begin{aligned}
-    \phi_{\alpha}(k_x,k_y,t) & =
+    \phi_{\alpha}(k_y,t) & =
+    {\sqrt{L_x}}
     \exp(
       \frac{-i}{\hbar}
       \qty[
@@ -410,8 +419,7 @@ and this can be re-write subtituting $\mu$ and $\gamma$ values as follows
       \qty[
       \frac{(eE)^2\qty(\omega_0^2 + \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
       ]\sin(2\omega t)
-    )
-    \delta\qty(k_x -\frac{p_x}{\hbar})\\
+    ) \\
     & \times
     \exp(
       -ik_y  \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)}
@@ -430,26 +438,24 @@ and this can be re-write subtituting $\mu$ and $\gamma$ values as follows
       \qty[ \frac{eE\omega_0^2\cos(\omega t)}{\omega(\omega_0^2 - \omega^2)}]
       y_0
     )
-    \frac{i^n\sqrt{2\pi}}{\sqrt{L_x}}
     \tilde{\chi}_{n}\qty(k_y -\gamma)
   \end{aligned}
 \end{equation}
 and
 \begin{equation} \label{3.36}
   \begin{aligned}
-    \phi_{\alpha}(k_x,k_y,t) & =
+    \phi_{\alpha}(k_y,t) & =
+    {\sqrt{L_x}}
     \exp(
       \frac{i}{\hbar}
       \qty[
       \frac{(eE)^2\qty(3\omega_0^2 - \omega^2)}{8\omega m_e(\omega_0^2 - \omega^2)^2}
       ]\sin(2\omega t)
-    )
-    \delta\qty(k_x -\frac{p_x}{\hbar})\\
+    ) \\
     & \times
     \exp(
       -ik_y  \qty[\frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0]
     )
-    \frac{i^n\sqrt{2\pi}}{\sqrt{L_x}}
     \tilde{\chi}_{n}\qty(k_y -\gamma).
   \end{aligned}
 \end{equation}
@@ -471,15 +477,14 @@ with
 Therefore we can write Eq. \eqref{3.36} as
 \begin{equation} \label{3.40}
   \begin{aligned}
-    \phi_{\alpha}(k_x,k_y,t) & =
-    \frac{i^n\sqrt{2\pi}}{\sqrt{L_x}}
-    \delta\qty(k_x -\frac{p_x}{\hbar})
-    \exp(
+    \phi_{\alpha}(k_y,t) & =
+    {\sqrt{L_x}}
+    e^{
       ib\sin(2\omega t)
-    )
-    \exp(
+    }
+    e^{
       -ik_y  \qty[d\sin(\omega t) + y_0]
-    )
+    }
     \tilde{\chi}_{n}\qty(k_y -g\cos(\omega t)).
   \end{aligned}
 \end{equation}

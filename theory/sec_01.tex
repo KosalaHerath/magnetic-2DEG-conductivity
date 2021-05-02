@@ -443,11 +443,15 @@ In terms of the eigenvalues
 \begin{equation} \label{1.46}
   E_n = \hbar \omega_0 \big(n + \frac{1}{2}\big)
 \end{equation}
-of well-known harmonic eigenfucntions (Gauss-Hermite functions)
+of well-known harmonic eigenfucntions (using Gauss-Hermite functions $\vartheta$)
 \begin{equation} \label{1.47}
-  \chi_n(x) \equiv \frac{\sqrt{\kappa}}{\sqrt{2^{n}n!}}
-  e^{-\kappa^2 x^2}
-  \mathcal{H}_n \qty(\kappa x) \quad \text{where}
+  \chi_n(x) \equiv
+  \sqrt{\kappa} \vartheta(\kappa x) \quad \text{where}
+  \quad
+  \vartheta(x) =
+   \frac{1}{\sqrt{2^{n}n!}}
+  e^{-x^2/2}
+  \mathcal{H}_n \qty(x) \quad \text{with}
   \quad
   \kappa = \sqrt{\frac{m_e \omega_0}{\hbar}}
 \end{equation}
@@ -474,7 +478,7 @@ and using Green function method the solution can be write as
 \begin{equation} \label{1.51}
   \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
 \end{equation}
-form this solutions we are able to derive the final solutions $\alpha=(n,m)$ where $n,m \in \mathbb{Z}^{+}_0$ are two quantum numbers that describe the state of the electron, can be present as
+form this solutions we are able to derive the final solutions $\alpha=(n,m)$ where $n \in \mathbb{Z}^{+}_0 and m \in \mathbb{Z} $ are two quantum numbers that describe the state of the electron, can be present as
 \begin{equation} \label{1.52}
   \begin{aligned}
     \psi_{\alpha}(x,\tilde{y},t)  = & \frac{1}{\sqrt{L_x}} \chi_n\big(\tilde{y} - \zeta(t)\big) \\
@@ -487,5 +491,9 @@ form this solutions we are able to derive the final solutions $\alpha=(n,m)$ whe
      + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg])
   \end{aligned}
 \end{equation}
-and the exponential phase shifts represent the effect done by the stationary magnetic field and strong dressing field. In here $p_x$ is qunatized with the quantum number $m$ due to the spacial confinemnet in $x$ direction. Therefore we can assume that the magnetitranport properties of 2DEG will be renormalized by the magnetic field as well as the dressing field.
+and the exponential phase shifts represent the effect done by the stationary magnetic field and strong dressing field. In here $p_x$ is qunatized with the quantum number $m$ due to the spacial confinemnet in $x$ direction.
+\begin{equation} \label{1.53}
+  p_x = m\frac{2\pi \hbar}{L_x} \quad , \quad m = 0,\pm1,\pm2,...
+\end{equation}
+Therefore we can assume that the magnetitranport properties of 2DEG will be renormalized by the magnetic field as well as the dressing field.
 \hfill$\blacksquare$
