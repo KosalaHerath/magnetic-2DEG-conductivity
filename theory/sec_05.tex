@@ -4,134 +4,172 @@ We hace derived the inverse scattering time matrix element from previous section
 \begin{equation} \label{5.1}
   \begin{aligned}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
-    \frac { 4\pi^2 N_{imp}^2 V_{imp}}{eB L_x^2 L_y^4}
+    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N})
     \int_{-\infty}^{\infty} d {k'}_x
-    \int_{-\infty}^{\infty} d\bar{k} \;
     &
     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
-    {\chi}^2_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    {\chi}^2_{N}\qty(\frac{\hbar}{eB}
-    \qty[\bar{k} - ({k}_x  - {k'}_x)]).
+    \qty|
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
   \end{aligned}
 \end{equation}
 
 \noindent
-THe disorder in the system is not supposed to change the eigenenergies of the bare system, hence all off0diogonal elements of the self-energy were neglected. Thesefore we can consider only the diagonal elements of the inverse scattering time matrix
+The disorder in the system is not supposed to change the eigenenergies of the bare system, hence all off0diogonal elements of the self-energy were neglected. Thesefore we can consider only the diagonal elements of the inverse scattering time matrix
 \begin{equation} \label{5.2}
   \begin{aligned}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll}_{N} =
-    \frac { 4\pi^2 N_{imp}^2 V_{imp}}{eB L_x^2 L_y^4}
+    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N}) &
-    \int_{-\infty}^{\infty} d {k'}_x
-    \int_{-\infty}^{\infty} d\bar{k} \;
+    \int_{-\infty}^{\infty} d {k'}_x \;
     J_l^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     \\
     & \times
-    {\chi}^2_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    {\chi}^2_{N}\qty(\frac{\hbar}{eB}
-    \qty[\bar{k} - ({k}_x  - {k'}_x)])
+    \qty|
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
   \end{aligned}
 \end{equation}
-and introduce new variable as follows
-\begin{equation} \label{5.3}
-    y_1 = \frac{\hbar}{eB}[{k'}_x - k_x] \longrightarrow
-    d{k'}_x = \frac{eB}{\hbar}dy_1
-\end{equation}
-and
-\begin{equation} \label{5.4}
-    y_2 = \frac{\hbar}{eB}\bar{k} \longrightarrow
-    d\bar{k} = \frac{eB}{\hbar}dy_2
-\end{equation}
-then above equation modified to
-\begin{equation} \label{5.5}
-  \begin{aligned}
-    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll}_{N} =
-    \frac { 4\pi^2 N_{imp}^2 V_{imp} eB}{\hbar^2 L_x^2 L_y^4}
-    \delta(\varepsilon - \varepsilon_{N}) &
-    \int_{-\infty}^{\infty} dy_1
-    \int_{-\infty}^{\infty} dy_2 \;
-    J_l^2\qty({gy_1})
-    {\chi}^2_{N}\qty(y_2)
-    {\chi}^2_{N}\qty(y_1 + y_2).
-  \end{aligned}
-\end{equation}
+% and introduce new variable as follows
+% \begin{equation} \label{5.3}
+%     y_1 = \frac{\hbar}{eB}[{k'}_x - k_x] \longrightarrow
+%     d{k'}_x = \frac{eB}{\hbar}dy_1
+% \end{equation}
+% and
+% \begin{equation} \label{5.4}
+%     y_2 = \frac{\hbar}{eB}\bar{k} \longrightarrow
+%     d\bar{k} = \frac{eB}{\hbar}dy_2
+% \end{equation}
+% then above equation modified to
+% \begin{equation} \label{5.5}
+%   \begin{aligned}
+%     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll}_{N} =
+%     \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
+%     \qty(\frac{eB}{\hbar})^3
+%     \delta(\varepsilon - \varepsilon_{N}) &
+%     \int_{-\infty}^{\infty} dy_1\;
+%     J_l^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+%     \\
+%     & \times
+%     \qty|
+%     \int_{-\infty}^{\infty} d\bar{k} \;
+%     {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
+%   \end{aligned}
+% \end{equation}
 
 \noindent
 Lets consider how this expression change when we have turn off the dressing field ($E = 0$). Thesefore the inverse scattering time becomes valid for only $l=0$
-\begin{equation} \label{5.6}
+\begin{equation} \label{5.3}
   \begin{aligned}
-    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N}\Bigg|_{E=0} & =
-    \frac { 4\pi^2 N_{imp}^2 V_{imp} eB}{\hbar^2 L_x^2 L_y^4}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N}\Bigg|_{E=0}  =
+    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N})
-    \int_{-\infty}^{\infty} dy_1
-    \int_{-\infty}^{\infty} dy_2 \;
-    J_0^2\qty(0)
-    {\chi}^2_{N}\qty(y_2)
-    {\chi}^2_{N}\qty(y_1 + y_2) \\
-    & =
-    \frac { 4\pi^2 N_{imp}^2 V_{imp} eB}{\hbar^2 L_x^2 L_y^4}
-    \delta(\varepsilon - \varepsilon_{N})
-    \int_{-\infty}^{\infty} dy_1
-    \int_{-\infty}^{\infty} dy_2 \;
-    {\chi}^2_{N}\qty(y_2)
-    {\chi}^2_{N}\qty(y_1 + y_2)
+    \int_{-\infty}^{\infty} d {k'}_x \;
+    \qty|
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
   \end{aligned}
 \end{equation}
-
 
 \noindent
 Thesefore we can analyze the behaviour of the inverse scattering time with
 $l=0$ central element of the matrix.
-\begin{equation} \label{5.7}
+\begin{equation} \label{5.4}
     \Lambda_{00} \equiv
     \frac{\qty(1/\tau)^{00}_{N}}{\qty(1/\tau)^{00}_{N}\big|_{E=0}}
 \end{equation}
 and this will be
-\begin{equation} \label{5.8}
+\begin{equation} \label{5.5}
     \Lambda_{00}(k_x) =
     \frac
-    {\int_{-\infty}^{\infty} dy_1
-    \int_{-\infty}^{\infty} dy_2 \;
-    J_0^2\qty({gy_1})
-    {\chi}^2_{N}\qty(y_2)
-    {\chi}^2_{N}\qty(y_1 + y_2)}
-    {\int_{-\infty}^{\infty} dy_1
-    \int_{-\infty}^{\infty} dy_2 \;
-    {\chi}^2_{N}\qty(y_2)
-    {\chi}^2_{N}\qty(y_1 + y_2)}
+    {\int_{-\infty}^{\infty} d {k'}_x \;
+    J_l^2\qty(g\gamma[{k}_x - {k'}_x])
+    \qty|
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    {\chi}_{N}\qty(\gamma\bar{k})
+    {\chi}_{N}\qty(\gamma\qty[{k'}_x - {k}_x - \bar{k}])|^2}
+    {\int_{-\infty}^{\infty} d {k'}_x \;
+    \qty|
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    {\chi}_{N}\qty(\gamma\bar{k})
+    {\chi}_{N}\qty(\gamma \qty[{k'}_x - {k}_x - \bar{k}])|^2}
 \end{equation}
 where
-\begin{equation} \label{5.9}
-    g = \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)}
+\begin{equation} \label{5.6}
+    g = \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)} \quad\quad
+    \gamma = \frac{\hbar}{eB}
 \end{equation}
 and
+\begin{equation} \label{5.7}
+  \chi_N(y) = \frac{\sqrt{\kappa}}{\sqrt{2^{N}N!\sqrt{\pi}}}
+  \exp(-\frac{\kappa^2 y^2}{2})
+  \mathcal{H}_N\qty(\kappa y) \quad \text{with} \quad
+  \kappa \equiv \sqrt{\frac{m_e \omega_0}{\hbar}}.
+\end{equation}
+
+\noindent
+Lets calculate these constants for GaAs-based quantum well with following given system external paramters and physical constants.
+\begin{table}[ht!]
+\begin{center}
+\begin{tabular}{ |l|c|l| }
+ \hline
+ \textbf{External paramter name} & \textbf{Symbol} & \textbf{Value in SI-units} \\ [0.5ex] \hline\hline
+ Average intensity  & $I$ & $200\;\text{W}/\text{cm}^{2} = 2\times10^6\;\text{W}/\text{m}^{2}$ \\ \hline
+ Magnetic field & $B$ & $1.2\;\text{T}$ \\ \hline
+ Driving frequency & $\omega$ & $2\times10^{12} \;\text{rad}\text{s}^{-1}$ \\ \hline
+ Effective mass &  $m_e$ & $0.071\times m = 6.467 \times10^{-32} \; \text{kg}$ \\ \hline
+\end{tabular}
+\caption {\label{tab:5.1}System external paramter values}
+\end{center}
+\end{table}
+
+\begin{table}[ht!]
+\begin{center}
+\begin{tabular}{ |l|c|l| }
+ \hline
+ \textbf{Physical constant name} & \textbf{Symbol} & \textbf{Value in SI-units} \\ [0.5ex] \hline\hline
+ Electron charge  & e & $1.602\times10^{-19} \;\text{C}$ \\ \hline
+ Electron mass & $m$ & $9.109\times10^{-31}\; \text{kg}$ \\ \hline
+ Reduced Planck's constant &  $\hbar$ & $1.054\times10^{-34} \;\text{kg}\text{m}^2\text{s}^{-1}$ \\ \hline
+ Speed of light & $c$ & $2.998\times10^8\; \text{ms}^{-1}$ \\ \hline
+ Vacuum permittivity & $\varepsilon_0$ & $8.854\times10^{-12}\; \text{C}^{2}\text{s}^2\text{kg}^{-1}\text{m}^{-3}$ \\ \hline
+\end{tabular}
+\caption {\label{tab:5.2}Physical constant values in SI-units}
+\end{center}
+\end{table}
+
+\noindent
+Therfore we can calculate following values
+\begin{equation} \label{5.8}
+  \omega_0 = \frac{eB}{m_e} = 2.97265 \times 10^{12}\; \text{s}^{-1}
+\end{equation}
+\begin{equation} \label{5.9}
+  \gamma = \frac{\hbar}{eB} = 5.4851 \times 10^{-16}\; \text{m}^{2}
+\end{equation}
 \begin{equation} \label{5.10}
-  \chi_N(y) = \frac{\sqrt{\mu}}{\sqrt{2^{N}N!\sqrt{\pi}}}
-  \exp(-\frac{\mu^2 y^2}{2})
-  \mathcal{H}_N\qty(\mu y) \quad \text{with} \quad
-  \mu \equiv \sqrt{\frac{m_e \omega_0}{\hbar}}
+  g = \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)}
+  = 5.38756 \times 10^{7}\; \text{m}^{-1}
 \end{equation}
-and this implies
 \begin{equation} \label{5.11}
-  \chi^2_N(y) = \frac{{\mu}}{{2^{N}N!\sqrt{\pi}}}
-  \exp(-{\mu^2 y^2})
-  \mathcal{H}^2_N\qty(\mu y).
+  \kappa = \sqrt{\frac{m_e \omega_0}{\hbar}}
+  = 4.2698 \times 10^{7}\; \text{m}^{-1}
 \end{equation}
-
-
-
-
-
-
-
-
-
-
-
-
+Since
+\begin{equation} \label{5.12}
+  g\gamma
+  = 2.95513 \times 10^{-8}\; \text{m} \quad \text{and} \quad
+  \kappa\gamma = 2.34202 \times 10^{-8}\; \text{m}
+\end{equation}
+we can choose our integral dummy variables ${k'}_x$, $\bar{k}$ and momentum variable $k_x$ are in one range as follows
+\begin{equation} \label{5.13}
+  {k'}_x,\bar{k},k_x \approx 10^{-8}\; \text{m}^{-1}
+\end{equation}
 
 
 

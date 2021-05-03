@@ -504,17 +504,18 @@ and this becomes
 >>>>>>>>>>> REDO FROM HERE <<<<<<<<<<<<<
 
 \noindent
-Considering orthonormality of Gusee-Hermite functions we can reduce these intragal into one variable and derive
+We can reduce these intragal into one variable and derive
 \begin{equation} \label{4.52}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
-      \qty[\frac { 32\pi^5 N_{imp}^2 |V_{{k'}_x,k_x}|^2}{L_x^2 L_y^4}] &
+      \qty[\frac { N_{imp}^2 A^2 |V_{{k'}_x,k_x}|^2}{4\pi^2}] &
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta^2(\varepsilon_{\beta} - \varepsilon) \\
       & \times
+      \qty|
       \int_{-\infty}^{\infty} dy \;
-      \tilde{\chi}^2_{n_{\beta}}\qty(y)
-      \tilde{\chi}^2_{n_{\beta}}\qty(y_0 - {y'}_0 - y).
+      {\chi}_{n_{\beta}}\qty(y)
+      {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)|^2.
   \end{aligned}
 \end{equation}
 Then desribing the square of the delta distribution using following procedure
@@ -529,14 +530,15 @@ one can modify our derivation in Eq. \eqref{4.51} as
 \begin{equation} \label{4.54}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
-      \qty[\frac { 32\pi^5 N_{imp}^2 |V_{{k'}_x,k_x}|^2}{L_x^2 L_y^4}] &
+      \qty[\frac { N_{imp}^2 A^2 |V_{{k'}_x,k_x}|^2}{4\pi^2}] &
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta(\varepsilon_{\beta} - \varepsilon)
       \frac{t}{2\pi \hbar}\\
       & \times
+      \qty|
       \int_{-\infty}^{\infty} dy \;
-      \tilde{\chi}^2_{n_{\beta}}\qty(y)
-      \tilde{\chi}^2_{n_{\beta}}\qty(y_0 - {y'}_0 - y).
+      {\chi}_{n_{\beta}}\qty(y)
+      {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)|^2.
   \end{aligned}
 \end{equation}
 Then performing thetime derivation of each matrix element yeild the \textit{transition amplitude matrix} as folllows
@@ -548,15 +550,16 @@ Then performing thetime derivation of each matrix element yeild the \textit{tran
     \Lambda |V_{{k'}_x,k_x}|^2
     \delta(\varepsilon_{\beta} - \varepsilon)
     J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
+    \qty|
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}^2_{n_{\beta}}\qty(y)
-    \tilde{\chi}^2_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)|^2
   \end{aligned}
 \end{equation}
 where
 \begin{equation} \label{4.56}
     \Lambda \equiv
-    \frac { 16\pi^4 N_{imp}^2}{L_x^2 L_y^4 \hbar}
+    \frac { N_{imp}^2 A^2}{8\pi^3 \hbar}
 \end{equation}
 
 \noindent
@@ -576,9 +579,10 @@ and this leads Eq. \eqref{4.56} to
     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
+    \qty|
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}^2_{n_{\beta}}\qty(y)
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)|^2
   \end{aligned}
 \end{equation}
 
@@ -586,42 +590,44 @@ and this leads Eq. \eqref{4.56} to
 An impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2} = V_{imp}$ and the inverse scattering time matrix is the sum over all momentum over the transition probability matrix
 \begin{equation} \label{4.59}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} \equiv
-    \frac{1}{L_x L_y} \sum_{{k'}_x}
+    \frac{1}{L_x} \sum_{{k'}_x}
     \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp}
 \end{equation}
 and this implies
 \begin{equation} \label{4.60}
   \begin{aligned}
     \Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x) =
-    \frac{\Lambda V_{imp}}{L_x L_y} \sum_{{k'}_x}
+    \frac{\Lambda V_{imp}}{L_x} \sum_{{k'}_x}
     \delta(\varepsilon_{\beta} - \varepsilon) &
     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
+    \qty|
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}^2_{n_{\beta}}\qty(y)
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)|^2
   \end{aligned}
 \end{equation}
-For the 2-dimentional case introduce the momentum continuum limit as folllows
+For the 1-dimentional case introduce the momentum continuum limit as folllows
 \begin{equation} \label{4.61}
-    \frac{1}{L_x L_y} \sum_{{k'}_x} \longrightarrow
-    \frac{1}{4\pi^2}\int d {k'}_x
+    \frac{1}{L_x} \sum_{{k'}_x} \longrightarrow
+    \frac{1}{2\pi}\int d {k'}_x
 \end{equation}
 and this leads to
 \begin{equation} \label{4.62}
   \begin{aligned}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
-    \frac{\Lambda V_{imp}}{4\pi^2}
+    \frac{\Lambda V_{imp}}{2\pi}
     \delta(\varepsilon_{\beta} - \varepsilon)
     \int_{-\infty}^{\infty} d {k'}_x
     &
     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
+    \qty|
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}^2_{n_{\beta}}\qty(y)
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)|^2
   \end{aligned}
 \end{equation}
 Using following subtitution
@@ -633,52 +639,53 @@ we can modify above derivation as
 \begin{equation} \label{4.64}
   \begin{aligned}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
-    \frac{\Lambda V_{imp}}{4\pi^2}
+    \frac{\Lambda V_{imp}}{2\pi}
     \delta(\varepsilon_{\beta} - \varepsilon)
     \int_{-\infty}^{\infty} d {k'}_x
     &
     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
-    \frac{\hbar }{eB}
+    \qty(\frac{\hbar }{eB})^2
+    \qty|
     \int_{-\infty}^{\infty} d\bar{k} \;
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}]).
+    {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2,
   \end{aligned}
 \end{equation}
-Since squared Guess-Hermite functions are even function around zero we can re-write above derived expression as
-\begin{equation} \label{4.65}
-  \begin{aligned}
-    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
-    \frac{\Lambda V_{imp}}{4\pi^2}
-    \delta(\varepsilon_{\beta} - \varepsilon)
-    \int_{-\infty}^{\infty} d {k'}_x
-    &
-    J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
-    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
-    & \times
-    \frac{\hbar }{eB}
-    \int_{-\infty}^{\infty} d\bar{k} \;
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
-    \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}
-    \qty[\bar{k} - ({k}_x  - {k'}_x)])
-  \end{aligned}
-\end{equation}
+% Since squared Guess-Hermite functions are even function around zero we can re-write above derived expression as
+% \begin{equation} \label{4.65}
+%   \begin{aligned}
+%     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
+%     \frac{\Lambda V_{imp}}{2\pi}
+%     \delta(\varepsilon_{\beta} - \varepsilon)
+%     \int_{-\infty}^{\infty} d {k'}_x
+%     &
+%     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+%     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
+%     & \times
+%     \frac{\hbar }{eB}
+%     \int_{-\infty}^{\infty} d\bar{k} \;
+%     \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}\bar{k})
+%     \tilde{\chi}^2_{n_{\beta}}\qty(\frac{\hbar}{eB}
+%     \qty[\bar{k} - ({k}_x  - {k'}_x)])
+%   \end{aligned}
+% \end{equation}
 and finally we can derive our expression for the \textit{inverse
 scattering time matrix} for $N$th Landau level (let $n_{\alpha} = n_{\beta} = N$)
-\begin{equation} \label{4.66}
+\begin{equation} \label{4.65}
   \begin{aligned}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
-    \frac { 4\pi^2 N_{imp}^2 V_{imp}}{eB L_x^2 L_y^4}
+    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N})
     \int_{-\infty}^{\infty} d {k'}_x
-    \int_{-\infty}^{\infty} d\bar{k} \;
     &
     J_l\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
-    \tilde{\chi}^2_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    \tilde{\chi}^2_{N}\qty(\frac{\hbar}{eB}
-    \qty[\bar{k} - ({k}_x  - {k'}_x)]).
+    \qty|
+    \int_{-\infty}^{\infty} d\bar{k} \;
+    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
+    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
   \end{aligned}
 \end{equation}
