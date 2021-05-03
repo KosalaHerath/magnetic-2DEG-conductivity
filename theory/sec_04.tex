@@ -106,7 +106,7 @@ Since our $t-t'$ Floquet states are orthonormal [*Ref:myReport- t-t' formalism] 
     V(\mb{r}) \ket{\psi_{\alpha}(t_1,t')}.
   \end{aligned}
 \end{equation}
-Now, set $t_0 = 0$ and for a case $\alpha \neq \beta$ this will simplied to
+Now, set $t_0 = 0$ and for a case $\alpha \neq \beta$ where we can represent $\alpha = (n_{\alpha},m_{\alpha})$ and $\beta = (n_{\beta},m_{\beta})$ and this will simplied to
 \begin{equation} \label{4.16}
   \begin{aligned}
     \braket{\psi_{\beta}(t,t')}{\Psi_{\alpha}(t,t')} =
@@ -158,7 +158,7 @@ Now consider a scattering event
 
 \noindent
 Here we need to undestand a state of this considering system only be represented by two independent quantum numbers which are $n$ energy eigen
-states and $k_x = p_x/\hbar$ qunatized momentum in $x$ direction values. Lets calculate the scattering amplitutde of the above mentioned scattering scenario using the equation derived in \eqref{4.18}.
+states and $m$ quantum number which represents the qunatized momentum in $x$ direction values. Lets calculate the scattering amplitutde of the above mentioned scattering scenario using the equation derived in \eqref{4.18}.
 \begin{equation} \label{4.21}
   \begin{aligned}
     a_{\alpha\beta}(\mb{k'},\mb{k},t,t') & =
@@ -209,14 +209,14 @@ Now lets consider about the inner product of the above derivation. Using complet
     \braket{\mb{k}}{\phi_{\alpha,\mb{k}}(t')}
   \end{aligned}
 \end{equation}
-and seperating $x$ and $y$ directional momentums we can modify this as follows (Assuming $L_y \rightarrow \infty$)
+and seperating $x$ and $y$ directional momentums we can modify this as follows (Assuming $L_y \rightarrow \infty$) and then using $\frac{1}{L_y}\sum_{k_y} = \frac{1}{2\pi}\int k_y$
 \begin{equation} \label{4.24}
   \begin{aligned}
     Q & \equiv
     \bra{\phi_{\beta,\mb{k'}}(t')}
     V(\mb{r}) \ket{\phi_{\alpha,\mb{k}}(t')} \\
     & =
-    \frac{1}{L_y}
+    \frac{L_y^2}{4 \pi^2}
     \sum_{k_x}\sum_{{k'}_x}
     \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
     \phi_{\beta}(\mb{k'},t')
@@ -304,13 +304,12 @@ Therefore, using the Eq. \eqref{3.36}, the Eq. \eqref{4.24} modified to (we can 
   \begin{aligned}
     Q & =
     \sum_{k_x}\sum_{{k'}_x}
-    \frac{N_{imp} V_{{k'}_x,k_x}}{L_y^2}
+    \frac{N_{imp} L_y V_{{k'}_x,k_x}}{4\pi^2}
     \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
     \delta({k'}_y - k_y)
     \\
     & \times
-    \frac{-i^{n_{\beta}}\sqrt{2\pi}}{\sqrt{L_x}}
-    \delta\qty({k'}_x -\frac{p_{x_{\beta}}}{\hbar})
+    \sqrt{L_x}
     \exp(
       -ib\sin(2\omega t)
     )
@@ -320,8 +319,7 @@ Therefore, using the Eq. \eqref{3.36}, the Eq. \eqref{4.24} modified to (we can 
     \tilde{\chi}_{n_{\beta}}\qty({k'}_y -g\cos(\omega t))
     \\
     & \times
-    \frac{i^{n_{\alpha}}\sqrt{2\pi}}{\sqrt{L_x}}
-    \delta\qty(k_x -\frac{p_{x_{\alpha}}}{\hbar})
+    \sqrt{L_x}
     \exp(
       ib\sin(2\omega t)
     )
@@ -334,22 +332,16 @@ Therefore, using the Eq. \eqref{3.36}, the Eq. \eqref{4.24} modified to (we can 
 and we can simplify this as
 \begin{equation} \label{4.35}
   \begin{aligned}
-    Q & =
-    \sum_{k_x}\sum_{{k'}_x}
-    \frac{N_{imp} V_{{k'}_x,k_x}}{L_y^2}
+    Q =
+    \sum_{k_x}\sum_{{k'}_x} &
+    \frac{N_{imp} L_xL_y V_{{k'}_x,k_x}}{4\pi^2}
     \int_{-\infty}^{\infty} dk_y \;
     \\
     & \times
-    \frac{-i^{n_{\beta}}\sqrt{2\pi}}{\sqrt{L_x}}
-    \delta\qty({k'}_x -\frac{p_{x_{\beta}}}{\hbar})
     \exp(
       i{k}_y {y'}_0
     )
     \tilde{\chi}_{n_{\beta}}\qty({k}_y -g\cos(\omega t))
-    \\
-    & \times
-    \frac{i^{n_{\alpha}}\sqrt{2\pi}}{\sqrt{L_x}}
-    \delta\qty(k_x -\frac{p_{x_{\alpha}}}{\hbar})
     \exp(
       -ik_y y_0
     )
@@ -361,10 +353,7 @@ and this can re-write as
   \begin{aligned}
     Q =
     \sum_{k_x}\sum_{{k'}_x}
-    \frac{-2\pi N_{imp} V_{{k'}_x,k_x} i^{n_{\alpha} + n_{\beta}}}{L_x L_y^2} &
-    \delta\qty({k'}_x -\frac{p_{x_{\beta}}}{\hbar})
-    \delta\qty(k_x -\frac{p_{x_{\alpha}}}{\hbar})
-    I
+    \frac{N_{imp} L_xL_y V_{{k'}_x,k_x}}{4\pi^2} I
   \end{aligned}
 \end{equation}
 where
@@ -401,6 +390,7 @@ Lets consider about this integral and we can calculate it as using the following
 and this leads to
 \begin{equation} \label{4.40}
     I \equiv
+    2\pi \times \frac{1}{2\pi}
     \int_{-\infty}^{\infty} d\bar{k}_y \;
     \tilde{\chi}_{n_{\alpha}}^2 \qty(\bar{k}_y)
     \exp(
@@ -410,21 +400,20 @@ and this leads to
 Using Fourier transform of Gauss-Hermite functions and convolution theorem we can write this as
 \begin{equation} \label{4.41}
     I \equiv
-    \sqrt{2\pi}
+    {2\pi}
     \exp(g[{y'}_0 - y_0]\cos(\omega t))
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}_{n_{\beta}}\qty(y)
-    \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y).
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y).
 \end{equation}
 Therefore the scatterng amplitude \eqref{4.22} will modified to
 \begin{equation} \label{4.42}
   \begin{aligned}
     a_{\alpha\beta}({k'}_x,k_x,t)  =
-    \delta(\varepsilon_{\beta} - \varepsilon) &
+    -2\pi i
+    \delta(\varepsilon_{\beta} - \varepsilon)
     \sum_{k_x}\sum_{{k'}_x}
-    \frac { 4\pi^2 i N_{imp} V_{{k'}_x,k_x}}{L_x L_y^2}
-    \delta\qty({k'}_x -\frac{p_{x_{\beta}}}{\hbar})
-    \delta\qty(k_x -\frac{p_{x_{\alpha}}}{\hbar})I
+    \frac{N_{imp} L_xL_y V_{{k'}_x,k_x}}{4\pi^2} I
   \end{aligned}
 \end{equation}
 Consideirng qunatized momentum given in $x$ direction derived in Eq. \eqref{2.4}, we can identify the non-zero values for scattering amplitude using following conditions
@@ -438,12 +427,12 @@ Then we can simplfied scattering amplitude for given ${k'}_x$ and $k_x$ as
   \begin{aligned}
     a_{\alpha\beta}({k'}_x,k_x,t)  =
     \delta(\varepsilon_{\beta} - \varepsilon)
-    \qty[\frac { 4\pi^2 i \sqrt{2\pi} N_{imp} V_{{k'}_x,k_x}}{L_x L_y^2}]&
+    \qty[\frac{-i N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]&
     \exp(g[{y'}_0 - y_0]\cos(\omega t)) \\
     & \times
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}_{n_{\beta}}\qty(y)
-    \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
   \end{aligned}
 \end{equation}
 Since this scattering amplitude is time-periodic we can write this as a Fourier series expansion
@@ -460,12 +449,12 @@ we can re-write the Eq.\eqref{4.44} as folllows
   \begin{aligned}
     a_{\alpha\beta}({k'}_x,k_x,t)  =
     \delta(\varepsilon_{\beta} - \varepsilon)
-    \qty[\frac { 4\pi^2 i \sqrt{2\pi} N_{imp} V_{{k'}_x,k_x}}{L_x L_y^2}]&
+    \qty[\frac{-i N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]&
     \sum_{l=-\infty}^{\infty} i^l J_l\qty(g[{y'}_0 - y_0]) e^{-il\omega t}\\
     & \times
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}_{n_{\beta}}\qty(y)
-    \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
   \end{aligned}
 \end{equation}
 \begin{equation} \label{4.48}
@@ -473,23 +462,23 @@ we can re-write the Eq.\eqref{4.44} as folllows
     a_{\alpha\beta}({k'}_x,k_x,t)  =
     \sum_{l=-\infty}^{\infty}
     \delta(\varepsilon_{\beta} - \varepsilon) &
-    \qty[\frac { 4\pi^2 i^{l+1} \sqrt{2\pi} N_{imp} V_{{k'}_x,k_x}}{L_x L_y^2}]
+    \qty[\frac{-i^{l+1} N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]
     J_l\qty(g[{y'}_0 - y_0]) \\
     & \times
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}_{n_{\beta}}\qty(y)
-    \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y) e^{-il\omega t}
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y) e^{-il\omega t}
   \end{aligned}
 \end{equation}
 Then we can identified the Fourier series component as
 \begin{equation} \label{4.49}
     a^l_{\alpha\beta}({k'}_x,k_x) =
     \delta(\varepsilon_{\beta} - \varepsilon)
-    \qty[\frac { 4\pi^2 i^{l+1} \sqrt{2\pi} N_{imp} V_{{k'}_x,k_x}}{L_x L_y^2}]
+    \qty[\frac{-i^{l+1} N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]
     J_l\qty(g[{y'}_0 - y_0])
     \int_{-\infty}^{\infty} dy \;
-    \tilde{\chi}_{n_{\beta}}\qty(y)
-    \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
 \end{equation}
 Now one can introduce the definition of the \textit{transition probability matrix} as
 \begin{equation} \label{4.50}
@@ -500,18 +489,21 @@ and this becomes
 \begin{equation} \label{4.51}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} & =
-      \qty[\frac { 32\pi^5 N_{imp}^2 |V_{{k'}_x,k_x}|^2}{L_x^2 L_y^4}]
+      \qty[\frac { N_{imp}^2 A^2 |V_{{k'}_x,k_x}|^2}{4\pi^2}]
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta^2(\varepsilon_{\beta} - \varepsilon) \\
       & \times
       \int_{-\infty}^{\infty} dy \;
-      \tilde{\chi}_{n_{\beta}}\qty(y)
-      \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
+      {\chi}_{n_{\beta}}\qty(y)
+      {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)
       \int_{-\infty}^{\infty} d\bar{y} \;
-      \tilde{\chi}_{n_{\beta}}\qty(\bar{y})
-      \tilde{\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - \bar{y}).
+      {\chi}_{n_{\beta}}\qty(\bar{y})
+      {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - \bar{y}).
   \end{aligned}
 \end{equation}
+>>>>>>>>>>> REDO FROM HERE <<<<<<<<<<<<<
+
+\noindent
 Considering orthonormality of Gusee-Hermite functions we can reduce these intragal into one variable and derive
 \begin{equation} \label{4.52}
   \begin{aligned}
