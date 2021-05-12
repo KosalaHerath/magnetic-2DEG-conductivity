@@ -1,0 +1,147 @@
+\section{Current Operator in Landau Levels}
+
+Now consider about the current density operator for $N$th Landau level. Since we have already found the extact solution for our time depenedent Hamiltonian and we have derive them as Floquet states with quesi energies. Using second quantization notaion we can represent our Hamiltonian using creating and anhilation operators for Floquet states which are eigen function of this Hamiltonian.
+
+\vspace{5mm}
+\noindent
+Let's introduce our creation and anhilation operators in momentum space for the $N$th Landau level states as follows
+\begin{equation} \label{7.1}
+  c_{k_x}^{\dagger} \ket{0} = \ket{\psi_{N,k_x}} \quad \text \quad
+  c_{k_x} \ket{\psi_{N,k_x}}  = \ket{0}.
+\end{equation}
+Therefore with second quantization we can represent our Hamiltonian as
+\begin{equation} \label{7.2}
+  \hat{H}_N = \sum_{k_x} \varepsilon_N c_{k_x}^{\dagger}c_{k_x}
+\end{equation}
+and particle density operator as
+\begin{equation} \label{7.3}
+  \hat{\rho}_N = \sum_{{k'}_x} c_{{k'}_x}^{\dagger}c_{{k'}_x}.
+\end{equation}
+
+\noindent
+Now we can find the commutation relationship with each other as
+\begin{equation} \label{7.4}
+  \qty[\hat{H}_N , \hat{\rho}_N] =
+  \qty[ \sum_{k_x} \varepsilon_N c_{k_x}^{\dagger}c_{k_x},
+  \sum_{{k'}_x} c_{{k'}_x}^{\dagger}c_{{k'}_x}]
+\end{equation}
+and this can be simplified using fermions commutation relationship and one can derive that
+\begin{equation} \label{7.5}
+  \qty[\hat{H}_N , \hat{\rho}_N] =
+   \sum_{k_x} \varepsilon_N c_{k_x}^{\dagger}c_{k_x}.
+\end{equation}
+Now using \textit{Liouville-Von Neumann equation} we can derive that
+\begin{equation} \label{7.6}
+  \pdv{\hat{\rho}_N}{t} =
+   -\frac{i}{\hbar}\qty[\hat{H}_N , \hat{\rho}_N] =
+   \sum_{k_x} -\frac{i}{\hbar}\varepsilon_N c_{k_x}^{\dagger}c_{k_x}
+\end{equation}
+and using famous \textit{continuty equation} we can make relationship with probability current density ($\mb{j}(\mb{r},t)$) operator as follows
+\begin{equation} \label{7.7}
+  \pdv{\hat{\rho}_N}{t} = - \grad \cdot \hat{\mb{j}}(\mb{r},t).
+\end{equation}
+However, we can assume that the current flow of this system only can be happed in $x$ direction due to $y$ direction restriction by magnetic leangth. Therefore we can re-write the above equation as follows
+\begin{equation} \label{7.8}
+  \pdv{\hat{\rho}_N}{t} = - \pdv{\hat{jx}^x(\mb{r},t)}{x}
+\end{equation}
+and using this on Eq. \eqref{7.6} we can derive that
+\begin{equation} \label{7.9}
+ - \pdv{\hat{j^x}(\mb{r},t)}{x} =
+ \sum_{k_x} -\frac{i}{\hbar}\varepsilon_N c_{k_x}^{\dagger}c_{k_x}
+\end{equation}
+and this leads to
+\begin{equation} \label{7.10}
+ \hat{j}^x(\mb{r},t) =
+ \sum_{k_x} -\frac{i L_x}{\hbar}\varepsilon_N c_{k_x}^{\dagger}c_{k_x}.
+\end{equation}
+Therefore we can identify the momentum space component of the current density operator as
+\begin{equation} \label{7.11}
+ - {j}^x(k_x,t) =
+ -\frac{i L_x}{\hbar}\varepsilon_N
+\end{equation}
+and find the time space fourier series components and this will vanish all the components expect $s=0$ components because
+\begin{equation} \label{7.12}
+ \int dt e^{-is\omega t} = 2\pi \delta_{s,0}
+\end{equation}
+and then we can find the time fourier series components of current operator as follows
+\begin{equation} \label{7.13}
+ {j}^x_{s=0} (k_x,t) =
+ \frac{i 2\pi L_x}{\hbar}\varepsilon_N =
+ i 2\pi \omega_0 L_x \qty(N + \frac{1}{2})
+\end{equation}
+and for electric current flow we can introfuce the electron's charge as $-e$ and this will be modified to
+\begin{equation} \label{7.14}
+ {j}^x_{s=0} (k_x,t) =
+ -i 2\pi e \omega_0 L_x \qty(N + \frac{1}{2})
+\end{equation}
+\hfill$\blacksquare$
+
+\noindent
+Now we can use this in our previously derived conductivity formula \eqref{6.20} and get
+\begin{equation} \label{7.15}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] =
+    \frac{\hbar}{4\pi A L_x}
+    \sum_{{k_x}}
+    \qty[-i 2\pi e \omega_0 L_x \qty(N + \frac{1}{2})]^2
+    \frac{\hbar^2}
+    {\qty[\Gamma^{00}_{N}(\varepsilon_F,k_x)]^2}
+    \qty[
+      1 -
+      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon_F,k_x)})^2
+    ]
+  \end{aligned}
+\end{equation}
+and this leads to
+\begin{equation} \label{7.16}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] =
+    \frac{\pi e^2 \omega_0^2 \hbar}{L_x}
+    \sum_{{k_x}}
+    \qty(N + \frac{1}{2})^2
+    \frac{\hbar^2}
+    {\qty[\Gamma^{00}_{N}(\varepsilon_F,k_x)]^2}
+    \qty[
+      1 -
+      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon_F,k_x)})^2
+    ].
+  \end{aligned}
+\end{equation}
+However we know that $\Gamma^{00}_{N}(\varepsilon_F,k_x)$ is independent of $k_x$ and we can get summation over availble all momentum through the summation. However by the condition that the center of the force of the oscillator $y_0$ must physically liw within the system $-L_y/2 < y_0 < L_y/2$, one can derive that
+\begin{equation} \label{7.17}
+ -\frac{m\omega_0 Ly}{2\hbar} \leq k_x \leq \frac{m\omega_0 Ly}{2\hbar}
+\end{equation}
+Therefore the Eq. \eqref{7.16} can be simplified to
+\begin{equation} \label{7.18}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] =
+    \frac{\pi e^2 \omega_0^2 \hbar}{L_x}
+    \frac{m\omega_0 Ly}{\hbar}
+    \qty(N + \frac{1}{2})^2
+    \frac{\hbar^2}
+    {\qty[\Gamma^{00}_{N}]^2}
+    \qty[
+      1 -
+      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}})^2
+    ]
+  \end{aligned}
+\end{equation}
+and this will becomes
+\begin{equation} \label{7.19}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] =
+    {\pi e^2 \omega_0 m }
+    \frac{\qty(\hbar \omega_0)^2}
+    {\qty[\Gamma^{00}_{N}]^2}
+    \qty(N + \frac{1}{2})^2
+    \qty[
+      1 -
+      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}})^2
+    ].
+  \end{aligned}
+\end{equation}
+\hfill$\blacksquare$
