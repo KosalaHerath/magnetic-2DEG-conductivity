@@ -1,335 +1,154 @@
-\section{Floquet Conductivity in Landau Levels}
+\section{Current Operator in Landau Levels}
 
-Now we can derive conductivity expression for a given Landau level using Floquet conductivity expression derived in [*Ref:my report 2.488]. Before that let's consider the inverse scattering time matrix element in the previous section. From Eq. \eqref{5.3} we can express the $N$th Landau level's inverse scattering time central element ($n=n'=0$) as
+Now consider about the current density operator for $N$th Landau level. Since we have already found the extact solution for our time depenedent Hamiltonian and we have identify them as Floquet states with quesi energies. From these solutions we can identify the \textit{Floquet modes} as given in Eq. \eqref{3.15} and using quantum numbers we can represent those states as follows
 \begin{equation} \label{6.1}
-  \begin{aligned}
-    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N} =
-    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
-    \delta(\varepsilon - \varepsilon_{N}) &
-    \int_{-\infty}^{\infty} d {k'}_x \;
-    J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
-    \\
-    & \times
-    \qty|
-    \int_{-\infty}^{\infty} d\bar{k} \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
-  \end{aligned}
+  \ket{\phi_{\alpha}} = \ket{\phi_{n,m}} \equiv \ket{n,k_x} \quad
+  \text{where} \quad
+  k_x = m \frac{2\pi}{L_x}
 \end{equation}
-Now we can introduce a new parameter with physical meaning of scatterin-induced broading of the Landau level as follows
+Using above complete set of eigenstates of Floquet Hamiltonian we can represent the single particle current operator's matrix element as
 \begin{equation} \label{6.2}
-  \Gamma^{00}_{N}(\varepsilon,k_x) \equiv \hbar \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N}
+  \qty(\mb{j})_{nm,n'm'} = \mel{n,k_x}{\;\hat{\mb{j}}\;}{n',k'_x}
 \end{equation}
-and this modify our previous expressing as
+where particle current operator for this system will be
 \begin{equation} \label{6.3}
-  \begin{aligned}
-    \Gamma^{00}_{N}(\varepsilon,k_x)  =
-    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
-    \delta(\varepsilon - \varepsilon_{N}) &
-    \int_{-\infty}^{\infty} d {k'}_x \;
-    J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
-    \\
-    & \times
-    \qty|
-    \int_{-\infty}^{\infty} d\bar{k} \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
-  \end{aligned}
+  \hat{\mb{j}} = \frac{1}{m} \qty(\hat{\mb{P}} - e\qty[\mb{A}_s + \mb{A}_d(t)]).
 \end{equation}
-In addition, for the case of elastic scattering within the same Landau level, one can present the delta distribution of the energy using the same physical interpretation as follows
+Howver, we are only consider the transverse conductivity in $x$ direction we can identify that $x$ directional current operator as
 \begin{equation} \label{6.4}
-  \delta(\varepsilon - \varepsilon_{N}) \approx
-  \frac{1}{\pi \Gamma^{00}_{N}(\varepsilon,k_x)}
+  \hat{j}_x = \frac{1}{m} \qty(-i\hbar\pdv{x} + eBy).
 \end{equation}
-and this leads to
+Now we can calculate the matrix elements of $x$ directional current operator's matrix in Floquet mode basis as
 \begin{equation} \label{6.5}
-  \begin{aligned}
-    \qty[\Gamma^{00}_{N}(\varepsilon,k_x)]^2  =
-    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^5 \qty(eB)^2}
-    \int_{-\infty}^{\infty} d {k'}_x \;
-    J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
-    \qty|
-    \int_{-\infty}^{\infty} d\bar{k} \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2.
-  \end{aligned}
+  \qty({j}_x)_{nm,n'm'} = \mel{n,k_x}{\;\hat{j}_x\;}{n',k'_x} =
+  \mel{n,k_x}{\;\frac{1}{m} \qty(-i\hbar\pdv{x} + eBy)\;}{n',k'_x}
 \end{equation}
-and
+and we can evaluate these using Floquet modes derived in Eq.\eqref{3.15} as follows
 \begin{equation} \label{6.6}
   \begin{aligned}
-    \Gamma^{00}_{N}(\varepsilon,k_x)  =
-    \qty[
-    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^5 \qty(eB)^2}
-    \int_{-\infty}^{\infty} d {k'}_x \;
-    J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
-    \qty|
-    \int_{-\infty}^{\infty} d\bar{k} \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB}\bar{k})
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x - \bar{k}])|^2
-    ]^{-1/2}.
+    \qty({j}_x)_{nm,n'm'} & =
+    \int dx \int dy \;
+    \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 - \zeta(t)\big)
+    \exp(-ik_x x) \\
+    & \times
+    \frac{1}{m} \qty(-i\hbar\pdv{x} + eBy)
+    \frac{1}{\sqrt{L_x}} \chi_{n'}\big(y - y_0 - \zeta(t)\big)
+    \exp(i k'_x x)
   \end{aligned}
 \end{equation}
-Using the numerical calculations we can see that the above integral is does not depend on the value of $k_x$ and we can choose any values for $k_x$. Therefore applying $k_x =0$ and letting $k'_x \rightarrow k_1,\bar{k}\rightarrow k_2$ we can modify our equation as
+and this can be simplified as
 \begin{equation} \label{6.7}
   \begin{aligned}
-    \Gamma^{00}_{N}(\varepsilon,k_x)  =
-    \qty[
-    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^5 \qty(eB)^2}
-    \int_{-\infty}^{\infty} d k_1\;
-    J_0^2\qty(\frac{g\hbar}{eB} k_1)
-    \qty|
-    \int_{-\infty}^{\infty} dk_2 \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB} k_2)
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[k_1 - k_2])|^2
-    ]^{-1/2}.
-  \end{aligned}
-\end{equation}
-
-\noindent
-Now we can compare the central element of energy level broading for each Landau level using normalized Landau energy broading(inverse scattering time) against applied dressing field's electric field's amplitude ($E$) as follows
-\begin{equation} \label{6.8}
-    \Lambda^{00}_{N} \equiv
-    \frac{\Gamma^{00}_{N}(\varepsilon,k_x)}
-    {\Gamma^{00}_{N}(\varepsilon,k_x)\big|_{E=0}}.
-\end{equation}
-As you can see in the Fig. \ref{fig6.1}, when the applied dressing field's intensity is increasing the broading of the Landau energy level decreasing. The effect of this decreasing is depend on the considering Landau level and for higher the level lower the effect.
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.5]{figures/fig04.pdf}
-  \caption{Normalized broading of Landau levels agaist dressing fileds amplitude. Red line represents $N=0$, blue line represents $N=1$, green line represents $N=2$ and purplr color line represents $N=3$ Landau levels.}
-  \label{fig6.1}
-\end{figure}
-
-\noindent
-Then we can use Floquet conductivity expression derived in [*Ref:my report 2.488] as follows
-\begin{equation} \label{6.9}
-  \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] &=
-    \frac{-1}{4\pi\hbar A}
-    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
-    \bigg(
-    -\frac{\partial f}{\partial \varepsilon} \bigg)
-    \frac{1}{A}\sum_{\mb{k}} \\
+    \qty({j}_x)_{nm,n'm'} & =
+    \frac{1}{{mL_x}}
+    \int dx \exp(-i(k_x-k'_x) x)
+    \int dy \;
+     \chi_{n}\big(y - y_0 - \zeta(t)\big) \\
     & \times
-    \sum_{s,s'=-\infty}^{\infty}
-    {j}^x_s(\mb{k}){j}^x_{s'}(\mb{k})
-    \tr_s \big[
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;\mb{k}) - \mb{G}^{a}_0 (\varepsilon;\mb{k})
-    \big)
-    \odot_s
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;\mb{k}) - \mb{G}^{a}_0 (\varepsilon;\mb{k})
-    \big)
-    \big].
-  \end{aligned}
-\end{equation}
-However, in this case we are consider only $x$ directional momentum as a quantum number to seperate different states and let $\lambda = \varepsilon_N$. In addition, with the current operator derivation IF we get component values only for $s=s'=0$ our conductivity rquation will be modified to
-\begin{equation} \label{6.10}
-  \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] &=
-    \frac{-1}{4\pi\hbar A}
-    \int_{\varepsilon_N - \hbar\Omega/2}^{\varepsilon_N + \hbar\Omega/2} d\varepsilon
-    \bigg(
-    -\frac{\partial f}{\partial \varepsilon} \bigg)
-    \frac{1}{L_x}\sum_{{k_x}}
-    \qty[{j}^x_0({k_x})]^2
-    \\
-    & \times
-    \tr \big[
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x}) - \mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x}) - \mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \big].
-  \end{aligned}
-\end{equation}
-Now we can expand the above expressing using unitary transformation
-\begin{equation} \label{6.11}
-    \qty(\mb{T})_{\alpha}^{nn'} \equiv \ket*{\phi_{\alpha}^{n+n'}}
-\end{equation}
-where
-\begin{equation} \label{6.12}
-    \ket{\phi_{\alpha}(t)} = \sum_{n = - \infty}^{\infty} e^{-in\omega t}
-    \ket{\phi_{\alpha}^{n}}.
-\end{equation}
-Therefore our conductivity equation becomes
-\begin{equation} \label{6.13}
-  \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] &=
-    \frac{-1}{4\pi\hbar A}
-    \int_{\varepsilon_N - \hbar\Omega/2}^{\varepsilon_N + \hbar\Omega/2} d\varepsilon
-    \bigg(
-    -\frac{\partial f}{\partial \varepsilon} \bigg)
-    \frac{1}{L_x}\sum_{{k_x}}
-    \qty[{j}^x_0({k_x})]^2
-    \\
-    & \times
-    \qty[
-    \mb{T}^{\dagger}(k_x)
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x}) - \mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \mb{T})(k_x)
-    ]^2_{00}.
-  \end{aligned}
-\end{equation}
-As derived in [*Ref:my report 2.547] we can present this matrix multiplication result as follows
-\begin{equation} \label{6.14}
-  \begin{aligned}
-    \qty[
-    \mb{T}^{\dagger}(k_x)
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x}) - \mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \mb{T})(k_x)
-    ]^2_{00} &
-    \approx
-    \qty[
-    \mb{T}^{\dagger}(k_x)
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x})\mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \mb{T})(k_x)
-    ]_{00} \\
-    & =
-    \frac{-1}
-    {
-      \qty(\frac{\varepsilon}{\hbar} - \frac{\varepsilon_N}{\hbar})^2
-      +
-      \qty(\frac{\Gamma^{00}_{N}(\varepsilon,k_x)}{2\hbar})^2
-    }
-  \end{aligned}
-\end{equation}
-and this can be more simplified as
-\begin{equation} \label{6.15}
-  \begin{aligned}
-    \qty[
-    \mb{T}^{\dagger}(k_x)
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x}) - \mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \mb{T})(k_x)
-    ]^2_{00} =
-    \frac{-\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon,k_x)]^2}
-    \qty[
-      1 +
-      \qty(\frac{{\varepsilon}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon,k_x)/2})^2
-    ]^{-1}.
-  \end{aligned}
-\end{equation}
-Since the squared termed in the square brackets goinf to zero with valid conditions we can use binomial approximation for the square bracket term and get the following derivation
-\begin{equation} \label{6.16}
-  \begin{aligned}
-    \qty[
-    \mb{T}^{\dagger}(k_x)
-    \big(
-    \mb{G}^{r}_0 (\varepsilon;{k_x}) - \mb{G}^{a}_0 (\varepsilon;{k_x})
-    \big)
-    \mb{T})(k_x)
-    ]^2_{00} =
-    \frac{-\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon,k_x)]^2}
-    \qty[
-      1 -
-      4\qty(\frac{{\varepsilon}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon,k_x)})^2
-    ]
-  \end{aligned}
-\end{equation}
-
-\noindent
-Now the conductivity expression get modify as
-\begin{equation} \label{6.17}
-  \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    \frac{\hbar}{4\pi A L_x}
-    \int_{\varepsilon_N - \hbar\Omega/2}^{\varepsilon_N + \hbar\Omega/2} d\varepsilon
-    \bigg(
-    -\frac{\partial f}{\partial \varepsilon} \bigg)
-    \sum_{{k_x}}
-    \qty[{j}^x_0({k_x})]^2
-    \frac{\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon,k_x)]^2}
-    \qty[
-      1 -
-      4\qty(\frac{{\varepsilon}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon,k_x)})^2
-    ]
-  \end{aligned}
-\end{equation}
-
-\noindent
-Then assuming we are considering fermions in aero temperature for this scenario we can describe the particle distribution function using the Fermi-Dirac distribution in zero-tempurature.
-\begin{equation} \label{6.18}
-    -\frac{\partial f}{\partial \varepsilon} = \delta(\varepsilon_F - \varepsilon)
-\end{equation}
-where $\varepsilon_F$ represent the Fermi energy for the considered material.
-
-\noindent
-With this approximation we can derive that
-\begin{equation} \label{6.19}
-  \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    \frac{\hbar}{4\pi A L_x}
-    \int_{\varepsilon_N - \hbar\Omega/2}^{\varepsilon_N + \hbar\Omega/2} d\varepsilon
-    \delta(\varepsilon_F - \varepsilon)
-    \sum_{{k_x}}
-    \qty[{j}^x_0({k_x})]^2
-    \frac{\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon,k_x)]^2}
-    \qty[
-      1 -
-      4\qty(\frac{{\varepsilon}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon,k_x)})^2
-    ]
+    \qty(\hbar k'_x + eBy)
+    \chi_{n'}\big(y - y_0 - \zeta(t)\big)
   \end{aligned}
 \end{equation}
 and
-\begin{equation} \label{6.20}
+\begin{equation} \label{6.8}
   \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    \frac{\hbar}{4\pi A L_x}
-    \sum_{{k_x}}
-    \qty[{j}^x_0({k_x})]^2
-    \frac{\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon_F,k_x)]^2}
+    \qty({j}_x)_{nm,n'm'} & =
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    \int dy \;
+    \qty(\hbar k'_x + eBy)
+     \chi_{n}\big(y - y_0 - \zeta(t)\big)
+    \chi_{n'}\big(y - y_0 - \zeta(t)\big).
+  \end{aligned}
+\end{equation}
+Now let $y - y_0 - \zeta(t) = \bar{y}$ and we will get
+\begin{equation} \label{6.9}
+  \begin{aligned}
+    \qty({j}_x)_{nm,n'm'} & =
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    \int d\bar{y} \;
+    \qty(\hbar k'_x + eB\bar{y} + eBy_0 + eB\zeta(t))
+     \chi_{n}(\bar{y})
+    \chi_{n'}(\bar{y}).
+  \end{aligned}
+\end{equation}
+using definition of $y_0$ given in Eq. \eqref{1.11} this will be modiofied to
+\begin{equation} \label{6.10}
+  \begin{aligned}
+    \qty({j}_x)_{nm,n'm'} & =
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    \int d\bar{y} \;
+    \qty(\hbar k'_x + eB\bar{y} -\hbar k'_x + eB\zeta(t))
+     \chi_{n}(\bar{y})
+    \chi_{n'}(\bar{y})
+  \end{aligned}
+\end{equation}
+and using integral indentities of Gauss-Hermite functions
+\begin{equation} \label{6.11}
+    \int d{y} \;
+    \chi_{n}({y})
+    \chi_{n'}({y}) =
+    \delta_{n',n}
+\end{equation}
+\begin{equation} \label{6.12}
+    \int dy \;
+    y
+    \chi_{n}({y})
+    \chi_{n'}({y}) =
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1})
+\end{equation}
+this becomes
+\begin{equation} \label{6.13}
+  \begin{aligned}
+    \qty({j}_x)_{nm,n'm'} & =
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    eB
     \qty[
-      1 -
-      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon_F,k_x)})^2
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1})
+    + \zeta(t) \delta_{n',n}
     ]
   \end{aligned}
 \end{equation}
+\textcolor{red}{Due to complexity we can only consider the constant contribution and we allows only the one-cycle averaged current flow} and then we can derive the $s=0$ components of the Fourier series as
+\begin{equation} \label{6.14}
+  \begin{aligned}
+    \qty({j}^x_{s=0})_{nm,n'm'} & =
+    \frac{1}{T} \int_0^T dt \;
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    eB
+    \qty[
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1})
+    + \frac{eE}{m(\omega_0^2 - \omega^2)}\sin(\omega t) \delta_{n',n}
+    ]
+  \end{aligned}
+\end{equation}
+and this can be evaluate and get
+\begin{equation} \label{6.15}
+  \begin{aligned}
+    \qty({j}^x_{s=0})_{nm,n'm'} & =
+    \frac{eB}{{m}}
+    \delta_{k_x,k'_x}
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1})
+  \end{aligned}
+\end{equation}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\noindent
+For electric current operator we can introduce the electron's charge and effective mass
+\begin{equation} \label{6.15}
+  \begin{aligned}
+    \qty({j}^x_{s=0})_{nm,n'm'} & =
+    \frac{e^2B}{{m}}
+    \delta_{k_x,k'_x}
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1})
+  \end{aligned}
+\end{equation}
 \hfill$\blacksquare$

@@ -1,147 +1,281 @@
-\section{Current Operator in Landau Levels}
+\section{Floquet-Drude Conductivity in Quantum Hall Systems}
 
-Now consider about the current density operator for $N$th Landau level. Since we have already found the extact solution for our time depenedent Hamiltonian and we have derive them as Floquet states with quesi energies. Using second quantization notaion we can represent our Hamiltonian using creating and anhilation operators for Floquet states which are eigen function of this Hamiltonian.
-
-\vspace{5mm}
-\noindent
-Let's introduce our creation and anhilation operators in momentum space for the $N$th Landau level states as follows
+The general expression for the conductivity [*Ref: Martin Wackerl Thesis 1.250] with the disorder averaging can be represent as follows
 \begin{equation} \label{7.1}
-  c_{k_x}^{\dagger} \ket{0} = \ket{\psi_{N,k_x}} \quad \text \quad
-  c_{k_x} \ket{\psi_{N,k_x}}  = \ket{0}.
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] &=
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \\
+    & \times
+    \tr
+    \qty[
+    {j}^x_0
+    \qty(
+    \mb{G}^{r} (\varepsilon) - \mb{G}^{a} (\varepsilon)
+    )
+    {j}^x_0
+    \qty(
+    \mb{G}^{r}_0 (\varepsilon) - \mb{G}^{a}_0 (\varepsilon)
+    )
+    ].
+  \end{aligned}
 \end{equation}
-Therefore with second quantization we can represent our Hamiltonian as
+where ${j}^x_0$ and $\mb{G}^{r,a} (\varepsilon)$ are $x$ directional current operator matrix and white noise disorder averaged Green function matrix respectvely defined against to the \textit{Floquet modes} of the system. Here we have assumed that only $s=0$ Fourier component of the current operator is contributing to the conductivity.
+
+\noindent
+Now this can be expand in off resonant regime ($\omega\tau_0 \gg 1$)using only central entry Fourier components ($l=l'=0$) of \textit{Floquet modes} mentioned in Eq. \eqref{6.1} as
 \begin{equation} \label{7.2}
-  \hat{H}_N = \sum_{k_x} \varepsilon_N c_{k_x}^{\dagger}c_{k_x}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \\
+    & \times
+    \frac{1}{L_x} \sum_{k_x}
+    \sum_{n}
+    \mel{n,k_x}{
+    {j}^x_0
+    \qty(
+    \mb{G}^{r} (\varepsilon) - \mb{G}^{a} (\varepsilon)
+    )
+    {j}^x_0
+    \qty(
+    \mb{G}^{r}_0 (\varepsilon) - \mb{G}^{a}_0 (\varepsilon)
+    )
+    }
+    {n,k_x}
+  \end{aligned}
 \end{equation}
-and particle density operator as
+and one can evaluate these matrix elements as follows
 \begin{equation} \label{7.3}
-  \hat{\rho}_N = \sum_{{k'}_x} c_{{k'}_x}^{\dagger}c_{{k'}_x}.
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \frac{1}{{L_x}^3} \sum_{{k_x}_1,{k_x}_2,{k_x}_3}
+    \sum_{n_1,n_2,n_3}
+    \\
+    & \times
+    \mel{n,k_x}{
+    {j}^x_0}
+    {n_1,{k_x}_1}
+    \mel{{n_1,{k_x}_1}}{
+    \qty(
+    \mb{G}^{r} (\varepsilon) - \mb{G}^{a} (\varepsilon)
+    )}
+    {n_2,{k_x}_2} \\
+    & \times
+    \mel{n_2,{k_x}_2}{
+    {j}^x_0}
+    {n_3,{k_x}_3}
+    \mel{n_3,{k_x}_3}{
+    \qty(
+    \mb{G}^{r} (\varepsilon) - \mb{G}^{a} (\varepsilon)
+    )
+    }
+    {n,k_x}
+  \end{aligned}
 \end{equation}
-
-\noindent
-Now we can find the commutation relationship with each other as
+Since we can diagonalize the impurity averaged Green's function using unitary trasnformation ($\mb{T} = \ket{n,k_x}$) [*Ref: Martin Wackerl - Paper] and we can evaluate the matrix element of differece between retarded and advanced Green's function as follows
+[*Ref: My report 2.535]
 \begin{equation} \label{7.4}
-  \qty[\hat{H}_N , \hat{\rho}_N] =
-  \qty[ \sum_{k_x} \varepsilon_N c_{k_x}^{\dagger}c_{k_x},
-  \sum_{{k'}_x} c_{{k'}_x}^{\dagger}c_{{k'}_x}]
+  \mel{{n_1,{k_x}_1}}{
+  \mb{T}^{\dagger}
+  \qty(
+  \mb{G}^{r} (\varepsilon) - \mb{G}^{a} (\varepsilon)
+  )\mb{T}}
+  {n_2,{k_x}_2} =
+  \qty[
+  \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})
+  \delta_{n_1,n_2}\delta_{{k_x}_1,{k_x}_2}}
+  {
+  \qty(
+  \frac{1}{\hbar}\varepsilon -
+  \frac{1}{\hbar}\varepsilon_{n_1}
+  )^2
+  + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
+  }]
 \end{equation}
-and this can be simplified using fermions commutation relationship and one can derive that
+and
 \begin{equation} \label{7.5}
-  \qty[\hat{H}_N , \hat{\rho}_N] =
-   \sum_{k_x} \varepsilon_N c_{k_x}^{\dagger}c_{k_x}.
+  \mel{{n_3,{k_x}_3}}{
+  \mb{T}^{\dagger}
+  \qty(
+  \mb{G}^{r} (\varepsilon) - \mb{G}^{a} (\varepsilon)
+  )\mb{T}}
+  {n,{k_x}} =
+  \qty[
+  \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})
+  \delta_{n_3,n}\delta_{{k_x}_3,{k_x}}}
+  {
+  \qty(
+  \frac{1}{\hbar}\varepsilon -
+  \frac{1}{\hbar}\varepsilon_{n}
+  )^2
+  + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
+  }]
 \end{equation}
-Now using \textit{Liouville-Von Neumann equation} we can derive that
-\begin{equation} \label{7.6}
-  \pdv{\hat{\rho}_N}{t} =
-   -\frac{i}{\hbar}\qty[\hat{H}_N , \hat{\rho}_N] =
-   \sum_{k_x} -\frac{i}{\hbar}\varepsilon_N c_{k_x}^{\dagger}c_{k_x}
-\end{equation}
-and using famous \textit{continuty equation} we can make relationship with probability current density ($\mb{j}(\mb{r},t)$) operator as follows
-\begin{equation} \label{7.7}
-  \pdv{\hat{\rho}_N}{t} = - \grad \cdot \hat{\mb{j}}(\mb{r},t).
-\end{equation}
-However, we can assume that the current flow of this system only can be happed in $x$ direction due to $y$ direction restriction by magnetic leangth. Therefore we can re-write the above equation as follows
-\begin{equation} \label{7.8}
-  \pdv{\hat{\rho}_N}{t} = - \pdv{\hat{jx}^x(\mb{r},t)}{x}
-\end{equation}
-and using this on Eq. \eqref{7.6} we can derive that
-\begin{equation} \label{7.9}
- - \pdv{\hat{j^x}(\mb{r},t)}{x} =
- \sum_{k_x} -\frac{i}{\hbar}\varepsilon_N c_{k_x}^{\dagger}c_{k_x}
-\end{equation}
-and this leads to
-\begin{equation} \label{7.10}
- \hat{j}^x(\mb{r},t) =
- \sum_{k_x} -\frac{i L_x}{\hbar}\varepsilon_N c_{k_x}^{\dagger}c_{k_x}.
-\end{equation}
-Therefore we can identify the momentum space component of the current density operator as
-\begin{equation} \label{7.11}
- - {j}^x(k_x,t) =
- -\frac{i L_x}{\hbar}\varepsilon_N
-\end{equation}
-and find the time space fourier series components and this will vanish all the components expect $s=0$ components because
-\begin{equation} \label{7.12}
- \int dt e^{-is\omega t} = 2\pi \delta_{s,0}
-\end{equation}
-and then we can find the time fourier series components of current operator as follows
-\begin{equation} \label{7.13}
- {j}^x_{s=0} (k_x,t) =
- \frac{i 2\pi L_x}{\hbar}\varepsilon_N =
- i 2\pi \omega_0 L_x \qty(N + \frac{1}{2})
-\end{equation}
-and for electric current flow we can introfuce the electron's charge as $-e$ and this will be modified to
-\begin{equation} \label{7.14}
- {j}^x_{s=0} (k_x,t) =
- -i 2\pi e \omega_0 L_x \qty(N + \frac{1}{2})
-\end{equation}
-\hfill$\blacksquare$
 
 \noindent
-Now we can use this in our previously derived conductivity formula \eqref{6.20} and get
-\begin{equation} \label{7.15}
+Then appying the results we derived in previous section \eqref{6.17} we can calculate the conductivity
+\begin{equation} \label{7.6}
   \begin{aligned}
     \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    \frac{\hbar}{4\pi A L_x}
-    \sum_{{k_x}}
-    \qty[-i 2\pi e \omega_0 L_x \qty(N + \frac{1}{2})]^2
-    \frac{\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon_F,k_x)]^2}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \frac{1}{{L_x}^3} \sum_{{k_x}_1,{k_x}_2,{k_x}_3}
+    \sum_{n_1,n_2,n_3}
+    \\
+    & \times
+    \frac{e^2B}{{m}}
+    \delta_{k_x,{k_x}_1}
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n_1,n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n_1,n-1})
     \qty[
-      1 -
-      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon_F,k_x)})^2
-    ]
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})
+    \delta_{n_1,n_2}\delta_{{k_x}_1,{k_x}_2}}
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n_1}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
+    }] \\
+    & \times
+    \frac{e^2B}{{m}}
+    \delta_{{k_x}_2,{k_x}_3}
+    \qty(\sqrt{\frac{n_2+1}{2}} \delta_{n_3,n_2+1} + \sqrt{\frac{n_2}{2}}
+    \delta_{n_3,n_2-1})
+    \qty[
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})
+    \delta_{n_3,n}\delta_{{k_x}_3,{k_x}}}
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
+    }]
   \end{aligned}
 \end{equation}
-and this leads to
-\begin{equation} \label{7.16}
+and this will be modified to
+\begin{equation} \label{7.7}
   \begin{aligned}
     \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    \frac{\pi e^2 \omega_0^2 \hbar}{L_x}
-    \sum_{{k_x}}
-    \qty(N + \frac{1}{2})^2
-    \frac{\hbar^2}
-    {\qty[\Gamma^{00}_{N}(\varepsilon_F,k_x)]^2}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \sum_{n_1,n_2}
+    \\
+    & \times
+    \frac{e^2B}{{m}}
+    \qty(\sqrt{\frac{n+1}{2}} \delta_{n_1,n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n_1,n-1})
     \qty[
-      1 -
-      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}(\varepsilon_F,k_x)})^2
-    ].
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})
+    \delta_{n_1,n_2}}
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n_1}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
+    }] \\
+    & \times
+    \frac{e^2B}{{m}}
+    \qty(\sqrt{\frac{n_2+1}{2}} \delta_{n,n_2+1} + \sqrt{\frac{n_2}{2}}
+    \delta_{n,n_2-1})
+    \qty[
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
+    }]
   \end{aligned}
 \end{equation}
-However we know that $\Gamma^{00}_{N}(\varepsilon_F,k_x)$ is independent of $k_x$ and we can get summation over availble all momentum through the summation. However by the condition that the center of the force of the oscillator $y_0$ must physically liw within the system $-L_y/2 < y_0 < L_y/2$, one can derive that
-\begin{equation} \label{7.17}
- -\frac{m\omega_0 Ly}{2\hbar} \leq k_x \leq \frac{m\omega_0 Ly}{2\hbar}
-\end{equation}
-Therefore the Eq. \eqref{7.16} can be simplified to
-\begin{equation} \label{7.18}
+and the only non-zero term would be
+\begin{equation} \label{7.8}
   \begin{aligned}
     \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    \frac{\pi e^2 \omega_0^2 \hbar}{L_x}
-    \frac{m\omega_0 Ly}{\hbar}
-    \qty(N + \frac{1}{2})^2
-    \frac{\hbar^2}
-    {\qty[\Gamma^{00}_{N}]^2}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{-1}{4\pi\hbar A}
+    \frac{e^4B^2}{{m^2}}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \qty(\frac{n+1}{2})
+    \\
+    & \times
     \qty[
-      1 -
-      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}})^2
-    ]
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{n+1}
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n+1}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{n+1}]^2
+    }]
+    \qty[
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_n
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_n]^2
+    }]
   \end{aligned}
 \end{equation}
-and this will becomes
-\begin{equation} \label{7.19}
-  \begin{aligned}
-    \lim_{\omega \to 0}
-    \text{Re}[{\sigma}^{xx}(0,\omega)] =
-    {\pi e^2 \omega_0 m }
-    \frac{\qty(\hbar \omega_0)^2}
-    {\qty[\Gamma^{00}_{N}]^2}
-    \qty(N + \frac{1}{2})^2
-    \qty[
-      1 -
-      4\qty(\frac{{\varepsilon_F}-{\varepsilon_N}}{\Gamma^{00}_{N}})^2
-    ].
-  \end{aligned}
-\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \hfill$\blacksquare$
