@@ -230,28 +230,71 @@ and the only non-zero term would be
     \\
     & \times
     \qty[
-    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{n+1}
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n+1}}
     }
     {
     \qty(
     \frac{1}{\hbar}\varepsilon -
     \frac{1}{\hbar}\varepsilon_{n+1}
     )^2
-    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{n+1}]^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n+1}}]^2
     }]
     \qty[
-    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_n
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n}}
     }
     {
     \qty(
     \frac{1}{\hbar}\varepsilon -
     \frac{1}{\hbar}\varepsilon_{n}
     )^2
-    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_n]^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n}}]^2
     }]
   \end{aligned}
 \end{equation}
+\hfill$\blacksquare$
 
+\noindent
+Then using the following identity derived in [*Ref: My report 2.509]
+\begin{equation} \label{7.9}
+  \qty(\frac{1}{\tau(\varepsilon,k_x)})_{ll} =
+  -2\text{Im}\qty[\qty(\mb{T}^{\dagger} {\sum}^r \mb{T})_{\varepsilon}]_{ll}
+\end{equation}
+we can modify our result as
+\begin{equation} \label{7.10}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{1}{4\pi\hbar A}
+    \frac{e^4B^2}{{m^2}}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \qty(\frac{n+1}{2})
+    \\
+    & \times
+    \qty[
+    \frac{\qty(\frac{1}{\tau(\varepsilon_{n+1},k_x)})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n+1}
+    )^2
+    + \qty(\frac{1}{2\tau(\varepsilon_{n+1},k_x)})^2
+    }]
+    \qty[
+    \frac{\qty(\frac{1}{\tau(\varepsilon_{n},k_x)})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty(\frac{1}{2\tau(\varepsilon_{n},k_x)})^2
+    }]
+  \end{aligned}
+\end{equation}
 
 
 
