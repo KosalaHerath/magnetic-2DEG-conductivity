@@ -38,7 +38,7 @@ Now this can be expand in off resonant regime ($\omega\tau_0 \gg 1$)using only c
     -\frac{\partial f}{\partial \varepsilon})
     \\
     & \times
-    \frac{1}{L_x} \sum_{k_x}
+    \frac{1}{V_{k_x}} \sum_{k_x}
     \sum_{n}
     \mel{n,k_x}{
     {j}^x_0
@@ -62,7 +62,7 @@ and one can evaluate these matrix elements as follows
     \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
     \frac{1}{{L_x}^3} \sum_{{k_x}_1,{k_x}_2,{k_x}_3}
     \sum_{n_1,n_2,n_3}
     \\
@@ -137,12 +137,12 @@ Then appying the results we derived in previous section \eqref{6.17} we can calc
     \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{L_x} \sum_{k_x} \sum_{n}
-    \frac{1}{{L_x}^3} \sum_{{k_x}_1,{k_x}_2,{k_x}_3}
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
+    \frac{1}{{V_{k_x}}^3} \sum_{{k_x}_1,{k_x}_2,{k_x}_3}
     \sum_{n_1,n_2,n_3}
     \\
     & \times
-    \frac{e^2B}{{m}}
+    \frac{e^2B}{{m_e}}
     \delta_{k_x,{k_x}_1}
     \qty(\sqrt{\frac{n+1}{2}} \delta_{n_1,n+1} + \sqrt{\frac{n}{2}}
     \delta_{n_1,n-1})
@@ -157,7 +157,7 @@ Then appying the results we derived in previous section \eqref{6.17} we can calc
     + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
     }] \\
     & \times
-    \frac{e^2B}{{m}}
+    \frac{e^2B}{{m_e}}
     \delta_{{k_x}_2,{k_x}_3}
     \qty(\sqrt{\frac{n_2+1}{2}} \delta_{n_3,n_2+1} + \sqrt{\frac{n_2}{2}}
     \delta_{n_3,n_2-1})
@@ -182,11 +182,11 @@ and this will be modified to
     \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
     \sum_{n_1,n_2}
     \\
     & \times
-    \frac{e^2B}{{m}}
+    \frac{e^2B}{{m_e}}
     \qty(\sqrt{\frac{n+1}{2}} \delta_{n_1,n+1} + \sqrt{\frac{n}{2}}
     \delta_{n_1,n-1})
     \qty[
@@ -200,7 +200,7 @@ and this will be modified to
     + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})]^2
     }] \\
     & \times
-    \frac{e^2B}{{m}}
+    \frac{e^2B}{{m_e}}
     \qty(\sqrt{\frac{n_2+1}{2}} \delta_{n,n_2+1} + \sqrt{\frac{n_2}{2}}
     \delta_{n,n_2-1})
     \qty[
@@ -221,11 +221,11 @@ and the only non-zero term would be
     \lim_{\omega \to 0}
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{-1}{4\pi\hbar A}
-    \frac{e^4B^2}{{m^2}}
+    \frac{e^4B^2}{{{m_e}^2}}
     \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
     \qty(\frac{n+1}{2})
     \\
     & \times
@@ -259,17 +259,17 @@ Then using the following identity derived in [*Ref: My report 2.509]
   \qty(\frac{1}{\tau(\varepsilon,k_x)})_{ll} =
   -2\text{Im}\qty[\qty(\mb{T}^{\dagger} {\sum}^r \mb{T})_{\varepsilon}]_{ll}
 \end{equation}
-we can modify our result as
+using central element of the inverse scattering time matrix we can modify our result as
 \begin{equation} \label{7.10}
   \begin{aligned}
     \lim_{\omega \to 0}
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{1}{4\pi\hbar A}
-    \frac{e^4B^2}{{m^2}}
+    \frac{e^4B^2}{{{m_e}^2}}
     \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{L_x} \sum_{k_x} \sum_{n}
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
     \qty(\frac{n+1}{2})
     \\
     & \times
@@ -296,12 +296,190 @@ we can modify our result as
   \end{aligned}
 \end{equation}
 
+\noindent
+We have identited that the inverse scattering time matrix's central element is not $k_x$ dependent we can get the sum over all available momentum space in $x$ direction. However by considering the condition that the center of the force of the oscillator $y_0$ must physically liw within the system $-L_y/2 < y_0 < L_y/2$, one can derive that
+\begin{equation} \label{7.11}
+ -\frac{m_e\omega_0 Ly}{2\hbar} \leq k_x \leq \frac{m_e\omega_0 Ly}{2\hbar}
+\end{equation}
+and we can derive that
+\begin{equation} \label{7.12}
+    \frac{1}{V_{k_x}}\sum_{k_x} = \frac{m_e\omega_0 Ly}{\hbar V_{k_x}} = 1
+\end{equation}
+Thefore Eq. \eqref{7.10} modified to
+\begin{equation} \label{7.13}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{e^2 \omega_0^2}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \sum_{n}
+    \qty(\frac{n+1}{2})
+    \\
+    & \times
+    \qty[
+    \frac{\qty(\frac{1}{\tau(\varepsilon_{n+1})})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n+1}
+    )^2
+    + \qty(\frac{1}{2\tau(\varepsilon_{n+1})})^2
+    }]
+    \qty[
+    \frac{\qty(\frac{1}{\tau(\varepsilon_{n})})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty(\frac{1}{2\tau(\varepsilon_{n})})^2
+    }]
+  \end{aligned}
+\end{equation}
 
+\noindent
+Then using Fermi-Dirac distribution as our partical distribution function ($f$) for this system
+\begin{equation} \label{7.14}
+  f(\varepsilon) = \frac{1}{\qty[\exp(\varepsilon - \varepsilon_F)/k_B T]+1}
+\end{equation}
+where $k_B$ is Botlzmann constant, $T$ is absolute tempurature and $\varepsilon_F$ is Fermi energy of the system. Using above distribution, for extreamly low tempuratures we can appromixate that
+\begin{equation} \label{7.15}
+  - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F)
+\end{equation}
+and this will mpre simplify our derivation of conductivity as
+\begin{equation} \label{7.16}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{e^2 \omega_0^2}{4\pi\hbar A}
+    \sum_{n}
+    \qty(\frac{n+1}{2})
+    \qty[
+    \frac{\qty(\frac{1}{\tau(\varepsilon_{n+1})})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon_F -
+    \frac{1}{\hbar}\varepsilon_{n+1}
+    )^2
+    + \qty(\frac{1}{2\tau(\varepsilon_{n+1})})^2
+    }]
+    \qty[
+    \frac{\qty(\frac{1}{\tau(\varepsilon_{n})})
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon_F -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty(\frac{1}{2\tau(\varepsilon_{n})})^2
+    }]
+  \end{aligned}
+\end{equation}
 
+\noindent
+Now introduce a new paramter with a physical meaning od scattering-induced broading of the Landau level as follows
+\begin{equation} \label{6.17}
+  \Gamma_n \equiv\Gamma(\varepsilon_n) \equiv \qty(\frac{\hbar }{2\tau(\varepsilon_n)})
+\end{equation}
+and then we can re-write Eq. \eqref{7.16} as follows
+\begin{equation} \label{7.18}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{e^2 (\hbar\omega_0)^2}{\pi\hbar A}
+    \sum_{n}
+    \qty(\frac{n+1}{2})
+    \qty[
+    \frac{\Gamma(\varepsilon_{n+1})
+    }
+    {
+    \qty(
+    \varepsilon_F - \varepsilon_{n+1}
+    )^2
+    + \Gamma^2(\varepsilon_{n+1})
+    }]
+    \qty[
+    \frac{\Gamma(\varepsilon_{n})
+    }
+    {
+    \qty(
+    \varepsilon_F - \varepsilon_{n}
+    )^2
+    + \Gamma^2(\varepsilon_{n})
+    }]
+  \end{aligned}
+\end{equation}
+\begin{equation} \label{7.19}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{e^2 (\hbar\omega_0)^2}{\pi\hbar A}
+    \sum_{n}
+    \qty(\frac{n+1}{2})
+    \qty[
+    \frac{\Gamma_{n+1}
+    }
+    {
+    \qty(
+    \varepsilon_F - \varepsilon_{n+1}
+    )^2
+    + \Gamma^2_{n+1}
+    }]
+    \qty[
+    \frac{\Gamma_{n}
+    }
+    {
+    \qty(
+    \varepsilon_F - \varepsilon_{n}
+    )^2
+    + \Gamma^2_{n}
+    }]
+  \end{aligned}
+\end{equation}
 
-
-
-
+\noindent
+Now use new dimentionless paramters
+\begin{equation} \label{6.17}
+  X_F \equiv \frac{\varepsilon_F}{\hbar \omega_0} -\frac{1}{2}
+\end{equation}
+and
+\begin{equation} \label{6.17}
+  \gamma_n \equiv \frac{\Gamma_n}{\hbar \omega_0}.
+\end{equation}
+Therefore the Eq. \eqref{7.19} leads to
+\begin{equation} \label{7.20}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{e^2}{\hbar}
+    \frac{1}{2\pi A}
+    \sum_{n}
+    \qty(n+1)
+    \qty[
+    \frac{\gamma_{n+1}
+    }
+    {
+    \qty(
+    X_F - n - 1
+    )^2
+    + \gamma^2_{n+1}
+    }]
+    \qty[
+    \frac{\gamma_{n}
+    }
+    {
+    \qty(
+    X_F - n
+    )^2
+    + \gamma^2_{n}
+    }]
+  \end{aligned}
+\end{equation}
 
 
 
