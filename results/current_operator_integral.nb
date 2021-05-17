@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3077,        107]
-NotebookOptionsPosition[      2496,         87]
-NotebookOutlinePosition[      2866,        103]
-CellTagsIndexPosition[      2823,        100]
+NotebookDataLength[      4164,        131]
+NotebookOptionsPosition[      3353,        107]
+NotebookOutlinePosition[      3724,        123]
+CellTagsIndexPosition[      3681,        120]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,32 +61,52 @@ Cell[BoxData[{
        FontWeight->"Bold"], ",", "y"}], "]"}]}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"Q", ":=", " ", 
-   RowBox[{"y", "*", 
+   RowBox[{
     RowBox[{"\[Chi]", "[", 
-     RowBox[{"y", ",", "0"}], "]"}], "*", 
+     RowBox[{"y", ",", "1"}], "]"}], "*", 
     RowBox[{"\[Chi]", "[", 
-     RowBox[{"y", ",", "1"}], "]"}]}]}], ";"}], "\n", 
+     RowBox[{"y", ",", "M"}], "]"}]}]}], ";"}], "\n", 
  RowBox[{"Integrate", "[", 
   RowBox[{"Q", ",", 
    RowBox[{"{", 
     RowBox[{"y", ",", 
-     RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}]}], "Input",
+     RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+   RowBox[{"Assumptions", "\[Rule]", 
+    RowBox[{
+     RowBox[{"M", " ", "\[Element]", 
+      TemplateBox[{},
+       "Integers"]}], " ", "&&", " ", 
+     RowBox[{"M", ">", "2"}]}]}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.829803685036169*^9, 3.82980368747921*^9}, {
   3.8298039330597887`*^9, 3.829803953856248*^9}, {3.8298040012653017`*^9, 
-  3.8298040664657497`*^9}},
- CellLabel->"In[65]:=",ExpressionUUID->"13968c31-a028-47ce-95bf-e00e2e472285"],
+  3.8298040664657497`*^9}, {3.829889738641041*^9, 3.8298897513862658`*^9}, {
+  3.8298898600981207`*^9, 3.829889861618105*^9}, {3.8298898924809685`*^9, 
+  3.8298898990637565`*^9}, {3.8298899602522335`*^9, 3.829889972747361*^9}, {
+  3.829890079666648*^9, 3.8298901247408323`*^9}, {3.8298905930950193`*^9, 
+  3.829890595018777*^9}, {3.8298933623659782`*^9, 3.8298933635348625`*^9}, {
+  3.829893506123912*^9, 3.829893510422402*^9}, {3.8298950033946743`*^9, 
+  3.829895007288562*^9}},ExpressionUUID->"13968c31-a028-47ce-95bf-\
+e00e2e472285"],
 
-Cell[BoxData[
- FractionBox["1", 
-  SqrtBox["2"]]], "Output",
- CellChangeTimes->{{3.8298039358675566`*^9, 3.8298039547329874`*^9}, {
-  3.8298040056962767`*^9, 3.829804067080223*^9}},
- CellLabel->"Out[67]=",ExpressionUUID->"7ec26997-abdf-4223-a009-bd82f6275e3a"]
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.829893490777232*^9, 3.8298940706408396`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"6892fc55-1d01-4c8b-b4fd-72bec5b99fc4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["0"], "Input",
+ CellChangeTimes->{3.82989336661108*^9},
+ CellLabel->"In[7]:=",ExpressionUUID->"f94c0190-34d9-4797-a45a-338aa2381062"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.829893366668916*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"3963e0a3-4239-4565-ab93-0a93223d1190"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1330, 813},
-WindowMargins->{{Automatic, -3}, {-26, Automatic}},
+WindowSize->{1447, 733},
+WindowMargins->{{Automatic, 148}, {142, Automatic}},
 Magnification->1.25,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"ReverseColor.nb"
@@ -105,13 +125,15 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 303, 9, 56, "Subsubsection",ExpressionUUID->"36faa7e0-8440-40a6-b005-6be7abf45338"],
 Cell[CellGroupData[{
-Cell[908, 35, 1297, 41, 135, "Input",ExpressionUUID->"13968c31-a028-47ce-95bf-e00e2e472285"],
-Cell[2208, 78, 260, 5, 63, "Output",ExpressionUUID->"7ec26997-abdf-4223-a009-bd82f6275e3a"]
+Cell[908, 35, 1907, 53, 135, "Input",ExpressionUUID->"13968c31-a028-47ce-95bf-e00e2e472285"],
+Cell[2818, 90, 173, 2, 40, "Output",ExpressionUUID->"6892fc55-1d01-4c8b-b4fd-72bec5b99fc4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3028, 97, 146, 2, 35, InheritFromParent,ExpressionUUID->"f94c0190-34d9-4797-a45a-338aa2381062"],
+Cell[3177, 101, 148, 2, 40, "Output",ExpressionUUID->"3963e0a3-4239-4565-ab93-0a93223d1190"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
