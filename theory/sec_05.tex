@@ -79,7 +79,7 @@ The disorder in the system is not supposed to change the eigenenergies of the ba
 % \end{equation}
 
 \noindent
-Now we can introduce a new parameter with physical meaning of scatterin-induced broading of the Landau level as follows
+Now we can introduce a new parameter with physical meaning of scatterin-induced broadening of the Landau level as follows
 \begin{equation} \label{5.3}
   \Gamma^{00}_{N}(\varepsilon,k_x) \equiv \hbar \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N}
 \end{equation}
@@ -206,7 +206,7 @@ where
     \lambda_2 = \sigma \kappa.
 \end{equation}
 \noindent
-Now we can analyze the behaviour of the normalized $N$-th Landau level for broading as follows
+Now we can analyze the behaviour of the normalized $N$-th Landau level for broadening as follows
 \begin{equation} \label{5.15}
     \Lambda_N(k_x) \equiv
     \frac{\qty(1/\tau)^{00}_{N}}{\qty(1/\tau)^{00}_{0}\big|_{E=0}} =
@@ -295,7 +295,7 @@ we can choose our integral dummy variables $k_1$, $k_2$ and momentum variable $k
 \end{equation}
 
 \noindent
-Using above values we can re-write the normalized energy broading of the $N$-th Landau level as
+Using above values we can re-write the normalized energy broadening of the $N$-th Landau level as
 \begin{equation} \label{5.24}
     \Lambda_N (k_x) =
     \qty[
@@ -313,6 +313,12 @@ Using above values we can re-write the normalized energy broading of the $N$-th 
     \tilde{\chi}_{0}\qty(2.342 \times \qty[{k}_1 - {k}_2 - {k}_x])|^2}
     ]^{1/2}.
 \end{equation}
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.7]{figures/fig51.pdf}
+  \caption{Normalized energy band broadening with $k_x$ for different Landau levels ($N=0,1,2,3,4$) for $\tilde{I}=1$.}
+  \label{fig:5.1}
+\end{figure}
 
 \noindent
 To check the variability of this expression with $k_x$ value we check it with a constant intensity. Therefore let $\tilde{I}=1$ and we can re-write above as
@@ -375,7 +381,95 @@ and letting $\tilde{k} = k_1$ we can find that this is do not depend on the valu
 \end{equation}
 
 \noindent
-Now we can draw the values of $\Lambda_N$ agaist $k_x$ to compare the differese of each Landau level's normalized energy band broading as given in Fig. \ref{fig:5.1}.
+Now we can draw the values of $\Lambda_N$ agaist $k_x$ to compare the differese of each Landau level's normalized energy band broadening as given in Figure \ref{fig:5.1}.
+
+\noindent
+Now let's check how the $\Lambda_N$ value change with the applied dressing field's intensity. Using following equation we can identify $\Lambda_N$ dependency on dressing field's intensity as given in Figure \ref{fig:5.2}.
+\begin{equation} \label{5.28}
+    \Lambda_N  =
+    \qty[
+    \frac
+    {\int_{-\infty}^{\infty} d {k}_1 \;
+    J_0^2\qty(2.090\sqrt{\tilde{I}}\times{k}_1)
+    \qty|
+    \int_{-\infty}^{\infty} d{k}_2 \;
+    \tilde{\chi}_{N}\qty(2.342 \times k_2)
+    \tilde{\chi}_{N}\qty(2.342 \times \qty[{k}_1 - {k}_2])|^2}
+    {\int_{-\infty}^{\infty} d {k}_1 \;
+    \qty|
+    \int_{-\infty}^{\infty} d{k}_2 \;
+    \tilde{\chi}_{0}\qty(2.342 \times k_2)
+    \tilde{\chi}_{0}\qty(2.342 \times \qty[{k}_1 - {k}_2])|^2}
+    ]^{1/2}.
+\end{equation}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.6]{figures/fig52.pdf}
+  \caption{Normalized energy band broadening with $k_x$ for different Landau levels ($N=0,1,2,3,4$) for $\tilde{I}=1$.}
+  \label{fig:5.2}
+\end{figure}
+
+\noindent
+Here we can identify that we can change the each Landau level normalized energy broadening value using apllied electromagnetic field. When the applied field's intensity increase the energy broadening gets reduced which make changes in conductivity.
+
+\noindent
+To make comparison we can select the experiment parameters from previous analysis on transverse conductivity in [*Ref: Akira Endo and Naomichi Hantno]. In this study we have assumed that the broadening of Landau levels are same and the value for $\Gamma_N$ non-existing dressing field is $0.24\;\text{me}V$. Therefore in our study for the comparison we can assume that the least Landau level broadening has this value.
+\begin{equation} \label{5.29}
+  \Gamma^{00}_{N=0}\big|_{E=0} = 0.24 \;\text{meV}
+\end{equation}
+
+\noindent
+Then using the calculated normalized broadening relations for each Landu levels, we can evaluate the energy band broadening values as follows
+\begin{equation} \label{5.30}
+  \Gamma^{00}_{N} = \Lambda_N \times \Gamma^{00}_{N=0}\big|_{E=0}.
+\end{equation}
+Therfore, the energy band broadening for Landau level with dressing field can be calculate as
+\begin{equation} \label{5.31}
+  \Gamma^{00}_{N} = \Lambda_N \times \Gamma^{00}_{N=0}\big|_{E=0}.
+\end{equation}
+and
+\begin{equation} \label{5.32}
+  \Gamma^{00}_{N} = 0.24 \times \Lambda_N  \;\text{meV}.
+\end{equation}
+\begin{equation} \label{5.33}
+  \Gamma^{00}_{N}(\tilde{I}) = 0.24 \times
+  \qty[
+  \frac
+  {\int_{-\infty}^{\infty} d {k}_1 \;
+  J_0^2\qty(2.090\sqrt{\tilde{I}}\times{k}_1)
+  \qty|
+  \int_{-\infty}^{\infty} d{k}_2 \;
+  \tilde{\chi}_{N}\qty(2.342 \times k_2)
+  \tilde{\chi}_{N}\qty(2.342 \times \qty[{k}_1 - {k}_2])|^2}
+  {\int_{-\infty}^{\infty} d {k}_1 \;
+  \qty|
+  \int_{-\infty}^{\infty} d{k}_2 \;
+  \tilde{\chi}_{0}\qty(2.342 \times k_2)
+  \tilde{\chi}_{0}\qty(2.342 \times \qty[{k}_1 - {k}_2])|^2}
+  ]^{1/2} \text{meV}.
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
