@@ -291,7 +291,7 @@ Since
 \end{equation}
 we can choose our integral dummy variables $k_1$, $k_2$ and momentum variable $k_x$ are in one range as follows
 \begin{equation} \label{5.23}
-  k_x,k_1,k_2 \approx 10^{-8}\; \text{m}^{-1}
+  k_x,k_1,k_2 \approx 10^{8}\; \text{m}^{-1}
 \end{equation}
 
 \noindent
@@ -315,7 +315,7 @@ Using above values we can re-write the normalized energy broading of the $N$-th 
 \end{equation}
 
 \noindent
-To check the variability of this expression with $k_x$ value we check it with a constant intensity. Therefore let $\tilde{I}=1$ and we can graph the $\Lambda_N (k_x)$ against $k_x$ for different Landau levels ($N$) using following equation.
+To check the variability of this expression with $k_x$ value we check it with a constant intensity. Therefore let $\tilde{I}=1$ and we can re-write above as
 \begin{equation} \label{5.25}
     \Lambda_N (k_x) =
     \qty[
@@ -333,12 +333,49 @@ To check the variability of this expression with $k_x$ value we check it with a 
     \tilde{\chi}_{0}\qty(2.342 \times \qty[{k}_1 - {k}_2 - {k}_x])|^2}
     ]^{1/2}.
 \end{equation}
+then introduce new variable
+\begin{equation} \label{5.26}
+  k_1 - k_x = \tilde{k} \quad \longrightarrow \quad dk_1 = d\tilde{k}
+\end{equation}
+and since $k_1$ can vary between all the range we can modify our Eq. \eqref{5.25} as follows
+\begin{equation} \label{5.27}
+    \Lambda_N (k_x) =
+    \qty[
+    \frac
+    {\int_{-\infty}^{\infty} d \tilde{k} \;
+    J_0^2\qty(2.090\times \tilde{k})
+    \qty|
+    \int_{-\infty}^{\infty} d{k}_2 \;
+    \tilde{\chi}_{N}\qty(2.342 \times k_2)
+    \tilde{\chi}_{N}\qty(2.342 \times \qty[\tilde{k}- {k}_2])|^2}
+    {\int_{-\infty}^{\infty} d \tilde{k} \;
+    \qty|
+    \int_{-\infty}^{\infty} d{k}_2 \;
+    \tilde{\chi}_{0}\qty(2.342 \times k_2)
+    \tilde{\chi}_{0}\qty(2.342 \times \qty[\tilde{k} - {k}_2])|^2}
+    ]^{1/2}
+\end{equation}
+and letting $\tilde{k} = k_1$ we can find that this is do not depend on the value of $k_x$. Therefore
+\begin{equation} \label{5.27}
+    \Lambda_N =
+    \qty[
+    \frac
+    {\int_{-\infty}^{\infty} d k_1 \;
+    J_0^2\qty(2.090\times k_1)
+    \qty|
+    \int_{-\infty}^{\infty} d{k}_2 \;
+    \tilde{\chi}_{N}\qty(2.342 \times k_2)
+    \tilde{\chi}_{N}\qty(2.342 \times \qty[k_1 - {k}_2])|^2}
+    {\int_{-\infty}^{\infty} d k_1\;
+    \qty|
+    \int_{-\infty}^{\infty} d{k}_2 \;
+    \tilde{\chi}_{0}\qty(2.342 \times k_2)
+    \tilde{\chi}_{0}\qty(2.342 \times \qty[k_1 - {k}_2])|^2}
+    ]^{1/2}
+\end{equation}
 
-
-
-
-
-
+\noindent
+Now we can draw the values of $\Lambda_N$ agaist $k_x$ to compare the differese of each Landau level's normalized energy band broading as given in Fig. \ref{fig:5.1}.
 
 
 
