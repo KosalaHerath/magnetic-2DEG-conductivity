@@ -444,15 +444,15 @@ and then we can re-write Eq. \eqref{7.16} as follows
 
 \noindent
 Now use new dimentionless paramters
-\begin{equation} \label{6.17}
+\begin{equation} \label{7.20}
   X_F \equiv \frac{\varepsilon_F}{\hbar \omega_0} -\frac{1}{2}
 \end{equation}
 and
-\begin{equation} \label{6.17}
+\begin{equation} \label{7.21}
   \gamma_n \equiv \frac{\Gamma_n}{\hbar \omega_0}.
 \end{equation}
 Therefore the Eq. \eqref{7.19} leads to
-\begin{equation} \label{7.20}
+\begin{equation} \label{7.22}
   \begin{aligned}
     \lim_{\omega \to 0}
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
@@ -480,7 +480,29 @@ Therefore the Eq. \eqref{7.19} leads to
     }]
   \end{aligned}
 \end{equation}
-
+and
+\begin{equation} \label{7.23}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{e^2}{\hbar}
+    \frac{1}{2\pi A}
+    \sum_{n}
+    \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}}
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n -1}{\gamma_{n+1}})^2
+      }
+    ]
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n}{\gamma_{n}})^2
+      }
+    ]
+  \end{aligned}
+\end{equation}
 
 
 

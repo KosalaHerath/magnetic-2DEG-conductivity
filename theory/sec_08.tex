@@ -1,0 +1,73 @@
+\section{Manipulate Conductivity in Quantum Hall System}
+
+Now using the relations derived in Eq. \eqref{5.34} and Eq. \eqref{7.17} we can derive that
+\begin{equation} \label{8.1}
+  \Gamma_n = \qty(\frac{\hbar }{2\tau(\varepsilon_n)}) =
+  \frac{1}{2}\Gamma^{00}_{N}(\tilde{I})
+\end{equation}
+and this will be
+\begin{equation} \label{8.2}
+  \Gamma_n(\tilde{I}) = 0.12\times
+  \qty[
+  \frac
+  {\int_{-\infty}^{\infty} d {k}_1 \;
+  J_0^2\qty(2.090\sqrt{\tilde{I}}\times{k}_1)
+  \qty|
+  \int_{-\infty}^{\infty} d{k}_2 \;
+  \tilde{\chi}_{N}\qty(2.342 \times k_2)
+  \tilde{\chi}_{N}\qty(2.342 \times \qty[{k}_1 - {k}_2])|^2}
+  {\int_{-\infty}^{\infty} d {k}_1 \;
+  \qty|
+  \int_{-\infty}^{\infty} d{k}_2 \;
+  \tilde{\chi}_{0}\qty(2.342 \times k_2)
+  \tilde{\chi}_{0}\qty(2.342 \times \qty[{k}_1 - {k}_2])|^2}
+  ]^{1/2} \text{meV}
+\end{equation}
+
+\noindent
+In addition we can calculate the cyclotron energy as
+\begin{equation} \label{8.3}
+  \hbar\omega_0 = 1.95663 \;\text{meV}
+\end{equation}
+and
+\begin{equation} \label{8.4}
+  \gamma_n = \frac{\Gamma_n}{\hbar \omega_0} = 0.06133 \times \Lambda_n(\tilde{I}) \approx 0.061 \Lambda_n(\tilde{I})
+\end{equation}
+
+\noindent
+Now we can use this into our conductivity expression derived in Eq. \eqref{7.23} and present the normalized transverse conductivity as a function of fermi energy and intensity of the dressing field
+\begin{equation} \label{8.5}
+  \begin{aligned}
+    \sigma^{xx}(X_F,\tilde{I}) & =
+    \sum_{n}
+    \frac{\qty(n+1)}{0.0037\Lambda_n \Lambda_{n+1}}
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n -1}{0.06\Lambda_n})^2
+      }
+    ]
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n}{0.06\Lambda_{n+1}})^2
+      }
+    ]
+  \end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\hfill$\blacksquare$
