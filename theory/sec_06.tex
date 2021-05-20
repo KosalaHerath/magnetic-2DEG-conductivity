@@ -14,7 +14,7 @@ where particle current operator for this system will be
 \begin{equation} \label{6.3}
   \hat{\mb{j}} = \frac{1}{m} \qty(\hat{\mb{P}} - e\qty[\mb{A}_s + \mb{A}_d(t)]).
 \end{equation}
-Howver, we are only consider the transverse conductivity in $x$ direction we can identify that $x$ directional current operator as
+Let's consider the transverse conductivity in $x$ direction and we can identify that $x$ directional current operator as
 \begin{equation} \label{6.4}
   \hat{j}_x = \frac{1}{m} \qty(-i\hbar\pdv{x} + eBy).
 \end{equation}
@@ -152,3 +152,143 @@ For electric current operator we can introduce the electron's charge and effecti
   \end{aligned}
 \end{equation}
 \hfill$\blacksquare$
+
+\noindent
+Next we can consider the transverse conductivity in $y$ direction and we can identify that $y$ directional current operator as
+\begin{equation} \label{6.17}
+  \hat{j}_y = \frac{1}{m} \qty(-i\hbar\pdv{y} - \frac{eE}{\omega}\cos(\omega t)).
+\end{equation}
+Now we can calculate the matrix elements of $y$ directional current operator's matrix in Floquet mode basis as
+\begin{equation} \label{6.18}
+  \qty({j}_y)_{nm,n'm'} = \mel{n,k_x}{\;\hat{j}_y\;}{n',k'_x} =
+  \mel{n,k_x}{\;\frac{-1}{m} \qty(i\hbar\pdv{y} + \frac{eE}{\omega}\cos(\omega t))\;}{n',k'_x}
+\end{equation}
+and we can evaluate these using Floquet modes derived in Eq.\eqref{3.15} as follows
+\begin{equation} \label{6.19}
+  \begin{aligned}
+    \qty({j}_y)_{nm,n'm'} & =
+    \int dx \int dy \;
+    \frac{1}{\sqrt{L_x}} \chi_{n}\big(y - y_0 - \zeta(t)\big)
+    \exp(-ik_x x) \\
+    & \times
+    \frac{-1}{m} \qty(i\hbar\pdv{y} + \frac{eE}{\omega}\cos(\omega t))
+    \frac{1}{\sqrt{L_x}} \chi_{n'}\big(y - y_0 - \zeta(t)\big)
+    \exp(i k'_x x)
+  \end{aligned}
+\end{equation}
+then introducing new variable
+\begin{equation} \label{6.20}
+  y - y_0 - \zeta(t) = \bar{y} \quad \longrightarrow \quad dy = d{\bar{y}}
+\end{equation}
+and follwing identity [*Ref: Appendix A Hermite fucntions]
+\begin{equation} \label{6.21}
+  \pdv{\chi_n(y)}{y} = -\sqrt{\frac{n+1}{2}} \chi_{n+1}(y) +
+  \sqrt{\frac{n}{2}} \chi_{n-1}(y)
+\end{equation}
+above expression can be simplified as previous case (let $y=\bar{y}$)
+\begin{equation} \label{6.22}
+  \begin{aligned}
+    \qty({j}_y)_{nm,n'm'} & =
+    \frac{-1}{{m}}
+    \delta_{k_x,k'_x}
+    \int dy \;
+     \chi_{n}(y)
+    \qty[-i\hbar \qty(
+    \sqrt{\frac{n'+1}{2}} \chi_{n'+1}(y) - \sqrt{\frac{n'}{2}} \chi_{n'-1}(y)
+    ) + \frac{eE}{\omega}\cos(\omega t)
+    \chi_{n'}(y)].
+  \end{aligned}
+\end{equation}
+Then considering Gauss-Hermite integral indentities we can derive that
+\begin{equation} \label{6.23}
+  \begin{aligned}
+    \qty({j}_y)_{nm,n'm'} & =
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    \qty[i\hbar \qty(
+    \sqrt{\frac{n'+1}{2}} \delta_{n,n'+1}
+    - \sqrt{\frac{n'}{2}} \delta_{n,n'-1}
+    ) - \frac{eE}{\omega}\cos(\omega t) \delta_{n,n'}]
+  \end{aligned}
+\end{equation}
+\textcolor{red}{Due to complexity we can only consider the constant contribution and we allows only the one-cycle averaged current flow} and then we can derive the $s=0$ components of the Fourier series as
+\begin{equation} \label{6.24}
+  \begin{aligned}
+    \qty({j}^y_{s=0})_{nm,n'm'} & =
+    \frac{1}{T} \int_0^T dt \;
+    \frac{1}{{m}}
+    \delta_{k_x,k'_x}
+    \qty[i\hbar \qty(
+    \sqrt{\frac{n'+1}{2}} \delta_{n,n'+1}
+    - \sqrt{\frac{n'}{2}} \delta_{n,n'-1}
+    ) - \frac{eE}{\omega}\cos(\omega t) \delta_{n,n'}]
+  \end{aligned}
+\end{equation}
+and this can be evaluate and get
+\begin{equation} \label{6.25}
+  \begin{aligned}
+    \qty({j}^y_{s=0})_{nm,n'm'} & =
+    \frac{i\hbar}{{m}}
+    \delta_{k_x,k'_x}
+    \qty[
+    \sqrt{\frac{n'+1}{2}} \delta_{n,n'+1}
+    - \sqrt{\frac{n'}{2}} \delta_{n,n'-1}
+    ]
+  \end{aligned}
+\end{equation}
+and this can be re-write as
+\begin{equation} \label{6.26}
+  \begin{aligned}
+    \qty({j}^y_{s=0})_{nm,n'm'} & =
+    \frac{i\hbar}{{m}}
+    \delta_{k_x,k'_x}
+    \qty[
+    \sqrt{\frac{n}{2}} \delta_{n',n-1}
+    - \sqrt{\frac{n+1}{2}} \delta_{n',n+1}
+    ]
+  \end{aligned}
+\end{equation}
+
+\noindent
+For electric current operator we can introduce the electron's charge and effective mass
+\begin{equation} \label{6.27}
+  \begin{aligned}
+    \qty({j}^y_{s=0})_{nm,n'm'} & =
+    \frac{ie\hbar}{{m}}
+    \delta_{k_x,k'_x}
+    \qty[
+    \sqrt{\frac{n}{2}} \delta_{n',n-1}
+    - \sqrt{\frac{n+1}{2}} \delta_{n',n+1}
+    ]
+  \end{aligned}
+\end{equation}
+\hfill$\blacksquare$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xx

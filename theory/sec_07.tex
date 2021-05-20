@@ -226,7 +226,7 @@ and the only non-zero term would be
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
     \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
-    \qty(\frac{n+1}{2})
+    \qty(n+1)
     \\
     & \times
     \qty[
@@ -270,7 +270,7 @@ using central element of the inverse scattering time matrix we can modify our re
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
     \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
-    \qty(\frac{n+1}{2})
+    \qty(n+1)
     \\
     & \times
     \qty[
@@ -315,7 +315,7 @@ Thefore Eq. \eqref{7.10} modified to
     \qty(
     -\frac{\partial f}{\partial \varepsilon})
     \sum_{n}
-    \qty(\frac{n+1}{2})
+    \qty(n+1)
     \\
     & \times
     \qty[
@@ -357,7 +357,7 @@ and this will mpre simplify our derivation of conductivity as
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{e^2 \omega_0^2}{4\pi\hbar A}
     \sum_{n}
-    \qty(\frac{n+1}{2})
+    \qty(n+1)
     \qty[
     \frac{\qty(\frac{1}{\tau(\varepsilon_{n+1})})
     }
@@ -393,7 +393,7 @@ and then we can re-write Eq. \eqref{7.16} as follows
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{e^2 (\hbar\omega_0)^2}{\pi\hbar A}
     \sum_{n}
-    \qty(\frac{n+1}{2})
+    \qty(n+1)
     \qty[
     \frac{\Gamma(\varepsilon_{n+1})
     }
@@ -420,7 +420,7 @@ and then we can re-write Eq. \eqref{7.16} as follows
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{e^2 (\hbar\omega_0)^2}{\pi\hbar A}
     \sum_{n}
-    \qty(\frac{n+1}{2})
+    \qty(n+1)
     \qty[
     \frac{\Gamma_{n+1}
     }
@@ -457,7 +457,7 @@ Therefore the Eq. \eqref{7.19} leads to
     \lim_{\omega \to 0}
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{e^2}{\hbar}
-    \frac{1}{2\pi A}
+    \frac{1}{\pi A}
     \sum_{n}
     \qty(n+1)
     \qty[
@@ -486,7 +486,7 @@ and
     \lim_{\omega \to 0}
     \text{Re}[{\sigma}^{xx}(0,\omega)] & =
     \frac{e^2}{\hbar}
-    \frac{1}{2\pi A}
+    \frac{1}{\pi A}
     \sum_{n}
     \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}}
     \qty[
@@ -503,11 +503,69 @@ and
     ]
   \end{aligned}
 \end{equation}
+\hfill$\blacksquare$
 
-
-
-
-
+\noindent
+Same as above derivation we can derive the transverse conductivity in $y$ direction by using the current operator derived in Eq. \eqref{6.27} as follows
+\begin{equation} \label{7.24}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{yy}(0,\omega)] & =
+    \frac{1}{4\pi\hbar A}
+    \frac{e^2\hbar^2}{{m^2}}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
+    -\qty(n+1)
+    \\
+    & \times
+    \qty[
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n+1}}
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n+1}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n+1}}]^2
+    }]
+    \qty[
+    \frac{2i \text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n}}
+    }
+    {
+    \qty(
+    \frac{1}{\hbar}\varepsilon -
+    \frac{1}{\hbar}\varepsilon_{n}
+    )^2
+    + \qty[\text{Im}\qty(\mb{T}^{\dagger} \sum^r \mb{T})_{\varepsilon_{n}}]^2
+    }]
+  \end{aligned}
+\end{equation}
+and same as above derivation this can be simplified into
+\begin{equation} \label{7.25}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{yy}(0,\omega)] & =
+    \frac{e^2}{\hbar}
+    \frac{1}{\pi A}
+    \frac{1}{e^2B^2}
+    \sum_{n}
+    \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}}
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n -1}{\gamma_{n+1}})^2
+      }
+    ]
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n}{\gamma_{n}})^2
+      }
+    ]
+  \end{aligned}
+\end{equation}
 
 
 
