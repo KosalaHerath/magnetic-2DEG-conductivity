@@ -258,7 +258,7 @@ and a random potential $V(\mb{r})$ with this property is called white noise [*Re
 \end{equation}
 
 \noindent
-Now we can calculate the Eq. \eqref{4.25} using this assumption as follows
+Since $\braket{\mb{r}}{\mb{k}} = \frac{1}{\sqrt{L_xL_y}} \exp(-i[k_xx + k_yy]),$ we can calculate the Eq. \eqref{4.25} using this assumption as follows
 \begin{equation} \label{4.31}
   \begin{aligned}
     V_{\mb{k'},\mb{k}}
@@ -267,36 +267,35 @@ Now we can calculate the Eq. \eqref{4.25} using this assumption as follows
     \Upsilon_{imp} \delta(\mb{r}-\mb{r}_i)}{\mb{k}} \\
     & = \mel**{\mb{k'}}{\sum_{i=1}^{N_{imp}}
     \Upsilon_{imp} \delta(x-x_i)\delta(y-y_i)}{\mb{k}} \\
-    & = \mel**{{k'}_x}{\sum_{x_i=1}^{N_{imp}}
-    \Upsilon_{imp} \delta(x-x_i)}{k_x}
-    \sum_{y_i=1}^{N_{imp}}
-    \int_{-\infty}^{\infty} dy\; e^{i{k'}_y y} \delta(y-y_i) e^{-i{k}_y y} \\
+    & =
+    \sum_{i=1}^{N_{imp}}
+    \int_{-\infty}^{\infty} dy\;
+    \frac{1}{\sqrt{L_y}} e^{ik'_y y} \delta(y-y_i) \frac{1}{\sqrt{L_y}} e^{-i{k}_y y}
+    \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \\
     &=
-    \mel**{{k'}_x}{\sum_{x_i=1}^{N_{imp}}
-    \Upsilon_{imp} \delta(x-x_i)}{k_x}
-    \sum_{y_i=1}^{N_{imp}}
-    e^{i\qty({k'}_y - k_y)y_i}
+    \sum_{i=1}^{N_{imp}} \frac{1}{{L_y}}
+    e^{i(k'_y - k_y )y}
+    \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x}
   \end{aligned}
 \end{equation}
-Assuming the total  umber of scatterers $N_{imp}$ is macroscopically large we can achieve following expression
+Assuming the total  umber of scatterers $N_{imp}$ is macroscopically large and for each impurity will produce same impurity potential($V_{k'_x,k_x}$) (\textcolor{red}{this is not sure and we need to prove this somehonw or we need to bring the $V_{\mb{k},\mb{k'}}$ without calculations})for every $x$-directional momentum pairs, we can achieve following expression
 \begin{equation} \label{4.32}
   \begin{aligned}
     V_{\mb{k'},\mb{k}}
     & =
-    \mel**{{k'}_x}{\sum_{x_i=1}^{N_{imp}}
-    \Upsilon_{imp} \delta(x-x_i)}{k_x}
-    \frac{N_{imp}}{L_y} \int_{-\infty}^{\infty} dy_i\;
+    V_{k'_x,k_x}
+    \frac{N_{imp}}{L_y^2} \int_{-\infty}^{\infty} dy_i\;
     e^{i\qty({k'}_y - k_y)y_i} \\
     & =
-    \frac{N_{imp}}{L_y} V_{{k'}_x,k_x} \delta({k'}_y - k_y)
+    \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y)
   \end{aligned}
 \end{equation}
 where
 \begin{equation} \label{4.33}
   V_{{k'}_x,k_x} \equiv
-  \mel**{{k'}_x}{\sum_{x_i=1}^{N_{imp}}
-  \Upsilon_{imp} \delta(x-x_i)}{k_x}
+  \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x}
 \end{equation}
+is constant value for every $i$ impurity and $\eta_{imp}$ is number of impurities in a unit area.\\
 
 \noindent
 Therefore, using the Eq. \eqref{3.36}, the Eq. \eqref{4.24} modified to (we can change varable $t' \rightarrow t$)
