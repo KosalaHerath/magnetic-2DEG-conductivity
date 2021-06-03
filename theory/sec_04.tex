@@ -209,14 +209,13 @@ Now lets consider about the inner product of the above derivation. Using complet
     \braket{\mb{k}}{\phi_{\alpha,\mb{k}}(t')}
   \end{aligned}
 \end{equation}
-and seperating $x$ and $y$ directional momentums we can modify this as follows (Assuming $L_y \rightarrow \infty$) and then using $\frac{1}{L_y}\sum_{k_y} = \frac{1}{2\pi}\int k_y$
+and seperating $x$ and $y$ directional momentums we can modify this as follows (Assuming $L_y \rightarrow \infty$) and since we assumed that $L_y \rightarrow \infty$
 \begin{equation} \label{4.24}
   \begin{aligned}
     Q & \equiv
     \bra{\phi_{\beta,\mb{k'}}(t')}
     V(\mb{r}) \ket{\phi_{\alpha,\mb{k}}(t')} \\
     & =
-    \frac{L_y^2}{4 \pi^2}
     \sum_{k_x}\sum_{{k'}_x}
     \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
     \phi_{\beta}(\mb{k'},t')
@@ -270,10 +269,10 @@ Since $\braket{\mb{r}}{\mb{k}} = \frac{1}{\sqrt{L_xL_y}} \exp(-i[k_xx + k_yy]),$
     & =
     \sum_{i=1}^{N_{imp}}
     \int_{-\infty}^{\infty} dy\;
-    \frac{1}{\sqrt{L_y}} e^{ik'_y y} \delta(y-y_i) \frac{1}{\sqrt{L_y}} e^{-i{k}_y y}
+    \frac{1}{\sqrt{L_xL_y}} e^{ik'_y y} \delta(y-y_i) \frac{1}{\sqrt{L_xL_y}} e^{-i{k}_y y}
     \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \\
     &=
-    \sum_{i=1}^{N_{imp}} \frac{1}{{L_y}}
+    \sum_{i=1}^{N_{imp}} \frac{1}{{L_xL_y}}
     e^{i(k'_y - k_y )y}
     \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x}
   \end{aligned}
@@ -284,7 +283,7 @@ Assuming the total  umber of scatterers $N_{imp}$ is macroscopically large and f
     V_{\mb{k'},\mb{k}}
     & =
     V_{k'_x,k_x}
-    \frac{N_{imp}}{L_y^2} \int_{-\infty}^{\infty} dy_i\;
+    \frac{N_{imp}}{L_y L_x} \int_{-\infty}^{\infty} dy_i\;
     e^{i\qty({k'}_y - k_y)y_i} \\
     & =
     \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y)
@@ -295,7 +294,7 @@ where
   V_{{k'}_x,k_x} \equiv
   \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x}
 \end{equation}
-is constant value for every $i$ impurity and $\eta_{imp}$ is number of impurities in a unit area.\\
+is constant value for every $i$ impurity and $\eta_{imp}$ is number of impurities in a unit area. It is important to notice that $\ket{k_x} = e^{-ik_xx}$.\\
 
 \noindent
 Therefore, using the Eq. \eqref{3.36}, the Eq. \eqref{4.24} modified to (we can change varable $t' \rightarrow t$)
@@ -303,7 +302,7 @@ Therefore, using the Eq. \eqref{3.36}, the Eq. \eqref{4.24} modified to (we can 
   \begin{aligned}
     Q & =
     \sum_{k_x}\sum_{{k'}_x}
-    \frac{N_{imp} L_y V_{{k'}_x,k_x}}{4\pi^2}
+    {\eta_{imp} V_{{k'}_x,k_x}}
     \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
     \delta({k'}_y - k_y)
     \\
@@ -333,7 +332,7 @@ and we can simplify this as
   \begin{aligned}
     Q =
     \sum_{k_x}\sum_{{k'}_x} &
-    \frac{N_{imp} L_xL_y V_{{k'}_x,k_x}}{4\pi^2}
+    {\eta_{imp} L_x V_{{k'}_x,k_x}}
     \int_{-\infty}^{\infty} dk_y \;
     \\
     & \times
@@ -352,7 +351,7 @@ and this can re-write as
   \begin{aligned}
     Q =
     \sum_{k_x}\sum_{{k'}_x}
-    \frac{N_{imp} L_xL_y V_{{k'}_x,k_x}}{4\pi^2} I
+    {\eta_{imp} L_x V_{{k'}_x,k_x}} I
   \end{aligned}
 \end{equation}
 where
@@ -412,10 +411,10 @@ Therefore the scatterng amplitude \eqref{4.22} will modified to
     -2\pi i
     \delta(\varepsilon_{\beta} - \varepsilon)
     \sum_{k_x}\sum_{{k'}_x}
-    \frac{N_{imp} L_xL_y V_{{k'}_x,k_x}}{4\pi^2} I
+    {\eta_{imp} L_x V_{{k'}_x,k_x}} I
   \end{aligned}
 \end{equation}
-Consideirng qunatized momentum given in $x$ direction derived in Eq. \eqref{2.4}, we can identify the non-zero values for scattering amplitude using following conditions
+Consideirng qunatized momentum given in $x$ direction derived in Eq. \eqref{1.53}, we can identify the non-zero values for scattering amplitude using following conditions
 \begin{equation} \label{4.43}
     {k'}_x = \frac{p_{x_{\beta}}}{\hbar} = m' \frac{2\pi}{L_x}
     \quad \text{and} \quad
@@ -425,8 +424,9 @@ Then we can simplfied scattering amplitude for given ${k'}_x$ and $k_x$ as
 \begin{equation} \label{4.44}
   \begin{aligned}
     a_{\alpha\beta}({k'}_x,k_x,t)  =
+    -2\pi i
     \delta(\varepsilon_{\beta} - \varepsilon)
-    \qty[\frac{-i N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]&
+    \eta_{imp} L_x V_{{k'}_x,k_x}&
     \exp(g[{y'}_0 - y_0]\cos(\omega t)) \\
     & \times
     \int_{-\infty}^{\infty} dy \;
@@ -447,8 +447,9 @@ we can re-write the Eq.\eqref{4.44} as folllows
 \begin{equation} \label{4.47}
   \begin{aligned}
     a_{\alpha\beta}({k'}_x,k_x,t)  =
+    -2\pi i
     \delta(\varepsilon_{\beta} - \varepsilon)
-    \qty[\frac{-i N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]&
+    \eta_{imp} L_x V_{{k'}_x,k_x}&
     \sum_{l=-\infty}^{\infty} i^l J_l\qty(g[{y'}_0 - y_0]) e^{-il\omega t}\\
     & \times
     \int_{-\infty}^{\infty} dy \;
@@ -460,8 +461,9 @@ we can re-write the Eq.\eqref{4.44} as folllows
   \begin{aligned}
     a_{\alpha\beta}({k'}_x,k_x,t)  =
     \sum_{l=-\infty}^{\infty}
-    \delta(\varepsilon_{\beta} - \varepsilon) &
-    \qty[\frac{-i^{l+1} N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]
+    -2\pi i^{l+1} &
+    \delta(\varepsilon_{\beta} - \varepsilon)
+    \eta_{imp} L_x V_{{k'}_x,k_x}
     J_l\qty(g[{y'}_0 - y_0]) \\
     & \times
     \int_{-\infty}^{\infty} dy \;
@@ -472,8 +474,9 @@ we can re-write the Eq.\eqref{4.44} as folllows
 Then we can identified the Fourier series component as
 \begin{equation} \label{4.49}
     a^l_{\alpha\beta}({k'}_x,k_x) =
+    -2\pi i^{l+1}
     \delta(\varepsilon_{\beta} - \varepsilon)
-    \qty[\frac{-i^{l+1} N_{imp} L_xL_y V_{{k'}_x,k_x}}{2\pi}]
+    \eta_{imp} L_x V_{{k'}_x,k_x}
     J_l\qty(g[{y'}_0 - y_0])
     \int_{-\infty}^{\infty} dy \;
     {\chi}_{n_{\beta}}\qty(y)
@@ -488,7 +491,7 @@ and this becomes
 \begin{equation} \label{4.51}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} & =
-      \qty[\frac { N_{imp}^2 A^2 |V_{{k'}_x,k_x}|^2}{4\pi^2}]
+      \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta^2(\varepsilon_{\beta} - \varepsilon) \\
       & \times
@@ -506,7 +509,7 @@ We can reduce these intragal into one variable and derive
 \begin{equation} \label{4.52}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
-      \qty[\frac { N_{imp}^2 A^2 |V_{{k'}_x,k_x}|^2}{4\pi^2}] &
+      \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2 &
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta^2(\varepsilon_{\beta} - \varepsilon) \\
       & \times
@@ -528,7 +531,7 @@ one can modify our derivation in Eq. \eqref{4.51} as
 \begin{equation} \label{4.54}
   \begin{aligned}
       \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
-      \qty[\frac { N_{imp}^2 A^2 |V_{{k'}_x,k_x}|^2}{4\pi^2}] &
+      \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2 &
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta(\varepsilon_{\beta} - \varepsilon)
       \frac{t}{2\pi \hbar}\\
@@ -557,7 +560,7 @@ Then performing thetime derivation of each matrix element yeild the \textit{tran
 where
 \begin{equation} \label{4.56}
     \Lambda \equiv
-    \frac { N_{imp}^2 A^2}{8\pi^3 \hbar}
+    \frac { 2\pi \eta_{imp}^2 L_x^2}{ \hbar}
 \end{equation}
 
 \noindent
@@ -674,7 +677,7 @@ scattering time matrix} for $N$th Landau level (let $n_{\alpha} = n_{\beta} = N$
 \begin{equation} \label{4.65}
   \begin{aligned}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
-    \frac { N_{imp}^2 A^2 \hbar V_{imp}}{16\pi^4 \qty(eB)^2}
+    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N})
     \int_{-\infty}^{\infty} d {k'}_x
     &
