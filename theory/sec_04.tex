@@ -161,7 +161,7 @@ Here we need to undestand a state of this considering system only be represented
 states and $m$ quantum number which represents the qunatized momentum in $x$ direction values. Lets calculate the scattering amplitutde of the above mentioned scattering scenario using the equation derived in \eqref{4.18}.
 \begin{equation} \label{4.21}
   \begin{aligned}
-    a_{\alpha\beta}(\mb{k'},\mb{k},t,t') & =
+    a_{\alpha\beta}(t,t') & =
     -
     \frac{i}{\hbar}
     \int_{0}^t dt_1 \;
@@ -218,7 +218,7 @@ and seperating $x$ and $y$ directional momentums we can modify this as follows (
     & =
     \sum_{k_x}\sum_{{k'}_x}
     \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
-    \phi_{\beta}(\mb{k'},t')
+    \phi_{\beta}^{\dagger}(\mb{k'},t')
     \mel{\mb{k'}}{V(\mb{r})}{\mb{k}}
     \phi_{\alpha}(\mb{k},t').
   \end{aligned}
@@ -229,7 +229,7 @@ For a random white scattering potential we can represent the inner product of sc
 \end{equation}
 
 \noindent
-In this study, the perturbation potential is assumed to be formed by an ensemble of randomly distributed impurities, since randomimpurities iin a disorded metal is a better approximation for experimental results.
+In this study, the perturbation potential is assumed to be formed by an ensemble of randomly distributed impurities, since randomimpurities in a disorded metal is a better approximation for experimental results.
 
 \noindent
 Consider $N_{imp}$ identical impurities positioned at the randomly distributed but fixed potions $\mb{r}_i$. The elastic scattering potential $V(\mb{r})$ is then given by the sum over uncorrelated single impurity potentials $\upsilon(\mb{r})$
@@ -277,7 +277,7 @@ Since $\braket{\mb{r}}{\mb{k}} = \frac{1}{\sqrt{L_xL_y}} \exp(-i[k_xx + k_yy]),$
     \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x}
   \end{aligned}
 \end{equation}
-Assuming the total  umber of scatterers $N_{imp}$ is macroscopically large and for each impurity will produce same impurity potential($V_{k'_x,k_x}$) (\textcolor{red}{this is not sure and we need to prove this somehonw or we need to bring the $V_{\mb{k},\mb{k'}}$ without calculations})for every $x$-directional momentum pairs, we can achieve following expression
+Assuming the total  umber of scatterers $N_{imp}$ is macroscopically large and for each impurity will produce same impurity potential($V_{k'_x,k_x}$) (\textcolor{red}{this is not sure and we need to prove this somehonw or we need to bring the $V_{\mb{k},\mb{k'}}$ without calculations})for every $x$-directional momentum pairs. Because $\upsilon (\mb{r})$ in momentum space is a constant value. Then we can achieve following expression
 \begin{equation} \label{4.32}
   \begin{aligned}
     V_{\mb{k'},\mb{k}}
@@ -420,10 +420,10 @@ Consideirng qunatized momentum given in $x$ direction derived in Eq. \eqref{1.53
     \quad \text{and} \quad
     k_x = \frac{p_{x_{\alpha}}}{\hbar} = m \frac{2\pi}{L_x}.
 \end{equation}
-Then we can simplfied scattering amplitude for given ${k'}_x$ and $k_x$ as
+Then we can simplfied scattering amplitude for given ${k'}_x$ and $k_x$ as (details of $k_x$ and $k'_x$ are included $\alpha$ and $\beta$ quantum numbers.)
 \begin{equation} \label{4.44}
   \begin{aligned}
-    a_{\alpha\beta}({k'}_x,k_x,t)  =
+    a_{\alpha\beta}(t)  =
     -2\pi i
     \delta(\varepsilon_{\beta} - \varepsilon)
     \eta_{imp} L_x V_{{k'}_x,k_x}&
@@ -436,8 +436,8 @@ Then we can simplfied scattering amplitude for given ${k'}_x$ and $k_x$ as
 \end{equation}
 Since this scattering amplitude is time-periodic we can write this as a Fourier series expansion
 \begin{equation} \label{4.45}
-    a_{\alpha\beta}({k'}_x,k_x,t) =
-    \sum_{l=-\infty}^{\infty} a^l_{\alpha\beta}({k'}_x,k_x) e^{-il\omega t}.
+    a_{\alpha\beta}(t) =
+    \sum_{l=-\infty}^{\infty} a^l_{\alpha\beta} e^{-il\omega t}.
 \end{equation}
 In addition, using Jacobi-Anger expansion
 \begin{equation} \label{4.46}
@@ -446,7 +446,7 @@ In addition, using Jacobi-Anger expansion
 we can re-write the Eq.\eqref{4.44} as folllows
 \begin{equation} \label{4.47}
   \begin{aligned}
-    a_{\alpha\beta}({k'}_x,k_x,t)  =
+    a_{\alpha\beta}(t)  =
     -2\pi i
     \delta(\varepsilon_{\beta} - \varepsilon)
     \eta_{imp} L_x V_{{k'}_x,k_x}&
@@ -459,7 +459,7 @@ we can re-write the Eq.\eqref{4.44} as folllows
 \end{equation}
 \begin{equation} \label{4.48}
   \begin{aligned}
-    a_{\alpha\beta}({k'}_x,k_x,t)  =
+    a_{\alpha\beta}(t)  =
     \sum_{l=-\infty}^{\infty}
     -2\pi i^{l+1} &
     \delta(\varepsilon_{\beta} - \varepsilon)
@@ -473,7 +473,7 @@ we can re-write the Eq.\eqref{4.44} as folllows
 \end{equation}
 Then we can identified the Fourier series component as
 \begin{equation} \label{4.49}
-    a^l_{\alpha\beta}({k'}_x,k_x) =
+    a^l_{\alpha\beta} =
     -2\pi i^{l+1}
     \delta(\varepsilon_{\beta} - \varepsilon)
     \eta_{imp} L_x V_{{k'}_x,k_x}
@@ -484,13 +484,13 @@ Then we can identified the Fourier series component as
 \end{equation}
 Now one can introduce the definition of the \textit{transition probability matrix} as
 \begin{equation} \label{4.50}
-    \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} \equiv
-    a^l_{\alpha\beta}({k'}_x,k_x)\qty[a^{l'}_{\alpha\beta}({k'}_x,k_x)]^{*}
+    \qty(A_{\alpha\beta})_{l,l'} \equiv
+    a^l_{\alpha\beta}\qty[a^{l'}_{\alpha\beta}]^{*}
 \end{equation}
 and this becomes
 \begin{equation} \label{4.51}
   \begin{aligned}
-      \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} & =
+      \qty(A_{\alpha\beta})_{l,l'} & =
       \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta^2(\varepsilon_{\beta} - \varepsilon) \\
@@ -508,7 +508,7 @@ and this becomes
 We can reduce these intragal into one variable and derive
 \begin{equation} \label{4.52}
   \begin{aligned}
-      \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
+      \qty(A_{\alpha\beta})_{l,l'} =
       \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2 &
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta^2(\varepsilon_{\beta} - \varepsilon) \\
@@ -530,7 +530,7 @@ Then desribing the square of the delta distribution using following procedure
 one can modify our derivation in Eq. \eqref{4.51} as
 \begin{equation} \label{4.54}
   \begin{aligned}
-      \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'} =
+      \qty(A_{\alpha\beta})_{l,l'} =
       \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2 &
       J_l\qty(g[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])
       \delta(\varepsilon_{\beta} - \varepsilon)
@@ -545,8 +545,8 @@ one can modify our derivation in Eq. \eqref{4.51} as
 Then performing thetime derivation of each matrix element yeild the \textit{transition amplitude matrix} as folllows
 \begin{equation} \label{4.55}
   \begin{aligned}
-    \Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x) &  \equiv
-    \frac{d \qty(A_{\alpha\beta}({k'}_x,k_x))_{l,l'}}{dt} \\
+    \Gamma_{\alpha\beta}^{ll'} &  \equiv
+    \frac{d \qty(A_{\alpha\beta})_{l,l'}}{dt} \\
     & =
     \Lambda |V_{{k'}_x,k_x}|^2
     \delta(\varepsilon_{\beta} - \varepsilon)

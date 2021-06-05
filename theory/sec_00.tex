@@ -1,0 +1,111 @@
+\section{Fermi's Goldern Rule - Revision}
+
+Next assuimg this scenario for long time $t \rightarrow \infty$ we can turn this integral into a delta distrubution as follows
+\begin{equation} \label{0.1}
+  \begin{aligned}
+    a_{\alpha\beta}(\mb{k'},\mb{k},t') & =
+    -
+    \frac{i}{\hbar}
+    \lim_{t \rightarrow \infty}\qty[
+      \int_{-t/2}^{t/2} dt_1 \;
+      e^{\frac{i}{\hbar}\qty(\varepsilon_{\beta} - \varepsilon)t_1}
+      \bra{\phi_{\beta,\mb{k'}}(t')}
+      V(\mb{r}) \ket{\phi_{\alpha,\mb{k}}(t')}
+    ] \\
+    & =
+    -2\pi i \delta(\varepsilon_{\beta} - \varepsilon)
+    \bra{\phi_{\beta,\mb{k'}}(t')}
+    V(\mb{r}) \ket{\phi_{\alpha,\mb{k}}(t')}
+    \\
+    & =
+    -2\pi i \delta(\varepsilon_{\beta} - \varepsilon)
+    \sum_{\mb{k}}\sum_{\mb{k'}}
+    \braket{\phi_{\beta,\mb{k'}}(t')}{\mb{k'}}
+    \mel{\mb{k'}}{V(\mb{r})}{\mb{k}}
+    \braket{\mb{k}}{\phi_{\alpha,\mb{k}}(t')}
+    \\
+    & =
+    \sum_{k_x}\sum_{{k'}_x}
+    \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
+    \phi_{\beta}^{\dagger}(\mb{k'},t')
+    \mel{\mb{k'}}{V(\mb{r})}{\mb{k}}
+    \phi_{\alpha}(\mb{k},t').
+  \end{aligned}
+\end{equation}
+Let's define the impurity potential matrix element as
+\begin{equation} \label{0.2}
+  V_{\mb{k}, \mb{k'}} = \mel{\mb{k'}}{V(\mb{r})}{\mb{k}}
+\end{equation}
+and consider this for a given $k_x$ and $k'_x$ momentum value. This information is included in the $\alpha$ and $\beta$ quantum numbers. Also we can transform the $t'$ varable into $t$ and present above as
+\begin{equation} \label{0.3}
+  \begin{aligned}
+    a_{\alpha\beta}(t) & =
+    \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
+    V_{\mb{k}, \mb{k'}}
+    \phi_{\beta}^{\dagger}(\mb{k'},t)
+    \phi_{\alpha}(\mb{k},t).
+  \end{aligned}
+\end{equation}
+Using the derivation of \textit{Floquet modes} in Eq. \eqref{3.40} we expand this as
+\begin{equation} \label{0.4}
+  \begin{aligned}
+    a_{\alpha\beta}(t) =
+    \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
+    V_{\mb{k}, \mb{k'}} &
+    {\sqrt{L_x}}
+    e^{
+      -ib\sin(2\omega t)
+    }
+    e^{
+      +ik'_y  \qty[d\sin(\omega t) + y'_0]
+    }
+    \tilde{\chi}_{n_{\beta}}\qty(k'_y -g\cos(\omega t)) \\
+    & \times
+    {\sqrt{L_x}}
+    e^{
+      ib\sin(2\omega t)
+    }
+    e^{
+      -ik_y  \qty[d\sin(\omega t) + y_0]
+    }
+    \tilde{\chi}_{n_{\alpha}}\qty(k_y -g\cos(\omega t))
+  \end{aligned}
+\end{equation}
+and this can be simplified to
+\begin{equation} \label{0.5}
+  \begin{aligned}
+    a_{\alpha\beta}(t) =
+    L_x
+    \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
+    V_{\mb{k}, \mb{k'}} &
+    e^{
+      i\qty[k'_y - k_y]d\sin(\omega t)
+    }
+    e^{
+      i\qty[k'_y y'_0 - k_y y_0]
+    }
+    \tilde{\chi}_{n_{\beta}}\qty(k'_y -g\cos(\omega t))
+    \tilde{\chi}_{n_{\alpha}}\qty(k_y -g\cos(\omega t)).
+  \end{aligned}
+\end{equation}
+Then by definiton of the \textit{transition probability} we can find the scattering probbaility as
+\begin{equation} \label{0.6}
+    \qty(A_{\alpha\beta}(t) \equiv
+    a_{\alpha\beta}(t)\qty[a_{\alpha\beta}({k'}_x,k_x)]^{*}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xx

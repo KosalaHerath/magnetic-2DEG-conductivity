@@ -26,7 +26,7 @@ The disorder in the system is not supposed to change the eigenenergies of the ba
     \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N}) &
     \int_{-\infty}^{\infty} d {k'}_x \;
-    J_l^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
+    J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     \\
     & \times
     \qty|
@@ -163,7 +163,7 @@ and
 \end{equation}
 
 \noindent
-Using above definition we can identify Gauss-Hermite functions ($\tilde{\chi}_N$) and this can re-write as
+Using above definition we can identify Gauss-Hermite functions ($\vartheta_N$) and this can re-write as
 \begin{equation} \label{5.11}
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,k_x)  =
@@ -171,20 +171,22 @@ Using above definition we can identify Gauss-Hermite functions ($\tilde{\chi}_N$
     \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
     \int_{-\infty}^{\infty} d {k'}_x \;
     J_0^2\qty(g\sigma[{k}_x - {k'}_x])
+    \kappa^2
     \qty|
     \int_{-\infty}^{\infty} d\bar{k} \;
-    \tilde{\chi}_{N}\qty(\sigma\kappa\bar{k})
-    \tilde{\chi}_{N}\qty(\sigma\kappa\qty[{k'}_x - {k}_x - \bar{k}])|^2
+    \vartheta_{N}\qty(\sigma\kappa\bar{k})
+    \vartheta_{N}\qty(\sigma\kappa\qty[{k'}_x - {k}_x - \bar{k}])|^2
     ]^{-1/2}
   \end{aligned}
 \end{equation}
 where
 \begin{equation} \label{5.12}
-  \tilde{\chi}_N(x) = \frac{1}{\sqrt{2^{N}N!\sqrt{\pi}}}
+  \vartheta_N(x) = \frac{1}{\sqrt{2^{N}N!\sqrt{\pi}}}
   \exp(-\frac{x^2}{2})
-  \mathcal{H}_N\qty(x)
+  \mathcal{H}_N\qty(x) \quad,\quad
+  \kappa^2 = \frac{m_e\omega_0}{\hbar} = \frac{eB}{\hbar}
 \end{equation}
-and this will be simplified to
+and this will be simplified to (with parmater change $k'_x \rightarrow k_1$ and $\bar{k}_x \rightarrow k_2$)
 \begin{equation} \label{5.13}
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,k_x)  =
@@ -201,7 +203,7 @@ and this will be simplified to
 \end{equation}
 where
 \begin{equation} \label{5.14}
-    \eta = \qty[\frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}]^{1/2} \quad,\quad
+    \eta = \eta_{imp} L_x \qty[\frac { V_{imp}}{eB}]^{1/2} \quad,\quad
     \lambda_1 = g\sigma \quad,\quad
     \lambda_2 = \sigma \kappa.
 \end{equation}
@@ -406,7 +408,7 @@ Now let's check how the $\Lambda_N$ value change with the applied dressing field
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.6]{figures/fig52.pdf}
-  \caption{Normalized energy band broadening with $k_x$ for different Landau levels ($N=0,1,2,3,4$) for $\tilde{I}=1$.}
+  \caption{Normalized energy band broadening with $\tilde{I}$ for different Landau levels.}
   \label{fig:5.2}
 \end{figure}
 
