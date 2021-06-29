@@ -1,0 +1,175 @@
+The deriving process of solutions for Schrödinger equation with Hamiltonian of an electron in 2DEG (Eq. \ref{eq_1}) quite similar to that followed in Refs. \cite{husmi53,dini16}. We start with expanding the Hamiltonian for two-dimentional case
+\begin{equation} \label{eq_a1}
+  \hat{H}_e(t) = \frac{1}{2m_e}\left[
+    \left(\hat{p}_x + eBy \right)^2 +
+    \left(\hat{p}_y - \frac{eE}{\omega}\cos(\omega t)\right)^2
+  \right],
+\end{equation}
+and since $\left[\hat{H}_e(t),\hat{p}_x \right] =0$ both operators share same (simultaneous) eigen functions
+$\frac{1}{\sqrt{L_x}}\exp(\frac{ip_x x}{\hbar})$ with $p_x = m2\pi \hbar/L_x~,~ m \in \mathbb{Z}$.
+Therefore we re-arrange the Hamiltonian using definition of canonical momentum in $y$-direction to derive
+\begin{equation} \label{eq_a2}
+    \hat{H}_e(t) = \frac{1}{2m_e}\left[
+      \left({p}_x + eBy \right)^2 +
+      \left(-i\hbar \pdv{y}- \frac{eE}{\omega}\cos(\omega t)\right)^2
+    \right].
+\end{equation}
+We now define the \textit{center of the cyclotron orbit} along $y$ axis $y_0 \equiv {-p_x}/{eB}$ and the \textit{cyclotron frequency} $\omega_0 \equiv {eB}/{m_e}$. This leads to a new arangement of the Hamiltonian
+\begin{equation} \label{eq_a3}
+  \begin{aligned}
+    \hat{H}_e(t) =
+      \frac{m_e \omega_0^2}{2}\tilde{y}^2 +
+      \frac{1}{2m_e}\bigg[
+      -\hbar^2 \pdv[2]{\tilde{y}} & +
+      \frac{2i\hbar eE}{\omega}\cos(\omega t) \pdv{\tilde{y}} \\
+      & +
+      \frac{e^2E^2}{\omega^2}\cos[2](\omega t)
+      \bigg],
+  \end{aligned}
+\end{equation}
+where we used a variable substitution $\tilde{y} = (y - y_0)$. Now we are assuming that the solutions for the time-dependent Schrödinger equation
+\begin{equation} \label{eq_a4}
+    i \hbar \dv{\psi}{t} = \hat{H}_e(t)\psi,
+\end{equation}
+can present by the following form
+\begin{equation} \label{eq_a5}
+    \psi_m(x,\tilde{y},t) = \frac{1}{\sqrt{L_x}} \exp\bigg(
+      \frac{ip_x x}{\hbar} +
+      \frac{ieE\tilde{y}}{\hbar \omega}\cos(\omega t)
+    \bigg) \phi(\tilde{y},t),
+\end{equation}
+where $\phi(\tilde{y},t)$ is a function that need to be find to satisfy the following property
+\begin{equation} \label{eq_a6}
+    \bigg[
+    \frac{m_e \omega_0^2}{2}\tilde{y}^2
+    - {eE\tilde{y}}\sin(\omega t)
+    -
+    \frac{\hbar^2}{2m_e}
+    \pdv[2]{\tilde{y}}
+    - i \hbar \dv{t}
+    \bigg]
+    \phi(\tilde{y},t) = 0.
+\end{equation}
+If we turn off the strong dressing field ($E=0$), this equation leads to simple harmonic oscillator Hamiltonian
+\begin{equation} \label{eq_a7}
+     i \hbar \dv{\phi(\tilde{y},t)}{t} =
+    \bigg[
+    \frac{\hat{p}_{\tilde{y}}^2}{2m_e} +
+    \frac{1}{2}m_e \omega_0^2\tilde{y}^2
+    \bigg]
+    \phi(\tilde{y},t).
+\end{equation}
+It is important to notice that we can identify the $S(t) \equiv eE\sin(\omega t)$ part as a external force act on the harmonic oscillator and we can solve this as a forced harmonic oscillator in $\tilde{y}$ axis.
+\begin{equation} \label{eq_a8}
+  \begin{aligned}
+    i \hbar \dv{\phi(\tilde{y},t)}{t} =
+    \bigg[
+    -
+    \frac{\hbar^2}{2m_e}
+    \pdv[2]{\tilde{y}} +
+    \frac{1}{2}m_e \omega_0^2\tilde{y}^2
+    - \tilde{y}S(t)]
+    \bigg]
+    \phi(\tilde{y},t).
+  \end{aligned}
+\end{equation}
+
+This system can be extacly solvable and we can solve the equation using the methods explained by Husimi \cite{husmi53} as follows. We introduce a time dependent shifted cordinate $ y' = \tilde{y} - \zeta(t)$ and perform following unitary trasformation
+\begin{equation} \label{eq_a9}
+    \phi(y',t) = \exp(\frac{im_e\dot{\zeta}y'}{\hbar})\varphi(y',t),
+\end{equation}
+and this yeilds
+\begin{equation} \label{eq_a10}
+  \begin{aligned}
+    i \hbar \pdv{\varphi(y',t)}{t}   =
+    \bigg[
+        & -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        + \frac{1}{2} m_e \omega_0^2 y'^2 \\
+        & +
+        \Big[
+            m_e\ddot{\zeta} + m_e\omega_0^2\zeta - S(t)
+        \Big]y' \\
+        &
+        +
+        \Big[
+            - \frac{1}{2} m_e\dot{\zeta}^2 + \frac{1}{2}m_e\omega_0^2 \zeta^2 - \zeta S(t)
+        \Big]
+    \bigg]\varphi(y',t).
+  \end{aligned}
+\end{equation}
+Then we can restrict our $\zeta(t)$ function such that
+\begin{equation} \label{eq_a11}
+  m_e\ddot{\zeta} + m_e\omega_0^2\zeta = S(t)
+\end{equation}
+and that leads to
+\begin{equation} \label{eq_a12}
+  \begin{aligned}
+    i \hbar \pdv{\varphi(y',t)}{t}   =
+    \bigg[
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        + \frac{1}{2} m_e \omega_0^2 {y'}^2
+        - L(\zeta,\dot{\zeta},t)
+    \bigg]\varphi(y',t)
+  \end{aligned}
+\end{equation}
+where
+\begin{equation} \label{eq_a13}
+  L(\zeta,\dot{\zeta},t) \equiv \frac{1}{2} m_e\dot{\zeta}^2 - \frac{1}{2}m_e\omega_0^2 \zeta^2 + \zeta S(t)
+\end{equation}
+is the largrangian of a classical driven oscillator. To proceed further, another unitary trasform can be introduced as follows
+\begin{equation} \label{eq_a14}
+    \varphi(y',t) = \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \chi(y',t),
+\end{equation}
+and subtiting Eq.~(\ref{eq_a14}) back in Eq.~(\ref{eq_a12}) yeilds
+\begin{equation} \label{eq_a15}
+    i \hbar \pdv{t} \chi(y',t)  =
+    \bigg[
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        + \frac{1}{2} m_e \omega_0^2 {y'}^2
+    \bigg] \chi(y',t).
+\end{equation}
+This is the well known Schrödinger equation of the quantum harmonic oscillator.
+This allows us to identify with the well-known eigenfucntions (using Gauss-Hermite functions)
+\begin{equation} \label{eq_a16}
+  \chi_n(y) \equiv
+   \frac{\sqrt{\kappa}}{\sqrt{2^{n}n!}}
+  e^{-\kappa^2 y^2/2}
+  \mathcal{H}_n \qty(\kappa y) \quad \text{with}
+  \quad
+  \kappa = \sqrt{\frac{m_e \omega_0}{\hbar}},
+\end{equation}
+which are propositional to the Hermite polynomials $\mathcal{H}_n$, with eigenvalues
+\begin{equation} \label{eq_a17}
+  \varepsilon_n = \hbar \omega_0 \big(n + \frac{1}{2}\big)
+  ~,~
+  n \in \mathbb{Z}^{+}_0.
+\end{equation}
+Therefore we can identify the solutions of Eq.~(\ref{eq_a8}) as
+\begin{equation} \label{eq_a18}
+  \begin{aligned}
+    \phi_n(\tilde{y},t) = \chi_n(\tilde{y} - \zeta(t))
+     \text{exp}\bigg(\frac{i}{\hbar}\bigg[&- \varepsilon_nt +
+    m_e\dot{\zeta(t)}\big(\tilde{y}-\zeta(t)\big) \\
+     & + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg)
+  \end{aligned}
+\end{equation}
+The set $\{\chi_n(x)\}$ functions forms a complete set and thus any general solution $\phi_(\tilde{y},t)$ can be expaned in terms of the solutions given in Eq.~(\ref{eq_a18}).
+
+Finally we consider our scenario where we assumed that $S(t) = eE\sin(\omega t)$ and we can derive the solution for Eq.~(\ref{eq_a11})
+\begin{equation} \label{eq_a19}
+  \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
+\end{equation}
+Subtiting solutions in Eq.~(\ref{eq_a18}) back in Eq.~(\ref{eq_a5}), we can obtain the set of wave functions with two different quantum number ($n$,$m$) that satisfy the Schrödinger eqution Eq.~(\ref{eq_a4})
+\begin{equation} \label{eq_a20}
+  \begin{aligned}
+    \psi_{n,m}&(x,y,t)  = \frac{1}{\sqrt{L_x}}
+    \chi_n\left[y - y_0 - \zeta(t)\right]
+    \text{exp}\bigg(
+    \frac{i}{\hbar}\bigg[- \varepsilon_nt \\
+    &
+    + p_x x + \frac{eE(y - y_0)}{\omega}\cos(\omega t)+
+    m_e\dot{\zeta}(t)\big[y - y_0 -\zeta(t)\big]\\
+    & +
+    \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg).
+  \end{aligned}
+\end{equation}
