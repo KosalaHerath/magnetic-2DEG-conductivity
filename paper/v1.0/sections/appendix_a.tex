@@ -36,9 +36,9 @@ can present by the following form
     \psi_m(x,\tilde{y},t) = \frac{1}{\sqrt{L_x}} \exp\bigg(
       \frac{ip_x x}{\hbar} +
       \frac{ieE\tilde{y}}{\hbar \omega}\cos(\omega t)
-    \bigg) \phi(\tilde{y},t),
+    \bigg) \vartheta(\tilde{y},t),
 \end{equation}
-where $\phi(\tilde{y},t)$ is a function that need to be find to satisfy the following property
+where $\vartheta(\tilde{y},t)$ is a function that need to be find to satisfy the following property
 \begin{equation} \label{eq_a6}
     \bigg[
     \frac{m_e \omega_0^2}{2}\tilde{y}^2
@@ -48,21 +48,21 @@ where $\phi(\tilde{y},t)$ is a function that need to be find to satisfy the foll
     \pdv[2]{\tilde{y}}
     - i \hbar \dv{t}
     \bigg]
-    \phi(\tilde{y},t) = 0.
+    \vartheta(\tilde{y},t) = 0.
 \end{equation}
 If we turn off the strong dressing field ($E=0$), this equation leads to simple harmonic oscillator Hamiltonian
 \begin{equation} \label{eq_a7}
-     i \hbar \dv{\phi(\tilde{y},t)}{t} =
+     i \hbar \dv{\vartheta(\tilde{y},t)}{t} =
     \bigg[
     \frac{\hat{p}_{\tilde{y}}^2}{2m_e} +
     \frac{1}{2}m_e \omega_0^2\tilde{y}^2
     \bigg]
-    \phi(\tilde{y},t).
+    \vartheta(\tilde{y},t).
 \end{equation}
 It is important to notice that we can identify the $S(t) \equiv eE\sin(\omega t)$ part as a external force act on the harmonic oscillator and we can solve this as a forced harmonic oscillator in $\tilde{y}$ axis.
 \begin{equation} \label{eq_a8}
   \begin{aligned}
-    i \hbar \dv{\phi(\tilde{y},t)}{t} =
+    i \hbar \dv{\vartheta(\tilde{y},t)}{t} =
     \bigg[
     -
     \frac{\hbar^2}{2m_e}
@@ -70,13 +70,13 @@ It is important to notice that we can identify the $S(t) \equiv eE\sin(\omega t)
     \frac{1}{2}m_e \omega_0^2\tilde{y}^2
     - \tilde{y}S(t)]
     \bigg]
-    \phi(\tilde{y},t).
+    \vartheta(\tilde{y},t).
   \end{aligned}
 \end{equation}
 
 This system can be extacly solvable and we can solve the equation using the methods explained by Husimi \cite{husmi53} as follows. We introduce a time dependent shifted cordinate $ y' = \tilde{y} - \zeta(t)$ and perform following unitary trasformation
 \begin{equation} \label{eq_a9}
-    \phi(y',t) = \exp(\frac{im_e\dot{\zeta}y'}{\hbar})\varphi(y',t),
+    \vartheta(y',t) = \exp(\frac{im_e\dot{\zeta}y'}{\hbar})\varphi(y',t),
 \end{equation}
 and this yeilds
 \begin{equation} \label{eq_a10}
@@ -147,13 +147,13 @@ which are propositional to the Hermite polynomials $\mathcal{H}_n$, with eigenva
 Therefore we can identify the solutions of Eq.~(\ref{eq_a8}) as
 \begin{equation} \label{eq_a18}
   \begin{aligned}
-    \phi_n(\tilde{y},t) = \chi_n(\tilde{y} - \zeta(t))
+    \vartheta_n(\tilde{y},t) = \chi_n(\tilde{y} - \zeta(t))
      \text{exp}\bigg(\frac{i}{\hbar}\bigg[&- \varepsilon_nt +
     m_e\dot{\zeta(t)}\big(\tilde{y}-\zeta(t)\big) \\
      & + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg)
   \end{aligned}
 \end{equation}
-The set $\{\chi_n(x)\}$ functions forms a complete set and thus any general solution $\phi_(\tilde{y},t)$ can be expaned in terms of the solutions given in Eq.~(\ref{eq_a18}).
+The set $\{\chi_n(x)\}$ functions forms a complete set and thus any general solution $\vartheta_(\tilde{y},t)$ can be expaned in terms of the solutions given in Eq.~(\ref{eq_a18}).
 
 Finally we consider our scenario where we assumed that $S(t) = eE\sin(\omega t)$ and we can derive the solution for Eq.~(\ref{eq_a11})
 \begin{equation} \label{eq_a19}

@@ -1,1 +1,41 @@
-Considerable research effort in recent years has been de- voted to synthesizing materials whose thermal conductivity.
+The general interpretations of physical systems are mostly derived using symmetry conditions in quantum theory. Famous Bloch analysis of electrons in quantum systems introduces a mathematical explanation of quantum systems occupying a discrete translational symmetry in configuration space. Floquet theory gives a mathematical formalism that can be used for translational symmetry in time rather than in space \cite{floquet83,grifoni98,holthaus15}. Examine the transport properties of systems exposed to strong radiation using the Floquet-Drude conductivity method introduced recently by M. Wackerl \cite{wackerl20}. In their analysis they have presented more accurate results than previously existed theoretical descriptions for the conductivity in presence of a strong dressing field. Therefore, we are hoping to apply the Floquet-Drude conductivity method to analyse our 2DEG system which is subjected to both a staionary magnetic field and a strong dressing field.
+
+First we need to identify the \textit{quasienergies} and periodic \textit{Floquet modes} for derived wavefunctions in Eq.~(\ref{eq_2}). By factorizing the wavefunction into a linearly time dependent part and a peridic time dependend part, the quasienergies can be present as
+\begin{equation} \label{eq_6}
+  \varepsilon_{n} =
+  \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon},
+\end{equation}
+which is only depend on single quantum number ($n$) and Floquet modes are given by
+\begin{equation} \label{eq_7}
+  \begin{aligned}
+    \phi_{n,m}(x,y,t) = &
+    \frac{1}{\sqrt{L_x}} \chi_{n}\left[y - y_0 - \zeta(t)\right]
+    \text{exp}\bigg(
+     \frac{i}{\hbar}\bigg[
+     p_x x \\
+     & +
+     \frac{eE(y - y_0)}{\omega}\cos(\omega t) \\
+     & +
+     m_e\dot{\zeta}(t)\big[y - y_0 -\zeta(t)\big]
+     + \xi \bigg]\bigg),
+  \end{aligned}
+\end{equation}
+with
+\begin{equation} \label{3.16}
+  \Delta_{\varepsilon} = \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)} ~ \text{and} ~
+  \xi = \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t).
+\end{equation}
+It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions. The detailed derivation can be found in Appendix B.
+
+
+
+
+
+
+
+
+
+
+
+
+x
