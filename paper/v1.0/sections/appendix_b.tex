@@ -1,0 +1,72 @@
+First define the time integral of Laggrangian of the classical oscillator given in Eq.~(\ref{eq_5}), over a $T=2\pi/\omega$ period as
+\begin{equation} \label{eq_b1}
+  \Delta_{\varepsilon} \equiv \frac{1}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t'),
+\end{equation}
+and after performing the integral using Eq.~(\ref{eq_4}), we can obtain more simplified result:
+\begin{equation} \label{eq_b2}
+  \Delta_{\varepsilon} = \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)}.
+\end{equation}
+Next define another paramter
+\begin{equation} \label{eq_b3}
+  \xi \equiv
+  \int_0^t dt' \; L(\zeta,\dot{\zeta},t') -
+  \Delta_{\varepsilon} t,
+\end{equation}
+and after simplying, this leads to
+\begin{equation} \label{eq_b4}
+  \xi =
+  \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t),
+\end{equation}
+which is a periodic function in time with $2\omega$ frequency. Now using these  parmaters we can factorize the wavefunction Eq.~(\ref{eq_2}) as linearly time dependend part and periodic time dependend part as follows
+\begin{equation} \label{eq_b5}
+  \begin{aligned}
+    \psi_{\alpha}(x,y,t)  = &
+    \exp(\frac{i}{\hbar}\qty[-\varepsilon_nt + \Delta_{\varepsilon} t ])
+    \frac{1}{\sqrt{L_x}} \chi_n\big(y - y_0 - \zeta(t)\big)
+    \\
+    & \times
+    \text{exp}\bigg(
+     \frac{i}{\hbar}\bigg[
+     p_x x +
+     \frac{eEy}{\omega}\cos(\omega t) \\
+     & +
+     m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
+     + \int_0^{t}dt'L(\zeta,\dot{\zeta},t') - \Delta_{\varepsilon} t  \bigg]
+     \bigg),
+  \end{aligned}
+\end{equation}
+and this leads to seperate linear time dependent phase component as the quasienergies
+\begin{equation} \label{eq_b6}
+  \varepsilon_{n} =
+  \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon}
+\end{equation}
+while rest of the components as time-periodic Floquet modes
+\begin{equation} \label{eq_b7}
+  \begin{aligned}
+    \phi_{n,m}(x,y,t) \equiv &
+    \frac{1}{\sqrt{L_x}} \chi_{n}\left[y - y_0 - \zeta(t)\right]
+    \text{exp}\bigg(
+     \frac{i}{\hbar}\bigg[
+     p_x x \\
+     & +
+     \frac{eE(y - y_0)}{\omega}\cos(\omega t) \\
+     & +
+     m_e\dot{\zeta}(t)\big[y - y_0 -\zeta(t)\big]
+     + \xi \bigg]\bigg).
+  \end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x

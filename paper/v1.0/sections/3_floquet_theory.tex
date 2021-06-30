@@ -21,21 +21,42 @@ which is only depend on single quantum number ($n$) and Floquet modes are given 
   \end{aligned}
 \end{equation}
 with
-\begin{equation} \label{3.16}
+\begin{equation} \label{eq_8}
   \Delta_{\varepsilon} = \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)} ~ \text{and} ~
   \xi = \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t).
 \end{equation}
-It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions. The detailed derivation can be found in Appendix B.
-
-
-
-
-
-
-
-
-
-
-
-
-x
+It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions.
+Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written in position space as
+\begin{equation} \label{eq_9}
+  \psi_{n,m}(x,y,t) =
+  \exp(-\frac{i}{\hbar}\varepsilon_{n}t)   \phi_{n,m} (x,y,t).
+\end{equation}
+Then performing Fourier trasform over the confined two-dimentional space $A=L_xL_y$, we obtain the momentum space($k_x,k_y$) representation of Floquet modes
+\begin{equation} \label{eq_10}
+  \begin{aligned}
+    \phi_{n,m}(k_x,k_y,t)  = &
+    {\sqrt{L_x}}
+    \tilde{\chi}_{n}\qty(k_y - b\cos(\omega t)) \\
+    & \times
+    \text{exp}\left(
+      i\xi
+      -ik_y  \qty[d\sin(\omega t) + y_0]
+    \right),
+  \end{aligned}
+\end{equation}
+where
+\begin{equation} \label{eq_11}
+  \tilde{\chi}_{n}\qty(k) =
+  \frac{i^n}{\sqrt{2^{n} n! \sqrt{\pi}}}
+  \qty(\frac{1}{\kappa})^{1/2}
+  e^{-\frac{k^2}{2 \kappa^2}}
+  \mathcal{H}_{n} \qty(\frac{k}{\kappa})
+\end{equation}
+and
+\begin{equation} \label{eq_12}
+  b \equiv
+  \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)} \quad
+  d \equiv
+ \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
+\end{equation}
+For details of the formalism the authors refer to Appendix B.
