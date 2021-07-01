@@ -1,1 +1,20 @@
-In this section we are going to derive the Floquet Fermi goldern rule for previously derived quantum Floquet states using $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,althorpe97}.
+In Ref. \cite{wackerl20} Floquet Fermi golden rule has been introduced as a method to analyse transport propeties in dressed quantum systems. However, this theory has not been applied for a dressed quantum Hall system and to identify magnetotransport properties in our system we use Floquet Fermi golden rule.
+With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,althorpe97} and using Floquet states derived in Eq.~(\ref{eq_12}) we can derive Floquet Fermi golden rule for our considered quantum Hall system as
+\begin{widetext}
+\begin{equation} \label{4.65}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
+    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \delta(\varepsilon - \varepsilon_{N})
+    \int_{-\infty}^{\infty} d k_1
+    &
+    J_l\qty(\frac{g\hbar}{eB}[{k}_x - k_1])
+    J_{l'}\qty(\frac{g\hbar}{eB}[{k}_x - k_1]) \\
+    & \times
+    \qty|
+    \int_{-\infty}^{\infty} dk_2 \;
+    {\chi}_{N}\qty(\frac{\hbar}{eB}k_2)
+    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[k_1 - {k}_x - k_2])|^2.
+  \end{aligned}
+\end{equation}
+\end{widetext}
