@@ -1,3 +1,5 @@
+\subsection{Position space representation}
+
 First define the time integral of Laggrangian of the classical oscillator given in Eq.~(\ref{eq_5}), over a $T=2\pi/\omega$ period as
 \begin{equation} \label{eq_b1}
   \Delta_{\varepsilon} \equiv \frac{1}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t'),
@@ -56,17 +58,113 @@ while rest of the components as time-periodic Floquet modes
   \end{aligned}
 \end{equation}
 
+\subsection{Momentum space representation}
 
-
-
-
-
-
-
-
-
-
-
-
-
-x
+To write the Floquet modes in momentum space, we perform continuous Fourier transform over the considering confined space $A=L_xL_y$ for Eq.~(\ref{eq_7})
+\begin{equation} \label{eq_b8}
+  \begin{aligned}
+    \phi_{n,m}(k_x,k_y,t)  &=
+    \int_{-L_y/2}^{L_y/2} dy\; \exp(-i\qty[k_y - \gamma(t)]y)
+    \chi_{n}\qty[y - \mu(t)] \\
+     & \times
+     \frac{1}{\sqrt{L_x}}
+     \int_{-L_x/2}^{L_x/2} dx\;
+     \exp(-ik_x x)
+     \exp( \frac{i p_x }{\hbar}x ) \\
+     &
+     \times
+     \exp(
+      \frac{-i\gamma(t)}{\hbar}
+      y_0)
+     \exp(\frac{-i}{\hbar}
+     \qty[
+     m_e \dot{\zeta}(t) \zeta(t) - \xi
+     ]),
+  \end{aligned}
+\end{equation}
+where
+\begin{equation} \label{eq_b9}
+  \mu(t) \equiv \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0
+  \quad,\quad
+  \gamma(t) \equiv
+  \frac{eE\omega_0^2\cos(\omega t)}{\hbar\omega(\omega_0^2 - \omega^2)}.
+\end{equation}
+Next using the identity \cite{bruus04}
+\begin{equation} \label{eq_b10}
+  \int_{L_x} dx\;
+  \exp( -ik_x x + \frac{i p_x }{\hbar}x ) =
+  L_x \delta_{k_x,\frac{p_x}{\hbar}},
+\end{equation}
+we can derive
+\begin{equation} \label{eq_b11}
+  \begin{aligned}
+    \phi_{n,m}(k_x,k_y,t)  =
+    \exp(
+     \frac{-i\gamma(t)}{\hbar}
+     y_0) &
+    \exp(\frac{-i}{\hbar}
+    \qty[
+    m_e \dot{\zeta}(t) \zeta(t) - \xi
+    ]) \\
+    & \times
+    \Phi_{n,m}(k_y,t)
+    \delta_{k_x,\frac{p_x}{\hbar}}.
+  \end{aligned}
+\end{equation}
+Here we defined $\Phi_{n,m}(k_y,t)$ as
+\begin{equation} \label{eq_b12}
+  \Phi_{n,m}(k_y,t) \equiv
+  \sqrt{L_x}
+  \int_{-L_y/2}^{L_y/2} dy\;
+  \chi_{n}\qty[y - \mu(t)]
+  \exp(
+    -i\qty[k_y - \gamma(t)]
+    y).
+\end{equation}
+Subtituting $  {k'_y} = k_y -\gamma(t)$ and $y' = y -\mu(t)$ and assuming that size of the 2DEG sample in $y$-direction is large ($L_y \rightarrow \infty$), we can obtain
+\begin{equation} \label{eq_b13}
+  \Phi_{n,m}({k'_y} ,t) =
+  {\sqrt{L_x}} e^{-i {k'_y}\mu}
+  \int_{-\infty}^{\infty} dy'\;
+  \chi_{n}\qty(y')
+  \exp(-i{k'_y} y').
+\end{equation}
+We can identify that the integral represnts the Fourier transform of $\{\chi_n\}$ functions and using the symmetric conditions \cite{bruus04} for the Fourier transform of Gauss-Hermite functions $\vartheta_n(x)$:
+\begin{equation} \label{eq_b14}
+  \mathcal{FT}[\vartheta_n(\kappa x),x,k] = \frac{i^n}{|\kappa|}\vartheta_n(k/\kappa),
+\end{equation}
+Eq.~(\ref{eq_b13}) can be simplified as
+\begin{equation} \label{eq_b15}
+  \Phi_{n,m}({k'_y} ,t) =
+    \sqrt{L_x}e^{-i {k'_y}\mu}
+    \tilde{\chi}_{n}\qty({k'_y}),
+\end{equation}
+with
+\begin{equation} \label{eq_b16}
+  \tilde{\chi}_{n}\qty(k) =
+  \frac{i^n}{\sqrt{2^{n} n! \sqrt{\pi}}}
+  \qty(\frac{1}{\kappa})^{1/2}
+  e^{-\frac{k^2}{2 \kappa^2}}
+  \mathcal{H}_{\alpha} \qty(\frac{k}{\kappa}).
+\end{equation}
+Subtitute Eq.~(\ref{eq_b15}) back in Eq.~(\ref{eq_b11}) and this leads to
+\begin{equation} \label{eq_b17}
+  \begin{aligned}
+    \phi_{n,m}(k_x,k_y,t)  = &
+    {\sqrt{L_x}}
+    \tilde{\chi}_{n}\qty(k_y - b\cos(\omega t)) \\
+    & \times
+    \text{exp}\left(
+      i\xi
+      -ik_y  \qty[d\sin(\omega t) + \frac{\hbar k_x}{eB}]
+    \right),
+  \end{aligned}
+\end{equation}
+where
+\begin{equation} \label{eq_b18}
+  b \equiv
+  \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)} \quad
+  d \equiv
+ \frac{eE}{m_e(\omega_0^2 - \omega^2)},
+\end{equation}
+and it is necessary to notice that $k_x$ is quantized with $k_x = 2\pi m/L_x ~,~ m \in \mathbb{Z}$.
