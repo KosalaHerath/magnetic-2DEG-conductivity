@@ -26,11 +26,7 @@ with
   \xi = \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t).
 \end{equation}
 It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions.
-Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written in position space as
-\begin{equation} \label{eq_9}
-  \psi_{n,m}(x,y,t) =
-  \exp(-\frac{i}{\hbar}\varepsilon_{n}t)   \phi_{n,m} (x,y,t).
-\end{equation}
+
 Then performing Fourier trasform over the confined two-dimentional space $A=L_xL_y$, we obtain the momentum space($k_x,k_y$) representation of Floquet modes
 \begin{equation} \label{eq_10}
   \begin{aligned}
@@ -59,4 +55,8 @@ and
   d \equiv
  \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
 \end{equation}
-For details of the formalism the authors refer to Appendix B.
+For details of the formalism the authors refer to Appendix B. Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written in momentum space as Floquet states
+\begin{equation} \label{eq_9}
+  \psi_{n,m}(k_x,k_y,t) =
+  \exp(-\frac{i}{\hbar}\varepsilon_{n}t)   \phi_{n,m} (k_x,k_y,t).
+\end{equation}
