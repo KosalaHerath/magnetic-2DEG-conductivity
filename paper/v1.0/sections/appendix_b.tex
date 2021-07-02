@@ -113,13 +113,16 @@ we can derive
 \end{equation}
 Here we defined $\Phi_{n,m}(k_y,t)$ as
 \begin{equation} \label{eq_b12}
-  \Phi_{n,m}(k_y,t) \equiv
-  \sqrt{L_x}
-  \int_{-L_y/2}^{L_y/2} dy\;
-  \chi_{n}\qty[y - \mu(t)]
-  \exp(
-    -i\qty[k_y - \gamma(t)]
-    y).
+  \begin{aligned}
+    \Phi_{n,m}(k_y,t) \equiv
+    \sqrt{L_x}
+    \int_{-L_y/2}^{L_y/2} dy\; &
+    \chi_{n}\qty[y - \mu(t)] \\
+    & \times
+    \exp(
+      -i\qty[k_y - \gamma(t)]
+      y).
+  \end{aligned}
 \end{equation}
 Subtituting $  {k'_y} = k_y -\gamma(t)$ and $y' = y -\mu(t)$ and assuming that size of the 2DEG sample in $y$-direction is large ($L_y \rightarrow \infty$), we can obtain
 \begin{equation} \label{eq_b13}
