@@ -65,24 +65,52 @@ Iterating the solution only upto the first order (Born approximation) we obtain
     V_I(\vb{r}) \ket{\psi_{n,m}(t_0,t')}.
   \end{aligned}
 \end{equation}
-In addition, since our Floquet states create a basis for composite space we can represent any solution using our Floquet states
+
+In addition, since our Floquet states create a basis we can represent any solution using these Floquet states
 \begin{equation} \label{eq_c12}
-  \ket{\Psi_{n,m}(t,t')} = \sum_{\beta} a_{n,m\beta}(t,t')
+  \ket{\Psi_{\alpha}(t,t')} = \sum_{\beta} a_{\alpha,\beta}(t,t')
   \ket{\psi_{\beta}(t,t')}.
 \end{equation}
-Therefore we can derive a equation for this \textit{scattering amplitude} as
+where we used a single notation to represent two quantum numbers; $\alpha \equiv (n_{\alpha},m_{\alpha})$ and $\beta \equiv (n_{\beta},m_{\beta})$.
+Then we can identify the \textit{scattering amplitude} as $a_{\alpha,\beta}(t,t') =
+\braket{\psi_{\beta}(t,t')}{\Psi_{\alpha}(t,t')}$ and this can evaluate with
 \begin{equation} \label{eq_c13}
-  a_{n,m\beta}(t,t') =
-  \braket{\psi_{\beta}(t,t')}{\Psi_{n,m}(t,t')} =
+  \begin{aligned}
+  a_{\alpha,\beta}(t,t') = &
+  \braket{\psi_{\beta}(t,t')}{\psi_{\alpha}(t,t')} \\
+  &+
+  \frac{1}{i\hbar}
+  \int_{t_0}^t dt_1 \;
+  \bra{\psi_{\beta}(t_1,t')}
+  V(\vb{r}) \ket{\psi_{\alpha}(t_1,t')}.
+  \end{aligned}
+\end{equation}
+Since the $t$-$t'$-Floquet states are orthonormal and assuming $t_0 = 0$ and $\alpha \neq \beta$ this leads to
+\begin{equation} \label{eq_c14}
+  a_{\alpha,\beta}(t,t') =
   -
   \frac{i}{\hbar}
   \int_{0}^t dt_1 \;
   \bra{\psi_{\beta}(t_1,t')}
-  V(\vb{r}) \ket{\psi_{n,m}(t_1,t')}.
+  V(\vb{r}) \ket{\psi_{\alpha}(t_1,t')}.
 \end{equation}
 
-
-
+Now consider a scattering event from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')}$ into another $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ with constant quansienergy $\varepsilon$ which has been
+\begin{equation} \label{eq_c16}
+  \begin{aligned}
+  \psi_{\beta}(\vb{k'},t,t') &= \exp(-\frac{i}{\hbar}\varepsilon_{\beta} t)
+  \phi_{\beta}(\vb{k'},t') \\
+  &
+  \longrightarrow
+  \Psi_{\alpha}(\vb{k},t,t') = \exp(-\frac{i}{\hbar}\varepsilon t)
+  \Phi_{\alpha}(\vb{k},t').
+  \end{aligned}
+\end{equation}
+\begin{figure}[b]
+  \includegraphics[scale=1.0]{figures/fig_2.pdf}
+  \caption{Scattering from $\ket{\psi_{\beta}(t,t')}$ to constant energy state $\ket{\Psi_{\alpha}(t,t')}$ due to scattering potential created by impurities.}
+  \label{fig_2}
+\end{figure}
 
 
 
