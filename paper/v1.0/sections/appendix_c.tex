@@ -13,17 +13,73 @@ where \textit{Floquet Hamiltonian} defined as
   H_F(t') \equiv
   H_e(t') - i\hbar \pdv{t'}.
 \end{equation}
-Next we can identify the the time evolution operator \cite{wackerl20} corresponding to the $t$-$t'$-Schrödinger equation given in Eq.~(\ref{eq_c2})
+Next we can identify the the time evolution operator corresponding to the $t$-$t'$-Schrödinger equation
 \begin{equation} \label{eq_c4}
-  U_0(t,t_0;t') = \exp(-\frac{i}{\hbar}H_F(t')\qty[t-t_0])
+  U_F(t,t_0;t') = \exp(-\frac{i}{\hbar}H_F(t')\qty[t-t_0]),
 \end{equation}
-and the advantage of $t$-$t'$ formalism lies on this time evolution operator which avoids any time odering operatos.
-Consider a time-independent total perturbation $V(\vb{r})$ switched on at the reference time $t=t_0$, then Schrödinger equation becomes
+and the advantage of $t$-$t'$ formalism lies on this time evolution operator which avoids any time odering operatos \cite{wackerl20}.
 
-
-
-
-
+For our scenario, consider a time-independent total perturbation $V(\vb{r})$ which has been switched on at the reference time $t=t_0$, then the $t$-$t'$-Schrödinger equation becomes
+\begin{equation} \label{eq_c5}
+  i \hbar \pdv{t}\ket{\Psi_{n,m}(t,t')} =
+  \qty[H_F(t') + V(\vb{r})]\ket{\Psi_{n,m}(t,t')},
+\end{equation}
+by introducing new wave function $\Psi_{n,m}$ for the system with the given total perturabation. If $t\leq t_0$, both solutions of the Schrödinger equations (Eq.~(\ref{eq_c2}) and Eq.~(\ref{eq_c5})) coincide
+\begin{equation} \label{eq_c6}
+  \ket{\psi_{n,m}(t,t')} =\ket{\Psi_{n,m}(t,t')} \quad
+  \text{when} \quad
+  t \leq t_0.
+\end{equation}
+Now move into the interaction picture representation \cite{bruus04,mahan00} of the $t$-$t'$-Floquet state
+\begin{equation} \label{eq_c7}
+  \ket{\Psi_{n,m}(t,t')}_I = U_0^{\dagger}(t,t_0;t')
+  \ket{\Psi_{n,m}(t,t')},
+\end{equation}
+and due to time independency, the perturbation in the interaction picture has the same form as Schrödinger picture
+\begin{equation} \label{eq_c8}
+  V_I(\vb{r}) = U_0^{\dagger}(t,t_0;t')V(\vb{r})U_0(t,t_0;t') =
+  V(\vb{r}).
+\end{equation}
+This leads to the $t$-$t'$-Schrödinger eqution in the interction picture
+\begin{equation} \label{eq_c9}
+  i \hbar \pdv{t}\ket{\Psi_{n,m}(t,t')}_I =
+  V_I(\vb{r})\ket{\Psi_{n,m}(t,t')}_I,
+\end{equation}
+with the recursive solution \cite{bruus04,mahan00}
+\begin{equation} \label{eq_c10}
+  \begin{aligned}
+  \ket{\Psi_{n,m}(t,t')}_I = &\ket{\Psi_{n,m}(t_0,t')}_I \\
+  &+
+  \frac{1}{i\hbar}
+  \int_{t_0}^t dt_1 \;
+  V_I(\vb{r}) \ket{\Psi_{n,m}(t_1,t')}_I.
+  \end{aligned}
+\end{equation}
+Iterating the solution only upto the first order (Born approximation) we obtain
+\begin{equation} \label{eq_c11}
+  \begin{aligned}
+    \ket{\Psi_{n,m}(t,t')}_I \approx &\ket{\psi_{n,m}(t_0,t')} \\
+    &+
+    \frac{1}{i\hbar}
+    \int_{t_0}^t dt_1 \;
+    V_I(\vb{r}) \ket{\psi_{n,m}(t_0,t')}.
+  \end{aligned}
+\end{equation}
+In addition, since our Floquet states create a basis for composite space we can represent any solution using our Floquet states
+\begin{equation} \label{eq_c12}
+  \ket{\Psi_{n,m}(t,t')} = \sum_{\beta} a_{n,m\beta}(t,t')
+  \ket{\psi_{\beta}(t,t')}.
+\end{equation}
+Therefore we can derive a equation for this \textit{scattering amplitude} as
+\begin{equation} \label{eq_c13}
+  a_{n,m\beta}(t,t') =
+  \braket{\psi_{\beta}(t,t')}{\Psi_{n,m}(t,t')} =
+  -
+  \frac{i}{\hbar}
+  \int_{0}^t dt_1 \;
+  \bra{\psi_{\beta}(t_1,t')}
+  V(\vb{r}) \ket{\psi_{n,m}(t_1,t')}.
+\end{equation}
 
 
 
