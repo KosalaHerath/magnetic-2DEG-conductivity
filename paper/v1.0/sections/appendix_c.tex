@@ -95,15 +95,15 @@ Since the $t$-$t'$-Floquet states are orthonormal and assuming $t_0 = 0$ and $\a
   V(\vb{r}) \ket{\psi_{\alpha}(t_1,t')}.
 \end{equation}
 
-Now consider a scattering event from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')}$ into another $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ with constant quansienergy $\varepsilon$ which has been
-\begin{equation} \label{eq_c16}
+Now consider a scattering event from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')} $ into another $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ with constant quansienergy $\varepsilon$:
+\begin{equation} \label{eq_c15}
   \begin{aligned}
-  \psi_{\beta}(\vb{k'},t,t') &= \exp(-\frac{i}{\hbar}\varepsilon_{\beta} t)
-  \phi_{\beta}(\vb{k'},t') \\
+  \ket{\psi_{\beta}(t,t')} &= \exp(-\frac{i}{\hbar}\varepsilon_{\beta} t)
+  \ket{\phi_{\beta}(t')} \\
   &
   \longrightarrow
-  \Psi_{\alpha}(\vb{k},t,t') = \exp(-\frac{i}{\hbar}\varepsilon t)
-  \Phi_{\alpha}(\vb{k},t').
+  \ket{\Psi_{\alpha}(t,t')} = \exp(-\frac{i}{\hbar}\varepsilon t)
+  \ket{\Phi_{\alpha}(t')}.
   \end{aligned}
 \end{equation}
 \begin{figure}[b]
@@ -111,15 +111,88 @@ Now consider a scattering event from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}
   \caption{Scattering from $\ket{\psi_{\beta}(t,t')}$ to constant energy state $\ket{\Psi_{\alpha}(t,t')}$ due to scattering potential created by impurities.}
   \label{fig_2}
 \end{figure}
+It is important to remember that a state of this considering system can be represented by two independent quantum numbers: $n$ represents the landau level and $m$ represents the qunatized momentum in $x$-direction. The scattering amplitutde for this scattering scenario can be calculated using the equation derived in Eq.~(\ref{eq_c14})
+\begin{equation} \label{eq_c16}
+  \begin{aligned}
+    a_{\alpha\beta}(t,t') =
+    -\frac{i}{\hbar}
+    \int_{0}^t dt_1 \;
+    e^{\frac{i}{\hbar}\qty(\varepsilon_{\beta} - \varepsilon)t_1}
+    \bra{\phi_{\beta}(t')}
+    V(\vb{r}) \ket{\phi_{\alpha}(t')},
+  \end{aligned}
+\end{equation}
+and assuiming for a long time $t \rightarrow \infty$, we can turn this integral into a delta distrubution
+\begin{equation} \label{eq_c17}
+  \begin{aligned}
+    a_{\alpha\beta}(t,t') =
+    -2\pi i \delta(\varepsilon_{\beta} - \varepsilon)Q,
+  \end{aligned}
+\end{equation}
+where $Q \equiv \bra{\phi_{\beta}(t')}
+V(\vb{r}) \ket{\phi_{\alpha}(t')}$ and using completeness properties we can re-write this as
+\begin{equation} \label{eq_c18}
+    Q =
+    \sum_{\vb{k}}\sum_{\vb{k'}}
+    \braket{\phi_{\beta}(t')}{\vb{k'}}
+    \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}
+    \braket{\vb{k}}{\phi_{\alpha}(t')},
+\end{equation}
+and seperating $x$ and $y$ directional momentums we can derive (we already assumed that $L_y \rightarrow \infty$)
+\begin{equation} \label{eq_c19}
+    Q =
+    \sum_{k_x}\sum_{{k'}_x}
+    \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
+    V_{\vb{k'},\vb{k}}
+    \phi_{\beta}^{\dagger}(\vb{k'},t')
+    \phi_{\alpha}(\vb{k},t').
+\end{equation}
+with $V_{\vb{k'},\vb{k}} \equiv \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}$.
 
-
-
-
-
-
-
-
-
+Since the perturbation potential $V(\vb{r})$ is assumed to be formed by an ensemble of randomly distributed impurities, consider $N_{imp}$ identical impurities positioned at randomly distributed but fixed positions $\vb{r}_i$. Then scattering potential $V(\vb{r})$ is given by the sum over uncorrelated single impurity potentials $\upsilon(\vb{r})$
+\begin{equation} \label{eq_c20}
+  V(\vb{r}) \equiv
+  \sum_{i=1}^{N_{imp}}
+  \upsilon (\vb{r}-\vb{r}_i).
+\end{equation}
+Next we model the perturbation $V(\vb{r})$ as a Gaussian random potential where one can choose the zero of enerrgy such that the potential is zero on average. This model is characterized by \cite{akkermans10}
+\begin{subequations}
+\begin{equation} \label{eq_c21a}
+  \expval{\upsilon(\vb{r})}_{imp} =0
+\end{equation}
+\begin{equation} \label{eq_c21b}
+  \expval{\upsilon(\vb{r})\upsilon(\vb{r'})}_{imp} = \Upsilon(\vb{r}-\vb{r'})
+\end{equation}
+\end{subequations}
+where $\expval{\cdot}_{imp}$ denoted the average over realizations of the impurity disorder. In addition, this model assume that $\upsilon (\vb{r}-\vb{r'})$ only dependes on the position difference $|\vb{r}-\vb{r'}|$ and it decays with a characteristic leangth $r_c$. Since this study considers the case where the waveleagth of radiation or scattering electrons is much faster than $r_c$, it is a good approximation to make two-point correlation function to be
+\begin{equation} \label{eq_c22}
+  \expval{\upsilon(\vb{r})\upsilon(\vb{r'})}_{imp} = \Upsilon_{imp}^2\delta(\vb{r}-\vb{r'})
+\end{equation}
+and a random potential $V(\vb{r})$ with this property is called white noise \cite{akkermans10}. Then we can model approximately the total scattering potential as
+\begin{equation} \label{eq_c23}
+  V(\vb{r}) =
+  \sum_{i=1}^{N_{imp}}
+  \Upsilon_{imp} \delta(\vb{r}-\vb{r}_i).
+\end{equation}
+Then we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
+\begin{subequations}
+\begin{align}
+ V_{\vb{k'},\vb{k}} & =
+ \mel**{\vb{k'}}{\sum_{i=1}^{N_{imp}}
+ \Upsilon_{imp} \delta(\vb{r}-\vb{r}_i)}{\vb{k}} \label{eq_c24a} \\
+ & =
+ \sum_{i=1}^{N_{imp}}
+ \int_{-\infty}^{\infty} dy\; \bigg[
+ \frac{1}{\sqrt{L_xL_y}} e^{ik'_y y} \delta(y-y_i) \nonumber \\
+ & \times \frac{1}{\sqrt{L_xL_y}} e^{-i{k}_y y}
+ \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \bigg] \label{eq_c24b} \\
+  & =
+ \sum_{i=1}^{N_{imp}} \frac{1}{{L_xL_y}}
+ e^{i(k'_y - k_y )y}
+ \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \label{eq_c24c}
+\end{align}
+\label{eqn:all-lines}
+\end{subequations}
 
 
 
