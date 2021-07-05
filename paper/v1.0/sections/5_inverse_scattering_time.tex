@@ -39,7 +39,7 @@ Next we are going to analyse the contribution of the inverse scattering time mat
   \end{equation}
 Introduce a new parameter with physical meaning of scattering-induced broadening of the Landau level as \cite{dini16,endo09}
 \begin{equation} \label{eq_15}
- \Gamma^{00}_{N}(\varepsilon,k_x) \equiv \hbar \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N}
+ \Gamma^{00}_{N}(\varepsilon,k_x) \equiv \hbar \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N},
 \end{equation}
 and this leads to
 \begin{equation} \label{eq_16}
@@ -83,7 +83,7 @@ where $\varrho \equiv \eta_{imp} L_x [ { V_{imp}}/{eB}]^{1/2}$, $ \lambda_1 \equ
 To analyze the contribution of dressing field on the scatering-induced broadening, normalized $N$-th Landau level scatering-induced broadening can be defined as
 \begin{equation} \label{eq_19}
     \Lambda_N(k_x) \equiv
-    \frac{\Gamma^{00}_{N}(\varepsilon,k_x)}{\Gamma^{00}_{0}(\varepsilon,k_x)\big|_{E=0}},
+    \frac{\Gamma^{00}_{N}(\varepsilon,k_x)}{\Gamma^{00}_{N=0}(\varepsilon,k_x)\big|_{E=0}},
 \end{equation}
 and this leads to
 \begin{widetext}
@@ -106,7 +106,8 @@ and this leads to
 \end{equation}
 \end{widetext}
 
-Normalized energy band broadening against ${k_x}$ for different Landau levels ($N = 0,1,2,3,4$) has been calculated for GaAs-based quantum well and results are given in Fig.~(\ref{fig_3}) and Fig.~(\ref{fig_4}). Here we can identify that we can change the each Landau level normalized energy broadening value using apllied electromagnetic field. When the applied field's intensity increase the energy broadening gets reduced which make changes in conductivity of 2DEG.
+Normalized energy band broadening against ${k_x}$ for different Landau levels ($N = 0,1,2,3,4$) has been calculated for GaAs-based quantum well and results are given in Fig.~(\ref{fig_3}) and Fig.~(\ref{fig_4}). To make comparison we have selected the experiment parameters to match with analysis done in Ref.~\cite{endo09}. In their study, they have assumed that the broadening of the natural(without a dressing field) $0$-th Landau level $\Gamma_0$ is $0.24\;\text{me}V$. Therefore in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = 0.24 \;\text{meV}$.
+Here we can identify that we can change the each Landau level normalized energy broadening value using apllied electromagnetic field. When the applied field's intensity increase the energy broadening gets reduced which make changes in conductivity of 2DEG.
 \begin{figure}[t]
 \includegraphics[scale=0.55]{figures/fig_3}
 \caption{\label{fig_3} The dependence of normalized scattering-induced broadening $\Lambda_N$ for each Landau level ($N =0,1,2,3,4$) against $x$-directional momentum value $k_x$ in a GaAs-based quantum well at a magnetic field $B = 1.2~\text{T}$, dressing field with frequency $\omega =2\times10^{12}~\text{rad}\text{s}^{-1}$ and intensity $I =100~\text{W}/\text{cm}^{2}$. In this calculation we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $0.24\;\text{me}V$.}
@@ -115,29 +116,3 @@ Normalized energy band broadening against ${k_x}$ for different Landau levels ($
 \includegraphics[scale=0.45]{figures/fig_4}
 \caption{\label{fig_4} The dependence of normalized scattering-induced broadening $\Lambda_N$ for each Landau level ($N =0,1,2,3,4$) against dressing field intensity $I$, in a GaAs-based quantum well at a magnetic field $B = 1.2~\text{T}$, dressing field with frequency $\omega =2\times10^{12}~\text{rad}\text{s}^{-1}$. In this calculation we have assumed that the natural broadening of $0$-th Landau level $\Gamma_0$ is $0.24\;\text{me}V$.}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-x
