@@ -164,18 +164,18 @@ Next we model the perturbation $V(\vb{r})$ as a Gaussian random potential where 
   \expval{\upsilon(\vb{r})\upsilon(\vb{r'})}_{imp} = \Upsilon(\vb{r}-\vb{r'})
 \end{equation}
 \end{subequations}
-where $\expval{\cdot}_{imp}$ denoted the average over realizations of the impurity disorder. In addition, this model assume that $\upsilon (\vb{r}-\vb{r'})$ only dependes on the position difference $|\vb{r}-\vb{r'}|$ and it decays with a characteristic leangth $r_c$. Since this study considers the case where the waveleagth of radiation or scattering electrons is much faster than $r_c$, it is a good approximation to make two-point correlation function to be
+where $\expval{\cdot}_{imp}$ denoted the average over realizations of the impurity disorder and $\Upsilon(\vb{r}-\vb{r'})$ is any decaying function depends only on $\vb{r}-\vb{r'}$. In addition, this model assume that $\upsilon (\vb{r}-\vb{r'})$ only dependes on the position difference $|\vb{r}-\vb{r'}|$ and it decays with a characteristic leangth $r_c$. Since this study considers the case where the waveleagth of radiation or scattering electrons is much faster than $r_c$, it is a good approximation to make two-point correlation function to be
 \begin{equation} \label{eq_c22}
   \expval{\upsilon(\vb{r})\upsilon(\vb{r'})}_{imp} = \Upsilon_{imp}^2\delta(\vb{r}-\vb{r'})
 \end{equation}
-and a random potential $V(\vb{r})$ with this property is called white noise \cite{akkermans10}. Then we can model approximately the total scattering potential as
+where $\Upsilon_{imp}$ is stregth of the delta potential and a random potential $V(\vb{r})$ with this property is called white noise \cite{akkermans10}. Then we can model approximately the total scattering potential as
 \begin{equation} \label{eq_c23}
   V(\vb{r}) =
   \sum_{i=1}^{N_{imp}}
   \Upsilon_{imp} \delta(\vb{r}-\vb{r}_i).
 \end{equation}
 Then we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
-\begin{subequations}
+\begin{subequations} \label{eq_24}
 \begin{align}
  V_{\vb{k'},\vb{k}} & =
  \mel**{\vb{k'}}{\sum_{i=1}^{N_{imp}}
@@ -189,10 +189,86 @@ Then we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
   & =
  \sum_{i=1}^{N_{imp}} \frac{1}{{L_xL_y}}
  e^{i(k'_y - k_y )y}
- \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \label{eq_c24c}
+ \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \label{eq_c24c}.
 \end{align}
-\label{eqn:all-lines}
 \end{subequations}
+Since $\upsilon (\vb{r})$ in momentum space is a constant value, each impurity  produce same impurity potential for every $x$-directional momentum pairs and assuming the total ncumber of scatterers $N_{imp}$ is macroscopically large, we can derive
+\begin{subequations} \label{eq_c25}
+  \begin{align}
+    V_{\vb{k'},\vb{k}}
+    & =
+    V_{k'_x,k_x}
+    \frac{N_{imp}}{L_y L_x} \int_{-\infty}^{\infty} dy_i\;
+    e^{i\qty({k'}_y - k_y)y_i} \label{eq_c25a} \\
+    & =
+    \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y), \label{eq_c25a}
+  \end{align}
+\end{subequations}
+where
+\begin{equation} \label{eq_c26}
+  V_{{k'}_x,k_x} \equiv
+  \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x}.
+\end{equation}
+is a constant value for every $i$ impurity and $\eta_{imp}$ is number of impurities in a unit area. It is important to notice that $\ket{k_x} = e^{-ik_xx}$.
+
+Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25}) on Eq.~(\ref{eq_c19}), we obtain
+\begin{equation} \label{eq_c27}
+  \begin{aligned}
+    Q & =
+    \sum_{k_x}\sum_{{k'}_x}
+    {\eta_{imp} V_{{k'}_x,k_x}}
+    \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
+    \delta({k'}_y - k_y)
+    \\
+    & \times
+    \sqrt{L_x}
+    \exp(
+      i{k'}_y  \qty[d\sin(\omega t) + {y'}_0]
+    )
+    \tilde{\chi}_{n_{\beta}}\qty({k'}_y -b\cos(\omega t))
+    \\
+    & \times
+    \sqrt{L_x}
+    \exp(
+      -ik_y  \qty[d\sin(\omega t) + y_0]
+    )
+    \tilde{\chi}_{n_{\alpha}}\qty(k_y -b\cos(\omega t)),
+  \end{aligned}
+\end{equation}
+and this can simplify as
+and this can re-write as
+\begin{equation} \label{eq_c28}
+  \begin{aligned}
+    Q =
+    \sum_{k_x}\sum_{{k'}_x}
+    {\eta_{imp} L_x V_{{k'}_x,k_x}} I,
+  \end{aligned}
+\end{equation}
+with
+\begin{equation} \label{eq_c29}
+  \begin{aligned}
+    I \equiv
+    \int_{-\infty}^{\infty} dk_y \;
+    \tilde{\chi}_{n_{\beta}}\qty(k_y -g\cos(\omega t)) &
+    \tilde{\chi}_{n_{\alpha}}\qty(k_y -g\cos(\omega t)) \\
+    & \times
+    \exp(
+      -ik_y  \qty[y_0 - {y'}_0  ]
+    ).
+  \end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
