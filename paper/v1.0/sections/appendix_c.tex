@@ -125,7 +125,7 @@ It is important to remember that a state of this considering system can be repre
 and assuiming for a long time $t \rightarrow \infty$, we can turn this integral into a delta distrubution
 \begin{equation} \label{eq_c17}
   \begin{aligned}
-    a_{\alpha\beta}(t,t') =
+    a_{\alpha\beta}(t') =
     -2\pi i \delta(\varepsilon_{\beta} - \varepsilon)Q,
   \end{aligned}
 \end{equation}
@@ -201,7 +201,7 @@ Since $\upsilon (\vb{r})$ in momentum space is a constant value, each impurity  
     \frac{N_{imp}}{L_y L_x} \int_{-\infty}^{\infty} dy_i\;
     e^{i\qty({k'}_y - k_y)y_i} \label{eq_c25a} \\
     & =
-    \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y), \label{eq_c25a}
+    \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y), \label{eq_c25b}
   \end{align}
 \end{subequations}
 where
@@ -211,7 +211,7 @@ where
 \end{equation}
 is a constant value for every $i$ impurity and $\eta_{imp}$ is number of impurities in a unit area. It is important to notice that $\ket{k_x} = e^{-ik_xx}$.
 
-Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25}) on Eq.~(\ref{eq_c19}), we obtain
+Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25}) on Eq.~(\ref{eq_c19}), we obtain (with changing varable $t' \rightarrow t'$)
 \begin{equation} \label{eq_c27}
   \begin{aligned}
     Q & =
@@ -236,7 +236,6 @@ Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25}) on Eq.~(\ref{eq_c19}), we obta
   \end{aligned}
 \end{equation}
 and this can simplify as
-and this can re-write as
 \begin{equation} \label{eq_c28}
   \begin{aligned}
     Q =
@@ -249,31 +248,174 @@ with
   \begin{aligned}
     I \equiv
     \int_{-\infty}^{\infty} dk_y \;
-    \tilde{\chi}_{n_{\beta}}\qty(k_y -g\cos(\omega t)) &
-    \tilde{\chi}_{n_{\alpha}}\qty(k_y -g\cos(\omega t)) \\
+    \tilde{\chi}_{n_{\beta}}\qty(k_y -b\cos(\omega t)) &
+    \tilde{\chi}_{n_{\alpha}}\qty(k_y -b\cos(\omega t)) \\
     & \times
     \exp(
       -ik_y  \qty[y_0 - {y'}_0  ]
     ).
   \end{aligned}
 \end{equation}
+To avoid the energy exchange from external strong field and electrons, the applied radiation should be a purely dressing field. Therefore, the only effect of the dressing field on 2DEG is the renormalization of the probability of elastic electron scattering within the same Landau level $(n_{\alpha} = n_{\beta} =N)$. This transform the Eq.~(\ref{eq_c29}) to
+\begin{equation} \label{eq_c30}
+    I =
+    \int_{-\infty}^{\infty} dk_y \;
+    \tilde{\chi}_{N}^2 \qty(k_y -b\cos(\omega t))
+    \exp(
+      -ik_y  \qty[y_0 - {y'}_0  ]
+    ).
+\end{equation}
+Using Fourier transform of Gauss-Hermite functions \cite{celeghini21} and convolution theorem \cite{arfken85,bracewell78} we can derive
+\begin{equation} \label{eq_c31}
+  \begin{aligned}
+    I =
+    {2\pi} &
+    \exp(b[{y'}_0 - y_0]\cos(\omega t)) \\
+    & \times
+    \int_{-\infty}^{\infty} dy \;
+    {\chi}_{N}\qty(y)
+    {\chi}_{N}\qty(y_0 - {y'}_0 - y).
+  \end{aligned}
+\end{equation}
+Therefore finally the scattering amplitude derived in Eq.~(\ref{eq_c17}) can be evaluated for given $k_x = 2\pi m_{\alpha}/L_x$ and $k'_x =  2\pi m_{\beta}/L_x$ as
+\begin{equation} \label{eq_c32}
+  \begin{aligned}
+    a_{\alpha\beta}(k_x,k'_x,t)  =&
+    -2\pi i
+    \eta_{imp} L_x V_{{k'}_x,k_x}
+    \delta(\varepsilon_{N} - \varepsilon)\\
+    & \times
+    \exp(b[{y'}_0 - y_0]\cos(\omega t))\\
+    & \times
+    \int_{-\infty}^{\infty} dy \;
+    {\chi}_{N}\qty(y)
+    {\chi}_{N}\qty(y_0 - {y'}_0 - y),
+  \end{aligned}
+\end{equation}
+Since this scattering amplitude is time-periodic we can write this as a Fourier series expansion
+\begin{equation} \label{eq_c33}
+    a_{\alpha\beta}(k_x,k'_x,t) =
+    \sum_{l=-\infty}^{\infty} a^l_{\alpha\beta}(k_x,k'_x) e^{-il\omega t}.
+\end{equation}
+In addition, using Jacobi-Anger expansion \cite{cuyt08,abramowitz64}
+\begin{equation} \label{eq_c34}
+    e^{iz\cos(\theta)} = \sum_{l=-\infty}^{\infty} i^l J_l\qty(z) e^{-il\theta},
+\end{equation}
+where $J_l(z)$ are Bessel functions of the first kind with $l$-th integer order and we can re-write the Eq.~(\ref{eq_c32}) as folllows
+\begin{equation} \label{eq_c35}
+  \begin{aligned}
+    a_{\alpha\beta}(k_x,k'_x,t)  = &
+    \sum_{l=-\infty}^{\infty}
+    -2\pi i^{l+1}
+    \eta_{imp} L_x V_{{k'}_x,k_x}
+    \delta(\varepsilon_{N} - \varepsilon)\\
+    & \times
+    J_l\qty(b[{y'}_0 - y_0]) \\
+    & \times
+    \int_{-\infty}^{\infty} dy \;
+    {\chi}_{N}\qty(y)
+    {\chi}_{N}\qty(y_0 - {y'}_0 - y) e^{-il\omega t}
+  \end{aligned}
+\end{equation}
+and then the Fourier series component can be identified as
+\begin{equation} \label{eq_c36}
+  \begin{aligned}
+    a^l_{\alpha\beta}(k_x,k'_x) = &
+    -2\pi i^{l+1}
+    \eta_{imp} L_x V_{{k'}_x,k_x}\\
+    & \times
+    \delta(\varepsilon_{N} - \varepsilon)
+    J_l\qty(b[{y'}_0 - y_0])\\
+    & \times
+    \int_{-\infty}^{\infty} dy \;
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y).
+  \end{aligned}
+\end{equation}
+Now define \textit{transition probability matrix}
+\begin{equation} \label{eq_c37}
+    \qty(A_{\alpha\beta})_{l,l'} \equiv
+    a^l_{\alpha\beta}\qty[a^{l'}_{\alpha\beta}]^{*},
+\end{equation}
+and this becomes
+\begin{equation} \label{eq_c38}
+  \begin{aligned}
+      \qty(A_{\alpha\beta})_{l,l'}(k_x,k'_x) = &
+      \qty[{ 2 \pi \eta_{imp} L_x |V_{{k'}_x,k_x}|}]^2
+      \delta^2(\varepsilon_{N} - \varepsilon) \\
+      & \times
+      J_l\qty(b[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0])\\
+      & \times
+      \qty|
+      \int_{-\infty}^{\infty} dy \;
+      {\chi}_{n_{\beta}}\qty(y)
+      {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)|^2.
+  \end{aligned}
+\end{equation}
+Then desribing the square of the delta distribution using following procedure \cite{dini16,kibis14}
+\begin{equation} \label{eq_c39}
+    \delta^2(\varepsilon) =
+    \delta(\varepsilon)\delta(0) =
+    \frac{\delta(\varepsilon)}{2\pi \hbar}
+    \int_{-t/2}^{t/2} e^{i0\times t'/\hbar} dt'\; =
+    \frac{\delta(\varepsilon)t}{2\pi \hbar},
+\end{equation}
+and performing the time derivation of each matrix element yeild the \textit{transition amplitude matrix}:
+\begin{equation} \label{eq_40}
+  \begin{aligned}
+    \Gamma_{\alpha\beta}^{ll'}(k_x,k'_x) = &
+    \frac { 2\pi \eta_{imp}^2 L_x^2}{ \hbar} |V_{{k'}_x,k_x}|^2
+    \delta(\varepsilon_{\beta} - \varepsilon)\\
+    & \times
+    J_l\qty(b[{y'}_0 - y_0]) J_{l'}\qty(g[{y'}_0 - y_0]) \\
+    & \times
+    \qty|
+    \int_{-\infty}^{\infty} dy \;
+    {\chi}_{N}\qty(y)
+    {\chi}_{N}\qty(y_0 - {y'}_0 - y)|^2.
+  \end{aligned}
+\end{equation}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-x
+An impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2} = V_{imp}$ and the inverse scattering time matrix is the sum over all momentum over the transition probability matrix
+\begin{equation} \label{eq_41}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} \equiv
+    \frac{1}{L_x} \sum_{{k'}_x}
+    \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp}
+\end{equation}
+and applying the 1-dimentional momentum continuum limit $\sum_{{k'}_x} \longrightarrow {L_x}/{2\pi}\int d {k'}_x$ and this leads to
+\begin{widetext}
+\begin{equation} \label{eq_42}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
+    \frac { 2\pi \eta_{imp}^2 L_x^2}{ \hbar}
+    \frac{V_{imp}}{2\pi}
+    \delta(\varepsilon_{\beta} - \varepsilon)
+    \int_{-\infty}^{\infty} d {k'}_x &
+    J_l\qty(\frac{b\hbar}{eB}[{k}_x - {k'}_x])
+    J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - {k'}_x]) \\
+    & \times
+    \qty|
+    \int_{-\infty}^{\infty} dy \;
+    {\chi}_{n_{\beta}}\qty(y)
+    {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)|^2.
+  \end{aligned}
+\end{equation}
+Using subtitution $k'_x = k_1$ and $y = {\hbar{k_2}}/{eB}$ finally we can derive our expression for the inverse scattering time matrix for $N$-th Landau
+level
+\begin{equation} \label{eq_43}
+  \begin{aligned}
+    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
+    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \delta(\varepsilon - \varepsilon_{N})
+    \int_{-\infty}^{\infty} d k_1
+    &
+    J_l\qty(\frac{b\hbar}{eB}[{k}_x - k_1])
+    J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - k_1]) \\
+    & \times
+    \qty|
+    \int_{-\infty}^{\infty} dk_2 \;
+    {\chi}_{N}\qty(\frac{\hbar}{eB}k_2)
+    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[k_1 - {k}_x - k_2])|^2.
+  \end{aligned}
+\end{equation}
+\end{widetext}
