@@ -1,1 +1,85 @@
-Considerable research effort in recent years has been de- voted to synthesizing materials whose thermal conductivity.
+A general theory for the conductivity in dressed systems with the disorder averaging was introduced by M. Wackerl in Ref.~\cite{wackerl20,wackerlthesis20}. Within this theory, the general $x$-directional longitudinal DC limit conductivity can be express with
+\begin{equation} \label{eq_21}
+  \begin{aligned}
+    {\sigma}^{xx} &=
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\omega/2}^{\lambda+ \hbar\omega/2} d\varepsilon \bigg[
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \\
+    & \times
+    \tr
+    \qty[
+    {j}^x_0
+    \qty(
+    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+    )
+    {j}^x_0
+    \qty(
+    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+    )
+    ]\bigg].
+  \end{aligned}
+\end{equation}
+where ${j}^x_0$ and $\vb{G}^{r,a} (\varepsilon)$ are $x$-directional electric current operator matrix elements' $s=0$ th Fourier component (see Appendix D) and white noise disorder averaged Green function matrix \cite{wackerl20,wackerlthesis20} respectvely defined against the Floquet modes of the considering system. Here we have assumed that only $s=0$ th Fourier component of the current operator is contributing to the conductivity. In addition $A$ is the area of the considering two-dimentionl system and $\lambda$ is a function that can be choose such that
+\begin{equation} \label{eq_22}
+    \lambda - \frac{\hbar \omega}{2}
+    \leq \varepsilon_N
+    <
+    \lambda + \frac{\hbar \omega}{2}
+\end{equation}
+where $ \varepsilon_N$ are quasienergies of all considering Floquet states.
+
+Then Eq.~(\ref{eq_21}) can be expanded in off resonant regime ($\omega\tau_0 \gg 1$), where $\tau_0$ is the scattering time of the undriven system, using only central entry Fourier components ($l=l'=0$) of Floquet modes $\ket{\phi_{n,m}} \equiv \ket{n,k_x}$
+\begin{widetext}
+\begin{equation} \label{7.2}
+  \begin{aligned}
+    \lim_{\omega \to 0}
+    \text{Re}[{\sigma}^{xx}(0,\omega)] & =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\lambda-\hbar\Omega/2}^{\lambda+ \hbar\Omega/2} d\varepsilon
+    \qty(
+    -\frac{\partial f}{\partial \varepsilon})
+    \\
+    & \times
+    \frac{1}{V_{k_x}} \sum_{k_x}
+    \sum_{n}
+    \mel{n,k_x}{
+    {j}^x_0
+    \qty(
+    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+    )
+    {j}^x_0
+    \qty(
+    \vb{G}^{r}_0 (\varepsilon) - \vb{G}^{a}_0 (\varepsilon)
+    )
+    }
+    {n,k_x}
+  \end{aligned}
+\end{equation}
+where $V_{k_x}$ is the volume of considering $x$-directional momentum space. 
+\end{widetext}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ x
