@@ -383,14 +383,15 @@ An impurity average of white noise potential allows to identify $\expval{|V_{{k'
     \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp}
 \end{equation}
 and applying the 1-dimentional momentum continuum limit $\sum_{{k'}_x} \longrightarrow {L_x}/{2\pi}\int d {k'}_x$ and this leads to
-\begin{widetext}
 \begin{equation} \label{eq_42}
   \begin{aligned}
-    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
+    \bigg(&\frac{1}{\tau(\varepsilon,k_x)}\bigg)^{ll'}_{\alpha\beta} \\
+    & =
     \frac { 2\pi \eta_{imp}^2 L_x^2}{ \hbar}
     \frac{V_{imp}}{2\pi}
-    \delta(\varepsilon_{\beta} - \varepsilon)
-    \int_{-\infty}^{\infty} d {k'}_x &
+    \delta(\varepsilon_{\beta} - \varepsilon)\\
+    & =
+    \int_{-\infty}^{\infty} d {k'}_x
     J_l\qty(\frac{b\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - {k'}_x]) \\
     & \times
@@ -404,11 +405,12 @@ Using subtitution $k'_x = k_1$ and $y = {\hbar{k_2}}/{eB}$ finally we can derive
 level
 \begin{equation} \label{eq_43}
   \begin{aligned}
-    \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{N} =
+    \bigg(&\frac{1}{\tau(\varepsilon,k_x)}\bigg)^{ll'}_{N} \\
+    & =
     \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
-    \delta(\varepsilon - \varepsilon_{N})
+    \delta(\varepsilon - \varepsilon_{N})\\
+    & \times
     \int_{-\infty}^{\infty} d k_1
-    &
     J_l\qty(\frac{b\hbar}{eB}[{k}_x - k_1])
     J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - k_1]) \\
     & \times
@@ -418,4 +420,3 @@ level
     {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[k_1 - {k}_x - k_2])|^2.
   \end{aligned}
 \end{equation}
-\end{widetext}
