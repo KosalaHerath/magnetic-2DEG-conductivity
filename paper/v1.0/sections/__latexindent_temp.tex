@@ -1,23 +1,47 @@
-% Section 01 - Introduction
+% Section 02 - Schrodinger problem for dressed quantum Hall system
 
-Manipulating physical systems as a consequence of light engagements introduced an astonishing scope of twentieth-century physics namely quantum optics \cite{grynberg10}.
-Quantum optics have dragged research attention in the disciplines of optoelectronics \cite{liu16,wijesekara20,tao21}, sensing \cite{rodrigo2015,pirandola18,hapuarachchi2018}, energy harvesting \cite{yuan16,sun18},
-quantum computing \cite{huh15,slussarenko19,andersen21}, bio-information \cite{marais18,bian20}, and abundant affiliates of recent technologies \cite{rivera20}.
-The studies on quantum optics of nanostructures were centered on metamaterials \cite{shalaev07,si14}, quantum plasmonic effects \cite{hapuarachchi19,perera20}, lasers and amplifiers \cite{zhang05,chow13}, quantum cavity physics \cite{tsang10,devi20}.
-However, over the past few years, the foremost aims for examining nanostructures under external radiation were focused on understanding the transport characteristics \cite{kitagawa11,zhou11,kibis14,pervishko15,morina15,dehghani15,dini16,wackerl20}. 
-The significance of describing fundamental mechanisms taking place in charge transport is that they will pave the way to invent new nanoelectronic devices and optimize their performance \cite{premaratne21}.
-Among these works, most studies have considered the driving field as a perturbation field \cite{pervishko15,morina15} that is not applicable for systems under high-intensity illumination \cite{grifoni98,wackerl20}. When the external electromagnetic field account with a perturbation method and it gets high intensive, the number of higher-order interaction terms need to be consider gets increase. Then a more accurate and powerful concept need to be adopt and we need to treat the interacting fermion system and the radiation as a one unique quantum system (dressed system) \cite{morina15,cohen98,scully01}. On account of the transport characteristics of dressed nanostructures, they are still expecting extensive analysis.
-Theoretical analyses of the transport properties of dressed fermions systems were recently reported in Ref. \cite{kibis14,morina15,wackerl20} where a general expression for Floquet-Drude conductivity has been derived in a fully closed analytical form in Ref. \cite{wackerl20}, introducing a novel type of Green’s functions namely four-times Green’s functions. As a consequence, the established formalism introduces a novel approach to manipulate the transport characteristics of nano-structures by an intense dressing field.
+Our system consist of a two-dimentional free electron gas (2DEG) confined in the $(x,y)$ plane of the three-dimentional coordinate space. In our analysis, the 2DEG is subjected to a stationary magnetic field $\vb{B} = (0,0,B)^{\text{T}}$ which is pointed towards the $z$ axis. In addition, a linearly polarized strong light is applied perpendicular to the 2DEG plane, and we specially tune the frequency of the field $\omega$ such that the optical field behaves as a purely dressing field (unabsorbable). Without limiting the generality we can choose $y$-polorized electric field $\vb{E} = (0,E\sin(\omega t),0)^{\text{T}}$ for the dressing field configuration (Fig.~\ref{fig_1}).
+\begin{figure}[b]
+\includegraphics[scale=0.9]{figures/fig_1}
+\caption{\label{fig_1} Two-dimensional electron gas (2DEG) confined in the $(x,y)$ plane while both stationary magnetic field $\vb{B}$ and strong dressing field with y-polarized electric field $\vb{E}$ are being applied perpendicular to the surface of 2DEG.}
+\end{figure}
+Here $B$ and $E$ represent the amplitude of the stationary magnetic field and oscillating electric field respectively.
 
-On the other hand, quantum Hall effect \cite{girvin90} observed for two-dimentional fermions systems at low temperatures under strong stationary magnetic field manifest remarkable magneto-transport behaviors and transport properties of these systems attracted many researches attention in experimentally \cite{allerman95,tieke97,pan05} and theoretically \cite{ando72,ando74_1,ando74_2,ando74_3,ando74_4,ando82,endo09}.
-Akira Endo et al. \cite{endo09} previously presented calculations of longitudinal and transverse conductivity tensor components and their relationship in a quantum Hall system and these theoretical calculations are well-suited with the experimental observations while other former studies [46] yields a semi-elliptical broadening for Landau levels and gives less fitting illustration for the experimental results \cite{endo09}.
-
-In contrast more fascinating transport phenomena can be achieved by creating a quantum Hall system using a stationary magnetic field and simultaneously applying a dressing field.
-Whilst there exist a number of leading theories devoted to the calculation of conductivity tensor elements in quantum Hall systems \cite{ando74_1,ando82,endo09}, they have not been utilized to describe the optical manipulation of the transport properties of the quantum Hall systems.
-Furthermore, K. Dini et al. \cite{dini16} have recently investigated the one-directional conductivity behavior of dressed quantum Hall systems, and they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system. In their study, they used the conductivity models from T. Ando et al. \cite{ando74_1,ando82} and as mentioned in A. Endo et al. work \cite{endo09} those models yields a semi-elliptical broadening for Landau levels and gives less fitting illustrration for the experimatal results.
-
-In the present analysis we report a robust mathematical model for dressed two-dimensional electron gas(2DEG) exposed to another stationary magnetic field.
-A stationary magnetic field is applied perpendicularly across the surface of 2DEG system and the orbital motion of electrons becomes completely quantized and the energy spectrum becomes discrete by creating Landau levels \cite{landau30}.
-Such a singular system is known as a two-dimentional quantum Hall system and in this study, we explicitly calculate the longitudinal  ($\sigma^{xx},\sigma^{yy}$) components of the conductivity tensor in the periodically driven quantum Hall systems by developing a generalized mathematical model to describe transport properties of dressed quantum Hall systems using Floquet-Drude conductivity \cite{wackerl20}.
-Finally we demonstrate that our generalised model is agreed with the state of art conductivity model \cite{endo09} already developed for specialized quantum Hall systems that have been considered without the external dressing field. 
-Furthermore the mechanism of optical manipulation can be used as a tool to utilise transport properties in various two-dimentional nano-structures which serve as a basis for nano-electronic devices and we believe that our theoretical analysis and visual depictions of results can be used to understand the basic structure and optimize the performance of optical manipulation of transport properties in a two-dimentional quantum Hall system.
+Using Landau gauge for the stationary magnetic field, we can represent it using vector potential as $\vb{A}_{s} = (-By,0,0)^{\text{T}}$ and choosing Coulomb gauge, the vector potential of the dynamic dressing radiation can be presented as $\vb{A}_{d}(t) = (0,[E/\omega ]\cos(\omega t),0)^{\text{T}}$. These vector potentials are coupled to the momentum of 2DEG as kinetic momentum \cite{mahan00,bruus04} and this leads to the time-dependent Hamiltonian
+\begin{equation} \label{eq_1}
+  \hat{H}_e(t) = \frac{1}{2m_e}\Big[\hat{\vb{p}} - e\big(\vb{A}_{s}+\vb{A}_{d}(t)\big)\Big]^2,
+\end{equation}
+where $m_e$ is the effective electron mass and $e$ is the magnitude of the electron charge. $\hat{\vb{p}} = (\hat{p}_x,\hat{p}_y,0)^{\text{T}}$ represents the canonical momentum operator for 2DEG with electron momentum $p_{x,y}$.
+The exact solutions for the time-dependent Schrödinger equation $i\hbar \dv{t}\psi = \hat{H}_e(t) \psi$ was already given by Refs. \cite{husmi53,ditt98,dini16} and we can present them as a set of wave functions defined by two quantum numbers $(n,m)$
+\begin{equation} \label{eq_2}
+  \begin{aligned}
+    \psi_{n,m}&(x,y,t)  \\
+    & = \frac{1}{\sqrt{L_x}}
+    \chi_n\left[y - y_0 - \zeta(t)\right]\\
+    & \times
+    \text{exp}\bigg(
+    \frac{i}{\hbar}\bigg[- \varepsilon_nt
+    + p_x x + \frac{eE(y - y_0)}{\omega}\cos(\omega t)\\
+    &+
+    m_e\dot{\zeta}(t)\big[y - y_0 -\zeta(t)\big] +
+    \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg),
+  \end{aligned}
+\end{equation}
+where $n \in \mathbb{Z}^{+}_0$ and $m \in \mathbb{Z}$ ; see Appendix A. Here $L_{x,y}$ are dimension of the 2DEG surface, $\hbar$ is the reduced Planck constant, and $y_0 = -p_x/eB$ is the center of the cyclotron orbit along $y$ axis. $\chi_n$ are well known solutions for Schrödinger equation of a stationary quantum harmonic oscillator
+\begin{equation} \label{eq_3}
+  \chi_n(x) \equiv
+   \frac{\sqrt{\kappa}}{\sqrt{2^{n}n!}}
+  e^{-\kappa^2 x^2/2}
+  \mathcal{H}_n \qty(\kappa x) \quad \text{with}
+  \quad
+  \kappa = \sqrt{\frac{m_e \omega_0}{\hbar}},
+\end{equation}
+with eigenvalues given by $\varepsilon_n = \hbar \omega_0 (n + 1/2)$ and $\omega_0 = eB/m_e$ is the cyclotron frequency. Each $n$ value defines the  energy($\varepsilon_n$) of the respective Landau level. The path shift of the driven classical oscillator $\zeta(t)$ is given by
+\begin{equation} \label{eq_4}
+  \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t),
+\end{equation}
+while the Lagrangian of the classical oscillator $L(\zeta,\dot{\zeta},t)$ can be identified as
+\begin{equation} \label{eq_5}
+  L(\zeta,\dot{\zeta},t) = \frac{1}{2} m_e\dot{\zeta}^2(t) - \frac{1}{2}m_e\omega_0^2 \zeta^2(t) + eE\zeta(t) \sin(\omega t).
+\end{equation}
+The exponential phase shifts in Eq.~(\ref{eq_2}) represent the influence done by the stationary magnetic field and strong dressing field. Therefore, we can accept that magneto-transport properties of 2DEG will be renormalized by the magnetic field as well as the dressing field.
