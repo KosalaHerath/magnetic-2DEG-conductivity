@@ -20,10 +20,10 @@ A general theory for the conductivity in dressed systems with the disorder avera
     \qty(
     \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
     )
-    ]\bigg].
+    ]\bigg],
   \end{aligned}
 \end{equation}
-where ${j}^x_0$ and $\vb{G}^{r,a} (\varepsilon)$ are $x$-directional electric current operator matrix elements' $s=0$ th Fourier component (see Appendix D) and white noise disorder averaged Floquet Green function matrix \cite{wackerl20,wackerlthesis20} respectvely defined against the Floquet modes of the considering system. Here we have assumed that only $s=0$ th Fourier component of the current operator is contributing to the conductivity. In addition $A$ is the area of the considering two-dimentionl system, partical distribution function is given by $f$ and $\lambda$ is a function that can be choose such that
+where ${j}^x_0$ and $\vb{G}^{r,a} (\varepsilon)$ are $x$-directional electric current operator matrix elements' $s=0$ the Fourier component (see Appendix D) and white noise disorder averaged Floquet Green function matrix \cite{wackerl20,wackerlthesis20} respectively defined against the Floquet modes of the considering system. Here we have assumed that only $s=0$ the Fourier component of the current operator is contributing to the conductivity. In addition, $A$ is the area of the considering two-dimentional system, partial distribution function is given by $f$ and $\lambda$ is a function that can be chosen such that
 \begin{equation} \label{eq_21}
     \lambda - \frac{\hbar \omega}{2}
     \leq \varepsilon_N
@@ -56,7 +56,7 @@ Then Eq.~(\ref{eq_20}) can be expanded in off resonant regime ($\omega\tau_0 \gg
     {n,k_x},
   \end{aligned}
 \end{equation}
-where $V_{k_x}$ is the volume of considering $x$-directional momentum space. Then this can evalute by considering each matrix elements seperatly
+where $V_{k_x}$ is the volume of considering $x$-directional momentum space. Then this can evaluate by considering each matrix elements separately
 \begin{equation} \label{eq_23}
   \begin{aligned}
     {\sigma}^{xx}  = &
@@ -87,7 +87,7 @@ where $V_{k_x}$ is the volume of considering $x$-directional momentum space. The
     {n,k_x}.
   \end{aligned}
 \end{equation}
-Since we can diagonalize the impurity averaged Green's function using unitary trasnformation ($\vb{T}  \equiv \ket{n,k_x}$) mentioned in Ref.~\cite{wackerl20,wackerlthesis20,tsuji08} and we evaluate the matrix element of the differece between retarded and advanced Green's functions
+Since we can diagonalize the impurity averaged Green's function using unitary transformation ($\vb{T}  \equiv \ket{n,k_x}$) mentioned in Ref.~\cite{wackerl20,wackerlthesis20,tsuji08}, and we evaluate the matrix element of the difference between retarded and advanced Green's functions
 \begin{equation} \label{eq_24}
   \mel{{n_1,{k_x}_1}}{
   \vb{T}^{\dagger}
@@ -125,7 +125,7 @@ and
   + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})]^2
   }],
 \end{equation}
-using the retared self-energy matrix $\vb{\Sigma}^r$ which is the sum over all irreducible diagrams \cite{wackerl20,wackerlthesis20}. Applying the matrix elements of electric current operator in Landau levels (see Appendix D) and
+using the retarded self-energy matrix $\vb{\Sigma}^r$ which is the sum over all irreducible diagrams \cite{wackerl20,wackerlthesis20}. Applying the matrix elements of electric current operator in Landau levels (see Appendix D) and
 results form Eq.~(\ref{eq_24}) and Eq.~(\ref{eq_25}) back into Eq.~(\ref{eq_23}) we obtain
 \begin{equation} \label{eq_26}
   \begin{aligned}
@@ -202,7 +202,7 @@ and the only non-zero term would be
     }].
   \end{aligned}
 \end{equation}
-Since the inverse scattering time matrix being equal to the diagonalized differece of the retared and advanced self-energy and on the diagonal the differece of the retarded and advanced Green's function is equal to the imaginary part of the retared self-energy \cite{wackerl20,wackerlthesis20} we can identify the following property
+Since the inverse scattering time matrix being equal to the diagonalized difference of the retared and advanced self-energy and on the diagonal the difference of the retarded and advanced Green's function is equal to the imaginary part of the retared self-energy \cite{wackerl20,wackerlthesis20} we can identify the following property
 \begin{equation} \label{eq_28}
   \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll} =
   -2\text{Im}\qty[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}]^{ll},
@@ -237,15 +237,15 @@ and using central element ($l=0$) of the inverse scattering time matrix we can m
     }],
 \end{equation}
 \end{widetext}
-with $\Gamma(\varepsilon_n,k_x) \equiv \qty({\hbar}/{2\tau(\varepsilon_n,k_x)})^{00}$. We already identited that the inverse scattering time matrix's central element is not $k_x$ dependent we can get the sum over all available momentum space in $x$ direction. However by considering the condition that the center of the force of the oscillator $y_0$ must physically lie within the considering system $-L_y/2 < y_0 < L_y/2$, we can identify
+with $\Gamma(\varepsilon_n,k_x) \equiv \qty({\hbar}/{2\tau(\varepsilon_n,k_x)})^{00}$. We already identified that the inverse scattering time matrix's central element is not $k_x$ dependent we can get the sum over all available momentum space in $x$ direction. However, by considering the condition that the center of the force of the oscillator $y_0$ must physically lie within the considering system $-L_y/2 < y_0 < L_y/2$, we can identify
 \begin{equation} \label{eq_30}
  -\frac{m_e\omega_0 Ly}{2\hbar} \leq k_x \leq \frac{m_e\omega_0 Ly}{2\hbar}.
 \end{equation}
-Then using Fermi-Dirac distribution as our partical distribution function ($f$) for this system
+Then using Fermi-Dirac distribution as our partial distribution function ($f$) for this system
 \begin{equation} \label{eq_31}
   f(\varepsilon) = \frac{1}{\qty[\exp(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
-where $k_B$ is Botlzmann constant, $T$ is absolute tempurature and $\varepsilon_F$ is Fermi energy of the system. Considering the above distribution with extreamly low tempurature conditions we can appromixate
+where $k_B$ is Boltzmann constant, $T$ is absolute temperature and $\varepsilon_F$ is Fermi energy of the system. Considering the above distribution with extremely low temperature conditions we can approximate
 \begin{equation} \label{eq_32}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F),
 \end{equation}

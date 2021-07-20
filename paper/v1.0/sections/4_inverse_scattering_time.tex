@@ -1,6 +1,6 @@
 % Section 04 - Inverse Scattering Time Analysis
 
-In Ref. \cite{wackerl20} Floquet Fermi golden rule has been introduced as a method to analyse transport propeties in dressed quantum systems. However, this theory has not been applied for a dressed quantum Hall system and to identify magnetotransport properties in our system we use Floquet Fermi golden rule.
+In Ref. \cite{wackerl20} Floquet Fermi golden rule has been introduced as a method to analyze transport properties in dressed quantum systems. However, this theory has not been applied for a dressed quantum Hall system and to identify magneto-transport properties in our system we use Floquet Fermi golden rule.
 With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,althorpe97} and using Floquet states derived in Eq.~(\ref{eq_12}) we can derive an  expression for the inverse scattering time matrix ($(l,l')$th element) for the $N$th Landau level, per a given energy $\varepsilon$ and momentum $k_x$ value for our considered quantum Hall system as
 \begin{equation} \label{eq_13}
   \begin{aligned}
@@ -20,9 +20,9 @@ With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,alt
   \end{aligned}
 \end{equation}
 where $\varrho \equiv \eta_{imp} L_x [ { V_{imp}}/{eB}]^{1/2}$,
-$J_l(\cdot)$ are Bessel functions of the first kind with $l$th integer order and $\varepsilon_N$ is the energy of $N$th Landau level; see Appendix C. In this study, the perturbation potential is assumed to be formed by an ensemble of randomly distributed impurities, since random impurities in a disorded metal is a better approximation for experimental results. The total  scattering potential in 2DEG is then given by the sum over uncorrelated single impurity potentials $\upsilon(\vb{r})$. Here $\eta_{imp}$ is the number of impurities in a unit area and $V_{imp} = \expval{|V_{{k'}_x,k_x}|^2}$ with $V_{{k'}_x,k_x} = \mel**{k'_x}{\upsilon(x) }{k_x}$ where $\braket{x}{k_x} = e^{-ik_x x}/\sqrt{L_x}$.
+$J_l(\cdot)$ are Bessel functions of the first kind with $l$th integer order and $\varepsilon_N$ is the energy of $N$th Landau level; see Appendix C. In this study, the perturbation potential is assumed to be formed by an ensemble of randomly distributed impurities, since random impurities in a disordered metal is a better approximation for experimental results. The total  scattering potential in 2DEG is then given by the sum over uncorrelated single impurity potentials $\upsilon(\vb{r})$. Here $\eta_{imp}$ is the number of impurities in a unit area and $V_{imp} = \expval{|V_{{k'}_x,k_x}|^2}$ with $V_{{k'}_x,k_x} = \mel**{k'_x}{\upsilon(x) }{k_x}$ where $\braket{x}{k_x} = e^{-ik_x x}/\sqrt{L_x}$.
 
-Next we are going to analyse the contribution of the inverse scattering time matrix elements to the transport properies in 2DEG. The disorder in the system is not supposed to change the eigenenergies of the bare system \cite{wackerl20}, hence all off-diogonal elements of the self-energy were neglected and then we can consider only the central diagonal element (${l=l'=0}$) of the inverse scattering time matrix which has the largest contribution to the transport characteristics.
+Next we are going to analyze the contribution of the inverse scattering time matrix elements to the transport properties in 2DEG. The disorder in the system is not supposed to change the eigenenergies of the bare system \cite{wackerl20}, hence all off-diogonal elements of the self-energy were neglected, and then we can consider only the central diagonal element (${l=l'=0}$) of the inverse scattering time matrix which has the largest contribution to the transport characteristics.
 % \begin{equation} \label{eq_14}
 %   \begin{aligned}
 %     \bigg(&\frac{1}{\tau(\varepsilon,k_x)}\bigg)^{00}_{N} \\
@@ -96,7 +96,7 @@ and we write the central element of inverse scattering time matrix in more compa
   \end{aligned}
 \end{equation}
 where $ \lambda_1 \equiv \hbar b/eB$ and  $\lambda_2 \equiv \hbar \kappa/eB$.
-To analyze the contribution of dressing field on the scatering-induced broadening, normalized $N$-th Landau level scatering-induced broadening can be defined as
+To analyze the contribution of dressing field on the scattering-induced broadening, normalized $N$-th Landau level scattering-induced broadening can be defined as
 \begin{equation} \label{eq_18}
     \Lambda_N(k_x) \equiv
     \frac{\Gamma^{00}_{N}(\varepsilon,k_x)}{\Gamma^{00}_{N=0}(\varepsilon,k_x)\big|_{E=0}},
@@ -123,5 +123,5 @@ and this leads to
 \end{widetext}
 
 Normalized energy band broadening against ${k_x}$ for different Landau levels ($N = 0,1,2,3,4$) has been calculated for GaAs-based quantum well and results are given in Fig.~(\ref{fig_3}) and Fig.~(\ref{fig_4}). To make comparison we have selected the experiment parameters to match with analysis done in Ref.~\cite{endo09}.
-In their study, they have assumed that effective mass of the electron in GaAs-based quantum well system is $m_e = 0.07m$ where $m$ is mass of the electron \cite{endo09,winkler03,wackerl20} and the broadening of the natural(without a dressing field) $0$-th Landau level $\Gamma_0$ is $0.24\;\text{me}V$. Therefore in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = 0.24 \;\text{meV}$.
-Here we can identify that we can change the each Landau level normalized energy broadening value using apllied electromagnetic field. When the applied field's intensity increase the energy broadening gets reduced which make changes in conductivity of 2DEG.
+In their study, they have assumed that effective mass of the electron in GaAs-based quantum well system is $m_e = 0.07m$ where $m$ is mass of the electron \cite{endo09,winkler03,wackerl20} and the broadening of the natural(without a dressing field) $0$-th Landau level $\Gamma_0$ is $0.24\;\text{me}V$. Therefore, in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = 0.24 \;\text{meV}$.
+Here we can identify that we can change each Landau level normalized energy broadening value using applied electromagnetic field. When the applied field's intensity increase the energy broadening gets reduced which make changes in conductivity of 2DEG.
