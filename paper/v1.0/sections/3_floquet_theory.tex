@@ -11,11 +11,11 @@ which is only depend on single quantum number ($n$) and Floquet modes are given 
 \begin{equation} \label{eq_7}
   \begin{aligned}
     \phi_{n,m}(x,y,t) = &
-    \frac{1}{\sqrt{L_x}} \chi_{n}\left[y - y_0 - \zeta(t)\right]
+    \frac{1}{\sqrt{L_x}} \chi_{n}\left[y - y_0 - \zeta(t)\right]\\
+    & \times
     \text{exp}\bigg(
      \frac{i}{\hbar}\bigg[
-     p_x x \\
-     & +
+     p_x x +
      \frac{eE(y - y_0)}{\omega}\cos(\omega t) \\
      & +
      m_e\dot{\zeta}(t)\big[y - y_0 -\zeta(t)\big]
@@ -27,7 +27,7 @@ with
   \Delta_{\varepsilon} = \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)} ~ \text{and} ~
   \xi = \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t).
 \end{equation}
-It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions.
+It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions. At the resounance $\omega = \omega_0$, the energy levels occupies a continuous form and the discrete quasienergies are not longer valid \cite{popov70}. Therefore in this work we choose the dressing field frequency as $\omega \neq \omega_0$.
 
 Then performing Fourier trasform over the confined two-dimentional space $A=L_xL_y$, we obtain the momentum space($k_x,k_y$) representation of Floquet modes
 \begin{equation} \label{eq_9}

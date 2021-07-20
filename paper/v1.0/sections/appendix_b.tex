@@ -22,7 +22,7 @@ and after simplying, this leads to
 which is a periodic function in time with $2\omega$ frequency. Now using these  parmaters we can factorize the wavefunction Eq.~(\ref{eq_2}) as linearly time dependend part and periodic time dependend part as follows
 \begin{equation} \label{eq_b5}
   \begin{aligned}
-    \psi_{\alpha}(x,y,t)  = &
+    \psi_{\alpha}&(x,y,t)  =
     \exp(\frac{i}{\hbar}\qty[-\varepsilon_nt + \Delta_{\varepsilon} t ])
     \frac{1}{\sqrt{L_x}} \chi_n\big(y - y_0 - \zeta(t)\big)
     \\
@@ -40,7 +40,7 @@ which is a periodic function in time with $2\omega$ frequency. Now using these  
 and this leads to seperate linear time dependent phase component as the quasienergies
 \begin{equation} \label{eq_b6}
   \varepsilon_{n} =
-  \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon}
+  \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon},
 \end{equation}
 while rest of the components as time-periodic Floquet modes
 \begin{equation} \label{eq_b7}
@@ -60,26 +60,26 @@ while rest of the components as time-periodic Floquet modes
 
 \subsection{Momentum space representation}
 
-To write the Floquet modes in momentum space, we perform continuous Fourier transform over the considering confined space $A=L_xL_y$ for Eq.~(\ref{eq_7})
+To write the Floquet modes in momentum space, we perform continuous Fourier transform over the considering confined space $A=L_xL_y$ for Eq.~(\ref{eq_7}):
 \begin{equation} \label{eq_b8}
   \begin{aligned}
-    \phi_{n,m}(k_x,k_y,t)  &=
+    \phi_{n,m}&(k_x,k_y,t) \\
+    & =
+    \exp(
+     \frac{-i\gamma(t)}{\hbar}
+     y_0)
+    \exp(\frac{-i}{\hbar}
+    \qty[
+    m_e \dot{\zeta}(t) \zeta(t) - \xi
+    ])\\
+    & \times
     \int_{-L_y/2}^{L_y/2} dy\; \exp(-i\qty[k_y - \gamma(t)]y)
     \chi_{n}\qty[y - \mu(t)] \\
      & \times
      \frac{1}{\sqrt{L_x}}
      \int_{-L_x/2}^{L_x/2} dx\;
      \exp(-ik_x x)
-     \exp( \frac{i p_x }{\hbar}x ) \\
-     &
-     \times
-     \exp(
-      \frac{-i\gamma(t)}{\hbar}
-      y_0)
-     \exp(\frac{-i}{\hbar}
-     \qty[
-     m_e \dot{\zeta}(t) \zeta(t) - \xi
-     ]),
+     \exp( \frac{i p_x }{\hbar}x ),
   \end{aligned}
 \end{equation}
 where
@@ -98,17 +98,17 @@ Next using the identity \cite{bruus04}
 we can derive
 \begin{equation} \label{eq_b11}
   \begin{aligned}
-    \phi_{n,m}(k_x,k_y,t)  =
+    \phi_{n,m}&(k_x,k_y,t)  = 
+    \Phi_{n,m}(k_y,t)
+    \delta_{k_x,\frac{p_x}{\hbar}}\\
+    & \times
     \exp(
      \frac{-i\gamma(t)}{\hbar}
-     y_0) &
+     y_0)
     \exp(\frac{-i}{\hbar}
     \qty[
     m_e \dot{\zeta}(t) \zeta(t) - \xi
-    ]) \\
-    & \times
-    \Phi_{n,m}(k_y,t)
-    \delta_{k_x,\frac{p_x}{\hbar}}.
+    ]).
   \end{aligned}
 \end{equation}
 Here we defined $\Phi_{n,m}(k_y,t)$ as

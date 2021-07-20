@@ -23,8 +23,6 @@ A general theory for the conductivity in dressed systems with the disorder avera
     ]\bigg].
   \end{aligned}
 \end{equation}
-
-\noindent
 where ${j}^x_0$ and $\vb{G}^{r,a} (\varepsilon)$ are $x$-directional electric current operator matrix elements' $s=0$ th Fourier component (see Appendix D) and white noise disorder averaged Floquet Green function matrix \cite{wackerl20,wackerlthesis20} respectvely defined against the Floquet modes of the considering system. Here we have assumed that only $s=0$ th Fourier component of the current operator is contributing to the conductivity. In addition $A$ is the area of the considering two-dimentionl system, partical distribution function is given by $f$ and $\lambda$ is a function that can be choose such that
 \begin{equation} \label{eq_21}
     \lambda - \frac{\hbar \omega}{2}
@@ -207,7 +205,7 @@ and the only non-zero term would be
 Since the inverse scattering time matrix being equal to the diagonalized differece of the retared and advanced self-energy and on the diagonal the differece of the retarded and advanced Green's function is equal to the imaginary part of the retared self-energy \cite{wackerl20,wackerlthesis20} we can identify the following property
 \begin{equation} \label{eq_28}
   \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll} =
-  -2\text{Im}\qty[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}]^{ll}
+  -2\text{Im}\qty[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}]^{ll},
 \end{equation}
 and using central element ($l=0$) of the inverse scattering time matrix we can modify the derived conductivity expression
 \begin{equation} \label{eq_29}
@@ -245,19 +243,19 @@ with $\Gamma(\varepsilon_n,k_x) \equiv \qty({\hbar}/{2\tau(\varepsilon_n,k_x)})^
 \end{equation}
 Then using Fermi-Dirac distribution as our partical distribution function ($f$) for this system
 \begin{equation} \label{eq_31}
-  f(\varepsilon) = \frac{1}{\qty[\exp(\varepsilon - \varepsilon_F)/k_B T]+1}
+  f(\varepsilon) = \frac{1}{\qty[\exp(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
 where $k_B$ is Botlzmann constant, $T$ is absolute tempurature and $\varepsilon_F$ is Fermi energy of the system. Considering the above distribution with extreamly low tempurature conditions we can appromixate
 \begin{equation} \label{eq_32}
-  - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F)
+  - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F),
 \end{equation}
 and by letting $\lambda = \varepsilon_F$, the expression for conductivity leads to
 \begin{equation} \label{eq_33}
   \begin{aligned}
     {\sigma}^{xx}  =
     \frac{e^2}{\hbar}
-    \frac{1}{\pi A}
-    \sum_{n} &
+    \frac{1}{\pi A} &
+    \sum_{n}
     \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}} \\
     &\times
     \qty[
@@ -282,8 +280,8 @@ Same as above derivation we can derive the transverse conductivity in $y$-direct
   \begin{aligned}
     {\sigma}^{yy} =
     \frac{e^2}{\hbar}
-    \frac{1}{\pi A}
-    \frac{1}{e^2B^2} &
+    \frac{1}{\pi A}&
+    \frac{1}{e^2B^2}
     \sum_{n}
     \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}} \\
     & \times

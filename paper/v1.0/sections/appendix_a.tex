@@ -81,9 +81,9 @@ This system can be extacly solvable and we can solve the equation using the meth
 and this yeilds
 \begin{equation} \label{eq_a10}
   \begin{aligned}
-    i \hbar \pdv{\varphi(y',t)}{t}   =
+    i \hbar \pdv{\varphi(y',t)}{t}   &=
     \bigg[
-        & -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
         + \frac{1}{2} m_e \omega_0^2 y'^2 \\
         & +
         \Big[
@@ -99,22 +99,23 @@ and this yeilds
 \end{equation}
 Then we can restrict our $\zeta(t)$ function such that
 \begin{equation} \label{eq_a11}
-  m_e\ddot{\zeta} + m_e\omega_0^2\zeta = S(t)
+  m_e\ddot{\zeta} + m_e\omega_0^2\zeta = S(t),
 \end{equation}
 and that leads to
 \begin{equation} \label{eq_a12}
   \begin{aligned}
     i \hbar \pdv{\varphi(y',t)}{t}   =
     \bigg[
-        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
-        + \frac{1}{2} m_e \omega_0^2 {y'}^2
+        -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}} &
+        + \frac{1}{2} m_e \omega_0^2 {y'}^2 \\
+        &
         - L(\zeta,\dot{\zeta},t)
-    \bigg]\varphi(y',t)
+    \bigg]\varphi(y',t),
   \end{aligned}
 \end{equation}
 where
 \begin{equation} \label{eq_a13}
-  L(\zeta,\dot{\zeta},t) \equiv \frac{1}{2} m_e\dot{\zeta}^2 - \frac{1}{2}m_e\omega_0^2 \zeta^2 + \zeta S(t)
+  L(\zeta,\dot{\zeta},t) \equiv \frac{1}{2} m_e\dot{\zeta}^2 - \frac{1}{2}m_e\omega_0^2 \zeta^2 + \zeta S(t),
 \end{equation}
 is the largrangian of a classical driven oscillator. To proceed further, another unitary trasform can be introduced as follows
 \begin{equation} \label{eq_a14}
@@ -140,7 +141,7 @@ This allows us to identify with the well-known eigenfucntions \cite{griffiths18,
 \end{equation}
 which are propositional to the Hermite polynomials $\mathcal{H}_n$, with eigenvalues
 \begin{equation} \label{eq_a17}
-  \varepsilon_n = \hbar \omega_0 \big(n + \frac{1}{2}\big)
+  \varepsilon_n = \hbar \omega_0 \bigg(n + \frac{1}{2}\bigg)
   ~,~
   n \in \mathbb{Z}^{+}_0.
 \end{equation}
@@ -150,7 +151,7 @@ Therefore we can identify the solutions of Eq.~(\ref{eq_a8}) as
     \vartheta_n(\tilde{y},t) = \chi_n(\tilde{y} - \zeta(t))
      \text{exp}\bigg(\frac{i}{\hbar}\bigg[&- \varepsilon_nt +
     m_e\dot{\zeta(t)}\big(\tilde{y}-\zeta(t)\big) \\
-     & + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg)
+     & + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg).
   \end{aligned}
 \end{equation}
 The set $\{\chi_n(x)\}$ functions forms a complete set and thus any general solution $\vartheta_(\tilde{y},t)$ can be expaned in terms of the solutions given in Eq.~(\ref{eq_a18}).
