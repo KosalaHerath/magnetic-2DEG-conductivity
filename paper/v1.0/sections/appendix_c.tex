@@ -1,4 +1,4 @@
-The derivation of the Floquet Fermi golden rule for our quantum Hall system with the help of $t-t'$ formalism is given here in detail. The $t$-$t'$-Floquet states \cite{grifoni98,wackerl20}
+The Floquet Fermi golden rule derivation for our quantum Hall system with the help of $t-t'$ formalism is given here in detail. The $t$-$t'$-Floquet states \cite{grifoni98,wackerl20}
 \begin{equation} \label{eq_c1}
   \ket{\psi_{n,m}(t,t')} =
   \exp(-\frac{i}{\hbar}\varepsilon_{n} t)\ket{\phi_{n,m}(t')},
@@ -19,7 +19,7 @@ Next we can identify the time evolution operator corresponding to the $t$-$t'$-S
 \end{equation}
 and the advantage of $t$-$t'$ formalism lies on this time evolution operator which avoids any time ordering operators \cite{wackerl20}.
 
-For our scenario, consider a time-independent total perturbation $V(\vb{r})$ which has been switched on at the reference time $t=t_0$, then the $t$-$t'$-Schrödinger equation becomes
+For our scenario, consider a time-independent total perturbation $V(\vb{r})$ which has been turned on at the reference time $t=t_0$, then the $t$-$t'$-Schrödinger equation becomes
 \begin{equation} \label{eq_c5}
   i \hbar \pdv{t}\ket{\Psi_{n,m}(t,t')} =
   \qty[H_F(t') + V(\vb{r})]\ket{\Psi_{n,m}(t,t')},
@@ -40,7 +40,7 @@ and due to time independence, the perturbation in the interaction picture has th
   V_I(\vb{r}) = U_0^{\dagger}(t,t_0;t')V(\vb{r})U_0(t,t_0;t') =
   V(\vb{r}).
 \end{equation}
-This leads to the $t$-$t'$-Schrödinger equation in the interaction picture
+This drive us to the $t$-$t'$-Schrödinger equation representation in the interaction picture
 \begin{equation} \label{eq_c9}
   i \hbar \pdv{t}\ket{\Psi_{n,m}(t,t')}_I =
   V_I(\vb{r})\ket{\Psi_{n,m}(t,t')}_I,
@@ -95,7 +95,7 @@ Since the $t$-$t'$-Floquet states are orthonormal and assuming $t_0 = 0$ and $\a
   V(\vb{r}) \ket{\psi_{\alpha}(t_1,t')}.
 \end{equation}
 
-Now consider a scattering event from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')} $ into another $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ with constant quansienergy $\varepsilon$:
+Now consider a scattering phenomenon from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')} $ into a distinct $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ that occupied with a constant quansienergy $\varepsilon$:
 \begin{equation} \label{eq_c15}
   \begin{aligned}
   \ket{\psi_{\beta}(t,t')} &= \exp(-\frac{i}{\hbar}\varepsilon_{\beta} t)
@@ -149,7 +149,7 @@ and separating $x$ and $y$ directional momentum we can derive (we already assume
 \end{equation}
 with $V_{\vb{k'},\vb{k}} \equiv \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}$.
 
-Since the perturbation potential $V(\vb{r})$ is assumed to be formed by an ensemble of randomly distributed impurities, consider $N_{imp}$ identical impurities positioned at randomly distributed but fixed positions $\vb{r}_i$. Then scattering potential $V(\vb{r})$ is given by the sum over uncorrelated single impurity potentials $\upsilon(\vb{r})$
+Since we are presenting the the perturbation potential $V(\vb{r})$ by using a group of randomly distributed impurities, consider $N_{imp}$ number of identical single impurity potentials distributed at randomly but fixed positions $\vb{r}_i$. Then scattering potential $V(\vb{r})$ can be identified as the sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$
 \begin{equation} \label{eq_c20}
   V(\vb{r}) \equiv
   \sum_{i=1}^{N_{imp}}
@@ -256,7 +256,8 @@ with
     ).
   \end{aligned}
 \end{equation}
-To avoid the energy exchange from external strong field and electrons, the applied radiation should be a purely dressing field. Therefore, the only effect of the dressing field on 2DEG is the renormalization of the probability of elastic electron scattering within the same Landau level $(n_{\alpha} = n_{\beta} =N)$. This transform the Eq.~(\ref{eq_c29}) to
+To avoid the energy exchange from external strong field and electrons in Landau levels, the applied radiation must be a purely dressing field.
+Therefore, in this study we assume that the dressing field only can renormalize the the probability of electron scattering inside the exact same Landau energy level $(n_{\alpha} = n_{\beta} =N)$. This transform the Eq.~(\ref{eq_c29}) to
 \begin{equation} \label{eq_c30}
     I =
     \int_{-\infty}^{\infty} dk_y \;
@@ -360,7 +361,7 @@ Then describing the square of the delta distribution using following procedure \
     \int_{-t/2}^{t/2} e^{i0\times t'/\hbar} dt'\; =
     \frac{\delta(\varepsilon)t}{2\pi \hbar},
 \end{equation}
-and performing the time derivation of each matrix element yield the \textit{transition amplitude matrix}:
+and executing the time derivation operation on each matrix element we receive the \textit{transition amplitude matrix} element:
 \begin{equation} \label{eq_40}
   \begin{aligned}
     \Gamma_{\alpha\beta}^{ll'}(k_x,k'_x) = &
@@ -376,7 +377,7 @@ and performing the time derivation of each matrix element yield the \textit{tran
   \end{aligned}
 \end{equation}
 
-An impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2} = V_{imp}$ and the inverse scattering time matrix is the sum over all momentum over the transition probability matrix
+An impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2} = V_{imp}$ and the inverse scattering time matrix is the sum of all available momentum over the transition probability matrix element
 \begin{equation} \label{eq_41}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} \equiv
     \frac{1}{L_x} \sum_{{k'}_x}
