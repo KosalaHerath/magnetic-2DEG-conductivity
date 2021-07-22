@@ -1,13 +1,13 @@
 % Section 02 - Schrodinger problem for dressed quantum Hall system
 
-Our system consist of a 2DEG restrained in the $(x,y)$ plane of the three-dimentional coordinate space. In our analysis, the 2DEG is subjected to a nonoscillating magnetic field $\vb{B} = (0,0,B)^{\text{T}}$ which is pointed towards the $z$ axis. In addition, a linearly polarized strong light is applied perpendicular to the 2DEG plane, and we specially pick the frequency of the dressing field $\omega$ such that the optical field behaves as a purely dressing field (unabsorbable). Without limiting the generality we can choose $y$-polorized electric field $\vb{E} = (0,E\sin(\omega t),0)^{\text{T}}$ for the dressing field configuration (Fig.~\ref{fig_1}).
+Our system consist of a 2DEG restrained in the $(x,y)$ plane of the three-dimentional coordinate space. In our analysis, the 2DEG is subjected to a nonoscillating magnetic field $\vb{B} = (0,0,B)^{\text{T}}$ which is pointed towards the $z$ axis. In addition, a linearly polarized strong light is applied perpendicular to the 2DEG plane, and we specially pick the frequency of the dressing field $\omega$ such that the optical field behaves as a purely dressing field (unabsorbable). Furthermore, we do our analysis with a linearly polarized light and without limiting the generality we choose $y$-polorized electric field $\vb{E} = (0,E\sin(\omega t),0)^{\text{T}}$ as the dressing field configuration (Fig.~\ref{fig_1}).
 \begin{figure}[b]
 \includegraphics[scale=0.9]{figures/fig_1}
-\caption{\label{fig_1} Our 2DEG system only confined in the $(x,y)$ plane while both stationary magnetic field $\vb{B}$ and strong dressing field with y-polarized electric field $\vb{E}$ are being applied perpendicular to the surface of 2DEG.}
+\caption{\label{fig_1} Our 2DEG system only confined in the $(x,y)$ plane while both stationary magnetic field $\vb{B}$ and dressing field (with y-polarized electric field $\vb{E}$) are applied perpendicular to the surface of 2DEG.}
 \end{figure}
 Here $B$ and $E$ represent the amplitude of the stationary magnetic field and oscillating electric field respectively.
 
-Using Landau gauge for the stationary magnetic field, we can represent it using vector potential as $\vb{A}_{s} = (-By,0,0)^{\text{T}}$ and choosing Coulomb gauge, the vector potential of the dynamic dressing radiation can be presented as $\vb{A}_{d}(t) = (0,[E/\omega ]\cos(\omega t),0)^{\text{T}}$. These vector potentials are coupled to the momentum of 2DEG as kinetic momentum \cite{mahan00,bruus04} and this leads to the time-dependent Hamiltonian
+Using Landau gauge for the stationary magnetic field, we can represent it using a vector potential as $\vb{A}_{s} = (-By,0,0)^{\text{T}}$ and choosing Coulomb gauge, the vector potential of the dynamic dressing radiation can be presented as $\vb{A}_{d}(t) = (0,[E/\omega ]\cos(\omega t),0)^{\text{T}}$. These vector potentials are coupled to the momentum of 2DEG as kinetic momentum \cite{mahan00,bruus04} and this leads to the time-dependent Hamiltonian
 \begin{equation} \label{eq_1}
   \hat{H}_e(t) = \frac{1}{2m_e}\Big[\hat{\vb{p}} - e\big(\vb{A}_{s}+\vb{A}_{d}(t)\big)\Big]^2,
 \end{equation}
@@ -36,7 +36,7 @@ where $n \in \mathbb{Z}^{+}_0$ and $m \in \mathbb{Z}$ ; see Appendix A. Here $L_
   \quad
   \kappa = \sqrt{\frac{m_e \omega_0}{\hbar}},
 \end{equation}
-with eigenvalues given by $\varepsilon_n = \hbar \omega_0 (n + 1/2)$ and $\omega_0 = eB/m_e$ is the cyclotron frequency. Each $n$ value defines the  energy($\varepsilon_n$) of the respective Landau level. The path shift of the driven classical oscillator $\zeta(t)$ is given by
+where eigenvalues are given by $\varepsilon_n = \hbar \omega_0 (n + 1/2)$ and $\omega_0 = eB/m_e$ is the cyclotron frequency. Each $n$ value defines the  energy($\varepsilon_n$) of the respective Landau level. The path shift of the driven classical oscillator $\zeta(t)$ is given by
 \begin{equation} \label{eq_4}
   \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t),
 \end{equation}
@@ -44,4 +44,4 @@ while the Lagrangian of the classical oscillator $L(\zeta,\dot{\zeta},t)$ can be
 \begin{equation} \label{eq_5}
   L(\zeta,\dot{\zeta},t) = \frac{1}{2} m_e\dot{\zeta}^2(t) - \frac{1}{2}m_e\omega_0^2 \zeta^2(t) + eE\zeta(t) \sin(\omega t).
 \end{equation}
-The exponential phase shifts in Eq.~(\ref{eq_2}) represent the influence done by the stationary magnetic field and strong dressing field. Therefore, we can accept that magneto-transport characteristics of 2DEG can be renormalized by the nonoscillating magnetic field along with the dressing field.
+The exponential phase shifts in Eq.~(\ref{eq_2}) represent the influence done by the stationary magnetic field and dressing field. Therefore, we can accept that magneto-transport characteristics of 2DEG can be renormalized by the nonoscillating magnetic field along with the dressing field.
