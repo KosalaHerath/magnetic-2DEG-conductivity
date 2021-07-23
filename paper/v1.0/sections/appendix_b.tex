@@ -2,7 +2,7 @@
 
 First define the time integral of Lagrangian of the classical oscillator given in Eq.~(\ref{eq_5}), over a $T=2\pi/\omega$ period as
 \begin{equation} \label{eq_b1}
-  \Delta_{\varepsilon} \equiv \frac{1}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t'),
+  \Delta_{\varepsilon} = \frac{1}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t'),
 \end{equation}
 and after performing the integral using Eq.~(\ref{eq_4}), we can obtain more simplified result:
 \begin{equation} \label{eq_b2}
@@ -10,7 +10,7 @@ and after performing the integral using Eq.~(\ref{eq_4}), we can obtain more sim
 \end{equation}
 Next define another parameter
 \begin{equation} \label{eq_b3}
-  \xi \equiv
+  \xi =
   \int_0^t dt' \; L(\zeta,\dot{\zeta},t') -
   \Delta_{\varepsilon} t,
 \end{equation}
@@ -23,7 +23,7 @@ which is a periodic function in time with $2\omega$ frequency. Now using these  
 \begin{equation} \label{eq_b5}
   \begin{aligned}
     \psi_{\alpha}&(x,y,t)  =
-    \exp(\frac{i}{\hbar}\qty[-\varepsilon_nt + \Delta_{\varepsilon} t ])
+    \exp(\frac{i}{\hbar}\qty[-\epsilon_nt + \Delta_{\varepsilon} t ])
     \frac{1}{\sqrt{L_x}} \chi_n\big(y - y_0 - \zeta(t)\big)
     \\
     & \times
@@ -46,12 +46,12 @@ while rest of the components as time-periodic Floquet modes
 \begin{equation} \label{eq_b7}
   \begin{aligned}
     \phi_{n,m}(x,y,t) \equiv &
-    \frac{1}{\sqrt{L_x}} \chi_{n}\left[y - y_0 - \zeta(t)\right]
+    \frac{1}{\sqrt{L_x}} \chi_{n}\left(y - y_0 - \zeta(t)\right)
     \text{exp}\bigg(
      \frac{i}{\hbar}\bigg[
      p_x x \\
      & +
-     \frac{eE(y - y_0)}{\omega}\cos(\omega t) \\
+     \frac{eE[y - y_0]}{\omega}\cos(\omega t) \\
      & +
      m_e\dot{\zeta}(t)\big[y - y_0 -\zeta(t)\big]
      + \xi \bigg]\bigg).
@@ -60,7 +60,7 @@ while rest of the components as time-periodic Floquet modes
 
 \subsection{Momentum space representation}
 
-To write the Floquet modes in momentum space, we perform continuous Fourier transform over the considering confined space $A=L_xL_y$ for Eq.~(\ref{eq_7}):
+To write the Floquet modes in momentum space, we perform continuous Fourier transform over the considering confined space $A=L_xL_y$ on the Floquet modes given in Eq.~(\ref{eq_7}):
 \begin{equation} \label{eq_b8}
   \begin{aligned}
     \phi_{n,m}&(k_x,k_y,t) \\
@@ -84,12 +84,12 @@ To write the Floquet modes in momentum space, we perform continuous Fourier tran
 \end{equation}
 where
 \begin{equation} \label{eq_b9}
-  \mu(t) \equiv \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0
+  \mu(t) = \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0
   \quad,\quad
-  \gamma(t) \equiv
+  \gamma(t) =
   \frac{eE\omega_0^2\cos(\omega t)}{\hbar\omega(\omega_0^2 - \omega^2)}.
 \end{equation}
-Next using the identity \cite{bruus04}
+Next using the Fourier transform identity \cite{bruus04}
 \begin{equation} \label{eq_b10}
   \int_{L_x} dx\;
   \exp( -ik_x x + \frac{i p_x }{\hbar}x ) =
@@ -114,7 +114,7 @@ we can derive
 Here we defined $\Phi_{n,m}(k_y,t)$ as
 \begin{equation} \label{eq_b12}
   \begin{aligned}
-    \Phi_{n,m}(k_y,t) \equiv
+    \Phi_{n,m}(k_y,t) =
     \sqrt{L_x}
     \int_{-L_y/2}^{L_y/2} dy\; &
     \chi_{n}\qty[y - \mu(t)] \\
@@ -124,7 +124,7 @@ Here we defined $\Phi_{n,m}(k_y,t)$ as
       y).
   \end{aligned}
 \end{equation}
-Substituting $  {k'_y} = k_y -\gamma(t)$ and $y' = y -\mu(t)$ and assuming that size of the 2DEG sample in $y$-direction is large ($L_y \rightarrow \infty$), we can obtain
+Substituting $  {k'_y} = k_y -\gamma(t)$ and $y' = y -\mu(t)$ and assuming that size of the 2DEG sample in $y$-direction is considerably large ($L_y \rightarrow \infty$), we can obtain
 \begin{equation} \label{eq_b13}
   \Phi_{n,m}({k'_y} ,t) =
   {\sqrt{L_x}} e^{-i {k'_y}\mu}
