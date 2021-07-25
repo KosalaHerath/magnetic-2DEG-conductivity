@@ -2,12 +2,12 @@
 
 The general interpretations of physical systems are mostly derived using symmetry conditions in quantum theory. Famous Bloch analysis of electrons in quantum systems introduces a mathematical explanation of quantum systems occupying a discrete translational symmetry in configuration space. Floquet theory gives a mathematical formalism that can be used for translational symmetry in time rather than in space \cite{floquet83,grifoni98,holthaus15}. Examine the transport properties of quantum systems exposed to strong radiation using the Floquet-Drude conductivity method introduced recently by Wackerl \textit{et al.} \cite{wackerl20}. In their analysis they have presented more accurate results than previously existed theoretical descriptions for the conductivity of nanoscale systems in presence of a dressing field. Therefore, we are hoping to apply the Floquet-Drude conductivity method to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
 
-First we require to recognize the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the previously derived wave functions in Eq.~(\ref{eq_2}). By factorizing the wave function into a linearly time dependent part and a periodic time dependent part, the quasienergies can be present as
+First we require to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq_2}). By factorizing the wave function into a linearly time dependent part and a periodic time dependent part, the quasienergies can be presented as
 \begin{equation} \label{eq_6}
   \varepsilon_{n} =
   \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon},
 \end{equation}
-which is only depended on a single quantum number ($n$) and Floquet modes are given by
+which is only depended on a single quantum number ($n$). Then Floquet modes can be recognized as
 \begin{equation} \label{eq_7}
   \begin{aligned}
     \phi_{n,m}(x,y,t) = &
@@ -27,7 +27,7 @@ with
   \Delta_{\varepsilon} = \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)} ~ \text{and} ~
   \xi = \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t).
 \end{equation}
-It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions. At the resonance $\omega = \omega_0$, the energy levels occupies a continuous form and the discrete quasienergies are no longer valid \cite{popov70}. Therefore, in this work we choose the dressing field frequency with the condition $\omega \neq \omega_0$.
+It is important to notice that these Floquet modes are time-periodic ($T=2\pi/\omega$) functions. At the resonance $\omega = \omega_0$, the energy levels occupies a continuous form and the discrete quasienergies are no longer valid \cite{popov70}. Therefore, in this work we choose a dressing field frequency obeying the condition $\omega \neq \omega_0$.
 
 Then performing Fourier transform over the confined two-dimensional space, we obtain the momentum space($k_x,k_y$) representation of Floquet modes
 \begin{equation} \label{eq_9}
@@ -52,12 +52,12 @@ where
 \end{equation}
 Here we used new parameters
 \begin{equation} \label{eq_11}
-  b \equiv
+  b =
   \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)} \quad \text{and} \quad
-  d \equiv
+  d =
  \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
 \end{equation}
-For details of the full derivation please refer to Appendix \ref{appendix_b}. Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written in momentum space as Floquet states
+For the detailed derivation please refer to Appendix \ref{appendix_b}. Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written in momentum space as Floquet states
 \begin{equation} \label{eq_12}
   \psi_{n,m}(k_x,k_y,t) =
   \exp(-\frac{i}{\hbar}\varepsilon_{n}t)   \phi_{n,m} (k_x,k_y,t).
