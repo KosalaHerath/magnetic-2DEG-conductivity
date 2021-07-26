@@ -1,6 +1,6 @@
 % Section 05 - Floquet-Drude Conductivity in Quantum Hall Systems
 
-A general theory for the conductivity in dressed systems with the disorder averaging was introduced by M. Wackerl in Refs.~\cite{wackerl20,wackerlthesis20}. Within this theory, the general $x$-directional longitudinal DC limit conductivity can be express with
+A general theory for the conductivity in dressed systems with the disorder averaging was reported by Wackerl \textit{et al.} \cite{wackerl20,wackerlthesis20}. Within this theory, the general $x$-directional longitudinal DC limit conductivity has been discribed by
 \begin{equation} \label{eq_20}
   \begin{aligned}
     {\sigma}^{xx} &=
@@ -30,7 +30,7 @@ where ${j}^x_0$ and $\vb{G}^{r,a} (\varepsilon)$ are $x$-directional electric cu
     <
     \Pi + \frac{\hbar \omega}{2},
 \end{equation}
-where $ \varepsilon_N$ are quasienergies of all considering Floquet states.
+where $ \varepsilon_N$ are quasienergies of all considering Floquet states. Moreover, $tr[\cdot]$ is the trace of operator.
 
 Then Eq.~(\ref{eq_20}) can be expanded in off resonant regime ($\omega\tau_0 \gg 1$), where $\tau_0$ is the scattering time of the undriven system, using only central entry Fourier components ($l=l'=0$) of Floquet modes $\ket{\phi_{n,m}} \equiv \ket{n,k_x}$
 \begin{widetext}
@@ -56,7 +56,7 @@ Then Eq.~(\ref{eq_20}) can be expanded in off resonant regime ($\omega\tau_0 \gg
     {n,k_x},
   \end{aligned}
 \end{equation}
-where $V_{k_x}$ is the volume of considering $x$-directional momentum space. Then this can evaluate by considering each matrix elements separately
+where $V_{k_x}$ is the volume of considering $x$-directional momentum space. Then this can evaluate as follows
 \begin{equation} \label{eq_23}
   \begin{aligned}
     {\sigma}^{xx}  = &
@@ -87,7 +87,7 @@ where $V_{k_x}$ is the volume of considering $x$-directional momentum space. The
     {n,k_x}.
   \end{aligned}
 \end{equation}
-Since we can diagonalize the impurity averaged Green's function using unitary transformation ($\vb{T}  \equiv \ket{n,k_x}$) mentioned in Refs.~\cite{wackerl20,wackerlthesis20,tsuji08}, and we evaluate the matrix element of the difference between retarded and advanced Green's functions
+Since we can diagonalize the impurity averaged Green's functions using unitary transformation ($\vb{T}  \equiv \ket{n,k_x}$) mentioned in Refs.~\cite{wackerl20,wackerlthesis20,tsuji08}. Thus, we evaluate the matrix element of the difference between retarded and advanced Green's functions as
 \begin{equation} \label{eq_24}
   \mel{{n_1,{k_x}_1}}{
   \vb{T}^{\dagger}
@@ -123,10 +123,10 @@ and
   \frac{1}{\hbar}\varepsilon_{n}
   )^2
   + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})]^2
-  }],
+  }].
 \end{equation}
-using the retarded self-energy matrix $\vb{\Sigma}^r$ which is the sum of all irreducible diagrams \cite{wackerl20,wackerlthesis20}. Using the matrix elements of electric current operator in Landau levels (see Appendix \ref{appendix_d}) and
-results form Eq.~(\ref{eq_24}) and Eq.~(\ref{eq_25}) back into Eq.~(\ref{eq_23}) we obtain
+Here we used the retarded self-energy matrix $\vb{\Sigma}^r$ which is the sum of all irreducible diagrams \cite{wackerl20,wackerlthesis20}. Applying the matrix elements of the electric current operator in Landau levels (see Appendix \ref{appendix_d}) and
+results form Eq.~(\ref{eq_24}) and Eq.~(\ref{eq_25}) back into Eq.~(\ref{eq_23}) we can obtain
 \begin{equation} \label{eq_26}
   \begin{aligned}
     {\sigma}^{xx}  =
@@ -167,7 +167,7 @@ results form Eq.~(\ref{eq_24}) and Eq.~(\ref{eq_25}) back into Eq.~(\ref{eq_23})
     }],
   \end{aligned}
 \end{equation}
-and the only non-zero term would be
+and after the expansion, the only remaining non-zero term would be
 \begin{equation} \label{eq_27}
   \begin{aligned}
     {\sigma}^{xx} & =
@@ -202,12 +202,12 @@ and the only non-zero term would be
     }].
   \end{aligned}
 \end{equation}
-Since the inverse scattering time matrix being equal to the diagonalized contrast of the retarded and advanced self-energy and on the diagonal the contrast of the retarded and advanced Green's function can be represented with the imaginary component of the retarded self-energy \cite{wackerl20,wackerlthesis20} we can identify the following property
+Since the inverse scattering time matrix being equal to the diagonalized contrast of the retarded and advanced self-energy, and on the diagonal the contrast of the retarded and advanced Green's function can be represented with the imaginary component of the retarded self-energy \cite{wackerl20,wackerlthesis20}, we can identify the following property
 \begin{equation} \label{eq_28}
   \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll} =
-  -2\text{Im}\qty[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}]^{ll},
+  -2\text{Im}\qty[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}]^{ll}.
 \end{equation}
-and using central element ($l=0$) of the inverse scattering time matrix we can modify the derived conductivity expression
+Then using central element ($l=0$) of the inverse scattering time matrix, we can restructure the derived conductivity expression as follows
 \begin{equation} \label{eq_29}
     {\sigma}^{xx}   =
     \frac{1}{\pi\hbar A}
@@ -237,15 +237,16 @@ and using central element ($l=0$) of the inverse scattering time matrix we can m
     }],
 \end{equation}
 \end{widetext}
-with $\tilde{{\Gamma}}(\varepsilon_n,k_x) \equiv \qty({\hbar}/{2\tau(\varepsilon_n,k_x)})^{00}$. We already identified that the inverse scattering time matrix's central element is not $k_x$ dependent we can get the sum over all available momentum space in $x$ direction. However, by considering the condition that the center of the force of the oscillator $y_0$ must physically lie within the considering system $-L_y/2 < y_0 < L_y/2$, we can identify
+where $\tilde{{\Gamma}}(\varepsilon_n,k_x) \equiv \qty({\hbar}/{2\tau(\varepsilon_n,k_x)})^{00}$. We already identified that the inverse scattering time matrix's central element is independent of $k_x$ value and we can get the sum over all available momentum space in $x$ direction.
+However, by considering the condition that the center of the cyclotron orbit $y_0$ must physically lie within the considering system $-L_y/2 < y_0 < L_y/2$, we can identify that
 \begin{equation} \label{eq_30}
  -\frac{m_e\omega_0 Ly}{2\hbar} \leq k_x \leq \frac{m_e\omega_0 Ly}{2\hbar}.
 \end{equation}
-Then we use the Fermi-Dirac distribution as our partial distribution function ($f$) for this system
+Then we use the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
 \begin{equation} \label{eq_31}
   f(\varepsilon) = \frac{1}{\qty[\exp(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
-where $k_B$ is Boltzmann constant, $T$ is absolute temperature and $\varepsilon_F$ is Fermi energy of the system. Considering the above distribution with extremely low temperature conditions we can approximate
+where $k_B$ is Boltzmann constant, $T$ is absolute temperature and $\varepsilon_F$ is Fermi energy of the system. Considering the above distribution with extremely low temperature conditions, we can approximate
 \begin{equation} \label{eq_32}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F),
 \end{equation}
@@ -275,7 +276,7 @@ and by letting $\Pi = \varepsilon_F$, the expression for conductivity leads to
 where $X_F \equiv ({\varepsilon_F}/{\hbar \omega_0} - {1}/{2})$
 and
 $\gamma_n \equiv {\tilde{{\Gamma}}(\varepsilon_n)}/{\hbar \omega_0}$.
-Same as above derivation we can derive the longitudinal conductivity in $y$-direction by using the current operator derived in Appendix \ref{appendix_d}
+Same as above derivation, we can derive the longitudinal conductivity in $y$-direction by using the current operator derived in Appendix \ref{appendix_d}
 \begin{equation} \label{eq_34}
   \begin{aligned}
     {\sigma}^{yy} =
