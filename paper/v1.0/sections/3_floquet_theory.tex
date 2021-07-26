@@ -1,13 +1,13 @@
 % Section 03 - Floquet theory perspective
 
-The general interpretations of physical systems are mostly derived using symmetry conditions in quantum theory. Famous Bloch analysis of electrons in quantum systems introduces a mathematical explanation of quantum systems occupying a discrete translational symmetry in configuration space. Floquet theory gives a mathematical formalism that can be used for translational symmetry in time rather than in space \cite{floquet83,grifoni98,holthaus15}. Examine the transport properties of quantum systems exposed to strong radiation using the Floquet-Drude conductivity method introduced recently by Wackerl \textit{et al.} \cite{wackerl20}. In their analysis they have presented more accurate results than previously existed theoretical descriptions for the conductivity of nanoscale systems in presence of a dressing field. Therefore, we are hoping to apply the Floquet-Drude conductivity method to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
+The general interpretations of physical systems are mostly derived using symmetry conditions in quantum theory. Famous Bloch analysis of electrons in quantum systems introduces a mathematical explanation of quantum systems occupying a discrete translational symmetry in configuration space. Floquet theory gives a mathematical formalism that can be used for translational symmetry in time rather than in space \cite{floquet83,grifoni98,holthaus15}. As a method to analyze the transport properties of quantum systems exposed to strong radiation, the Floquet-Drude conductivity theory was introduced recently by Wackerl \textit{et al.} \cite{wackerl20}. In their work, they have presented more accurate results than the former theoretical descriptions for the conductivity of nanoscale systems in presence of a dressing field. Therefore, we are expecting to apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
 
-First we require to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq_2}). By factorizing the wave function into a linearly time dependent part and a periodic time dependent part, the quasienergies can be presented as
+First, we need to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq_2}). By factorizing the wave function into a linearly time dependent part and a periodic time dependent part, the quasienergies can present as
 \begin{equation} \label{eq_6}
   \varepsilon_{n} =
   \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon},
 \end{equation}
-which is only depended on a single quantum number ($n$). Then Floquet modes can be recognized as
+which is only depend on a single quantum number $n$. Then Floquet modes are recognized as
 \begin{equation} \label{eq_7}
   \begin{aligned}
     \phi_{n,m}(x,y,t) = &
@@ -57,7 +57,7 @@ Here we used new parameters
   d =
  \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
 \end{equation}
-For the detailed derivation please refer to Appendix \ref{appendix_b}. Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written in momentum space as Floquet states
+For the detailed derivation, please refer to Appendix \ref{appendix_b}. Now using Floquet theory, the wave functions derived in Eq.~(\ref{eq_2}) can be written as Floquet states in momentum space
 \begin{equation} \label{eq_12}
   \psi_{n,m}(k_x,k_y,t) =
   \exp(-\frac{i}{\hbar}\varepsilon_{n}t)   \phi_{n,m} (k_x,k_y,t).
