@@ -1,25 +1,25 @@
 \subsection{Position space representation}
 
-First define the time integral of Lagrangian of the classical oscillator given in Eq.~(\ref{eq_5}), over a $T=2\pi/\omega$ period as
+First we define the time integral of the Lagrangian of the classical oscillator given in Eq.~(\ref{eq_5}), over a period $T=2\pi/\omega$ as
 \begin{equation} \label{eq_b1}
-  \Delta_{\varepsilon} = \frac{1}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t'),
+  \Delta_{\varepsilon} = \frac{1}{T} \int_0^T dt' \; L(\zeta,\dot{\zeta},t').
 \end{equation}
-and after performing the integral using Eq.~(\ref{eq_4}), we can obtain more simplified result:
+Additionally, performing this integral, we can obtain a more simplified result
 \begin{equation} \label{eq_b2}
   \Delta_{\varepsilon} = \frac{(eE)^2}{4m_e(\omega_0^2 - \omega^2)}.
 \end{equation}
-Next define another parameter
+Next, we define another parameter
 \begin{equation} \label{eq_b3}
   \xi =
   \int_0^t dt' \; L(\zeta,\dot{\zeta},t') -
   \Delta_{\varepsilon} t,
 \end{equation}
-and after simplifying, this leads to
+and after simplifying, we can identify
 \begin{equation} \label{eq_b4}
   \xi =
   \frac{(eE)^2\qty(3\omega^2 - \omega_0^2)}{8m_e\omega(\omega_0^2 - \omega^2)^2} \sin(2\omega t),
 \end{equation}
-which is a periodic function in time with $2\omega$ frequency. Now using these  parameters we can factorize the wave function Eq.~(\ref{eq_2}) as linearly time dependent part and periodic time dependent part as follows
+which is a periodic function in time. Using these parameters, we can factorize the wave function given in Eq.~(\ref{eq_2}) as linearly time dependent part and periodic time dependent part as follows
 \begin{equation} \label{eq_b5}
   \begin{aligned}
     \psi_{\alpha}&(x,y,t)  =
@@ -34,10 +34,10 @@ which is a periodic function in time with $2\omega$ frequency. Now using these  
      & +
      m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
      + \int_0^{t}dt'L(\zeta,\dot{\zeta},t') - \Delta_{\varepsilon} t  \bigg]
-     \bigg),
+     \bigg).
   \end{aligned}
 \end{equation}
-and this leads to separate linear time dependent phase component as the quasienergies
+This leads to separate the linear time dependent phase component as the quasienergies
 \begin{equation} \label{eq_b6}
   \varepsilon_{n} =
   \hbar \omega_0\qty(n + \frac{1}{2}) - \Delta_{\varepsilon},
@@ -60,7 +60,7 @@ while rest of the components as time-periodic Floquet modes
 
 \subsection{Momentum space representation}
 
-To write the Floquet modes in momentum space, we perform continuous Fourier transform over the considering confined space $A=L_xL_y$ on the Floquet modes given in Eq.~(\ref{eq_7}):
+We perform continuous Fourier transform over the considering confined space $A=L_xL_y$ on the Floquet modes given in Eq.~(\ref{eq_7}) to realize the Floquet modes in momentum space
 \begin{equation} \label{eq_b8}
   \begin{aligned}
     \phi_{n,m}&(k_x,k_y,t) \\
@@ -79,17 +79,19 @@ To write the Floquet modes in momentum space, we perform continuous Fourier tran
      \frac{1}{\sqrt{L_x}}
      \int_{-L_x/2}^{L_x/2} dx\;
      \exp(-ik_x x)
-     \exp( \frac{i p_x }{\hbar}x ),
+     \exp( \frac{i p_x }{\hbar}x ).
   \end{aligned}
 \end{equation}
-where
-\begin{equation} \label{eq_b9}
-  \mu(t) = \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0
-  \quad,\quad
+Here we used new two parameters
+\begin{equation} \label{eq_b9a}
+  \mu(t) = \frac{eE\sin(\omega t)}{m_e(\omega_0^2 - \omega^2)} + y_0,
+\end{equation}
+and
+\begin{equation} \label{eq_b9b}
   \gamma(t) =
   \frac{eE\omega_0^2\cos(\omega t)}{\hbar\omega(\omega_0^2 - \omega^2)}.
 \end{equation}
-Next using the Fourier transform identity \cite{bruus04}
+Subsequenty, using the Fourier transform identity \cite{bruus04}
 \begin{equation} \label{eq_b10}
   \int_{L_x} dx\;
   \exp( -ik_x x + \frac{i p_x }{\hbar}x ) =
@@ -108,10 +110,10 @@ we can derive
     \exp(\frac{-i}{\hbar}
     \qty[
     m_e \dot{\zeta}(t) \zeta(t) - \xi
-    ]).
+    ]),
   \end{aligned}
 \end{equation}
-Here we defined $\Phi_{n,m}(k_y,t)$ as
+where we can define $\Phi_{n,m}(k_y,t)$ as
 \begin{equation} \label{eq_b12}
   \begin{aligned}
     \Phi_{n,m}(k_y,t) =
@@ -124,7 +126,7 @@ Here we defined $\Phi_{n,m}(k_y,t)$ as
       y).
   \end{aligned}
 \end{equation}
-Substituting $  {k'_y} = k_y -\gamma(t)$ and $y' = y -\mu(t)$ and assuming that size of the 2DEG sample in $y$-direction is considerably large ($L_y \rightarrow \infty$), we can obtain
+Substituting ${k'_y} = k_y -\gamma(t)$ with $y' = y -\mu(t)$, and assuming that the size of the considered 2DEG sample in $y$-direction is considerably large ($L_y \rightarrow \infty$), we can obtain
 \begin{equation} \label{eq_b13}
   \Phi_{n,m}({k'_y} ,t) =
   {\sqrt{L_x}} e^{-i {k'_y}\mu}
@@ -132,11 +134,11 @@ Substituting $  {k'_y} = k_y -\gamma(t)$ and $y' = y -\mu(t)$ and assuming that 
   \chi_{n}\qty(y')
   \exp(-i{k'_y} y').
 \end{equation}
-We can identify that the integral represents the Fourier transform of $\{\chi_n\}$ functions and using the symmetric conditions \cite{celeghini21} for the Fourier transform of Gauss-Hermite functions $\theta_n(x)$:
+Moreover, we can identify that the above integral represents the Fourier transform of $\{\chi_n\}$ functions. In addition, using the symmetric conditions of the Fourier transform for Gauss-Hermite functions $\theta_n(x)$ \cite{celeghini21}
 \begin{equation} \label{eq_b14}
   \mathcal{FT}[\theta_n(\kappa x),x,k] = \frac{i^n}{|\kappa|}\theta_n(k/\kappa),
 \end{equation}
-Eq.~(\ref{eq_b13}) can be simplified as
+we can simply the Eq.~(\ref{eq_b13}) as
 \begin{equation} \label{eq_b15}
   \Phi_{n,m}({k'_y} ,t) =
     \sqrt{L_x}e^{-i {k'_y}\mu}
@@ -150,7 +152,7 @@ with
   e^{-\frac{k^2}{2 \kappa^2}}
   \mathcal{H}_{\alpha} \qty(\frac{k}{\kappa}).
 \end{equation}
-Substitute Eq.~(\ref{eq_b15}) back in Eq.~(\ref{eq_b11}) and this leads to
+Finally, substitute Eq.~(\ref{eq_b15}) back into Eq.~(\ref{eq_b11}) and this leads to
 \begin{equation} \label{eq_b17}
   \begin{aligned}
     \phi_{n,m}(k_x,k_y,t)  = &
@@ -166,8 +168,11 @@ Substitute Eq.~(\ref{eq_b15}) back in Eq.~(\ref{eq_b11}) and this leads to
 where
 \begin{equation} \label{eq_b18}
   b \equiv
-  \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)} \quad
-  d \equiv
- \frac{eE}{m_e(\omega_0^2 - \omega^2)},
+  \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)},
 \end{equation}
-and it is necessary to notice that $k_x$ is quantized with $k_x = 2\pi m/L_x ~,~ m \in \mathbb{Z}$.
+and
+\begin{equation} \label{eq_b18}
+  d \equiv
+ \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
+\end{equation}
+It is necessary to notice that $k_x$ is quantized with $k_x = 2\pi m/L_x ~,~ m \in \mathbb{Z}$.
