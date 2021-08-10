@@ -1,51 +1,51 @@
-The Floquet Fermi golden rule derivation for our quantum Hall system with the help of $t-t'$ formalism is given here in detail. The $t$-$t'$-Floquet states \cite{grifoni98,wackerl20}
+The Floquet-Fermi golden rule for our dressed quantum Hall system is derived  using the $t$-$t'$ formalism. The $t$-$t'$-Floquet states \cite{grifoni98,wackerl20}
 \begin{equation} \label{eq_c1}
   \ket{\psi_{n,m}(t,t')} =
   \exp(-\frac{i}{\hbar}\varepsilon_{n} t)\ket{\phi_{n,m}(t')},
 \end{equation}
-are derived by separating the aperiodic and periodic components of Eq.~(\ref{eq_12}). Additionally, these fulfill the $t$-$t'$-Schrödinger equation \cite{grifoni98,wackerl20}
+are derived by separating the aperiodic and periodic components of the Floquet states given in Eq.~(\ref{eq_12}). Additionally, these states fulfill the $t$-$t'$-Schrödinger equation \cite{grifoni98,wackerl20}
 \begin{equation} \label{eq_c2}
   i \hbar \pdv{t}\ket{\psi_{n,m}(t,t')} =
   H_F(t') \ket{\psi_{n,m}(t,t')},
 \end{equation}
 where \textit{Floquet Hamiltonian} defined as
 \begin{equation} \label{eq_c3}
-  H_F(t') \equiv
+  H_F(t') =
   H_e(t') - i\hbar \pdv{t'}.
 \end{equation}
-Next we can identify the time evolution operator corresponding to the $t$-$t'$-Schrödinger equation
+Next, we can identify the time evolution operator corresponding to the $t$-$t'$-Schrödinger equation as
 \begin{equation} \label{eq_c4}
-  U_F(t,t_0;t') = \exp(-\frac{i}{\hbar}H_F(t')\qty[t-t_0]),
+  U_F(t,t_0;t') = \exp(-\frac{i}{\hbar}H_F(t')\qty[t-t_0]).
 \end{equation}
-and the advantage of $t$-$t'$ formalism lies on this time evolution operator which avoids any time ordering operators \cite{wackerl20}.
+The advantage of $t$-$t'$ formalism lies on this time evolution operator which avoids any time ordering operators \cite{wackerl20}.
 
-For our scenario, consider a time-independent total perturbation $V(\vb{r})$ which has been turned on at the reference time $t=t_0$, then the $t$-$t'$-Schrödinger equation becomes
+For our scenario, we take into account a time-independent total perturbation $V(\vb{r})$ which has been turned on at the reference time $t=t_0$, and the $t$-$t'$-Schrödinger equation becomes
 \begin{equation} \label{eq_c5}
   i \hbar \pdv{t}\ket{\Psi_{n,m}(t,t')} =
-  \qty[H_F(t') + V(\vb{r})]\ket{\Psi_{n,m}(t,t')},
+  \qty[H_F(t') + V(\vb{r})]\ket{\Psi_{n,m}(t,t')}.
 \end{equation}
-and this introduce a new wave function solution $\Psi_{n,m}$ for the system with the given total perturbation. If $t\leq t_0$, both solutions of the Schrödinger equations (Eq.~(\ref{eq_c2}) and Eq.~(\ref{eq_c5})) coincide
+This introduces a new wave function solution $\ket{\Psi_{n,m}}$ for a system with a given perturbation. If $t\leq t_0$, both of the solutions for Eq.~(\ref{eq_c2}) and Eq.~(\ref{eq_c5}) coincide
 \begin{equation} \label{eq_c6}
   \ket{\psi_{n,m}(t,t')} =\ket{\Psi_{n,m}(t,t')} \quad
   \text{when} \quad
   t \leq t_0.
 \end{equation}
-Now move into the interaction picture representation \cite{bruus04,mahan00} of the $t$-$t'$-Floquet state
+Next, our analysis can move into the interaction picture representation \cite{bruus04,mahan00} and in the interaction picture, the $t$-$t'$-Floquet state can be identified as
 \begin{equation} \label{eq_c7}
   \ket{\Psi_{n,m}(t,t')}_I = U_0^{\dagger}(t,t_0;t')
-  \ket{\Psi_{n,m}(t,t')},
+  \ket{\Psi_{n,m}(t,t')}.
 \end{equation}
-and due to time independence, the perturbation in the interaction picture has the same form as Schrödinger picture representation
+Due to time independence, the perturbation in the interaction picture has the same form as Schrödinger picture representation
 \begin{equation} \label{eq_c8}
   V_I(\vb{r}) = U_0^{\dagger}(t,t_0;t')V(\vb{r})U_0(t,t_0;t') =
   V(\vb{r}).
 \end{equation}
-This drive us to the $t$-$t'$-Schrödinger equation representation in the interaction picture
+This leads us to the $t$-$t'$-Schrödinger equation in the interaction picture representation
 \begin{equation} \label{eq_c9}
   i \hbar \pdv{t}\ket{\Psi_{n,m}(t,t')}_I =
   V_I(\vb{r})\ket{\Psi_{n,m}(t,t')}_I,
 \end{equation}
-with the recursive solution \cite{bruus04,mahan00}
+with the recursive solutions \cite{bruus04,mahan00}
 \begin{equation} \label{eq_c10}
   \begin{aligned}
   \ket{\Psi_{n,m}(t,t')}_I = &\ket{\Psi_{n,m}(t_0,t')}_I \\
@@ -66,14 +66,14 @@ Iterating the solution only up to the first order (Born approximation) we obtain
   \end{aligned}
 \end{equation}
 
-In addition, since our Floquet states create a basis, we can represent any solution using these Floquet states:
+Since our $t$-$t'$-Floquet states create a basis, we can represent solutions for the $t$-$t'$-Schrödinger equation given in Eq.~(\ref{eq_c5}) using our known $t$-$t'$-Floquet states
 \begin{equation} \label{eq_c12}
   \ket{\Psi_{\alpha}(t,t')} = \sum_{\beta} a_{\alpha,\beta}(t,t')
-  \ket{\psi_{\beta}(t,t')},
+  \ket{\psi_{\beta}(t,t')}.
 \end{equation}
-where we used a single notation to represent two quantum numbers; $\alpha \equiv (n_{\alpha},m_{\alpha})$ and $\beta \equiv (n_{\beta},m_{\beta})$.
+Here, we used a single term notation to represent two quantum numbers; $\alpha \equiv (n_{\alpha},m_{\alpha})$ and $\beta \equiv (n_{\beta},m_{\beta})$.
 Then we can identify the \textit{scattering amplitude} as $a_{\alpha,\beta}(t,t') =
-\braket{\psi_{\beta}(t,t')}{\Psi_{\alpha}(t,t')}$ and this can evaluate with
+\braket{\psi_{\beta}(t,t')}{\Psi_{\alpha}(t,t')}$ and this can be evaluated with
 \begin{equation} \label{eq_c13}
   \begin{aligned}
   a_{\alpha,\beta}(t,t') = &
@@ -95,7 +95,7 @@ Since the $t$-$t'$-Floquet states are orthonormal and assuming $t_0 = 0$ and $\a
   V(\vb{r}) \ket{\psi_{\alpha}(t_1,t')}.
 \end{equation}
 
-Now consider a scattering phenomenon from a $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')} $ into a distinct $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ that occupied with a constant quansienergy $\varepsilon$ (Fig.~\ref{fig_2}):
+Next, we consider a scattering phenomenon when a electron scatters from a known $t$-$t'$-Floquet state $\ket{\psi_{\beta}(t,t')} $ into a distinct $t$-$t'$-Floquet state $\ket{\Psi_{\alpha}(t,t')}$ with a constant quansienergy $\varepsilon$ as follows
 \begin{equation} \label{eq_c15}
   \begin{aligned}
   \ket{\psi_{\beta}(t,t')} &= \exp(-\frac{i}{\hbar}\varepsilon_{\beta} t)
@@ -108,10 +108,11 @@ Now consider a scattering phenomenon from a $t$-$t'$-Floquet state $\ket{\psi_{\
 \end{equation}
 \begin{figure}[b]
   \includegraphics[scale=1.0]{figures/fig_2.pdf}
-  \caption{Scattering from $\ket{\psi_{\beta}(t,t')}$ to constant energy state $\ket{\Psi_{\alpha}(t,t')}$ due to scattering potential created by impurities.}
+  \caption{Scattering from known $\ket{\psi_{\beta}(t,t')}$ state to a constant energy state $\ket{\Psi_{\alpha}(t,t')}$ due to the scattering potential created by impurities in the material.}
   \label{fig_2}
 \end{figure}
-It is important to remember that a state of this considering system can be represented by two independent quantum numbers: $n$ represents the landau level and $m$ represents the quantized momentum in $x$-direction. The scattering amplitude for this scattering scenario can be calculated using the equation derived in Eq.~(\ref{eq_c14})
+This scenario is illustared in Fig.~\ref{fig_2}.
+The scattering amplitude for this scattering scenario can be calculated using the equation derived in Eq.~(\ref{eq_c14})
 \begin{equation} \label{eq_c16}
   \begin{aligned}
     a_{\alpha\beta}(t,t') =
@@ -119,26 +120,26 @@ It is important to remember that a state of this considering system can be repre
     \int_{0}^t dt_1 \;
     e^{\frac{i}{\hbar}\qty(\varepsilon_{\beta} - \varepsilon)t_1}
     \bra{\phi_{\beta}(t')}
-    V(\vb{r}) \ket{\phi_{\alpha}(t')},
+    V(\vb{r}) \ket{\phi_{\alpha}(t')}.
   \end{aligned}
 \end{equation}
-and assuming for a long time $t \rightarrow \infty$, we can turn this integral into a delta distribution
+By assuming for a long time $t \rightarrow \infty$, we can turn this integral into a delta distribution
 \begin{equation} \label{eq_c17}
   \begin{aligned}
     a_{\alpha\beta}(t') =
     -2\pi i \delta(\varepsilon_{\beta} - \varepsilon)Q,
   \end{aligned}
 \end{equation}
-where $Q \equiv \bra{\phi_{\beta}(t')}
-V(\vb{r}) \ket{\phi_{\alpha}(t')}$ and using completeness properties we can re-write this as
+where $Q = \bra{\phi_{\beta}(t')}
+V(\vb{r}) \ket{\phi_{\alpha}(t')}$ and using the completeness properties we can re-write this as
 \begin{equation} \label{eq_c18}
     Q =
     \sum_{\vb{k}}\sum_{\vb{k'}}
     \braket{\phi_{\beta}(t')}{\vb{k'}}
     \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}
-    \braket{\vb{k}}{\phi_{\alpha}(t')},
+    \braket{\vb{k}}{\phi_{\alpha}(t')}.
 \end{equation}
-and separating $x$ and $y$ directional momentum we can derive (we already assumed that $L_y \rightarrow \infty$)
+Moreover, separating $x$-directional and $y$-directional momentum components, this can be simplified as
 \begin{equation} \label{eq_c19}
     Q =
     \sum_{k_x}\sum_{{k'}_x}
@@ -149,13 +150,13 @@ and separating $x$ and $y$ directional momentum we can derive (we already assume
 \end{equation}
 with $V_{\vb{k'},\vb{k}} \equiv \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}$.
 
-Since we are presenting the the perturbation potential $V(\vb{r})$ by using a group of randomly distributed impurities, we take into account $N_{imp}$ number of identical single impurity potentials distributed at randomly but in fixed positions $\vb{r}_i$. Then scattering potential $V(\vb{r})$ can be identified as the sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$:
+Since we are presenting the the perturbation potential $V(\vb{r})$ by a group of randomly distributed impurities, we take into account $N_{imp}$ number of identical single impurity potentials distributed at randomly but in fixed positions $\vb{r}_i$. Then scattering potential $V(\vb{r})$ can be identified as the sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$
 \begin{equation} \label{eq_c20}
   V(\vb{r}) \equiv
   \sum_{i=1}^{N_{imp}}
   \upsilon (\vb{r}-\vb{r}_i).
 \end{equation}
-Next we model the perturbation $V(\vb{r})$ as a Gaussian random potential where one can choose the zero of energy such that the potential is zero on average. This model is characterized by \cite{akkermans10}
+Furthermore, we model the perturbation $V(\vb{r})$ as a Gaussian random potential where one can choose the zero of energy such that the potential is zero on average. This model is characterized by \cite{akkermans10}
 \begin{subequations}
 \begin{equation} \label{eq_c21a}
   \expval{\upsilon(\vb{r})}_{imp} =0,
@@ -164,17 +165,18 @@ Next we model the perturbation $V(\vb{r})$ as a Gaussian random potential where 
   \expval{\upsilon(\vb{r})\upsilon(\vb{r'})}_{imp} = \Upsilon(\vb{r}-\vb{r'}),
 \end{equation}
 \end{subequations}
-where $\expval{\cdot}_{imp}$ denoted the average over realizations of the impurity disorder and $\Upsilon(\vb{r}-\vb{r'})$ is any decaying function depends only on $\vb{r}-\vb{r'}$. In addition, this model assumes that $\upsilon (\vb{r}-\vb{r'})$ only depends on the position difference $|\vb{r}-\vb{r'}|$, and it decays with a characteristic length $r_c$. Since this study considers the case where the wavelength of radiation or scattering electrons is much greater than $r_c$, it is a good approximation to make two-point correlation function to be
+where $\expval{\cdot}_{imp}$ represents the average over the impurity disorder and $\Upsilon(\vb{r}-\vb{r'})$ is any decaying function depends only on $\vb{r}-\vb{r'}$. In addition, this model assumes that $\upsilon (\vb{r}-\vb{r'})$ only depends on the magnitude of the position difference $|\vb{r}-\vb{r'}|$, and it decays with a characteristic length $r_c$. Since this study considers the case where the wavelength of radiation or scattering electron is much greater than $r_c$, it is a better approximation to make two-point correlation function to be
 \begin{equation} \label{eq_c22}
   \expval{\upsilon(\vb{r})\upsilon(\vb{r'})}_{imp} = \Upsilon_{imp}^2\delta(\vb{r}-\vb{r'}),
 \end{equation}
-where $\Upsilon_{imp}$ is strength of the delta potential and a random potential $V(\vb{r})$ with this property is called white noise \cite{akkermans10}. Then we can approximately model the total scattering potential as
+where $\Upsilon_{imp}^2$ is a conatant. A random potential $V(\vb{r})$ with this property is called white noise \cite{akkermans10}. Then we can approximately model the total scattering potential as
 \begin{equation} \label{eq_c23}
   V(\vb{r}) =
   \sum_{i=1}^{N_{imp}}
   \Upsilon_{imp} \delta(\vb{r}-\vb{r}_i).
 \end{equation}
-Then we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
+Here we can identify the $\Upsilon_{imp}$ as the strength of the delta potential.
+Furthermore, we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
 \begin{subequations} \label{eq_c24}
 \begin{align}
  V_{\vb{k'},\vb{k}} & =
@@ -184,7 +186,7 @@ Then we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
  \sum_{i=1}^{N_{imp}}
  \int_{-\infty}^{\infty} dy\; \bigg[
  \frac{1}{\sqrt{L_xL_y}} e^{ik'_y y} \delta(y-y_i) \nonumber \\
- & \times \frac{1}{\sqrt{L_xL_y}} e^{-i{k}_y y}
+ & \quad\times \frac{1}{\sqrt{L_xL_y}} e^{-i{k}_y y}
  \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \bigg] \label{eq_c24b} \\
   & =
  \sum_{i=1}^{N_{imp}} \frac{1}{{L_xL_y}}
@@ -192,7 +194,7 @@ Then we can calculate $V_{\vb{k'},\vb{k}}$ using this assumption as follows
  \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x} \label{eq_c24c}.
 \end{align}
 \end{subequations}
-Since $\upsilon (\vb{r})$ in momentum space is a constant value, each impurity  produce same impurity potential for every $x$-directional momentum pairs and assuming the total number of scatters $N_{imp}$ is microscopically large, we can derive
+Since $\upsilon (\vb{r})$ in momentum space is a constant value, each impurity  produce same impurity potential for every $x$-directional momentum pairs. Additionally, assuming the total number of scatters $N_{imp}$ is microscopically large, we can derive
 \begin{subequations} \label{eq_c25}
   \begin{align}
     V_{\vb{k'},\vb{k}}
@@ -201,17 +203,17 @@ Since $\upsilon (\vb{r})$ in momentum space is a constant value, each impurity  
     \frac{N_{imp}}{L_y L_x} \int_{-\infty}^{\infty} dy_i\;
     e^{i\qty({k'}_y - k_y)y_i} \label{eq_c25a} \\
     & =
-    \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y), \label{eq_c25b}
+    \eta_{imp} V_{k'_x,k_x} \delta(k'_y - k_y). \label{eq_c25b}
   \end{align}
 \end{subequations}
-where
+In the above equation we introduced
 \begin{equation} \label{eq_c26}
   V_{{k'}_x,k_x} \equiv
   \mel**{k'_x}{\Upsilon_{imp} \delta(x-x_i)}{k_x},
 \end{equation}
-is a constant value for every $i$ impurity and $\eta_{imp}$ is number of impurities in a unit area. It is important to notice that $\braket{x}{k_x} = e^{-ik_xx}$.
+which is a constant value for every $i$ impurity. Moreover, $\eta_{imp}$ is the number of impurities in a unit area. It is important to note that $\braket{x}{k_x} = e^{-ik_xx}$.
 
-Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25b}) on Eq.~(\ref{eq_c19}), we obtain (with changing variable $t' \rightarrow t$)
+Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25b}) on Eq.~(\ref{eq_c19}), we obtain
 \begin{equation} \label{eq_c27}
   \begin{aligned}
     Q & =
@@ -220,22 +222,22 @@ Now using Eq.~(\ref{eq_9}) and Eq.~(\ref{eq_c25b}) on Eq.~(\ref{eq_c19}), we obt
     \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} dk_y d{k'}_y \;
     \delta({k'}_y - k_y)
     \\
-    & \times
+    & \quad\times
     \sqrt{L_x}
     \exp(
       i{k'}_y  \qty[d\sin(\omega t) + {y'}_0]
     )
     \tilde{\chi}_{n_{\beta}}\qty({k'}_y -b\cos(\omega t))
     \\
-    & \times
+    & \quad\times
     \sqrt{L_x}
     \exp(
       -ik_y  \qty[d\sin(\omega t) + y_0]
     )
-    \tilde{\chi}_{n_{\alpha}}\qty(k_y -b\cos(\omega t)),
+    \tilde{\chi}_{n_{\alpha}}\qty(k_y -b\cos(\omega t)).
   \end{aligned}
 \end{equation}
-and this can simplify as
+Here we have changed the time variable $t' \rightarrow t$ only for the simplicity of notation. This can be simplified as
 \begin{equation} \label{eq_c28}
   \begin{aligned}
     Q =
@@ -257,7 +259,7 @@ with
   \end{aligned}
 \end{equation}
 To avoid the energy exchange from the dressing field and electrons in Landau levels, the applied radiation must be a purely dressing field.
-Therefore, in this study we assume that the dressing field only can renormalize the the probability of electron scattering inside a same Landau energy level $(n_{\alpha} = n_{\beta} =N)$. This transform the Eq.~(\ref{eq_c29}) to
+Therefore, in this study we assume that the dressing field can only renormalize the the probability of electron scattering inside a same Landau energy level $(n_{\alpha} = n_{\beta} =N)$. This transform the Eq.~(\ref{eq_c29}) to
 \begin{equation} \label{eq_c30}
     I =
     \int_{-\infty}^{\infty} dk_y \;
@@ -266,7 +268,7 @@ Therefore, in this study we assume that the dressing field only can renormalize 
       -ik_y  \qty[y_0 - {y'}_0  ]
     ).
 \end{equation}
-Using Fourier transform of Gauss-Hermite functions \cite{celeghini21} and convolution theorem \cite{arfken85,bracewell78} we can derive
+Using the Fourier transform of Gauss-Hermite functions \cite{celeghini21} and the convolution theorem \cite{arfken85,bracewell78} we obtain
 \begin{equation} \label{eq_c31}
   \begin{aligned}
     I =
@@ -278,7 +280,7 @@ Using Fourier transform of Gauss-Hermite functions \cite{celeghini21} and convol
     {\chi}_{N}\qty(y_0 - {y'}_0 - y).
   \end{aligned}
 \end{equation}
-Therefore, finally the scattering amplitude derived in Eq.~(\ref{eq_c17}) can be evaluated for given $k_x = 2\pi m_{\alpha}/L_x$ and $k'_x =  2\pi m_{\beta}/L_x$ as
+Finally, the scattering amplitude derived in Eq.~(\ref{eq_c17}) can be evaluated for given $k_x = 2\pi m_{\alpha}/L_x$ and $k'_x =  2\pi m_{\beta}/L_x$ as
 \begin{equation} \label{eq_c32}
   \begin{aligned}
     a_{\alpha\beta}(k_x,k'_x,t)  =&
@@ -302,7 +304,7 @@ In addition, using Jacobi-Anger expansion \cite{cuyt08,abramowitz64}
 \begin{equation} \label{eq_c34}
     e^{iz\cos(\theta)} = \sum_{l=-\infty}^{\infty} i^l J_l\qty(z) e^{-il\theta},
 \end{equation}
-where $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer order, and we can re-write the Eq.~(\ref{eq_c32}) as follows
+where $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer order, we can re-write the Eq.~(\ref{eq_c32}) as follows
 \begin{equation} \label{eq_c35}
   \begin{aligned}
     a_{\alpha\beta}(k_x,k'_x,t)  = &
@@ -315,10 +317,10 @@ where $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer or
     & \times
     \int_{-\infty}^{\infty} dy \;
     {\chi}_{N}\qty(y)
-    {\chi}_{N}\qty(y_0 - {y'}_0 - y) e^{-il\omega t},
+    {\chi}_{N}\qty(y_0 - {y'}_0 - y) e^{-il\omega t}.
   \end{aligned}
 \end{equation}
-and then the Fourier series component can be identified as
+Thus, we can identify the Fourier series component of the scattering amplitude as
 \begin{equation} \label{eq_c36}
   \begin{aligned}
     a^l_{\alpha\beta}(k_x,k'_x) = &
@@ -333,7 +335,7 @@ and then the Fourier series component can be identified as
     {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y).
   \end{aligned}
 \end{equation}
-Now define \textit{transition probability matrix} as
+Furthermore, we define \textit{transition probability matrix} as
 \begin{equation} \label{eq_c37}
     \qty(A_{\alpha\beta})^{l,l'} \equiv
     a^l_{\alpha\beta}\qty[a^{l'}_{\alpha\beta}]^{*},
@@ -353,7 +355,7 @@ and this becomes
       {\chi}_{n_{\beta}}\qty(y_0 - {y'}_0 - y)|^2.
   \end{aligned}
 \end{equation}
-Then describing the square of the delta distribution using following interpretation \cite{dini16,kibis14}
+Then describing the square of the delta distribution using the following interpretation \cite{dini16,kibis14}
 \begin{equation} \label{eq_c39}
     \delta^2(\varepsilon) =
     \delta(\varepsilon)\delta(0) =
@@ -361,7 +363,7 @@ Then describing the square of the delta distribution using following interpretat
     \int_{-t/2}^{t/2} e^{i0\times t'/\hbar} dt'\; =
     \frac{\delta(\varepsilon)t}{2\pi \hbar},
 \end{equation}
-and executing the time derivation operation on each matrix element we receive the \textit{transition amplitude matrix} elements:
+and executing the time derivation operation on each matrix element of transition probability matrix, we receive the \textit{transition amplitude matrix} elements
 \begin{equation} \label{eq_40}
   \begin{aligned}
     \Gamma_{\alpha\beta}^{ll'}(k_x,k'_x) = &
@@ -377,13 +379,13 @@ and executing the time derivation operation on each matrix element we receive th
   \end{aligned}
 \end{equation}
 
-An impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2}_{imp} = V_{imp}$. Furthermore, the inverse scattering time matrix can be identified as the sum of all available momentum over the impurity averaged transition probability matrix element \cite{wackerl20,wackerlthesis20}
+Additionally, the inverse scattering time matrix can be identified as the sum of all available momentum over the impurity averaged transition probability matrix element \cite{wackerl20,wackerlthesis20}
 \begin{equation} \label{eq_41}
     \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll'}_{\alpha\beta} =
     \frac{1}{L_x} \sum_{{k'}_x}
-    \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp},
+    \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp}.
 \end{equation}
-and applying the 1-dimensional momentum continuum limit $\sum_{{k'}_x} \longrightarrow {L_x}/{2\pi}\int d {k'}_x$ and this leads to
+Next, applying the 1-dimensional momentum continuum limit $\sum_{{k'}_x} \longrightarrow {L_x}/{2\pi}\int d {k'}_x$, we can obtain
 \begin{equation} \label{eq_42}
   \begin{aligned}
     \bigg(&\frac{1}{\tau(\varepsilon,k_x)}\bigg)^{ll'}_{\alpha\beta} \\
@@ -395,14 +397,15 @@ and applying the 1-dimensional momentum continuum limit $\sum_{{k'}_x} \longrigh
     \int_{-\infty}^{\infty} d {k'}_x
     J_l\qty(\frac{b\hbar}{eB}[{k}_x - {k'}_x])
     J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - {k'}_x]) \\
-    & \times
+    & \quad\times
     \qty|
     \int_{-\infty}^{\infty} dy \;
     {\chi}_{n_{\beta}}\qty(y)
     {\chi}_{n_{\beta}}\qty(\frac{\hbar}{eB} \qty[{k'}_x - {k}_x] - y)|^2.
   \end{aligned}
 \end{equation}
-Using substitution $k'_x = k_1$ and $y = {\hbar{k_2}}/{eB}$ finally we can derive our expression for the inverse scattering time matrix for $N$-th Landau
+Here an impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2}_{imp} = V_{imp}$.
+Finally, using substitutions $k'_x = k_1$ and $y = {\hbar{k_2}}/{eB}$, we can derive our expression for the inverse scattering time matrix for $N$-th Landau
 level as follows
 \begin{equation} \label{eq_43}
   \begin{aligned}
@@ -410,11 +413,11 @@ level as follows
     & =
     \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N})\\
-    & \times
+    & \quad\times
     \int_{-\infty}^{\infty} d k_1
     J_l\qty(\frac{b\hbar}{eB}[{k}_x - k_1])
     J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - k_1]) \\
-    & \times
+    & \quad\times
     \qty|
     \int_{-\infty}^{\infty} dk_2 \;
     {\chi}_{N}\qty(\frac{\hbar}{eB}k_2)

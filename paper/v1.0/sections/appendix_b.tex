@@ -31,7 +31,7 @@ which is a periodic function in time. Using these parameters, we can factorize t
      \frac{i}{\hbar}\bigg[
      p_x x +
      \frac{eEy}{\omega}\cos(\omega t) \\
-     & +
+     & \quad+
      m_e\dot{\zeta(t)}\big[y-\zeta(t)\big]
      + \int_0^{t}dt'L(\zeta,\dot{\zeta},t') - \Delta_{\varepsilon} t  \bigg]
      \bigg).
@@ -45,7 +45,7 @@ This leads to separate the linear time dependent phase component as the quasiene
 while rest of the components as time-periodic Floquet modes
 \begin{equation} \label{eq_b7}
   \begin{aligned}
-    \phi_{n,m}(x,y,t) \equiv &
+    \phi_{n,m}(x,y,t) =  &
     \frac{1}{\sqrt{L_x}} \chi_{n}\left(y - y_0 - \zeta(t)\right)
     \text{exp}\bigg(
      \frac{i}{\hbar}\bigg[
@@ -72,10 +72,10 @@ We perform continuous Fourier transform over the considering confined space $A=L
     \qty[
     m_e \dot{\zeta}(t) \zeta(t) - \xi
     ])\\
-    & \times
+    & \quad\times
     \int_{-L_y/2}^{L_y/2} dy\; \exp(-i\qty[k_y - \gamma(t)]y)
     \chi_{n}\qty[y - \mu(t)] \\
-     & \times
+     & \quad\times
      \frac{1}{\sqrt{L_x}}
      \int_{-L_x/2}^{L_x/2} dx\;
      \exp(-ik_x x)
@@ -171,7 +171,7 @@ where
   \frac{eE\omega_0^2}{\hbar\omega(\omega_0^2 - \omega^2)},
 \end{equation}
 and
-\begin{equation} \label{eq_b18}
+\begin{equation} \label{eq_b19}
   d \equiv
  \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
 \end{equation}
