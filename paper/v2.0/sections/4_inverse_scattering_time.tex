@@ -2,38 +2,40 @@
 
 The Floquet-Fermi golden rule was proposed in Ref. \cite{wackerl20} as an approach to analyze the transport properties of dressed quantum systems with impurities.
 However, this theory has not been applied for a dressed quantum Hall system in the previous studies. In this analysis, we use Floquet-Fermi golden rule to identify the effects induced by impurities on the magneto-transport properties.
-With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,althorpe97} and applying Floquet states derived in Eq.~(\ref{eq_12}), we can derive an  expression for $(l,l')$-th element of the inverse scattering time matrix for the $N$-th Landau level as
-\begin{equation} \label{eq_13}
+With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,althorpe97} and applying Floquet states derived in Eq.~(\ref{eq:14}), we can derive an  expression for $(l,l')$-th element of the inverse scattering time matrix for the $N$-th Landau level as
+\begin{widetext}
+\begin{equation} \label{eq:15}
   \begin{aligned}
-    \bigg(&\frac{1}{\tau(\varepsilon,k_x)}\bigg)^{ll'}_{N} \\
-    & =
-    \frac { \varrho^2}{eB}
-    \delta(\varepsilon - \varepsilon_{N}) \\
-    & \quad\times
-    \int_{-\infty}^{\infty} d k_1 \Bigg[
-    J_l\qty(\frac{b\hbar}{eB}[{k}_x - k_1])
-    J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - k_1]) \\
-    & \quad\times
-    \qty|
-    \int_{-\infty}^{\infty} dk_2 \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB}k_2)
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[k_1 - {k}_x - k_2])|^2\Bigg],
+    \left(\frac{1}{\tau(\varepsilon,k_x)}\right)^{ll'}_N = &
+    \frac{ \varrho^2}{eB} \delta(\varepsilon - \varepsilon_N) \\
+    & \times
+    \int_{-\infty}^{\infty}
+    J_l \bm{\left(} \frac{b\hbar}{eB}({k}_x - k_1) \bm{\right)}
+    J_{l'} \bm{\left(} \frac{b\hbar}{eB}({k}_x - k_1) \bm{\right)}
+    \left|
+    \int_{-\infty}^{\infty}
+    \chi_N \left( \frac{\hbar}{eB}k_2 \right)
+    \chi_N \bm{\left(} \frac{\hbar}{eB}
+    \left( k_1 - {k}_x - k_2 \right) \bm{\right)}
+    dk_2 \right|^2 d k_1,
   \end{aligned}
 \end{equation}
-where $\varrho = \eta_{imp} L_x [ { V_{imp}}/{eB}]^{1/2}$, $\varepsilon$ is a given energy value, $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer order, and $\varepsilon_N$ is the energy of the $N$-th Landau level.
+\end{widetext}
+where $\varrho = \eta_{imp} L_x \left[\flatfrac{ V_{imp}}{(eB)}\right]^{1/2}$, $\varepsilon$ is a given energy value, $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer order, and $\varepsilon_N$ is the energy of the $N$-th Landau level.
 A more detailed derivation is given in Appendix \ref{appendix_c}.
 We modeled the effect caused by impurities in the considered system as a single perturbation potential.
-Since random impurities in a disordered metal offers a better approximation for experimental conditions, we assumed that our perturbation potential is formed by a group of randomly distributed impurities.
+Since random impurities in a disordered metal offer a better approximation for experimental conditions, we assumed that our perturbation potential is formed by a group of randomly distributed impurities.
 Thus, the total scattering potential in the 2DEG has been represented as a sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$. Here $\eta_{imp}$ is the number of impurities in a unit area, $V_{imp} = \expval{|V_{{k'}_x,k_x}|^2}_{imp}$ with $V_{{k'}_x,k_x} = \mel**{k'_x}{\upsilon(x) }{k_x}$, and $\braket{x}{k_x} = e^{-ik_x x}$.
 Moreover, in this analysis, $\expval{\cdot}_{imp}$ represents the average over the impurity disorder.
 
 Next, we analyze the contribution of the inverse scattering time matrix elements on the transport properties of our system.
 Since the disorder in the system can not significantly alter the eigenenergy values of the undressed system \cite{wackerl20}, we can neglect the contribution of all off-diagonal elements in the inverse scattering time matrix. Subsequently we consider only the central diagonal element (${l=l'=0}$) of the inverse scattering time matrix which has the largest contribution to the transport characteristics. Along with this assumption, we introduce a new parameter as the scattering-induced broadening of the $N$-th Landau level \cite{dini16,endo09}
-\begin{equation} \label{eq_14}
- \Gamma^{00}_{N}(\varepsilon,k_x) = \hbar \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N},
+\begin{equation} \label{eq:16}
+ \Gamma^{00}_{N}(\varepsilon,k_x) =
+ \hbar \qty(\frac{1}{\tau(\varepsilon,k_x)})^{00}_{N},
 \end{equation}
 which simplifies to
-\begin{equation} \label{eq_15}
+\begin{equation} \label{eq:17}
  \begin{aligned}
    &\Gamma^{00}_{N} (\varepsilon,k_x) \\
    & =
@@ -63,12 +65,12 @@ In this calculation, we have assumed that the natural  broadening of $0$-th Land
 \end{figure}
 
 In addition, for a scattering scenario taking place within the same Landau level, we are able to present the delta distribution of the energy by the  interpretation \cite{dini16}
-\begin{equation} \label{eq_16}
+\begin{equation} \label{eq:18}
  \delta(\varepsilon - \varepsilon_{N}) \approx
  \frac{1}{\pi \Gamma^{00}_{N}(\varepsilon,k_x)}.
 \end{equation}
 Then we write the central element of inverse scattering time matrix in the more compact form
-\begin{equation} \label{eq_17}
+\begin{equation} \label{eq:19}
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,& k_x) =
     \varrho
@@ -85,13 +87,13 @@ Then we write the central element of inverse scattering time matrix in the more 
 \end{equation}
 where $ \lambda_1 \equiv \hbar b/eB$ and  $\lambda_2 \equiv \hbar \kappa/eB$.
 To analyze the effects of the dressing field on the scattering-induced broadening, we introduce the normalized $N$-th Landau level scattering-induced broadening as
-\begin{equation} \label{eq_18}
+\begin{equation} \label{eq:20}
     \Lambda_N(k_x) =
     \frac{\Gamma^{00}_{N}(\varepsilon,k_x)}{\Gamma^{00}_{N=0}(\varepsilon,k_x)\big|_{E=0}},
 \end{equation}
 which can be evaluated with
 \begin{widetext}
-\begin{equation} \label{eq_19}
+\begin{equation} \label{eq:21}
     \Lambda_N (k_x) =
     \qty[
     \frac
