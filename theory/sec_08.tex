@@ -3,9 +3,66 @@
 Now using the relations derived in Eq. \eqref{5.34} and Eq. \eqref{7.17} we can derive that
 \begin{equation} \label{8.1}
   \Gamma_n = \qty(\frac{\hbar }{2\tau(\varepsilon_n)}) =
-  \frac{1}{2}\Gamma^{00}_{N}(\tilde{I})
+  \frac{1}{2}\Gamma^{00}_{N}(\tilde{I}),
 \end{equation}
-and this will be
+and using \eqref{5.32}, this can be re-write as follows
+\begin{equation} \label{8.2}
+   \Gamma_n = \frac{1}{2} \Lambda_N (\tilde{I}) \Gamma^{00}_{N=0}\big|_{E=0}.
+\end{equation}
+Let $\Gamma^{00}_{N=0}\big|_{E=0} = \Gamma_0$ and this leads to
+\begin{equation} \label{8.3}
+   \gamma_n = \frac{\Gamma_n}{\hbar \omega_0} =
+   \frac{\Gamma_0}{2\hbar \omega_0} \Lambda_N (\tilde{I})
+\end{equation}
+Let $\alpha \equiv \flatfrac{\Gamma_0}{2\hbar \omega_0}$ and we can obtain
+\begin{equation} \label{8.4}
+   \gamma_n = \alpha \Lambda_N (\tilde{I})
+\end{equation}
+Thus we can write the transverse conductivity as a function of fermi energy and intensity
+\begin{equation} \label{8.5}
+  \begin{aligned}
+    \sigma^{xx}(X_F,\tilde{I}) & =
+    \frac{e^2}{\pi\hbar A}
+    \sum_{n}
+    \frac{\qty(n+1)}{\alpha^2 \Lambda_n \Lambda_{n+1}}
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n -1}{\alpha\Lambda_n})^2
+      }
+    ]
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n}{\alpha\Lambda_{n+1}})^2
+      }
+    ].
+  \end{aligned}
+\end{equation}
+Then we can define a normalized transverse conductivity as follows
+\begin{equation} \label{8.6}
+  \begin{aligned}
+    \widetilde{\sigma}^{xx}(X_F,\tilde{I}) =
+    \flatfrac{\sigma^{xx}}{\sigma_0} =
+    \sum_{n}
+    \frac{\qty(n+1)}{\alpha^2 \Lambda_n \Lambda_{n+1}}
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n -1}{\alpha\Lambda_n})^2
+      }
+    ]
+    \qty[
+      \frac{1}
+      {
+        1 + \qty(\frac{X_F - n}{\alpha\Lambda_{n+1}})^2
+      }
+    ],
+  \end{aligned}
+\end{equation}
+where $\sigma_0 = \flatfrac{e^2}{(\pi\hbar A)}$.
+
+Above parameters can be evaluated for our experiment variables($\Gamma_0 = 0.24 \text{meV}$) as follows
 \begin{equation} \label{8.2}
   \Gamma_n(\tilde{I}) = 0.12\times
   \qty[
