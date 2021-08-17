@@ -1,304 +1,330 @@
 % Section 05 - Floquet-Drude Conductivity in Quantum Hall Systems
 
 A general theory for the conductivity of a dressed system with the disorder was reported by Wackerl \textit{et al.} \cite{wackerl20,wackerlthesis20}. This theory, the general $x$-directional longitudinal DC-limit conductivity has been characterized as
-\begin{equation} \label{eq_20}
+\begin{equation} \label{eq:22}
   \begin{aligned}
-    {\sigma}^{xx} =&
+    \sigma^{xx} = &
     \frac{-1}{4\pi\hbar A}
-    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2} d\varepsilon \bigg[
-    \qty(
-    -\frac{\partial f}{\partial \varepsilon})
-    \\
-    & \times
+    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2}
+    \left(
+    -\pdv*{f}{\varepsilon }\right) \\
+    &  \quad\times
     \tr
-    \qty[
+    \left\{
     {j}^x_0
-    \qty(
+    \left[
     \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-    )
+    \right]
     {j}^x_0
-    \qty(
+    \left[
     \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-    )
-    ]\bigg],
+    \right]
+    \right\} d\varepsilon,
   \end{aligned}
 \end{equation}
-where ${j}^x_0$ and $\vb{G}^{r,a} (\varepsilon)$ are the $x$-directional electric current operator matrix elements' $0$-th Fourier component and the white noise disorder averaged Floquet Green function matrix \cite{wackerl20,wackerlthesis20} respectively defined against the Floquet modes of the considering system. Here we have assumed that only $0$-th Fourier component of the current operator is contributing to the conductivity. In addition, $A$ is the area of the considered two-dimensional system, $f$ is the partial distribution function, and $\Pi$ is a function that can be chosen such that
-\begin{equation} \label{eq_21}
-    \Pi- \frac{\hbar \omega}{2}
+where $j^x_0$ is the $x$-directional electric current operator matrix elements' $0$-th Fourier component. Here, $\vb{G}^{r}(\varepsilon)$ and $\vb{G}^{a} (\varepsilon)$ are the retarted and advanced white noise disorder averaged Floquet Green function matrices \cite{wackerl20,wackerlthesis20}, respectively. These matrices are defined against the Floquet modes of the considering system. Here we have assumed that only $0$-th Fourier component of the current operator is contributing to the conductivity. In addition, $A$ is the area of the considered two-dimensional system, $f$ is the partial distribution function, and $\Pi$ is a function that can be chosen such that
+\begin{equation} \label{eq:23}
+    \Pi- \flatfrac{\hbar \omega}{2}
     \leq \varepsilon_N
     <
-    \Pi + \frac{\hbar \omega}{2}.
+    \Pi + \flatfrac{\hbar \omega}{2}.
 \end{equation}
-Here $ \varepsilon_N$ are quasienergies of all relevant Floquet states, and $tr[\cdot]$ is the trace of the considering operator.
+Here $ \varepsilon_N$ are quasienergies of all relevant Floquet states, and $tr\{\cdot\}$ is the trace of the considering operator.
 
 Next, we restrict our analysis into the off-resonant regime $\omega\tau_0 \gg 1$), where $\tau_0$ is the scattering time of the undriven system. Thus, the $x$-directional longitudinal conductivity given in
-Eq.~(\ref{eq_20}) can be expanded using only the central entry Fourier components ($l=l'=0$) of Floquet modes $\ket{\phi_{n,m}} \equiv \ket{n,k_x}$ as
+Eq.~(\ref{eq:22}) can be expanded using only the central entry Fourier components ($l=l'=0$) of Floquet modes $\ket{\phi_{n,m}} = \ket{n,k_x}$ as
 \begin{widetext}
-\begin{equation} \label{eq_22}
+\begin{equation} \label{eq:24}
   \begin{aligned}
-    {\sigma}^{xx} =
-    \frac{-1}{4\pi\hbar A} &
-    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2} d\varepsilon
-    \qty(
-    -\frac{\partial f}{\partial \varepsilon})
+    \sigma^{xx} =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2}
+    \left(
+      -\frac{\partial f}{\partial \varepsilon}
+    \right)
     \frac{1}{V_{k_x}} \sum_{k_x}
     \sum_{n}
-    \mel{n,k_x}{
-    {j}^x_0
-    \qty(
-    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-    )
-    {j}^x_0
-    \qty(
-    \vb{G}^{r}_0 (\varepsilon) - \vb{G}^{a}_0 (\varepsilon)
-    )
+    \mel{n,k_x}
+    {
+      {j}^x_0
+      \left[
+        \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+      \right]
+      {j}^x_0
+      \left[
+        \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+      \right]
     }
-    {n,k_x},
+    {n,k_x}
+    d\varepsilon,
   \end{aligned}
 \end{equation}
 where $V_{k_x}$ is the volume of considering $x$-directional momentum space. Next, we evaluate the above expression as follows
-\begin{equation} \label{eq_23}
+\begin{equation} \label{eq:25}
   \begin{aligned}
-    {\sigma}^{xx}  = &
+    \sigma^{xx}  = &
     \frac{-1}{4\pi\hbar A}
-    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2} d\varepsilon
-    \qty(
-    -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{V_{k_x}^4} \sum_{k_x} \sum_{n}
+    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2}
+    \left(
+      -\frac{\partial f}{\partial \varepsilon}
+    \right)
+    \frac{1}{V_{k_x}^4}
+    \sum_{k_x} \sum_{n}
     \sum_{{k_x}_1,{k_x}_2,{k_x}_3}
-    \sum_{n_1,n_2,n_3}\\
-    & \times
-    \mel{n,k_x}{
+    \sum_{n_1,n_2,n_3} \\
+    & \quad\times \mel{n,k_x}{
     {j}^x_0}
     {n_1,{k_x}_1}
     \mel{{n_1,{k_x}_1}}{
-    \qty(
-    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-    )}
+    \left[
+      \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+    \right]
+    }
     {n_2,{k_x}_2}
     \mel{n_2,{k_x}_2}{
     {j}^x_0}
     {n_3,{k_x}_3}
     \mel{n_3,{k_x}_3}{
-    \qty(
-    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-    )
+    \left[
+      \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+    \right]
     }
-    {n,k_x}.
+    {n,k_x} d\varepsilon.
   \end{aligned}
 \end{equation}
 We can diagonalize the impurity averaged Green's functions using a unitary transformation ($\vb{T}  = \ket{n,k_x}$) as mentioned in Refs.~\cite{wackerl20,wackerlthesis20,tsuji08}. Thus, we evaluate the matrix elements of the difference between retarded and advanced Green's functions as
-\begin{equation} \label{eq_24}
-  \mel{{n_1,{k_x}_1}}{
-  \vb{T}^{\dagger}
-  \qty(
-  \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-  )\vb{T}}
-  {n_2,{k_x}_2} =
-  \qty[
-  \frac{2i \text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
-  \delta_{n_1,n_2}\delta_{{k_x}_1,{k_x}_2}}
+\begin{equation} \label{eq:26}
+  \mel{{n_1,{k_x}_1}}
   {
-  \qty(
-  \frac{1}{\hbar}\varepsilon -
-  \frac{1}{\hbar}\varepsilon_{n_1}
-  )^2
-  + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})]^2
-  }],
+    \vb{T}^{\dagger}
+    \left[
+    \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
+    \right]\vb{T}
+  }
+  {n_2,{k_x}_2} =
+  \frac
+  {
+    2i \Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
+    \delta_{n_1,n_2}\delta_{{k_x}_1,{k_x}_2}
+  }
+  {
+    \left(
+    \flatfrac{\varepsilon}{\hbar} -
+    \flatfrac{\varepsilon_{n_1}}{\hbar}
+    \right)^2
+    + \left[\Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})\right]^2
+  },
 \end{equation}
 and
-\begin{equation} \label{eq_25}
+\begin{equation} \label{eq:27}
   \mel{{n_3,{k_x}_3}}{
   \vb{T}^{\dagger}
-  \qty(
+  \left[
   \vb{G}^{r} (\varepsilon) - \vb{G}^{a} (\varepsilon)
-  )\vb{T}}
+  \right]\vb{T}}
   {n,{k_x}} =
-  \qty[
-  \frac{2i \text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
-  \delta_{n_3,n}\delta_{{k_x}_3,{k_x}}}
+  \frac{
+    2i \Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
+    \delta_{n_3,n}\delta_{{k_x}_3,{k_x}}
+  }
   {
-  \qty(
-  \frac{1}{\hbar}\varepsilon -
-  \frac{1}{\hbar}\varepsilon_{n}
-  )^2
-  + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})]^2
-  }].
+    \left(
+    \flatfrac{\varepsilon }{\hbar}-
+    \flatfrac{\varepsilon_{n}}{\hbar}
+    \right)^2
+    + \left[\Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})\right]^2
+  }.
 \end{equation}
 Here we introduced the retarded self-energy matrix $\vb{\Sigma}^r$ which is the sum of all irreducible diagrams \cite{wackerl20,wackerlthesis20}. Applying the matrix elements of the electric current operator in Landau levels and
-expressions from Eq.~(\ref{eq_24}) and Eq.~(\ref{eq_25}) back into Eq.~(\ref{eq_23}) we obtain
-\begin{equation} \label{eq_26}
+expressions from Eq.~(\ref{eq:26}) and Eq.~(\ref{eq:27}) back into Eq.~(\ref{eq:25}) we obtain
+\begin{equation} \label{eq:28}
   \begin{aligned}
-    {\sigma}^{xx}  =
-    \frac{-1}{4\pi\hbar A} &
-    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2} d\varepsilon
-    \qty(
-    -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
-    \sum_{n_1,n_2}
+    \sigma^{xx}  =
+    \frac{-1}{4\pi\hbar A}
+    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2}&
+    \left(
+    -\frac{\partial f}{\partial \varepsilon}
+    \right)
+    \frac{1}{V_{k_x}}
+    \sum_{k_x} \sum_{n} \sum_{n_1,n_2}
     \\
     & \times
     \frac{e^2B}{{m_e}}
-    \qty(\sqrt{\frac{n+1}{2}} \delta_{n_1,n+1} + \sqrt{\frac{n}{2}}
-    \delta_{n_1,n-1})
-    \qty[
-    \frac{2i \text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
-    \delta_{n_1,n_2}}
+    \left(
+    \sqrt{\frac{n+1}{2}} \delta_{n_1,n+1} + \sqrt{\frac{n}{2}}\delta_{n_1,n-1}
+    \right)
+    \left\{
+    \frac
     {
-    \qty(
-    \frac{1}{\hbar}\varepsilon -
-    \frac{1}{\hbar}\varepsilon_{n_1}
-    )^2
-    + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})]^2
-    }] \\
-    & \times
-    \frac{e^2B}{{m_e}}
-    \qty(\sqrt{\frac{n_2+1}{2}} \delta_{n,n_2+1} + \sqrt{\frac{n_2}{2}}
-    \delta_{n,n_2-1})
-    \qty[
-    \frac{2i \text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
+      2i \Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
+      \delta_{n_1,n_2}
     }
     {
-    \qty(
-    \frac{1}{\hbar}\varepsilon -
-    \frac{1}{\hbar}\varepsilon_{n}
-    )^2
-    + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})]^2
-    }],
+      \left(
+      \flatfrac{\varepsilon}{\hbar} -
+      \flatfrac{\varepsilon_{n_1}}{\hbar}
+      \right)^2
+      + \left[\Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})\right]^2
+    }
+    \right\} \\
+    & \times
+    \frac{e^2B}{{m_e}}
+    \left(
+    \sqrt{\frac{n_2+1}{2}} \delta_{n,n_2+1} + \sqrt{\frac{n_2}{2}}
+    \delta_{n,n_2-1}
+    \right)
+    \left\{
+    \frac{
+      2i \Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})
+    }
+    {
+      \left(
+      \flatfrac{\varepsilon }{\hbar}-
+      \flatfrac{\varepsilon_{n}}{\hbar}
+      \right)^2
+      + \left[\Im(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})\right]^2
+    }
+    \right\}  d\varepsilon,
   \end{aligned}
 \end{equation}
-For the full derivation of electric current operators in quantum Hall system refer to Appendix \ref{appendix_d}.
+For the full derivation of electric current operators in a quantum Hall system, refer to Appendix \ref{appendix_d}.
 After the expansion, the only non-zero term would be
-\begin{equation} \label{eq_27}
+\begin{equation} \label{eq:29}
   \begin{aligned}
-    {\sigma}^{xx} =
+    \sigma^{xx} =
     \frac{-1}{4\pi\hbar A}
     \frac{e^4B^2}{{{m_e}^2}} &
-    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2} d\varepsilon
-    \qty(
-    -\frac{\partial f}{\partial \varepsilon})
+    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2}
+    \left(
+    -\frac{\partial f}{\partial \varepsilon}\right)
     \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
-    \qty(n+1)
+    (n+1)
     \\
     & \times
-    \qty[
-    \frac{2i \text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})_{\varepsilon_{n+1}}
+    \left\{
+    \frac
+    {
+      2i \Im\bm{(}\vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon_{n+1},k_x) \vb{T}\bm{)}
     }
     {
-    \qty(
-    \frac{1}{\hbar}\varepsilon -
-    \frac{1}{\hbar}\varepsilon_{n+1}
-    )^2
-    + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})_{\varepsilon_{n+1}}]^2
-    }]
-    \qty[
-    \frac{2i \text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})_{\varepsilon_{n}}
+      \left(
+      \flatfrac{\varepsilon}{\hbar} -
+      \flatfrac{\varepsilon_{n+1}}{\hbar}
+      \right)^2
+      + \left[\Im\bm{(}\vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon_{n+1},k_x) \vb{T}\bm{)}\right]^2
+    }
+    \right\}
+    \left\{
+    \frac{
+      2i \Im\bm{(}\vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon_n,k_x) \vb{T}\bm{)}
     }
     {
-    \qty(
-    \frac{1}{\hbar}\varepsilon -
-    \frac{1}{\hbar}\varepsilon_{n}
-    )^2
-    + \qty[\text{Im}\qty(\vb{T}^{\dagger} \vb{\Sigma}^r \vb{T})_{\varepsilon_{n}}]^2
-    }].
+      \left(
+      \flatfrac{\varepsilon }{\hbar}-
+      \flatfrac{\varepsilon_{n}}{\hbar}
+      \right)^2
+      + \left[\Im\bm{(}\vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon_n,k_x) \vb{T}\bm{)}\right]^2
+    }
+    \right\}
+    d\varepsilon.
   \end{aligned}
 \end{equation}
 The inverse scattering time matrix is equal to the diagonalized contrast of the retarded and advanced self-energy \cite{wackerl20,wackerlthesis20}. In addition, on the diagonal the contrast of the retarded and advanced Green's function can be represented with the imaginary component of the retarded self-energy \cite{wackerl20,wackerlthesis20}. Subsequenty, we can identify the following property
-\begin{equation} \label{eq_28}
-  \qty(\frac{1}{\tau(\varepsilon,k_x)})^{ll} =
-  -2\text{Im}\qty[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}]^{ll}.
+\begin{equation} \label{eq:30}
+  \left(\frac{1}{\tau(\varepsilon,k_x)}\right)^{ll} =
+  -2\text{Im} \left[ \vb{T}^{\dagger} \vb{\Sigma}^r(\varepsilon,k_x) \vb{T}\right]^{ll}.
 \end{equation}
-Aterwards, considering only the central element ($l=0$) of the inverse scattering time matrix, we can restructure the derived conductivity expression in \ref{eq_27} as follows
-\begin{equation} \label{eq_29}
-    {\sigma}^{xx}   =
+Aterwards, considering only the central element ($l=0$) of the inverse scattering time matrix, we can restructure the derived conductivity expression in Eq.~(\ref{eq:29}) as follows
+\begin{equation} \label{eq:31}
+    \sigma^{xx}   =
     \frac{1}{\pi\hbar A}
     \frac{e^4B^2}{{{m_e}^2}}
-    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2} d\varepsilon
-    \qty(
-    -\frac{\partial f}{\partial \varepsilon})
-    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n}
-    \qty(n+1)
-    \qty[
-    \frac{\tilde{{\Gamma}}(\varepsilon_{n+1})
+    \int_{\Pi-\hbar\omega/2}^{\Pi+ \hbar\omega/2}
+    \left(
+      -\frac{\partial f}{\partial \varepsilon}
+    \right)
+    \frac{1}{V_{k_x}} \sum_{k_x} \sum_{n} (n+1)
+    \left[
+    \frac{\widetilde{{\Gamma}}(\varepsilon_{n+1})
     }
     {
-    \qty(
+    \left(
     \varepsilon_F - \varepsilon_{n+1}
-    )^2
-    + \tilde{{\Gamma}}^2(\varepsilon_{n+1})
-    }]
-    \qty[
-    \frac{\tilde{{\Gamma}}(\varepsilon_{n})
+    \right)^2
+    + \widetilde{{\Gamma}}^2(\varepsilon_{n+1})
+    }
+    \right]
+    \left[
+    \frac{\widetilde{{\Gamma}}(\varepsilon_{n})
     }
     {
-    \qty(
+    \left(
     \varepsilon_F - \varepsilon_{n}
-    )^2
-    + \tilde{{\Gamma}}^2(\varepsilon_{n})
-    }],
+    \right)^2
+    + \widetilde{{\Gamma}}^2(\varepsilon_{n})
+    }
+    \right]
+    d\varepsilon,
 \end{equation}
 \end{widetext}
-with $\tilde{{\Gamma}}(\varepsilon_n,k_x) = \qty({\hbar}/{2\tau(\varepsilon_n,k_x)})^{00}$. Since we already identified that the inverse scattering time matrix's central element is independent of $k_x$ value, we can drop the $k_x$-dependent in the $\tilde{{\Gamma}}(\varepsilon_n,k_x)$ terms and get the sum over all available momentum space in $x$ direction.
+with $\widetilde{{\Gamma}}(\varepsilon_n,k_x) = \left[\flatfrac{\hbar}{2\tau(\varepsilon_n,k_x)}\right]^{00}$. Since we already identified that the inverse scattering time matrix's central element is independent of $k_x$ value, we can drop the $k_x$-dependent in the $\widetilde{{\Gamma}}(\varepsilon_n,k_x)$ terms. Subsequently, we can get the sum over available momentum in $x$-direction.
 However, by considering the condition that the center of the cyclotron orbit $y_0$ must physically lie within the considered system, we can identify that
-\begin{equation} \label{eq_30}
- -\frac{m_e\omega_0 Ly}{2\hbar} \leq k_x \leq \frac{m_e\omega_0 Ly}{2\hbar}.
+\begin{equation} \label{eq:32}
+ -\flatfrac{m_e\omega_0 Ly}{(2\hbar)} \leq k_x \leq \flatfrac{m_e\omega_0 Ly}{(2\hbar)}.
 \end{equation}
 We use the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
-\begin{equation} \label{eq_31}
-  f(\varepsilon) = \frac{1}{\qty[\exp(\varepsilon - \varepsilon_F)/k_B T]+1},
+\begin{equation} \label{eq:33}
+  f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
 where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature and $\varepsilon_F$ is the Fermi energy of the system. Considering the above distribution for extremely low-temperature conditions, we can use the following approximation
-\begin{equation} \label{eq_32}
+\begin{equation} \label{eq:34}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F).
 \end{equation}
-Moreover, let $\Pi = \varepsilon_F$ and the derived expression in \ref{eq_29} leads to
-\begin{equation} \label{eq_33}
+Moreover, let $\Pi = \varepsilon_F$ and the derived expression in \ref{eq:31} leads to
+\begin{equation} \label{eq:35}
   \begin{aligned}
-    {\sigma}^{xx}  =
-    \frac{e^2}{\hbar}
-    \frac{1}{\pi A} &
-    \sum_{n}
-    \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}} \\
+    \sigma^{xx}  =
+    \frac{e^2}{\pi\hbar A}
+    \sum_{n} &
+    \frac{(n+1)}{\gamma_{n}\gamma_{n+1}} \\
     &\times
-    \qty[
+    \left[
       \frac{1}
       {
-        1 + \qty(\frac{X_F - n -1}{\gamma_{n+1}})^2
+        1 + \left(\frac{X_F - n -1}{\gamma_{n+1}}\right)^2
       }
-    ]
-    \qty[
+    \right]
+    \left[
       \frac{1}
       {
-        1 + \qty(\frac{X_F - n}{\gamma_{n}})^2
+        1 + \left(\frac{X_F - n}{\gamma_{n}}\right)^2
       }
-    ],
+    \right],
   \end{aligned}
 \end{equation}
-where $X_F = ({\varepsilon_F}/{\hbar \omega_0} - {1}/{2})$
+where $X_F = \left[\flatfrac{\varepsilon_F}{(\hbar \omega_0)} - \flatfrac{1}{2}\right]$
 and
-$\gamma_n = {\tilde{{\Gamma}}(\varepsilon_n)}/{\hbar \omega_0}$.
+$\gamma_n = \flatfrac{\widetilde{{\Gamma}}(\varepsilon_n)}{(\hbar \omega_0)}$.
 Following the same steps as above derivation, we can derive the longitudinal conductivity in the $y$-direction by applying the electric current operator for $y$-direction derived in Appendix \ref{appendix_d}
-\begin{equation} \label{eq_34}
+\begin{equation} \label{eq:36}
   \begin{aligned}
     {\sigma}^{yy} =
-    \frac{e^2}{\hbar}
-    \frac{1}{\pi A}&
+    \frac{e^2}{\pi\hbar A} &
     \frac{1}{e^2B^2}
     \sum_{n}
-    \frac{\qty(n+1)}{\gamma_{n}\gamma_{n+1}} \\
+    \frac{(n+1)}{\gamma_{n}\gamma_{n+1}} \\
     & \times
-    \qty[
+    \left[
       \frac{1}
       {
-        1 + \qty(\frac{X_F - n -1}{\gamma_{n+1}})^2
+        1 + \left(\frac{X_F - n -1}{\gamma_{n+1}}\right)^2
       }
-    ]
-    \qty[
+    \right]
+    \left[
       \frac{1}
       {
-        1 + \qty(\frac{X_F - n}{\gamma_{n}})^2
+        1 + \left(\frac{X_F - n}{\gamma_{n}}\right)^2
       }
-    ].
+    \right].
   \end{aligned}
 \end{equation}
