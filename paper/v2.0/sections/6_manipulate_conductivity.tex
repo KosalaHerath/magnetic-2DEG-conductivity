@@ -1,29 +1,33 @@
 % Section 06 - Manipulate Conductivity in Quantum Hall Systems
 
 To identify the longitudinal conductivity characteristics of quantum Hall system under external dressing field, first we derive an expression for normalized longitudinal conductivity as a function of Fermi energy $X_F$ and intensity of the dressing field $I$.
-Here we derive a normalized $x$-directional conductivity of dressed quantum Hall system using the natural conductivity of the least Landau level
-\begin{equation} \label{eq:37}
+We can identifiy the normalized $x$-directional longitudinal conductivity of dressed quantum Hall system by
+\begin{equation}\label{eq:37}
+  \widetilde{\sigma}^{xx}(X_F,I) =
+  \flatfrac{\sigma^{xx}}{\sigma_{0}},
+\end{equation}
+with $\sigma^0 = \flatfrac{e^2}{(\pi \hbar A)}$, and this can be expressed as
+\begin{equation} \label{eq:38}
   \begin{aligned}
-    \widetilde{\sigma}^{xx} =
-    \sigma_{0}
-    \sum_{n} &
-    \frac{(n+1)}{0.0037 \Lambda_n \Lambda_{n+1}} \\
-    & \times
+    \widetilde{\sigma}^{xx}(X_F,I) &=
+    \sum_{n}
+    \frac{(n+1)}{\alpha^2 \Lambda_n \Lambda_{n+1}} \\
+    &\quad\times
     \left[
       \frac{1}
       {
-        1 + \left(\frac{X_F - n -1}{0.06\Lambda_n}\right)^2
+        1 + \left(\frac{X_F - n -1}{\alpha \Lambda_n}\right)^2
       }
     \right]
     \left[
       \frac{1}
       {
-        1 + \left(\frac{X_F - n}{0.06\Lambda_{n+1}}\right)^2
+        1 + \left(\frac{X_F - n}{\alpha \Lambda_{n+1}}\right)^2
       }
     \right],
   \end{aligned}
 \end{equation}
-with $\sigma^0 = \flatfrac{e^2}{(\pi \hbar A)}$.
+where $\alpha = \flatfrac{\Gamma_0}{(2\hbar \omega_0)}$. Here, $\Gamma_0$ is the natural energy broadening of the least Landau level.
 
 As illustrated in Fig.~\ref{fig:5} and \ref{fig:6}, we can manipulate the normalized longitudinal conductivity $\widetilde{\sigma}^{xx}$ with the applied dressing field's intensity and the Fermi level $X_F$ of the considered system.
 For a given dressing field intensity, the longitudinal conductivity varies with  the Fermi level of the system showing sharp peaks at each Landau energy level.
@@ -48,6 +52,6 @@ However, they have not considered the tunability that can be achieved with a dre
 \begin{figure}[t]
 \includegraphics[scale=0.575]{figures/fig_5}
 \caption{$3$rd Landau level’s normalized longitudinal conductivity $\widetilde{\sigma}^{xx}$ against Fermi level $X_F$ with different intensities $I$ of the external dressing field in a GaAs-based quantum well under a nonoscillating magnetic field with $B = \SI{1.2}{\tesla}$, dressing field with a frequency of $\omega =\SI{2e12}{\radian\per\second}$ and $I_0 =\SI{100}{\watt\per\square\centi\metre}$.
-In this calculation, we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $\SI{0.24}{\milli\eV}$}.
+In this calculation, we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $\SI{0.24}{\milli\eV}$.}
 \label{fig:6}
 \end{figure}
