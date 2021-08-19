@@ -1,5 +1,5 @@
-The derivation of the solutions for the time-dependent Schrödinger equation with our system's Hamiltonian (Eq. \ref{eq_1}) is quite similar to that followed in Refs. \cite{husimi53,dini16}. We start with expanding the Hamiltonian for two-dimensional case
-\begin{equation} \label{eq_a1}
+The derivation of the solutions for the time-dependent Schrödinger equation with our system's Hamiltonian (Eq. \ref{eq:1}) is quite similar to that followed in Refs. \cite{husimi53,dini16}. We start with expanding the Hamiltonian for two-dimensional case
+\begin{equation} \label{eq:a1}
   \hat{H}_e(t) = \frac{1}{2m_e}\left[
     \left[\hat{p}_x + eBy \right]^2 +
     \left[\hat{p}_y - \frac{eE}{\omega}\cos(\omega t)\right]^2
@@ -8,14 +8,14 @@ The derivation of the solutions for the time-dependent Schrödinger equation wit
 Since $\left[\hat{H}_e(t),\hat{p}_x \right] =0$, both of these operators share same eigenfunctions
 ${L_x}^{-1/2}\exp(\frac{ip_x x}{\hbar})$ where $p_x = 2\pi \hbar m/L_x~$ with $ m \in \mathbb{Z}$.
 Thus, we re-arrange the Hamiltonian using the definition of canonical momentum in $y$-direction and this leads to
-\begin{equation} \label{eq_a2}
+\begin{equation} \label{eq:a2}
     \hat{H}_e(t) = \frac{1}{2m_e}\left[
       \left[{p}_x + eBy \right]^2 +
       \left[-i\hbar \pdv{y}- \frac{eE}{\omega}\cos(\omega t)\right]^2
     \right].
 \end{equation}
 Subsequently we define the \textit{center of the cyclotron orbit} on the $y$-axis $y_0 = {-p_x}/{eB}$ and the \textit{cyclotron frequency} $\omega_0 = {eB}/{m_e}$. This leads to a new arrangement of the Hamiltonian
-\begin{equation} \label{eq_a3}
+\begin{equation} \label{eq:a3}
   \begin{aligned}
     \hat{H}_e(t) =
       \frac{m_e \omega_0^2}{2}\tilde{y}^2 +
@@ -28,18 +28,18 @@ Subsequently we define the \textit{center of the cyclotron orbit} on the $y$-axi
   \end{aligned}
 \end{equation}
 where we used a variable substitution $\tilde{y} = (y - y_0)$. Furthermore, we assume that the wave function solutions for the time-dependent Schrödinger equation of considered quantum system
-\begin{equation} \label{eq_a4}
+\begin{equation} \label{eq:a4}
     i \hbar \dv{\psi}{t} = \hat{H}_e(t)\psi,
 \end{equation}
 can be presented by the following form
-\begin{equation} \label{eq_a5}
+\begin{equation} \label{eq:a5}
     \psi_m(x,\tilde{y},t) = \frac{1}{\sqrt{L_x}} \exp\bigg(
       \frac{ip_x x}{\hbar} +
       \frac{ieE\tilde{y}}{\hbar \omega}\cos(\omega t)
     \bigg) \vartheta(\tilde{y},t),
 \end{equation}
 where $\vartheta(\tilde{y},t)$ is a function that satisfy the property
-\begin{equation} \label{eq_a6}
+\begin{equation} \label{eq:a6}
     \bigg[
     \frac{m_e \omega_0^2}{2}\tilde{y}^2
     - {eE\tilde{y}}\sin(\omega t)
@@ -51,7 +51,7 @@ where $\vartheta(\tilde{y},t)$ is a function that satisfy the property
     \vartheta(\tilde{y},t) = 0.
 \end{equation}
 If we turn off the dressing field ($E=0$), this equation leads to the Schrödinger equation with the simple harmonic oscillator Hamiltonian
-\begin{equation} \label{eq_a7}
+\begin{equation} \label{eq:a7}
      i \hbar \dv{\vartheta(\tilde{y},t)}{t} =
     \bigg[
     \frac{\hat{p}_{\tilde{y}}^2}{2m_e} +
@@ -60,7 +60,7 @@ If we turn off the dressing field ($E=0$), this equation leads to the Schröding
     \vartheta(\tilde{y},t).
 \end{equation}
 Thus, we can identify $S(t) \equiv eE\sin(\omega t)$ term as an external force act on the harmonic oscillator, and we can solve this as a forced harmonic oscillator in $\tilde{y}$ axis
-\begin{equation} \label{eq_a8}
+\begin{equation} \label{eq:a8}
   \begin{aligned}
     i \hbar \dv{\vartheta(\tilde{y},t)}{t} =
     \bigg[
@@ -75,11 +75,11 @@ Thus, we can identify $S(t) \equiv eE\sin(\omega t)$ term as an external force a
 \end{equation}
 
 This system is exactly solvable, and we can solve the equation using the methods explained by Husimi \cite{husimi53}. We introduce a time-dependent shifted coordinate $ y' = \tilde{y} - \zeta(t)$ and perform the following unitary transformation
-\begin{equation} \label{eq_a9}
+\begin{equation} \label{eq:a9}
     \vartheta(y',t) = \exp(\frac{im_e\dot{\zeta}y'}{\hbar})\varphi(y',t).
 \end{equation}
 This leads to
-\begin{equation} \label{eq_a10}
+\begin{equation} \label{eq:a10}
   \begin{aligned}
     i \hbar \pdv{\varphi(y',t)}{t}   &=
     \bigg[
@@ -98,11 +98,11 @@ This leads to
   \end{aligned}
 \end{equation}
 Subsequently, we can restrict $\zeta(t)$ function such that
-\begin{equation} \label{eq_a11}
+\begin{equation} \label{eq:a11}
   m_e\ddot{\zeta} + m_e\omega_0^2\zeta = S(t),
 \end{equation}
 and that simply our previous expression as
-\begin{equation} \label{eq_a12}
+\begin{equation} \label{eq:a12}
   \begin{aligned}
     i \hbar \pdv{\varphi(y',t)}{t}   =
     \bigg[
@@ -114,15 +114,15 @@ and that simply our previous expression as
   \end{aligned}
 \end{equation}
 Here
-\begin{equation} \label{eq_a13}
+\begin{equation} \label{eq:a13}
   L(\zeta,\dot{\zeta},t) = \frac{1}{2} m_e\dot{\zeta}^2 - \frac{1}{2}m_e\omega_0^2 \zeta^2 + \zeta S(t),
 \end{equation}
 is the Lagrangian of a classical driven oscillator. To proceed further, another unitary transform can be introduced as follows
-\begin{equation} \label{eq_a14}
+\begin{equation} \label{eq:a14}
     \varphi(y',t) = \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \chi(y',t),
 \end{equation}
-and subtitling Eq.~(\ref{eq_a14}) back in Eq.~(\ref{eq_a12}) yields
-\begin{equation} \label{eq_a15}
+and subtitling Eq.~(\ref{eq:a14}) back in Eq.~(\ref{eq:a12}) yields
+\begin{equation} \label{eq:a15}
     i \hbar \pdv{t} \chi(y',t)  =
     \bigg[
         -  \frac{\hbar^2}{2m_e}\pdv[2]{{y'}}
@@ -131,21 +131,21 @@ and subtitling Eq.~(\ref{eq_a14}) back in Eq.~(\ref{eq_a12}) yields
 \end{equation}
 This is the well-known Schrödinger equation of the quantum harmonic oscillator.
 This allows us to identify the well known eigenfunctions \cite{griffiths18,shankar94}
-\begin{equation} \label{eq_a16}
+\begin{equation} \label{eq:a16}
   \chi_n(y) =
    \frac{\sqrt{\kappa}}{\sqrt{2^{n}n!}}
   e^{-\kappa^2 y^2/2}
   \mathcal{H}_n \qty(\kappa y),
 \end{equation}
 with eigenvalues
-\begin{equation} \label{eq_a17}
+\begin{equation} \label{eq:a17}
   \epsilon_n = \hbar \omega_0 \bigg(n + \frac{1}{2}\bigg)
   ~\text{for}~
   n \in \mathbb{Z}^{+}_0.
 \end{equation}
 Here, $\kappa = \sqrt{{m_e \omega_0}/{\hbar}}$, and $\mathcal{H}_n$ are the Hermite polynomials.
-Thus, we can identify the solutions for Eq.~(\ref{eq_a8}) as
-\begin{equation} \label{eq_a18}
+Thus, we can identify the solutions for Eq.~(\ref{eq:a8}) as
+\begin{equation} \label{eq:a18}
   \begin{aligned}
     \vartheta_n(\tilde{y},t) = \chi_n(\tilde{y} - \zeta(t))
      \text{exp}\bigg(\frac{i}{\hbar}\bigg[&- \epsilon_nt +
@@ -153,14 +153,14 @@ Thus, we can identify the solutions for Eq.~(\ref{eq_a8}) as
      & + \int_0^{t}dt'L(\zeta,\dot{\zeta},t')\bigg]\bigg).
   \end{aligned}
 \end{equation}
-Since $\chi_n(x)$ functions forms a complete set, any general solution $\vartheta_(\tilde{y},t)$ can be presented with the help of the solutions derived in Eq.~(\ref{eq_a18}).
+Since $\chi_n(x)$ functions forms a complete set, any general solution $\vartheta_(\tilde{y},t)$ can be presented with the help of the solutions derived in Eq.~(\ref{eq:a18}).
 
-Finally, we consider our scenario where we assumed that $S(t) = eE\sin(\omega t)$, and we derive the solution for Eq.~(\ref{eq_a11}) as
-\begin{equation} \label{eq_a19}
+Finally, we consider our scenario where we assumed that $S(t) = eE\sin(\omega t)$, and we derive the solution for Eq.~(\ref{eq:a11}) as
+\begin{equation} \label{eq:a19}
   \zeta(t) = \frac{eE}{m_e(\omega_0^2 - \omega^2)}\sin(\omega t).
 \end{equation}
-Subtitling solutions in Eq.~(\ref{eq_a18}) back in Eq.~(\ref{eq_a5}), we obtain a set of wave functions with two different quantum number ($n$,$m$) that satisfy the time-dependent Schrödinger equation Eq.~(\ref{eq_a4}) as follows
-\begin{equation} \label{eq_a20}
+Subtitling solutions in Eq.~(\ref{eq:a18}) back in Eq.~(\ref{eq:a5}), we obtain a set of wave functions with two different quantum number ($n$,$m$) that satisfy the time-dependent Schrödinger equation Eq.~(\ref{eq:a4}) as follows
+\begin{equation} \label{eq:a20}
   \begin{aligned}
     \psi_{n,m}&(x,y,t) \\
     &=  \frac{1}{\sqrt{L_x}}
