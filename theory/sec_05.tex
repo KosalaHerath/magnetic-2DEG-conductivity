@@ -87,7 +87,7 @@ and this modify our previous expressing as
 \begin{equation} \label{5.4}
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,k_x)  =
-    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \frac { \eta_{imp}^2 L_x^2 \hbar^2 V_{imp}}{\qty(eB)^2}
     \delta(\varepsilon - \varepsilon_{N}) &
     \int_{-\infty}^{\infty} d {k'}_x \;
     J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
@@ -108,7 +108,7 @@ and this leads to
 \begin{equation} \label{5.6}
   \begin{aligned}
     \qty[\Gamma^{00}_{N}(\varepsilon,k_x)]^2  =
-    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \frac { \eta_{imp}^2 L_x^2 \hbar^2 V_{imp}}{\pi\qty(eB)^2}
     \int_{-\infty}^{\infty} d {k'}_x \;
     J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     \qty|
@@ -122,7 +122,7 @@ and
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,k_x)  =
     \qty[
-    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \frac { \eta_{imp}^2 L_x^2 \hbar^2 V_{imp}}{\pi\qty(eB)^2}
     \int_{-\infty}^{\infty} d {k'}_x \;
     J_0^2\qty(\frac{g\hbar}{eB}[{k}_x - {k'}_x])
     \qty|
@@ -139,7 +139,7 @@ This can be write in more compact form as follows
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,k_x)  =
     \qty[
-    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \frac { \eta_{imp}^2 L_x^2 \hbar^2 V_{imp}}{\pi\qty(eB)^2}
     \int_{-\infty}^{\infty} d {k'}_x \;
     J_0^2\qty(g\sigma[{k}_x - {k'}_x])
     \qty|
@@ -168,10 +168,10 @@ Using above definition we can identify Gauss-Hermite functions ($\vartheta_N$) a
   \begin{aligned}
     \Gamma^{00}_{N}(\varepsilon,k_x)  =
     \qty[
-    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
+    \frac { \eta_{imp}^2 L_x^2 \hbar^2 V_{imp}}{\pi\qty(eB)^2}
     \int_{-\infty}^{\infty} d {k'}_x \;
     J_0^2\qty(g\sigma[{k}_x - {k'}_x])
-    \kappa^2
+    \kappa^4
     \qty|
     \int_{-\infty}^{\infty} d\bar{k} \;
     \vartheta_{N}\qty(\sigma\kappa\bar{k})
@@ -203,7 +203,7 @@ and this will be simplified to (with parmater change $k'_x \rightarrow k_1$ and 
 \end{equation}
 where
 \begin{equation} \label{5.14}
-    \eta = \eta_{imp} L_x \qty[\frac { V_{imp}}{eB}]^{1/2} \quad,\quad
+    \eta = \eta_{imp} L_x \qty[\frac { V_{imp}}{\pi}]^{1/2} \quad,\quad
     \lambda_1 = g\sigma \quad,\quad
     \lambda_2 = \sigma \kappa.
 \end{equation}

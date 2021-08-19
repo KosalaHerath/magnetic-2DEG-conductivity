@@ -327,8 +327,8 @@ Thus, we can identify the Fourier series component of the scattering amplitude a
     J_l\bm{(}b({y'}_0 - y_0)\bm{)}\\
     & \times
     \int_{-\infty}^{\infty}
-    {\chi}_{n_{\beta}}(y)
-    {\chi}_{n_{\beta}}(y_0 - {y'}_0 - y) dy.
+    {\chi}_N(y)
+    {\chi}_N(y_0 - {y'}_0 - y) dy.
   \end{aligned}
 \end{equation}
 Furthermore, we can define \textit{transition probability matrix} as
@@ -347,8 +347,8 @@ and this becomes
       & \times
       \left|
       \int_{-\infty}^{\infty}
-      {\chi}_{n_{\beta}}(y)
-      {\chi}_{n_{\beta}}(y_0 - {y'}_0 - y) dy \right|^2.
+      {\chi}_N(y)
+      {\chi}_N(y_0 - {y'}_0 - y) dy \right|^2.
   \end{aligned}
 \end{equation}
 Then describing the square of the delta distribution using the following interpretation \cite{dini16,kibis14}
@@ -370,8 +370,8 @@ and executing the time derivation operation on each matrix element of transition
     & \times
     \left|
     \int_{-\infty}^{\infty}
-    {\chi}_{n_{\beta}}(y)
-    {\chi}_{n_{\beta}}(y_0 - {y'}_0 - y) dy \right|^2.
+    {\chi}_N(y)
+    {\chi}_N(y_0 - {y'}_0 - y) dy \right|^2.
   \end{aligned}
 \end{equation}
 
@@ -382,22 +382,21 @@ Additionally, the inverse scattering time matrix can be identified as the sum of
     \expval**{\Gamma_{\alpha\beta}^{ll'}({k'}_x,k_x)}_{imp}.
 \end{equation}
 Next, applying the 1-dimensional momentum continuum limit $\sum_{{k'}_x} \longrightarrow {L_x}/{2\pi}\int d {k'}_x$, we can obtain
+\begin{widetext}
 \begin{equation} \label{eq:42}
   \begin{aligned}
-    &\left(\frac{1}{\tau(\varepsilon,k_x)}\right)^{ll'}_{\alpha\beta} \\
-    & =
+    \left(\frac{1}{\tau(\varepsilon,k_x)}\right)^{ll'}_{\alpha\beta} = &
     \frac { 2\pi \eta_{imp}^2 L_x^2}{ \hbar}
     \frac{V_{imp}}{2\pi}
-    \delta(\varepsilon_{\beta} - \varepsilon)\\
-    & \quad\times
+    \delta(\varepsilon_{\beta} - \varepsilon) \\
+    & \times
     \int_{-\infty}^{\infty} \left\{
-    J_l\bm{(}\frac{b\hbar}{eB}[{k}_x - {k'}_x]\bm{)}
-    J_{l'}\bm{(}\frac{b\hbar}{eB}[{k}_x - {k'}_x]\bm{)} \right. \\
-    & \left. \qquad\times
+    J_l\bm{\left(}\frac{b\hbar}{eB}({k}_x - {k'}_x)\bm{\right)}
+    J_{l'}\bm{\left(}\frac{b\hbar}{eB}({k}_x - {k'}_x)\bm{\right)}
     \left|
     \int_{-\infty}^{\infty}
-    {\chi}_{n_{\beta}}(y)
-    {\chi}_{n_{\beta}} \bm{\left(}\frac{\hbar}{eB} ({k'}_x - {k}_x) - y \bm{\right)} dy\right|^2 \right\} d {k'}_x.
+    {\chi}_N(y)
+    {\chi}_N \bm{\left(}\frac{\hbar}{eB} ({k'}_x - {k}_x) - y \bm{\right)} dy\right|^2 \right\} d {k'}_x.
   \end{aligned}
 \end{equation}
 Here an impurity average of white noise potential allows to identify $\expval{|V_{{k'}_x,k_x}|^2}_{imp} = V_{imp}$.
@@ -405,18 +404,17 @@ Finally, using substitutions $k'_x = k_1$ and $y = \flatfrac{\hbar{k_2}}{(eB)}$,
 level as follows
 \begin{equation} \label{eq:43}
   \begin{aligned}
-    \bigg(&\frac{1}{\tau(\varepsilon,k_x)}\bigg)^{ll'}_{N} \\
-    & =
-    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{\qty(eB)^2}
-    \delta(\varepsilon - \varepsilon_{N})\\
-    & \quad\times
-    \int_{-\infty}^{\infty} d k_1
-    J_l\qty(\frac{b\hbar}{eB}[{k}_x - k_1])
-    J_{l'}\qty(\frac{b\hbar}{eB}[{k}_x - k_1]) \\
-    & \quad\times
-    \qty|
-    \int_{-\infty}^{\infty} dk_2 \;
-    {\chi}_{N}\qty(\frac{\hbar}{eB}k_2)
-    {\chi}_{N}\qty(\frac{\hbar}{eB} \qty[k_1 - {k}_x - k_2])|^2.
+    \left(\frac{1}{\tau(\varepsilon,k_x)}\right)^{ll'}_{N} &=
+    \frac { \eta_{imp}^2 L_x^2 \hbar V_{imp}}{e^2B^2}
+    \delta(\varepsilon - \varepsilon_{N}) \\
+    & \times
+    \int_{-\infty}^{\infty} \left\{
+    J_l\bm{\left(}\frac{b\hbar}{eB}({k}_x - k_1)\bm{\right)}
+    J_{l'}\bm{\left(}\frac{b\hbar}{eB}({k}_x - k_1)\bm{\right)}
+    \left|
+    \int_{-\infty}^{\infty}
+    {\chi}_N\left(\frac{\hbar}{eB}k_2 \right)
+    {\chi}_N \bm{\left(}\frac{\hbar}{eB} (k_1 - k_x - k_2) \bm{\right)} dk_2 \right|^2 \right\} d k_1.
   \end{aligned}
 \end{equation}
+\end{widetext}
