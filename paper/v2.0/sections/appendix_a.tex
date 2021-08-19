@@ -84,7 +84,7 @@ This system is exactly solvable, and we can solve the equation using the methods
 \begin{equation} \label{eq:a9}
     \vartheta(y',t) = \exp(\frac{im_e\dot{\zeta}y'}{\hbar})\varphi(y',t).
 \end{equation}
-This leads to
+and this leads to
 \begin{equation} \label{eq:a10}
   \begin{aligned}
     i \hbar \pdv{\varphi(y',t)}{t}   &=
@@ -99,10 +99,10 @@ This leads to
         \left[
             m_e\ddot{\zeta} + m_e\omega_0^2\zeta - S(t)
         \right]y'
-    \right\} \varphi(y',t),
+    \right\} \varphi(y',t).
   \end{aligned}
 \end{equation}
-where we introduce $\dot{\zeta} = \dv*{\zeta}{t}$ and $\ddot{\zeta} = \dv*[2]{\zeta}{t}$ for the sake of notational convenience. Subsequently, we can restrict $\zeta(t)$ function such that
+Here, we introduced $\dot{\zeta} = \pdv*{\zeta}{t}$ and $\ddot{\zeta} = \pdv*[2]{\zeta}{t}$ for the sake of notational convenience. Subsequently, we can restrict $\zeta(t)$ function such that
 \begin{equation} \label{eq:a11}
   m_e\ddot{\zeta} + m_e\omega_0^2\zeta = S(t),
 \end{equation}
@@ -124,7 +124,7 @@ Here
 \end{equation}
 is the Lagrangian of a classical driven oscillator. To proceed further, another unitary transform can be introduced as follows
 \begin{equation} \label{eq:a14}
-    \varphi(y',t) = \exp(\frac{i}{\hbar}\int_0^{t}dt'L(\zeta,\dot{\zeta},t')) \chi(y',t),
+    \varphi(y',t) = \exp(\frac{i}{\hbar}\int_0^{t} L(\zeta,\dot{\zeta},t')dt') \chi(y',t),
 \end{equation}
 and subtitling Eq.~(\ref{eq:a14}) back in Eq.~(\ref{eq:a12}), we can obtain
 \begin{equation} \label{eq:a15}
