@@ -31,7 +31,7 @@ This introduces a new wave function solution $\ket{\Psi_{n,m}}$ for a system wit
   \text{when} \quad
   t \leq t_0.
 \end{equation}
-Next, we can move our analysis into the interaction picture representation \cite{bruus04,mahan00} and in the interaction picture, the $t$-$t'$-Floquet state can be identified as
+Next, we move our analysis into the interaction picture representation \cite{bruus04,mahan00} and in the interaction picture, we can identify the $t$-$t'$-Floquet state as
 \begin{equation} \label{eq:c7}
   \ket{\Psi_{n,m}(t,t')}_I = U_0^{\dagger}(t,t_0;t')
   \ket{\Psi_{n,m}(t,t')}.
@@ -73,8 +73,8 @@ Since our $t$-$t'$-Floquet states create a basis, we can represent the solutions
   \ket{\psi_{\beta}(t,t')}.
 \end{equation}
 Here, we used a single term notation to represent two quantum numbers; $\alpha \equiv (n_{\alpha},m_{\alpha})$ and $\beta \equiv (n_{\beta},m_{\beta})$.
-Then we can identify the \textit{scattering amplitude} as $a_{\alpha,\beta}(t,t') =
-\braket{\psi_{\beta}(t,t')}{\Psi_{\alpha}(t,t')}$ and this can be evaluated with
+Subsequently, we can identify the \textit{scattering amplitude} as $a_{\alpha,\beta}(t,t') =
+\braket{\psi_{\beta}(t,t')}{\Psi_{\alpha}(t,t')}$ and we can evaluate this with
 \begin{equation} \label{eq:c13}
   \begin{aligned}
   a_{\alpha,\beta}(t,t') = &
@@ -112,8 +112,8 @@ Next, we consider a scattering phenomenon when a electron scatters from a known 
   \caption{Scattering from known $\ket{\psi_{\beta}(t,t')}$ state to a constant energy state $\ket{\Psi_{\alpha}(t,t')}$ due to the scattering potential created by impurities in the material.}
   \label{fig:2}
 \end{figure}
-This scenario is illustrated in Fig.~\ref{fig:2}.
-The scattering amplitude for this scattering scenario can be calculated using the expression derived in Eq.~(\ref{eq:c14}) as follows
+This phenomenon is illustrated in Fig.~\ref{fig:2}.
+We can calculate the scattering amplitude for this scattering scenario using the expression derived in Eq.~(\ref{eq:c14}) as follows
 \begin{equation} \label{eq:c16}
   \begin{aligned}
     a_{\alpha\beta}(t,t') =
@@ -139,7 +139,7 @@ where $Q = \bra{\phi_{\beta}(t')} V(\vb{r}) \ket{\phi_{\alpha}(t')}$ and using t
     \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}
     \braket{\vb{k}}{\phi_{\alpha}(t')}.
 \end{equation}
-Moreover, separating $x$-directional and $y$-directional momentum components, this can be simplified as
+Moreover, separating $x$-directional and $y$-directional momentum components, we can simply this to obtain
 \begin{equation} \label{eq:c19}
     Q =
     \sum_{k_x}\sum_{{k'}_x}
@@ -150,7 +150,7 @@ Moreover, separating $x$-directional and $y$-directional momentum components, th
 \end{equation}
 with $V_{\vb{k'},\vb{k}} = \mel{\vb{k'}}{V(\vb{r})}{\vb{k}}$.
 
-Since we are presenting the the perturbation potential $V(\vb{r})$ by a group of randomly distributed impurities, we take into account $N_{imp}$ number of identical single impurity potentials distributed at randomly but in fixed positions $\vb{r}_i$. Then scattering potential $V(\vb{r})$ can be identified as the sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$
+Since we are presenting the the perturbation potential $V(\vb{r})$ by a group of randomly distributed impurities, we take into account $N_{imp}$ number of identical single impurity potentials distributed at randomly but in fixed positions $\vb{r}_i$. Thus, we can describe the scattering potential $V(\vb{r})$ as the sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$
 \begin{equation} \label{eq:c20}
   V(\vb{r}) =
   \sum_{i=1}^{N_{imp}}
@@ -233,7 +233,7 @@ Now using Eq.~(\ref{eq:10}) and Eq.~(\ref{eq:c25b}) on Eq.~(\ref{eq:c19}), we ob
      dk'_y dk_y.
   \end{aligned}
 \end{equation}
-Here we have changed the time variable $t' \rightarrow t$ only for the simplicity of notation. This can be simplified as
+Here we have changed the time variable $t' \rightarrow t$ only for the simplicity of notation. We can more simply this as
 \begin{equation} \label{eq:c28}
   \begin{aligned}
     Q =
@@ -275,7 +275,7 @@ Using the Fourier transform of Gauss-Hermite functions \cite{celeghini21} and th
     {\chi}_{N}(y_0 - {y'}_0 - y) dy.
   \end{aligned}
 \end{equation}
-Finally, the scattering amplitude derived in Eq.~(\ref{eq:c17}) can be evaluated for given $k_x = 2\pi m_{\alpha}/L_x$ and $k'_x =  2\pi m_{\beta}/L_x$ as
+Finally, we can evaluate the scattering amplitude derived in Eq.~(\ref{eq:c17}) for given $k_x = 2\pi m_{\alpha}/L_x$ and $k'_x =  2\pi m_{\beta}/L_x$ as follows
 \begin{equation} \label{eq:c32}
   \begin{aligned}
     a_{\alpha\beta}&(k_x,k'_x,t)

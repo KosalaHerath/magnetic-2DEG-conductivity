@@ -5,12 +5,12 @@ For instance, in the famous Bloch analysis of electrons in quantum systems intro
 The Floquet-Drude conductivity theory was employed recently by Wackerl \textit{et al.} \cite{wackerl20} as a method to analyze the transport properties of quantum systems exposed to strong radiation.
 In their work, they have presented more accurate results than the former theoretical descriptions for the conductivity of nanoscale systems in the  presence of a dressing field. Therefore, we apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
 
-First, we need to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq:2}). By factorizing the wave function into a linearly time-dependent part and a periodic time-dependent part, we present the quasienergies as
+First, we need to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq:2}). By factorizing the wave function into a linearly time-dependent part and a periodic time-dependent part, we present the quasienergies with
 \begin{equation} \label{eq:6}
   \varepsilon_{n} =
   \hbar \omega_0 \left(n + \flatfrac{1}{2}\right) - \Delta_{\varepsilon},
 \end{equation}
-which only depends on a single quantum number $n$. The Floquet modes can then be recognized as
+which only depends on a single quantum number $n$. Furthermore, we can recognize the Floquet modes as
 \begin{equation} \label{eq:7}
   \begin{aligned}
     \phi_{n,m}(x,y,t) =&
@@ -63,7 +63,7 @@ and
   d =
  \frac{eE}{m_e(\omega_0^2 - \omega^2)}.
 \end{equation}
-Using Floquet theory, the wave functions derived in Eq.~(\ref{eq:2}) can be written as Floquet states in momentum space as
+Using Floquet theory, we can re-write the wave functions derived in Eq.~(\ref{eq:2}) as the \textit{Floquet states} in momentum space
 \begin{equation} \label{eq:14}
   \psi_{n,m}(k_x,k_y,t) =
   \exp(-\flatfrac{i\varepsilon_{n}t}{\hbar}) \phi_{n,m} (k_x,k_y,t).
