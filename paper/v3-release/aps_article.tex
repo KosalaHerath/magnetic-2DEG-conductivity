@@ -1,0 +1,117 @@
+% ****** Start of file dressed_quantum_hall.tex ****** %
+
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+ prb,
+]{revtex4-2}
+
+%===============================================================================
+% Import packages
+%===============================================================================
+% Bold math
+\usepackage{bm}
+% AMS packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+% Physics package
+\usepackage{physics}
+% SI units package
+\usepackage{siunitx}
+% Hypertext package
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%===============================================================================
+% Bibliography style
+\bibliographystyle{apsrev4-2}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+% Title of the manuscript
+\title{A generalized model for the charge transport properties of
+\\dressed quantum Hall systems}
+
+% Authors of the manuscript
+\author{Kosala Herath,}
+\email[]{kosala.herath@monash.edu}
+\author{Malin Premaratne}
+\email[]{malin.premaratne@monash.edu}
+\affiliation{Advanced Computing and Simulation Laboratory (A$\chi$L), Department of Electrical and Computer Systems Engineering, Monash University, Clayton, Victoria 3800, Australia.}
+
+% Add date
+\date{\today}
+
+% Abstract
+\begin{abstract}
+\input{sections/abstract.tex}
+\end{abstract}
+
+% Make title of the manuscript
+\maketitle
+
+% Section 01 : Introduction
+\section{\label{sec_introduction} Introduction}
+\input{sections/1_introduction.tex}
+
+% Section 02 : Schrodinger problem for a dressed quantum Hall system
+\section{\label{sec_schrodinger_problem} Schrodinger problem for a dressed quantum Hall system}
+\input{sections/2_schrodinger_problem.tex}
+
+% Section 03 : Floquet theory perspectiv
+\section{\label{sec_floquet_theory} Floquet theory perspective}
+\input{sections/3_floquet_theory.tex}
+
+% Section 04 :
+\section{\label{sec_inverse_scattering_time}  Inverse Scattering Time Analysis}
+\input{sections/4_inverse_scattering_time.tex}
+
+% Section 05 :
+\section{\label{sec_floquet_drude_conductivity} Floquet-Drude Conductivity in a Dressed Quantum Hall System}
+\input{sections/5_floquet_drude_conductivity.tex}
+
+% Section 06 :
+\section{\label{sec_manipulate_conductivity} Manipulate Conductivity in Quantum Hall Systems}
+\input{sections/6_manipulate_conductivity.tex}
+
+% Section 07 :
+\section{\label{sec_conclusions} Conclusions}
+\input{sections/7_conclusions.tex}
+
+% Acknowledgments
+\begin{acknowledgments}
+\input{sections/acknowledgments.tex}
+\end{acknowledgments}
+
+% Add appendixes
+\appendix
+
+% Appendix A : Wave function solutions for a dressed quantum Hall system
+\section{\label{appendix_a} Wave function solutions for a dressed quantum Hall system}
+\input{sections/appendix_a.tex}
+
+% Appendix B :
+\section{\label{appendix_b} Floquet modes and quasienergies}
+\input{sections/appendix_b.tex}
+
+% Appendix C :
+\section{\label{appendix_c} Floquet-Fermi golden rule for a dressed quantum  Hall system}
+\input{sections/appendix_c.tex}
+
+% Appendix D :
+\section{\label{appendix_d} Current operators for a dressed quantum Hall system}
+\input{sections/appendix_d.tex}
+
+% Bibliography
+\bibliography{aps_article}
+
+\end{document}
+
+% ****** End of file dressed_quantum_hall.tex ****** %

@@ -1,0 +1,123 @@
+In this section, we derive the current density operator for the $N$-th Landau level in a dressed quantum Hall system. We already found the exact solution for the time-dependent Schrödinger equation with the Hamiltonian give in Eq.~(\ref{eq:1}) and we identified them as the Floquet states in Eq.~(\ref{eq:14}). For the simplicity of notation, we can represent the Floquet modes derived in Eq.~(\ref{eq:10}) as quantum states using their corresponding quantum numbers as follows
+\begin{equation} \label{eq:d1}
+  \ket{\phi_{n,m}} = \ket{n,k_x}.
+\end{equation}
+Using this complete set of quantum states \cite{wackerl20,holthaus15,grifoni98}, we can represent the single particle current operator's matrix element as
+\begin{equation} \label{eq:d2}
+  \left(\vb{j} \right)_{nm,n'm'} = \mel{n,k_x}{\;\hat{\vb{j}}\;}{n',k'_x}.
+\end{equation}
+Next, we can identify the particle current operator for our system \cite{mahan00,bruus04} as
+\begin{equation} \label{eq:d3}
+  \hat{\vb{j}} = \frac{1}{\widetilde{m}} \left\{\hat{\vb{p}} - e\left[\vb{A}_s + \vb{A}_d(t) \right]\right\},
+\end{equation}
+where $\widetilde{m}$ is the mass of the considering particle.
+
+First, we consider the $x$-directional particle current operator component, and we can identify that as
+\begin{equation} \label{eq:d4}
+  \hat{j}_x = \frac{1}{\widetilde{m}} \left(-i\hbar\pdv{x} + eBy \right).
+\end{equation}
+Next, we calculate the matrix elements of $x$-directional current operator against our Floquet mode basis
+\begin{equation} \label{eq:d5}
+  \left({j}_x \right)_{nm,n'm'} =
+  \mel{n,k_x}{\;\frac{1}{\widetilde{m}} \left(-i\hbar\pdv{x} + eBy \right)}{n',k'_x},
+\end{equation}
+and we evaluate these using the Floquet modes derived in Eq.~(\ref{eq:7}) as follows
+\begin{equation} \label{eq:d6}
+  \begin{aligned}
+    \left({j}_x \right)_{nm,n'm'} = &
+    \frac{1}{{\widetilde{m}}}
+    \delta_{k_x,k'_x}
+    \int
+    \left(\hbar k'_x + eBy\right) \\
+    & \times
+     \chi_{n}\bm{\left(}y - y_0 - \zeta(t)\bm{\right)}
+    \chi_{n'}\bm{\left(}y - y_0 - \zeta(t)\bm{\right)}
+    dy.
+  \end{aligned}
+\end{equation}
+Let $[y - y_0 - \zeta(t)] = \bar{y}$ and we can obtain
+\begin{equation} \label{eq:d7}
+  \begin{aligned}
+    \left({j}_x \right)_{nm,n'm'} =
+    \frac{1}{{\widetilde{m}}}
+    \delta_{k_x,k'_x}
+    \int &
+    \left[ \hbar k'_x + eB\bar{y} -\hbar k'_x + eB\zeta(t)\right] \\
+    & \times
+    \chi_{n}(\bar{y})
+    \chi_{n'}(\bar{y})
+    d\bar{y}.
+  \end{aligned}
+\end{equation}
+Using the following integral identities of the Floquet modes which are made up with Gauss-Hermite functions \cite{vedenyapin11,szego59}
+\begin{subequations} \label{eq:d8}
+  \begin{align}
+    \int
+    \chi_{n}({y})
+    \chi_{n'}({y}) d{y} &=
+    \delta_{n',n}, \\
+    \int
+    y \chi_{n}({y})\chi_{n'}({y}) d{y} &=
+    \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1} \right),
+  \end{align}
+\end{subequations}
+we simplify the matrix elements of $x$-directional current operator to obtain
+\begin{equation} \label{eq:d9}
+  \begin{aligned}
+    &\left({j}_x \right)_{nm,n'm'} =
+    \frac{eB}{{\widetilde{m}}}
+    \delta_{k_x,k'_x} \\
+    & \qquad\times
+    \left[
+    \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+    \delta_{n',n-1}\right)
+    + \zeta(t) \delta_{n',n}
+    \right].
+  \end{aligned}
+\end{equation}
+Due to high complexity of extract solution, in this study we only consider the constant contribution. Therefore, we can identify the $0$-th component of the Fourier series as
+\begin{equation} \label{eq:d10}
+  \begin{aligned}
+      \left({j}_x \right)_{nm,n'm'} =&
+      \frac{eB}{\widetilde{m}}
+      \delta_{k_x,k'_x} \\
+      & \times
+      \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+      \delta_{n',n-1} \right).
+  \end{aligned}
+\end{equation}
+For a electric current operator, we can apply the electron's charge and the  effective mass of the electron to the above derived equation. This leads to
+\begin{equation} \label{eq:d11}
+  \begin{aligned}
+      \Big({j}^x_{s=0}\Big)_{nm,n'm'}^{electron}  =&
+      \frac{e^2B}{{m_e}}
+      \delta_{k_x,k'_x}\\
+      & \times
+      \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
+      \delta_{n',n-1} \right).
+  \end{aligned}
+\end{equation}
+
+Moreover, we can identify the $y$-directional current operator component as
+\begin{equation} \label{eq:d12}
+  \hat{j}_y = \frac{1}{\widetilde{m}} \left(-i\hbar\pdv{y} - \frac{eE}{\omega}\cos(\omega t) \right).
+\end{equation}
+Using this operator, we can represent the matrix elements of $y$-directional current operator in Floquet mode basis as
+\begin{equation} \label{eq:d13}
+  \left({j}_y \right)_{nm,n'm'} =
+  \mel{n,k_x}{\;\frac{-1}{\widetilde{m}} \left(i\hbar\pdv{y} + \frac{eE}{\omega}\cos(\omega t) \right)}{n',k'_x}.
+\end{equation}
+After following the same steps done for the $x$-directional current operator, we can identify the $0$-th component of matrix elements for $y$-directional electric current operator as
+\begin{equation} \label{eq:d14}
+  \begin{aligned}
+    \Big({j}^y_{s=0}\Big)_{nm,n'm'}^{electron} = &
+    \frac{ie\hbar}{{m_e}}
+    \delta_{k_x,k'_x} \\
+    & \times
+    \left(
+    \sqrt{\frac{n}{2}} \delta_{n',n-1}
+    - \sqrt{\frac{n+1}{2}} \delta_{n',n+1}
+    \right).
+  \end{aligned}
+\end{equation}
