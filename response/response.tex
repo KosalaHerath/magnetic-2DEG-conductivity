@@ -1,0 +1,143 @@
+% ****** Start of file response.tex ****** %
+\documentclass{article}
+
+%===============================================================================
+% Import packages
+%===============================================================================
+
+\usepackage[top=0.8in,bottom=1in,left=1in,right=1in]{geometry}
+% Physics package
+\usepackage{physics}
+% Paragraph skip package
+\usepackage[parfill]{parskip}
+% AMS packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+% Color package
+\usepackage[dvipsnames]{xcolor}
+% Acronym package
+\usepackage[acronym]{glossaries}
+% SI units package
+\usepackage{siunitx}
+% Hypertext package
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=black,citecolor=blue]{hyperref}
+% Bold math
+\usepackage{bm}
+% Other packages
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{float}
+
+% Bibliography style
+\bibliographystyle{abbrv}
+
+\begin{document}
+
+% Define acronyms
+\newacronym{tls}{TLS}{two-level system}
+
+%===============================================================================
+% Add date
+%===============================================================================
+\today\\
+
+Ashot Melikyan,\\
+Associate Editor,\\
+Physical Review B.\\
+
+Dear Professor Melikyan,
+
+Thank you very much for your effort in managing the review process of our manuscript. We are also thankful for the reviewer comments, and believe the second version of the manuscript we submit herewith has been significantly improved by the constructive criticism we received. Additionally, the subsequent sections of this document discusses the reviewer comments and our responses to them.
+
+Please note that in the following sections, the statements in {\color{RoyalBlue} \textbf{blue}} are the comments of the reviewers. Our responses are shown in black letters and the modifications we have done to the manuscript are given in {\color{Maroon} red}.
+
+\subsection*{General changes to the manuscript}
+
+\begin{itemize}
+    \item We have made minor changes in language and presentation to improve clarity, and to match the rest of the manuscript better to the changes done to address the reviewer's comments.
+    \begin{itemize}
+        \item Section IV-A first paragraph - \\
+            {\color{Maroon} We prepare the thermal reservoirs $B_L$ and $B_R$ so that the temperature $T_L$ of $B_L$ is significantly higher than the temperature $T_R$ of $B_R$ \acrshort{tls}.}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Response to the comments of Reviewer 1}
+
+We would like to thank the reviewer for bringing the deficiencies of our manuscript to our attention and providing constructive feedback to improve the quality of our work. We have considered all of your suggestions seriously and revised our paper manuscript as described below.
+
+\subsubsection*{Comment 1 -
+\color{RoyalBlue} My concern is that the manuscript is heavily skewed towards a purely mathematical formulation of the problem. It has a minimal connection to realistic two-dimensional electron systems. The manuscript does not discuss how the results can be applied to understanding mechanisms of charge transport in nanoelectronic devices and can be used to optimize device performance. Without such discussion, the manuscript will have a minimal impact on the community working on developing nanoelectronics.}
+
+In the initial version of the manuscript, we used natural units with $\hbar=k_B=1$ mainly because a similar system of units was used in Joulain \textit{et al.} \cite{mahan00} whose work we extend. Also, some of the widely used standard textbooks (e.g. Breuer \textit{et al.} \cite{breuer2002theory}) use a similar scheme. It was our belief at the time that it would have improved the readability of the manuscript for a reader well-versed in the relevant literature.
+
+However we admit that the use of natural units would make it harder for some experimentally inclined readers as measurement instruments usually provide SI readings. To such a reader, mapping our simulated results with their corresponding experimental values by transforming the units would have been an additional task.
+
+Thus, as per your suggestion, we have mapped all natural units to their equivalent SI units in the revised manuscript. For comparison with earlier work (as per your Comment 2), we have taken the liberty of recreating the thermal transistor system analyzed by Joulain \textit{et al.} \cite{joulain2016quantum} and converting it also into SI units.
+
+We detail these changes below.
+
+\begin{itemize}
+    \item Section IV first paragraph -
+        Changed to reflect the new SI system of units. - \\
+            {\color{Maroon} Note that in the following, we work in SI units where $\hbar=1.055\cross10^{-34} \text{Js}$ and $k_B=1.381\cross10^{-23} \text{J/K}$.}
+    \item Section IV-A fourth paragraph -
+        When moving to SI units, we had to insert conversion factors to deal with differently scaled energy levels, frequencies and temperatures. We have introduced Eq.~\ref{eq:unitequivalence} and the text below to establish these exact relationships. The factor of $5$ used there originates from the work of Joulain \textit{et al.} \cite{joulain2016quantum} and is verified further by our simulations. (The system energy levels need to be at least $5$ times higher for it to demonstrate the thermal transistor and optical-gating behaviors well. If the system energy levels were lower, the baths would have had enough energy to drive the conduction mechanism by its own, without the need for raised temperature $T_M$ or the optical field. Thus the optical gating action or thermal transistor action would diminish.) - \\
+            {\color{Maroon} Our next task is to select the appropriate system parameters. For proper operation, the overall scale of the system energy levels should be chosen to be around five times greater than the energy levels associated with the thermal baths \cite{joulain2016quantum}. Mathematically, this condition can be written as
+            \setcounter{equation}{24}
+            \begin{equation}
+                \hbar \omega \approx 5 k_B T
+                \label{eq:unitequivalence}
+            \end{equation}
+            where $\omega$ and $T$ represent the typical frequency and the temperature scales associated with the system and its environment. We then specify the relationships between different energy levels as $\omega_L=\omega_R=0$, $\omega_{RL}=0$, and $\omega_{LM}=\omega_{MR}\gg\omega_M>0$ to obtain a system whose energy level diagram is similar to Fig. 2. This provides us with a relatively simple system while showcasing thermal gating behavior well.}
+\end{itemize}
+
+
+\subsubsection*{Comment 2 -
+\color{RoyalBlue} As the proposed system is an extension of the one reported in
+reference \cite{joulain2016quantum}, authors should compare their results with the
+corresponding ones reported in that reference. In particular, the
+comparison of the amplification factors would be interesting.}
+
+We agree with the reviewer that a comparison between the our optical-gating system and the device reported in \cite{joulain2016quantum} would be valuable to the reader. However it is important to note that the previous device controlled the $J_L$ and $J_R$ heat flows via changing the temperature $T_M$ of the terminal $M$. In contrast, we employ the driving strength of the field $F$, or in other words its Rabi frequency $\Omega$, to control the same heat flows. Even though the two devices are basically identical in the output side, they are quite different on the input side. This makes a simple, direct comparison of the two devices impossible. Therefore, we had to resort to the following methodology for our comparison.
+\begin{enumerate}
+    \item First we simulate both systems with the same bath temperatures $T_L$ and $T_R$, and same system parameters $\omega_P$s and $\omega_{PQ}$s. -
+    \begin{itemize}
+        \item We first reproduced the results of Joulain \textit{et al.} \cite{joulain2016quantum}. Since we use SI units for our work, we mapped all their parameters to SI units and generated corresponding results.
+        \item We then used the same parameter set as Joulain \textit{et al.} \cite{joulain2016quantum} to simulate our device.
+    \end{itemize}
+
+    \item Then, we find the control-parameter (i.e. $T_M$ for original system, $\Omega$ for our system) ranges within which each system shows the required thermal behaviors. -
+    \begin{itemize}
+        \item For the previous system, the original authors had found that the control range is between the lower bound $T_R$ and the upper bound $T_L$.
+        \item In our system the magnitude of $\Omega$ has the lower bound of zero, but does not have a hard upper bound. However we see from Fig. \ref{fig:energyflows2}, that our system eventually saturates for large $\Omega$ values, after which increasing $\Omega$ further has minimal effect on the heat flows. We use this $\Omega$ value at saturation to define an approximate upper bound, which turns out to be around $3\Delta$ in our simulations.
+    \end{itemize}
+
+    \item Next, we simulate all output heat flows of each device for the full control-parameter range of that particular device. -
+    \begin{itemize}
+        \item For each system, we use a very small step-size and vary the control-parameter from its minimum value to its maximum value, and measure the output heat flows.
+        \item The resulting plots are shown in Fig. \ref{fig:energyflows2} and Fig. \ref{fig:energyefficiency}. Each plot have a single vertical axis, and two horizontal axes. The top horizontal axis measures $T_M$ and corresponds to the device of Joulain \textit{et al.} \cite{joulain2016quantum}, while the bottom axis measures $\Omega$ and corresponds to our system. We plot the values measured from the previous device with dashed lines, and values measured from our device with solid lines.
+    \end{itemize}
+\end{enumerate}
+
+
+\bibliography{response}
+
+\bigskip
+\bigskip
+
+Sincerely yours,
+
+\def\s#1#2#3{\vbox{\hsize=4.5cm
+		\kern2cm
+		\hrule\kern1ex
+		\hbox to \hsize{\strut\hfil #1 \hfil}
+		\hbox to \hsize{\strut\hfil #2 \hfil}
+		\hbox to \hsize{\strut\hfil #3 \hfil}}}
+
+\hbox to \hsize{\s{Malin Premaratne}{(Corresponding Author)}{\href{malin.premaratne@monash.edu}{malin.premaratne@monash.edu}}}
+
+
+\end{document}
+
+% ****** End of file dressed_quantum_hall.tex ****** %
