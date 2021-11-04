@@ -21,7 +21,7 @@
 % SI units package
 \usepackage{siunitx}
 % Hypertext package
-\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=black,citecolor=blue]{hyperref}
+\usepackage{hyperref}
 % Bold math
 \usepackage{bm}
 % Other packages
@@ -30,7 +30,7 @@
 \usepackage{float}
 
 % Bibliography style
-\bibliographystyle{abbrv}
+\bibliographystyle{unsrt}
 
 \begin{document}
 
@@ -69,56 +69,98 @@ We would like to thank the reviewer for bringing the deficiencies of our manuscr
 \subsubsection*{Comment 1 -
 \color{RoyalBlue} My concern is that the manuscript is heavily skewed towards a purely mathematical formulation of the problem. It has a minimal connection to realistic two-dimensional electron systems. The manuscript does not discuss how the results can be applied to understanding mechanisms of charge transport in nanoelectronic devices and can be used to optimize device performance. Without such discussion, the manuscript will have a minimal impact on the community working on developing nanoelectronics.}
 
-In the initial version of the manuscript, we used natural units with $\hbar=k_B=1$ mainly because a similar system of units was used in Joulain \textit{et al.} \cite{mahan00} whose work we extend. Also, some of the widely used standard textbooks (e.g. Breuer \textit{et al.} \cite{breuer2002theory}) use a similar scheme. It was our belief at the time that it would have improved the readability of the manuscript for a reader well-versed in the relevant literature.
+We strongly agree with the reviewer that a reasoning on our theoritical results and their application in current nanoelectronic devices would be essential to the reader. Therefore, we have made a discussion on physical significance of our theoritical results and their possible employments in the optimization of nanoelectronic device performance. We have inserted a new Section VII to incorporate the above discussion into the manuscript. The total content of the section is given below,
 
-However we admit that the use of natural units would make it harder for some experimentally inclined readers as measurement instruments usually provide SI readings. To such a reader, mapping our simulated results with their corresponding experimental values by transforming the units would have been an additional task.
+{\color{Maroon}
+\subsection*{Physical significance of outcomes}
 
-Thus, as per your suggestion, we have mapped all natural units to their equivalent SI units in the revised manuscript. For comparison with earlier work (as per your Comment 2), we have taken the liberty of recreating the thermal transistor system analyzed by Joulain \textit{et al.} \cite{joulain2016quantum} and converting it also into SI units.
+With the realization of 2DEGs in Si-MOSFETs (Metal Oxide Semiconductor Field Effect Transistors) \cite{fowler66}, Klitzing \textit{et al.} \cite{klitzing80} made the first transport measurements on such systems to reveal the quantum Hall effect. The empirical discovery of these unusual properties marked the beginning of a whole new realm in condensed matter physics that continues to produce phenomenal advancements in electronic system. The quantum Hall effects in a 2DEG under a static magnetic field are discribed by plateaus quantized to integer values of the conductivity quantum ($\flatfrac{e^2}{\hbar}$) in the off-diagonal conductivity, with simultaneously peaks at inter-plateau transition for the diagonal conductivity \cite{endo09}. This is due to the applied magnetic field and it changes the energy spectrum of 2DEG in a dramatic way. The magnetic field causes the density of states in 2DEG to split up into a sequence of delta functions, separated by an energy $\hbar\omega_0$, with $\omega_0$ the cyclotron frequency which is depend on the appplied magnetic field.
+However, experimental results demonstrate that these Landau levels are broadened and the main source of these broadening  in low temperatures is the disorders in materials \cite{ando85,dial07}. This behavour imply the  oscillating behavior of the experimental measurement of longitudinal conductivity (the Shubnikov–de Haas oscillations) \cite{endo09,wakabayashi78}.
 
-We detail these changes below.
+Our theoritical analysis on longitudinal conductivity behaviour of dressed quantum Hall system developed by consideirng low temperature limit with gaussian impurity broadening assumptions. As illustrated in Fig. 4, we also able to demostrate same Shubnikov–de Haas conductivity oscillations as experimental results \cite{endo09,wakabayashi78} through our model. Under the undressed ($I=0$) condition, our results are overlap with the conductivity measurement for quantum Hall systems. However, from our results given in Fig. 5, we demostrate that we are able to manipulate the broadening of these conductivity peaks using an external dressing field. In low temperature the principal cause of broadening of these conductivity peaks are impurity scattering and using an external dressing field we are able suppress the scattering which results in shrinkage both the scattering-induced broadening and the longitudinal conductivity.
 
-\begin{itemize}
-    \item Section IV first paragraph -
-        Changed to reflect the new SI system of units. - \\
-            {\color{Maroon} Note that in the following, we work in SI units where $\hbar=1.055\cross10^{-34} \text{Js}$ and $k_B=1.381\cross10^{-23} \text{J/K}$.}
-    \item Section IV-A fourth paragraph -
-        When moving to SI units, we had to insert conversion factors to deal with differently scaled energy levels, frequencies and temperatures. We have introduced Eq.~\ref{eq:unitequivalence} and the text below to establish these exact relationships. The factor of $5$ used there originates from the work of Joulain \textit{et al.} \cite{joulain2016quantum} and is verified further by our simulations. (The system energy levels need to be at least $5$ times higher for it to demonstrate the thermal transistor and optical-gating behaviors well. If the system energy levels were lower, the baths would have had enough energy to drive the conduction mechanism by its own, without the need for raised temperature $T_M$ or the optical field. Thus the optical gating action or thermal transistor action would diminish.) - \\
-            {\color{Maroon} Our next task is to select the appropriate system parameters. For proper operation, the overall scale of the system energy levels should be chosen to be around five times greater than the energy levels associated with the thermal baths \cite{joulain2016quantum}. Mathematically, this condition can be written as
-            \setcounter{equation}{24}
-            \begin{equation}
-                \hbar \omega \approx 5 k_B T
-                \label{eq:unitequivalence}
-            \end{equation}
-            where $\omega$ and $T$ represent the typical frequency and the temperature scales associated with the system and its environment. We then specify the relationships between different energy levels as $\omega_L=\omega_R=0$, $\omega_{RL}=0$, and $\omega_{LM}=\omega_{MR}\gg\omega_M>0$ to obtain a system whose energy level diagram is similar to Fig. 2. This provides us with a relatively simple system while showcasing thermal gating behavior well.}
-\end{itemize}
+Research on novel states of matter has driven the evolution of present-day nanoelectronic devices. In particular, controllable manipulation of material properties through a gate electric field has revolutionized the development  material science and technology \cite{ahn03,deng18}.
+Charge carrier concentration of a considering system is an imperative parameter that define the conductivity properties of system. We can manipulate that using the electrostatic field-effect machanism and it is an ideal tool to controll the conductivity in some specific systems.
+A 2DEG under static magnetic field with quantum Hall effects, is a excellent example that the gate electric field can be used to manipulate the conductivity. Considerable number researches has been performed using different type of 2D field-effect transistors(FETs) in magnetic fields to study the electronic transport in quantum limit \cite{wakabayashi78,yang18,long20,li14}. In the study done by Yang \textit{et al.} \cite{yang18}, the authors have observed quantized Hall plateaus and Shubnikov–de Haas oscillations for longitudinal conductivity against gate volatage in black phosphorus FET under high magnetic fields in low temperatures. Since the Fermi level of the system can be altered with applied gate volatge, this behaviour can be easily map into our results given in Fig. 4. However, specility of our outcomes is we owned the capability of manipulate the broadening of the conductivity regions using an external dressing field. Although Yang \textit{et al.} \cite{yang18}, achieved this broadening manipulation by changing the temperature in low range, in this study we present a general methematical describtion to perform that using only a high intensity electromagnetic field.
+
+As a result of manipulating the broadening of conductivity regions, we can enhance the sensitivity of FETs which gives the ability of observe narrow changes in gate volage.
 
 
-\subsubsection*{Comment 2 -
-\color{RoyalBlue} As the proposed system is an extension of the one reported in
-reference \cite{joulain2016quantum}, authors should compare their results with the
-corresponding ones reported in that reference. In particular, the
-comparison of the amplification factors would be interesting.}
 
-We agree with the reviewer that a comparison between the our optical-gating system and the device reported in \cite{joulain2016quantum} would be valuable to the reader. However it is important to note that the previous device controlled the $J_L$ and $J_R$ heat flows via changing the temperature $T_M$ of the terminal $M$. In contrast, we employ the driving strength of the field $F$, or in other words its Rabi frequency $\Omega$, to control the same heat flows. Even though the two devices are basically identical in the output side, they are quite different on the input side. This makes a simple, direct comparison of the two devices impossible. Therefore, we had to resort to the following methodology for our comparison.
-\begin{enumerate}
-    \item First we simulate both systems with the same bath temperatures $T_L$ and $T_R$, and same system parameters $\omega_P$s and $\omega_{PQ}$s. -
-    \begin{itemize}
-        \item We first reproduced the results of Joulain \textit{et al.} \cite{joulain2016quantum}. Since we use SI units for our work, we mapped all their parameters to SI units and generated corresponding results.
-        \item We then used the same parameter set as Joulain \textit{et al.} \cite{joulain2016quantum} to simulate our device.
-    \end{itemize}
 
-    \item Then, we find the control-parameter (i.e. $T_M$ for original system, $\Omega$ for our system) ranges within which each system shows the required thermal behaviors. -
-    \begin{itemize}
-        \item For the previous system, the original authors had found that the control range is between the lower bound $T_R$ and the upper bound $T_L$.
-        \item In our system the magnitude of $\Omega$ has the lower bound of zero, but does not have a hard upper bound. However we see from Fig. \ref{fig:energyflows2}, that our system eventually saturates for large $\Omega$ values, after which increasing $\Omega$ further has minimal effect on the heat flows. We use this $\Omega$ value at saturation to define an approximate upper bound, which turns out to be around $3\Delta$ in our simulations.
-    \end{itemize}
 
-    \item Next, we simulate all output heat flows of each device for the full control-parameter range of that particular device. -
-    \begin{itemize}
-        \item For each system, we use a very small step-size and vary the control-parameter from its minimum value to its maximum value, and measure the output heat flows.
-        \item The resulting plots are shown in Fig. \ref{fig:energyflows2} and Fig. \ref{fig:energyefficiency}. Each plot have a single vertical axis, and two horizontal axes. The top horizontal axis measures $T_M$ and corresponds to the device of Joulain \textit{et al.} \cite{joulain2016quantum}, while the bottom axis measures $\Omega$ and corresponds to our system. We plot the values measured from the previous device with dashed lines, and values measured from our device with solid lines.
-    \end{itemize}
-\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+% \subsubsection*{Comment 2 -
+% \color{RoyalBlue} As the proposed system is an extension of the one reported in
+% reference \cite{joulain2016quantum}, authors should compare their results with the
+% corresponding ones reported in that reference. In particular, the
+% comparison of the amplification factors would be interesting.}
+%
+% We agree with the reviewer that a comparison between the our optical-gating system and the device reported in \cite{joulain2016quantum} would be valuable to the reader. However it is important to note that the previous device controlled the $J_L$ and $J_R$ heat flows via changing the temperature $T_M$ of the terminal $M$. In contrast, we employ the driving strength of the field $F$, or in other words its Rabi frequency $\Omega$, to control the same heat flows. Even though the two devices are basically identical in the output side, they are quite different on the input side. This makes a simple, direct comparison of the two devices impossible. Therefore, we had to resort to the following methodology for our comparison.
+% \begin{enumerate}
+%     \item First we simulate both systems with the same bath temperatures $T_L$ and $T_R$, and same system parameters $\omega_P$s and $\omega_{PQ}$s. -
+%     \begin{itemize}
+%         \item We first reproduced the results of Joulain \textit{et al.} \cite{joulain2016quantum}. Since we use SI units for our work, we mapped all their parameters to SI units and generated corresponding results.
+%         \item We then used the same parameter set as Joulain \textit{et al.} \cite{joulain2016quantum} to simulate our device.
+%     \end{itemize}
+%
+%     \item Then, we find the control-parameter (i.e. $T_M$ for original system, $\Omega$ for our system) ranges within which each system shows the required thermal behaviors. -
+%     \begin{itemize}
+%         \item For the previous system, the original authors had found that the control range is between the lower bound $T_R$ and the upper bound $T_L$.
+%         \item In our system the magnitude of $\Omega$ has the lower bound of zero, but does not have a hard upper bound. However we see from Fig. \ref{fig:energyflows2}, that our system eventually saturates for large $\Omega$ values, after which increasing $\Omega$ further has minimal effect on the heat flows. We use this $\Omega$ value at saturation to define an approximate upper bound, which turns out to be around $3\Delta$ in our simulations.
+%     \end{itemize}
+%
+%     \item Next, we simulate all output heat flows of each device for the full control-parameter range of that particular device. -
+%     \begin{itemize}
+%         \item For each system, we use a very small step-size and vary the control-parameter from its minimum value to its maximum value, and measure the output heat flows.
+%         \item The resulting plots are shown in Fig. \ref{fig:energyflows2} and Fig. \ref{fig:energyefficiency}. Each plot have a single vertical axis, and two horizontal axes. The top horizontal axis measures $T_M$ and corresponds to the device of Joulain \textit{et al.} \cite{joulain2016quantum}, while the bottom axis measures $\Omega$ and corresponds to our system. We plot the values measured from the previous device with dashed lines, and values measured from our device with solid lines.
+%     \end{itemize}
+% \end{enumerate}
 
 
 \bibliography{response}
