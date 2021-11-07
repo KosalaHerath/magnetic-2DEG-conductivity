@@ -29,6 +29,8 @@
 \usepackage{textcomp}
 \usepackage{float}
 \usepackage{cite}
+\usepackage{multicol}
+\usepackage{multirow}
 
 % Bibliography style
 \bibliographystyle{unsrt}
@@ -76,9 +78,9 @@ We strongly agree with the reviewer that a reasoning on our theoritical results 
 \subsection*{Physical significance of outcomes}
 
 With the realization of 2DEGs in Si-MOSFETs (Metal Oxide Semiconductor Field Effect Transistors) \cite{fowler66}, Klitzing \textit{et al.} \cite{klitzing80} made the first transport measurements on such systems to reveal the quantum Hall effect. The empirical discovery of these unusual properties marked the beginning of a whole new realm in condensed matter physics that continues to produce phenomenal advancements in electronic systems. The quantum Hall effects in a 2DEG under a static magnetic field are described by plateaus quantized to integer values of the conductivity quantum ($\flatfrac{e^2}{\hbar}$) in the off-diagonal conductivity, with simultaneously peaks at inter-plateau transition for the diagonal conductivity \cite{endo09}. This is due to the applied magnetic field and it changes the energy spectrum of 2DEG in a dramatic way. The magnetic field causes the density of states in 2DEG to split up into a sequence of delta functions, separated by an energy $\hbar\omega_0$, with $\omega_0$ the cyclotron frequency which depends on the applied magnetic field.
-However, experimental results demonstrate that these Landau levels are broadened and the main source of these broadening in low temperatures is the disorders in materials \cite{ando85,dial07}. This behavior implies the oscillating behavior of the experimental measurement of longitudinal conductivity (Shubnikov–de Haas oscillations) \cite{endo09,wakabayashi78}.
+However, experimental results demonstrate that these Landau levels are broadened and the main source of these broadening in low temperatures is the disorders in materials \cite{ando85,dial07}. This behavior implies the oscillating behavior of the experimental measurement of longitudinal conductivity which is known as Shubnikov–de Haas (SdH) oscillations. \cite{endo09,wakabayashi78}.
 
-Our theoretical analysis on longitudinal conductivity behavior of dressed quantum Hall system developed by considering low-temperature limit with gaussian impurity broadening assumptions. As illustrated in Fig. 4, we were also able to demonstrate the same Shubnikov–de Haas conductivity oscillations as experimental results \cite{endo09,wakabayashi78} through our model. Under the undressed ($I=0$) condition, our results overlap with the conductivity measurement for quantum Hall systems. However, from our results given in Fig. 5, we demonstrate that we can manipulate the broadening of these conductivity peaks using an external dressing field. In low temperatures, the principal cause of broadening of these conductivity peaks is impurity scattering and using an external dressing field we can suppress the scattering which results in shrinkage of both the scattering-induced broadening and the longitudinal conductivity.
+Our theoretical analysis on longitudinal conductivity behavior of dressed quantum Hall system developed by considering low-temperature limit with gaussian impurity broadening assumptions. As illustrated in Fig. 4, we were also able to demonstrate the same SdH oscillations as experimental results \cite{endo09,wakabayashi78} through our model. Under the undressed ($I=0$) condition, our results overlap with the conductivity measurement for quantum Hall systems. However, from our results given in Fig. 5, we demonstrate that we can manipulate the broadening of these conductivity peaks using an external dressing field. In low temperatures, the principal cause of broadening of these conductivity peaks is impurity scattering and using an external dressing field we can suppress the scattering which results in shrinkage of both the scattering-induced broadening and the longitudinal conductivity.
 
 Research on novel states of matter has driven the evolution of present-day nanoelectronic devices. In particular, controllable manipulation of material properties through a gate electric field has revolutionized the development of material science and technology \cite{ahn03,deng18}.
 The charge carrier concentration of a considering system is an imperative parameter that defines the conductivity properties of the system. We can manipulate that using the electrostatic field-effect mechanism and it is an ideal tool to control the conductivity in some specific systems.
@@ -96,20 +98,35 @@ However, later a novel model was proposed in Ref. \cite{dmitriev03,dmitriev05,dm
 Furthermore we can recognize that the underlying mechanism of all these models \cite{durst03,dmitriev03,dmitriev05,dmitriev09} is microwave photon absorbtion by electron in the considering system. However, in our theoritical model we consider higher frequencies than microwaves for the dressing field. Therefore we can clearly identify major dissimilarities between our system under the analysis and MIROs systems \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. We listed these dissimilarities as follows for our comparison.
 \begin{itemize}
   \item
-  Dressing field frequency ($\omega \approx \SI{1}{\tera\hertz} \gg \SI{150}{\giga\hertz}$)
+  The mentioned experiments on magnetoresistance oscillations on 2DEG quantum Hall systems \cite{zudov01,mani02,zudov03,mani04} were performed in microwave frequency range ($30 -\SI{150}{\giga\hertz}$). This leads to build the theoritical models presented in Ref. \cite{durst03,dmitriev03} by assuming that these oscillations are caused by photoexcited electrons. Since these models consider on relevant frequency range (microwave radiation), it will allow to acknowledge the photon absorbtion by electrons. In cotrast to that, our consideration is only focus on the systems with high frequency range dressing fields which will not be associated to any photon absorbtion.
   \item
-  Dressing field intensity  ($I \approx \SI{100}{\watt\per\square\centi\metre}$)
+  The applied microwave radiation power on the MIROs experiments \cite{mani02,zudov03} are varies around $\SI{1}{\milli\watt\per\square\centi\metre}$ range. However, in our analysis we take the dressing field as a high intensity field, where we can not address the dressing field as a perturbation to our considering system. This leads us to use regonize new Floquet states together with conventinal Landau levels. As we mentioned in our results, we used high intensity dressing fields of magnitude around $\SI{100}{\watt\per\square\centi\metre}$ range in our numerical calculations.
   \item
-  Magnetic field intensity ($B \gg \SI{1}{\tesla}$). Their a weak magnetic field.
+  These fascinating MIROs are only observed under the weak magnetic fields ($B < \SI{0.2}{\tesla}$) in the experiments performed in Ref. \cite{zudov01,mani02,zudov03,mani04}. In this range of weak magnetic fields we can only observe MIROs and Shubnikov–de Haas (SdH) oscillations reveal only on high intensity magnetic fields. In comaparison to our analysis, we are  interested in the SdH oscillations and manipulation of their characteristics. Thesefore in our analysis we aim on the effects induced by high intensity magnetic fields ($B \sim \SI{1}{\tesla}$).
   \item
-  Purely dressing field vs absorbtion.
-  \item
-  Quantum mechanical electron state absolute solutions because new electron ststes are created in our system.
-  \item
-  Polarization dependent of our system.
-  \item
-  We consdier only on SdH oscillations which are only important in low temperature limits.
+  In our work, we analysed the 2DEG quantum Hall system with high-intensity dressing field which does not contribute to the energy exchange between a high-frequency dressing field and electrons. Therefore we have assumed the applied electromagnetic radiation as a purely dressing field. There are two possible absorbtion mechanism in 2DEG quantum Hall system namely electron transitions bewtween distinct Landau levels and electron transitions between distinct states of a same broadened Landau level. To avoid these absorbtions we have tuned the dressing field to a high frequency in our system under the analysis. Furthermore due to high intensity dressing field, it will restructure the entire electronic states of the conventinal 2DEG quantum Hall systems. We have address these modifications throuth the Floquet theory. However, the MIROs models \cite{durst03,dmitriev03} are based on low frequecy case where the system is able to absorb low frequency photons from the field.
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
