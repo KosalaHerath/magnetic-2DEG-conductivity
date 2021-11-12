@@ -246,7 +246,7 @@ Although we have extend our general derivation given in Eq.~[31] into special co
 \color{RoyalBlue} The authors presented the results for the conductivity tensor's xx- and yy-components. They seem to be identical, apart of a dimensional factor $(eB)^2$ in the denominator. The equality of these two components is expected for isotropic systems. Does the polarization of the electromagnetic field break the isotropy? Do the two components of the conductivity remain equal even for an arbitrary direction of a linearly polarized field? Is there a non-Hall contribution to the xy-component?
 }
 
-We thank the reviewer for pointing out the importance mistake we have made in the $yy$-component calculation. We have made an mistake in the current operator calculations and this has leaded to a unexpected normalization factor in the conductivity expresiion. Since we have only analyzed the $xx$-component this is not used to any further calculations and remaining analysis is not effected by this change. After this changes we can predict that the both $xx$-component and $yy$-component shows the same conductivity behaviours. We added these changes to the calculations done in Appendix D and the conductivity calculation under Section V.
+We thank the reviewer for pointing out the importance mistake we have made in the $yy$-component calculation. We have made an mistake in the current operator calculations and this has leaded to a unexpected normalization factor in the conductivity expresiion. Since we have only analyzed the normalized $xx$-component of the conductivity tensor, the remaining analysis is not effected by this change. After this change we can predict that the both $xx$-component and $yy$-component shows the same conductivity behaviours. We added these changes to the calculations done in Appendix D and the conductivity calculation under Section V.
 
 \begin{itemize}
   \item Appendix D - (page 14):\\
@@ -308,11 +308,12 @@ We thank the reviewer for pointing out the importance mistake we have made in th
     \int
     \chi_{n}({y})
     \chi_{n'}({y}) d{y} =
-    \kappa\delta_{n',n},
+    \delta_{n',n},
   \end{equation}
   \begin{equation} \tag{D9}
     \int
     y \chi_{n}({y})\chi_{n'}({y}) d{y} =
+    \frac{1}{\kappa}
     \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
     \delta_{n',n-1} \right),
   \end{equation}
@@ -320,7 +321,7 @@ We thank the reviewer for pointing out the importance mistake we have made in th
   \begin{equation} \tag{D10}
     \begin{aligned}
       &\left({j}_x \right)_{nm,n'm'} =
-      \frac{eB}{{\widetilde{m}}}
+      \frac{eB}{{\widetilde{m}\kappa}}
       \delta_{k_x,k'_x}
       \left[
       \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
@@ -333,7 +334,7 @@ We thank the reviewer for pointing out the importance mistake we have made in th
   \begin{equation} \tag{D11}
     \begin{aligned}
         \left({j}_x \right)_{nm,n'm'} =&
-        \frac{eB}{\widetilde{m}}
+        \frac{eB}{\widetilde{m}\kappa}
         \delta_{k_x,k'_x}
         \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
         \delta_{n',n-1} \right).
@@ -343,12 +344,13 @@ We thank the reviewer for pointing out the importance mistake we have made in th
   \begin{equation} \tag{D12}
     \begin{aligned}
         \Big({j}^x_{s=0}\Big)_{nm,n'm'}^{electron}  =&
-        \frac{e^2B}{{m_e}}
+        \frac{e\hbar}{{m_e}l_0}
         \delta_{k_x,k'_x}
         \left(\sqrt{\frac{n+1}{2}} \delta_{n',n+1} + \sqrt{\frac{n}{2}}
         \delta_{n',n-1} \right).
     \end{aligned}
   \end{equation}
+  where $l_0 = \sqrt{\flatfrac{\hbar}{eB}}$ is the magnetic length.
 
   Moreover, we can identify the $y$-directional current operator component as
   \begin{equation} \tag{D13}
@@ -373,7 +375,7 @@ We thank the reviewer for pointing out the importance mistake we have made in th
   \begin{equation} \tag{D16}
     \begin{aligned}
       \Big({j}^y_{s=0}\Big)_{nm,n'm'}^{electron} = &
-      \frac{ie\hbar\kappa^2}{m_e}
+      \frac{ie\hbar\kappa}{m_e}
       \delta_{k_x,k'_x}
       \left(
       \sqrt{\frac{n}{2}} \delta_{n',n-1}
@@ -384,7 +386,7 @@ We thank the reviewer for pointing out the importance mistake we have made in th
   \begin{equation} \tag{D17}
     \begin{aligned}
       \Big({j}^y_{s=0}\Big)_{nm,n'm'}^{electron} = &
-      \frac{ie^2 B}{m_e}
+      \frac{ie \hbar}{m_e l_0}
       \delta_{k_x,k'_x}
       \left(
       \sqrt{\frac{n}{2}} \delta_{n',n-1}
@@ -395,11 +397,34 @@ We thank the reviewer for pointing out the importance mistake we have made in th
   }
   \item Section V - (page 7):\\
   {\color{Maroon}
+  Moreover, let $\Pi = \varepsilon_F$ and the derived expression in Eq.~(31) leads to
+  \begin{equation} \label{eq:35}
+    \begin{aligned}
+      \sigma^{xx}  =
+      \frac{e^2l_0^2}{\pi\hbar A}
+      \sum_{n}
+      \frac{(n+1)}{\gamma_{n}\gamma_{n+1}}
+      \left[
+        \frac{1}
+        {
+          1 + \left(\frac{X_F - n -1}{\gamma_{n+1}}\right)^2
+        }
+      \right]
+      \left[
+        \frac{1}
+        {
+          1 + \left(\frac{X_F - n}{\gamma_{n}}\right)^2
+        }
+      \right],
+    \end{aligned}
+  \end{equation}
+  where $X_F = \left[\flatfrac{\varepsilon_F}{(\hbar \omega_0)} - \flatfrac{1}{2}\right]$,
+  $\gamma_n = \flatfrac{\widetilde{{\Gamma}}(\varepsilon_n)}{(\hbar \omega_0)}$, and $l_0 = \sqrt{\flatfrac{\hbar}{eB}}$.
   Following the same steps as above derivation, we can derive the longitudinal conductivity in the $y$-direction by applying the electric current operator for $y$-direction derived in Appendix D
-  \begin{equation} \tag{36}
+  \begin{equation} \label{eq:36}
     \begin{aligned}
       {\sigma}^{yy} =
-      \frac{e^2}{\pi\hbar A} &
+      \frac{e^2l_0^2}{\pi\hbar A}
       \sum_{n}
       \frac{(n+1)}{\gamma_{n}\gamma_{n+1}}
       \left[
@@ -479,11 +504,33 @@ We would like to mentioned the reviewer that while deriving Eq.~[31], we have as
 \color{RoyalBlue} Can the authors reproduce the quantized Hall conductance of filled Landau levels in the presence of disorder? Please discuss.
 }
 
-
+For analysing our system, we mainly employ the Floquet-Drude conductivity formula introduced by Wackerl \textit{et al.} \cite{wackerl20}. The Floquet-Drude conductivity formula was only developed for the diogonal components of the conductivity tensor of the considering system. In this analysis we were only focused on SdH oscillations in longitudinal conductivity components we analysed the dressing field effect on two diogonal components of the conductivity tensor through Floquet-Drude conductivity formula. Therefore we are unable to predict the off-diogonal component behavior of the system through our analysis and we need a novel formalism to handle these type of behaviors of dressed 2DEG quanutm Hall systems. However, we can use the already established formalism introduced by Endo \textit{et al.} \cite{endo09} to predict the behaviour of off-diogonal components of the conductivity tensor. As mentioned in the Ref.~\cite{endo09}, this theory on the relation between longitudinal and transverse conductivities highly match with the experiment observations
+\begin{equation} \nonumber
+  \dv{\widetilde{\sigma}^{xy}(X_F,I)}{B} \approx
+    \pi\mu \frac{\hbar \omega_0}{\varepsilon_F} [\widetilde{\sigma}^{xx}(X_F,I)]^2.
+\end{equation}
+By comparing the resultion between longitudinal and transverse conductivities in 2DEG quantum Hall system, we can expect the same Hall conductivity behaviour in a dressed quantum Hall system. However, using the dressing field we are able to squeeze the conductivity peaks on Landau levels. This will reduce the region of high conductivity peaks placed near the Landau levels. This will imply sudden Hall conductivity transitions between one plateau to another one near a Landau level. As empherical observation showed in Ref. \cite{klitzing80,gusynin06}, we can predict a staircase behavior for quantum Hall conductivity but with higher intensity dressing field we will get rapid transitions then the undressed system. However, to derive an analytical expression for the quantum Hall conductivity through Floquet-Drude conductivity needs to be reformulate from the begin and it will be the subject of our future study.
 
 \subsubsection*{Comment 4 -
 \color{RoyalBlue} The way some previous works are cited is disappointing. Example from page 8: “Despite this behavior being identified in previous works, their results did not coincide with the more accurate description of conductivity components in undressed quantum Hall systems.” This is not informative. Where, specifically, did results from earlier works fall short of reality, which have been better addressed in this work?
 }
+
+We would like to thank the reviewer for pointing out the deficiencies on our manuscript and we have considered your recommendations seriously. We made the following changes in language and presentation to improve the clarity of our manuscript.
+
+\begin{itemize}
+  \item Section VIII (page 8):\\
+  {\color{Maroon}
+  Our derived analytical expressions disclosed that we are able to control the transport characteristics of the dressed quantum Hall system by the applied dressing field’s intensity. Using detailed numerical calculations with empirical system parameters, we further analyzed the manipulation of conductivity components using the dressing field.
+  We found that the graphical illustrations that we obtained from these numerical calculations are capable of producing the same behavior as experiments on quantum Hall systems in the absence of a dressing field.
+  Furthermore, we identified that by increasing the intensity of the radiation, we can squeeze the conductivity regions near the Landau levels. Despite this behavior being identified in previous works done by Dini \textit{et al.}  \cite{dini16}, their results did not coincide with the experimental observations of longitudinal conductivity components in undressed quantum Hall systems presented in Ref.\cite{endo09}. This is due to the fact that the authors of Ref.\cite{dini16} has been used the conventinal expression of longitudinal conductivity from Ref.\cite{ando74_1,ando82}. However this theory yields a semi-elliptical broadening, which significantly deviates by the experimentally observed Landau levels \cite{endo09}.
+  However, our generalized analysis on the conductivity of dressed quantum Hall systems provide a well-suited description for empherically observed behaviours of undressed quantum Hall systems as well.
+  }
+  \item Section III (page 3):\\
+  {\color{Maroon}
+  The Floquet-Drude conductivity theory was employed recently by Wackerl \textit{et al.} \cite{wackerl20} as a method to analyze the transport properties of quantum systems exposed to strong radiation.
+  In their study \cite{wackerl20}, the authors have presented more accurate results than the former theoretical descriptions \cite{morina15,pervishko15} for the conductivity of nanoscale systems in the  presence of a dressing field. Therefore, we apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
+  }
+\end{itemize}
 
 \subsubsection*{Comment 5 -
 \color{RoyalBlue} Adding some physical insight into the remarkable observation of radiation-induced narrowing of lineshapes (Figs 4, 5) will help elevate
