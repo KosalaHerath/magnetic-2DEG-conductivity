@@ -105,10 +105,10 @@ Endo \textit{et al.} \cite{endo09} presented the calculations of longitudinal a
 In contrast, we can observe more exciting phenomena by simultaneously applying a dressing field to a quantum Hall system already under a non-oscillating magnetic field.
 Whilst there exist several leading theories for calculating conductivity tensor elements in quantum Hall systems \cite{ando74_1,ando82,endo09}, these studies  have not been utilized to describe the optical manipulation of charge transport.
 {\color{Red}Recently, experimental research on the effects of microwave illumination of 2DEG systems revealed microwave-induced resistance oscillations (MIRO) under weak magnetic fields \cite{zudov01,mani02,zudov03,mani04}.
-This inspired investigations on theoretical description of MIROs and several semiclassical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These analytical formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to photon absorption from low-frequency (microwave) fields.
+This inspired investigations on theoretical description of MIROs, and several semiclassical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These analytical formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to photon absorption from low-frequency (microwave) fields.
 In contrast to that, high-frequency external illumination on a 2DEG quantum Hall system needs to be studied as a purely dressing (nonabsorbable) field.
 The impacts induced by a purely dressing field on magnetotransport properties of 2DEG quantum Hall system need to be described by a non absorption mechanism and it has escaped the researchers’ attention before.
-Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall systems for a high-frequency case.} However, they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system.
+Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall system under high-frequency field.} However, they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system.
 {\color{Red}The authors of Ref.\cite{dini16} used the conductivity models from Refs. \cite{ando74_1,ando82}, and as mentioned in Endo \textit{et al.} \cite{endo09}, those models predict a semi-elliptical broadening against Fermi level for each Landau level and provide less agreement with the empirical results.}
 
 In the present analysis, we introduce a robust mathematical model for a dressed two-dimensional electron gas (2DEG) subject to another nonoscillating magnetic field.
@@ -121,8 +121,8 @@ Moreover, we find that the optical field can be used as a mechanism to regulate 
 
 The paper is organized as follows. Sec.  \ref{sec:schrodinger_problem} introduces our dressed quantum Hall system and the exact wave function solutions for the given configuration. Sec. \ref{sec:floquet_theory} provides the Floquet theory interpretation of these wave functions.
 We introduce Floquet-Fermi golden rule for a quantum Hall system in Sec. \ref{sec:inverse_scattering_time}, and use it in Sec. \ref{sec:floquet_drude_conductivity} to derive analytical expressions for longitudinal components of conductivity.
-The derived theoretical model is further analyzed numerically using empirical system parameters and compared with previous studies in Sec. \ref{sec:manipulate_conductivity}.
-In Sec. \ref{sec:conclusions}, we summarize our analysis and present our conclusions.
+The derived theoretical model is further analyzed numerically using empirical system parameters and compared with previous studies in Sec. \ref{sec:manipulate_conductivity}. {\color{Red}In Sec. \ref{sec:physical_significance}, we discuss the physical significance of our theoretical results and their possible employments in future nanoelectronic devices.
+Finally, we summarize our findings and present our conclusions in Sec. \ref{sec:conclusions}.}
 %===============================================================================
 
 %===============================================================================
@@ -130,20 +130,20 @@ In Sec. \ref{sec:conclusions}, we summarize our analysis and present our conclus
 %===============================================================================
 \section{\label{sec:schrodinger_problem} Schrodinger Problem for a Dressed Quantum Hall System}
 
-Our system consists of a 2DEG placed on the $xy$-plane of the three-dimensional coordinate space. In our analysis, the 2DEG is subjected to a nonoscillating magnetic field $\vb{B} = (0,0,B)^{T}$, which is pointed towards the $z$-axis. In addition, a linearly polarized strong light is applied perpendicular to the 2DEG surface. We specially select the frequency of the dressing field $\omega$ to be in the off-resonant regime such that the field behaves as a purely dressing field. Furthermore, without limiting the generality, we choose a $y$-polarized electric field $\vb{E} = (0,E\sin(\omega t),0)^{T}$ for the linearly polarized dressing field as given in Fig.~\ref{fig:1}.
+Our system consists of a 2DEG placed on the $xy$-plane of the three-dimensional coordinate space. In our analysis, the 2DEG is subjected to a nonoscillating magnetic field $\vb{B} = (0,0,B)^{\intercal}$, which is pointed towards the $z$-axis. In addition, a linearly polarized strong light is applied perpendicular to the 2DEG surface. We specially select the frequency of the dressing field $\omega$ to be in the off-resonant regime such that the field behaves as a purely dressing field. Furthermore, without limiting the generality, we choose a $y$-polarized electric field $\vb{E} = (0,E\sin(\omega t),0)^{\intercal}$ for the linearly polarized dressing field as given in Fig.~\ref{fig:1}.
 \begin{figure}[b]
 \includegraphics[scale=0.9]{fig_1_system_diagram}
 \caption{\label{fig:1} Our 2DEG system only confined in the $xy$-plane while both of the stationary magnetic field $\vb{B}$ and the dressing field are applied perpendicular to the plane of 2DEG. The dressing field is linearly polarized with a $y$-polarized electric field $\vb{E}$.}
 \end{figure}
 Here $B$ and $E$ represent the amplitudes of the stationary magnetic field and oscillating electric field, respectively.
 
-Using Landau gauge for the stationary magnetic field, we can represent it as a vector potential $\vb{A}_{s} = (-By,0,0)^{T}$. Furthermore, we model the dynamic dressing field in the Coulomb gauge as $\vb{A}_{d}(t) = (0,[E\cos(\omega t)]/\omega,0)^{T}$. These vector potentials are coupled to the momentum of 2DEG as kinetic momentum \cite{mahan00,bruus04}. Thus, we can represent our system with a time-dependent Hamiltonian
+Using Landau gauge for the stationary magnetic field, we can represent it as a vector potential $\vb{A}_{s} = (-By,0,0)^{\intercal}$. Furthermore, we model the dynamic dressing field in the Coulomb gauge as $\vb{A}_{d}(t) = (0,[E\cos(\omega t)]/\omega,0)^{\intercal}$. These vector potentials are coupled to the momentum of 2DEG as kinetic momentum \cite{mahan00,bruus04}. Thus, we can represent our system with a time-dependent Hamiltonian
 \begin{equation} \label{eq:1}
   \hat{H}_e(t) =
   \frac{1}{2m_e}
   \left\{ \hat{\vb{p}} - e\right[ \vb{A}_{s}+\vb{A}_{d}(t) \left] \right\}^2,
 \end{equation}
-where $m_e$ is the effective electron mass, $e$ is the magnitude of the electron charge, and $\hat{\vb{p}} = (\hat{p}_x,\hat{p}_y,0)^{T}$ represents the canonical momentum operator for 2DEG with electron momentum $(p_{x},p_{y},0)^{T}$.
+where $m_e$ is the effective electron mass, $e$ is the magnitude of the electron charge, and $\hat{\vb{p}} = (\hat{p}_x,\hat{p}_y,0)^{\intercal}$ represents the canonical momentum operator for 2DEG with electron momentum $(p_{x},p_{y},0)^{\intercal}$.
 The exact solutions for the time-dependent Schrödinger equation $i\hbar \dv*{\psi}{t} = \hat{H}_e(t)\psi$ were already derived in Refs. \cite{husimi53,ditt98,dini16}. Here we present them as a set of wave functions defined by two quantum numbers $(n,m)$
 \begin{equation} \label{eq:2}
   \begin{aligned}
@@ -671,7 +671,7 @@ Since we consider the dressed quantum Hall system under the off-resonant conditi
 \begin{equation} \label{eq:33}
   f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
-where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature and $\varepsilon_F$ is the Fermi energy of the system. Under the above distribution in low-temperature conditions or $k_BT \ll \varepsilon_F$ condition, we can approximate that the derivative of the Fermi-Dirac distribution is sharply peaked around the Fermi energy. This can be represented by the delta function \cite{endo09}
+where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature and $\varepsilon_F$ is the Fermi energy of the system. Under the low-temperature conditions ($k_BT \ll \varepsilon_F$), we can assume that the derivative of the Fermi-Dirac distribution is sharply peaked around the Fermi energy. This can be represented by the delta function \cite{endo09}
 \begin{equation} \label{eq:34}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F).
 \end{equation}
@@ -762,15 +762,18 @@ As illustrated in Fig.~\ref{fig:5} and Fig.~\ref{fig:6}, we can manipulate the n
 For a given dressing field intensity, the longitudinal conductivity varies with  the Fermi level of the system showing sharp peaks at each Landau energy level.
 In quantum Hall systems, electrons are restricted to bear only the Landau energies. Thus, the conductivity reduces significantly when the Fermi level is not aligned with any of the Landau levels. In contrast, near each Landau level, the conductivity achieves excessive values compared to other areas. Moreover, as illustrates in Fig.~\ref{fig:5}, the peak value of the normalized longitudinal conductivity on each Landau level gets increased with the Landau level number.
 
-On the other hand, considering the effects of the applied dressing field on the longitudinal conductivity of 2DEG, we can identify that the dressing field has sharpened the conductivity peaks.
+{\color{Red}
+By comparing the theoretical \cite{ando72,ando74_1,ando74_2,ando74_3,ando74_4,ando82,endo09} and experimental \cite{endo09,wakabayashi78,ochiai190,mancoff96,arapov02,grbic04,caviglia10} studies on the magnetoresistance of 2DEG quantum Hall systems under zero radiation with our results, we can identify that longitudinal conductivity oscillations in Fig.~[4] are a repetition of the Shubnikov–de Haas(SdH) oscillations.
+As observed in the experimental work done by Caviglia \textit{et al.} \cite{caviglia10}, the SdH oscillations period only depends on the perpendicular component of the applied magnetic field.
+Therefore, we can identify that many experiments done in low-temperatures \cite{endo09,ochiai190,mancoff96,arapov02,grbic04,caviglia10} with a different type of 2DEG have been examined these SdH oscillations against the applied magnetic field amplitude.
+The magnetic field's perpendicular component amplitude defines the cyclotron frequency ($\omega_0$) of the considering system.
+Therefore we can achieve the same oscillatory behavior for longitudinal conductivity in 2DEG quantum Hall system by changing the gate voltage. The  change of the gate voltage applied to the system will modify the Fermi level of the system.
+Since the Landau level energy is only dependent on the cyclotron frequency, this will generate the same SdH oscillations against gate voltage.
+This oscillatory behavior with applied gate voltage has been observed in an  experiment done by Wakabayashi \textit{et al.} \cite{wakabayashi78} in an inversion layer on a silicon surface at low temperature. By comparing these empirical observations with our results given in Fig. [4], we can identify that our oscillations are also shown the same characteristic behavior with $\hbar\omega_0$ periodicity against Fermi level value. Furthermore, when we increase the gate voltage, the Fermi level of the system gets increased. This will locate to the Fermi level on higher-order Landau levels. As illustrated in Fig.~[4], this will result in a higher conductivity peak value at the higher-order Landau levels. This same behavior was also observed in the experimental observations presented in Ref. \cite{wakabayashi78} as well.}
+
+{\color{Red}Considering the effects of the applied dressing field on the longitudinal conductivity of 2DEG, we can identify that the dressing field has sharpened the conductivity peaks.}
 When we increase the intensity level of the dressing field, the conductivity regions get weakened as illustrated in the Fig.~\ref{fig:6}.
 However, the peak value of the conductivity at each Landau level has the same value as the undressed system. This demonstrates our ability to tune the width of the conductivity regions in these quantum Hall systems with the help of a dressing field.
-
-These characteristics align well with the outcomes demonstrated by Dini \textit{et al.} \cite{dini16}.
-However, we can distinguish that the shapes and behavior of the conductivity regions that illustrated in Fig.~\ref{fig:5} and Fig.~\ref{fig:6} are generally incompatible with the results reported in Ref.~\cite{dini16}. This is due to the selection of the conventional longitudinal conductivity theory of 2DEG from Refs.~\cite{ando74_1,ando82}. The semi-elliptical conductivity regions are  illustrated in Refs.~\cite{dini16,ando74_1,ando82}, have less consistency with the experimentally observed data for Landau levels \cite{endo09}.
-In our study of the transport properties of quantum Hall systems, we developed the conductivity expression starting from the Floquet-Drude conductivity \cite{wackerl20} and we achieved outcomes that align with the results depicted in Ref. \cite{endo09}.
-The theory on the conductivity of quantum Hall systems in Ref.~\cite{endo09} provides an excellent agreement with the experimentally observed results in GaAs/AlGaAs 2DEG for the low magnetic field range.
-However, they have not considered the tunability that can be achieved with a dressing field. In this analysis, we account for both the magnetic and dressing field effects that can affect the transport properties of 2DEG, leading to a more generalized theory. Thus in this study, we were able to demonstrate that using Floquet-Drude conductivity method, one can derive a more generalized mathematical model which fits better with experiment for the charge transport properties of quantum Hall systems.
 
 \begin{figure}[t]
 \includegraphics[scale=0.54]{fig_4_conductivity_with_fermi_level}
@@ -785,14 +788,13 @@ In this calculation, we have assumed that the natural  broadening of $0$-th Land
 \label{fig:6}
 \end{figure}
 
+These characteristics align well with the outcomes demonstrated by Dini \textit{et al.} \cite{dini16}.
+However, we can distinguish that the shapes and behavior of the conductivity regions that illustrated in Fig.~\ref{fig:5} and Fig.~\ref{fig:6} are generally incompatible with the results reported in Ref.~\cite{dini16}. This is due to the selection of the conventional longitudinal conductivity theory of 2DEG from Refs.~\cite{ando74_1,ando82}. The semi-elliptical conductivity regions are  illustrated in Refs.~\cite{dini16,ando74_1,ando82}, have less consistency with the experimentally observed data for Landau levels \cite{endo09}.
+In our study of the transport properties of quantum Hall systems, we developed the conductivity expression starting from the Floquet-Drude conductivity \cite{wackerl20} and we achieved outcomes that align with the results depicted in Ref. \cite{endo09}.
+The theory on the conductivity of quantum Hall systems in Ref.~\cite{endo09} provides an excellent agreement with the experimentally observed results in GaAs/AlGaAs 2DEG for the low magnetic field range.
+However, they have not considered the tunability that can be achieved with a dressing field. In this analysis, we account for both the magnetic and dressing field effects that can affect the transport properties of 2DEG, leading to a more generalized theory. Thus in this study, we were able to demonstrate that using Floquet-Drude conductivity method, one can derive a more generalized mathematical model which fits better with experiment for the charge transport properties of quantum Hall systems.
+
 {\color{Red}
-By comparing the theoretical \cite{ando72,ando74_1,ando74_2,ando74_3,ando74_4,ando82,endo09} and experimental \cite{endo09,wakabayashi78,ochiai190,mancoff96,arapov02,grbic04,caviglia10} studies on the magnetoresistance of 2DEG quantum Hall systems under zero radiation with our results, we can identify that longitudinal conductivity oscillations in Fig.~[4] are a repetition of the Shubnikov–de Haas(SdH) oscillations.
-As observed in the experimental work done by Caviglia \textit{et al.} \cite{caviglia10}, the SdH oscillations period only depends on the perpendicular component of the applied magnetic field.
-Therefore, we can identify that many experiments done in low-temperatures \cite{endo09,ochiai190,mancoff96,arapov02,grbic04,caviglia10} with a different type of 2DEG have been examined these SdH oscillations against the applied magnetic field amplitude.
-The magnetic field's perpendicular component amplitude defines the cyclotron frequency ($\omega_0$) of the considering system.
-Therefore we can achieve the same oscillatory behavior for longitudinal conductivity in 2DEG quantum Hall system by changing the gate voltage. The  change of the gate voltage applied to the system will modify the Fermi level of the system.
-Since the Landau level energy is only dependent on the cyclotron frequency, this will generate the same SdH oscillations against gate voltage.
-This oscillatory behavior with applied gate voltage has been observed in an  experiment done by Wakabayashi \textit{et al.} \cite{wakabayashi78} in an inversion layer on a silicon surface at low temperature. By comparing these empirical observations with our results given in Fig. [4], we can identify that our oscillations are also shown the same characteristic behavior with $\hbar\omega_0$ periodicity against Fermi level value. Furthermore, when we increase the gate voltage, the Fermi level of the system gets increased. This will locate to the Fermi level on higher-order Landau levels. As illustrated in Fig.~[4], this will result in a higher conductivity peak value at the higher-order Landau levels. This same behavior was also observed in the experimental observations presented in Ref. \cite{wakabayashi78} as well. However, in our analysis, we have analytically explained the controllability of these conductivity regions using a dressing field.
 Lately, several experimental \cite{zudov01,mani02,zudov03,mani04} and theoretical \cite{durst03,dmitriev03,dmitriev05,dmitriev09} studies have uncovered various remarkable magnetotransport properties induced by microwave radiation on 2DEG quantum Hall systems. However, these experiments and theoretical models only examined the behavior of MIROs in 2DEG systems which are based on photon absorption from the applied low-frequency field.
 It is important to state that the difference between our SdH oscillations and MIROs \cite{zudov01,mani02,zudov03,mani04} by considering the frequency range of the applied electromagnetic field. In our case, the applied dressing field is in the off-resonant range and that will only change the broadening of Landau levels and avoid any contribution towards the photon absorptions. This will clearly describe the crucial difference between low-frequency illumination and high-frequency illumination effects on 2DEG quantum systems. Therefore our theoretical analysis can help to fill the gap in knowledge of the high-frequency dressing field effects on 2DEG quantum Hall systems.
 }
@@ -824,7 +826,7 @@ Based on these ready-to-use nanoelectronic devices and their feasible optimizati
 \section{\label{sec:conclusions} Conclusions}
 
 In this paper, we introduced a generalized mathematical model for predicting  charge transport properties in a 2DEG under a nonoscillating magnetic field and a high-intensity light. Under the uniform magnetic field, the charged particles can only settle in discrete energy values, which leads to the Landau quantization. We modeled the behavior of electrons in Landau levels under the dressing field utilizing the Floquet-Drude conductivity method. {\color{Red}
-We assumed the impurities in the material as a Gaussian random scattering potential and the applied magnetic field within an order where we can neglect effects of the Anderson localization, the formation of the edge states, the spin splitting, and the electron-electron interactions.} Finally, we derived expressions for x-directional and y-directional longitudinal components of electric conductivity tensor for the considered system.
+We assumed the impurities in the material as a Gaussian random scattering potential and the applied magnetic field within an order where we can neglect effects of the Anderson localization, the formation of the edge states, the spin splitting, and the electron-electron interactions. Finally, we derived analytical expressions for the diagonal components of electric conductivity tensor concerning the 2DEG quantum Hall system under low temperatures.}
 
 Our derived analytical expressions disclosed that we are able to control the transport characteristics of the dressed quantum Hall system by the applied dressing field’s intensity. Using detailed numerical calculations with empirical system parameters, we further analyzed the manipulation of conductivity components using the dressing field.
 We found that the graphical illustrations that we obtained from these numerical calculations are capable of producing the same behavior as experiments on quantum Hall systems in the absence of a dressing field.
@@ -1786,7 +1788,7 @@ we can identify the $0$-th component of matrix elements for $y$-directional elec
   \end{aligned}
 \end{equation}
 and
-\begin{equation} \label{eq:d15}
+\begin{equation} \label{eq:d16}
   \begin{aligned}
     \Big({j}^y_{s=0}\Big)_{nm,n'm'}^{electron} = &
     \frac{ie\hbar}{{m_e}l_0}
