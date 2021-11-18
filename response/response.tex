@@ -252,17 +252,17 @@ Since we have only mentioned the validity conditions we used to derive the Eq.~[
 \color{RoyalBlue} If continuous illumination is applied to an electron system, the system will heat indefinitely. The distribution function is stabilized when the electron-electron and electron-phonon scattering mechanisms are included. What are the conditions of validity for eqs. (33-34)? The deviations of the distribution function from its equilibrium result in effects that can significantly overcome the equilibrium contributions, see Dmitriev et al, Phys. Rev. B 80, 165327 (2009). However, to capture these effects, a treatment within Floquet-Drude formalism is insufficient and a complete quantum kinetic equation has to be analyzed. Can the authors argue why their results still present some interest to the community even if they potentially disregard more significant contributions?
 }
 
-This is a good, valid question. First, we discuss the validity of the Eq.~[33] and Eq.~[34]. In our analysis, we have derived the longitudinal conductivity of a dressed quantum Hall system without any partial distribution function specification until Eq.~[31].
-In contrast to the MIROs analysis \cite{dmitriev03,dmitriev05,dmitriev09}, we consider the dressed quantum Hall system under the off-resonant condition, where the absorption of photons are avoided. Therefore, we can select the Fermi-Dirac distribution as our particle distribution function on the general expression given in Eq.~[31]
+This is a good, valid question. First, we discuss the validity of the Eq.~[33] and Eq.~[34]. Our analysis derived the longitudinal conductivity of a dressed quantum Hall system without any partial distribution function specification until Eq.~[31].
+In contrast to the MIROs analysis \cite{dmitriev03,dmitriev05,dmitriev09}, we consider the dressed quantum Hall system under the off-resonant condition, but photon absorption does not happen. Therefore, we can select the Fermi-Dirac distribution as our particle distribution function for Eq.~[31]
 \begin{equation} \tag{5}
   f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1}.
 \end{equation}
-Here, $k_B$ is the Boltzmann constant, $T$ is the absolute temperature and $\varepsilon_F$ is the Fermi energy of the system.
-Then we selected a special scenario where we assumed that the system is under a low-temperature limit or the condition $k_BT \ll \varepsilon_F$.
-Since previous theoretical studies \cite{wackerl20,dini16,endo09} on magnetotransport properties of 2DEG quantum Hall systems were derived under this assumption, we selected this condition to provide a better comparison with their outcomes.
+Here, $k_B$ is the Boltzmann constant, $T$ is the absolute temperature, and $\varepsilon_F$ is the Fermi energy of the system.
+Then we consider a special scenario where the system operates at a low-temperature limit, i.e., the condition $k_BT \ll \varepsilon_F$.
+Since previous theoretical studies \cite{wackerl20,dini16,endo09} on magneto-transport properties of 2DEG quantum Hall systems were derived under this assumption, we also adopted the same conditions as it enables us to compare results with those studies.
 In addition, as mentioned in previous experimental studies on SdH oscillations \cite{zudov03,mani02,arapov02} in 2DEG undressed quantum Hall systems with increasing temperature, we can identify the decaying behavior of SdH oscillations.
-Therefore, if we need to maintain a good oscillatory behavior we need to work in low temperatures.
-Since in our analysis, we study the manipulation of SdH oscillations using a dressing field, it is reasonable to extend our general derivation in given Eq.~[31] into a simple expression through a low-temperature limit. Then we can assume that the derivative of the Fermi-Dirac distribution is sharply peaked around the Fermi energy. This can be represented by the delta function \cite{endo09}
+Therefore, if we need to maintain a good oscillatory behavior, we need to operate in low temperatures.
+Since in our analysis, we study the manipulation of SdH oscillations using a dressing field, it is reasonable to simplify our general derivation in given Eq.~[31] for low-temperature limit. Under these assumptions, the derivative of the Fermi-Dirac distribution is sharply peaked around the Fermi energy, and  can be represented by the delta function \cite{endo09}
 \begin{equation} \tag{6}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F).
 \end{equation}
@@ -270,20 +270,20 @@ Applying these adequate conditions, we can simplify our derivation into single e
 \begin{itemize}
   \item Section V - second paragraph (page 7):\\
   {\color{Red}
-  Since we consider the dressed quantum Hall system under the off-resonant condition, the absorption of photons are avoided. Therefore, we select the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
+  We consider a dressed quantum Hall system under off-resonant condition, where photon absorption does not happen. Therefore, we can select the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
   \begin{equation} \tag{33}
     f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1},
   \end{equation}
-  where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature and $\varepsilon_F$ is the Fermi energy of the system. Under the low-temperature conditions ($k_BT \ll \varepsilon_F$), we can assume that the derivative of the Fermi-Dirac distribution is sharply peaked around the Fermi energy. This can be represented by the delta function \cite{endo09}
+  where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature, and $\varepsilon_F$ is the Fermi energy of the system. At low-temperatures, i.e. $k_BT \ll \varepsilon_F$, the derivative of this distribution is sharply peaked around the Fermi energy, and can be approximated by a delta function \cite{endo09}
   \begin{equation} \tag{34}
     - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F).
   \end{equation}
   }
 \end{itemize}
 
-Yes, it is true that when we consider the experimental observations of a quantum Hall system a strong dressing field can increase the temperature of the sample. However, as mentioned in a previous study by Dini \textit{et al.} \cite{dini16} and Kibis \textit{et al.} \cite{kibis15}, we can maintain low-temperature by applying narrow pulses of a strong dressing field to observe the discussed phenomena.
+Yes, indeed, experiments on quantum hall systems subject to a strong dressing field show elevated temperatures. However, as demonstrated in previous studies by Dini \textit{et al.} \cite{dini16} and Kibis \textit{et al.} \cite{kibis15}, it is possible to maintain low system temperature by limiting the dressing field to narrow pulses.
 
-Although we have extended our general derivation given in Eq.~[31] into special consideration for comparison, we can improve our theoretical model into different types of particle distribution functions. As presented in the previous work done by Dmitriev \textit{et al.} \cite{dmitriev05}, a well-defined analytical discussion needs to address the changes in distribution functions in our derived general longitudinal conductivity formula and this would be an noteworthy extension to our study.
+Although we have extended our general derivation given in Eq.~[31] into special consideration for comparison, we can improve our theoretical model into different types of particle distribution functions. As presented in the previous work done by Dmitriev \textit{et al.} \cite{dmitriev05}, a well-defined analytical discussion needs to address the changes in distribution functions in our derived general longitudinal conductivity formula, and this would be a noteworthy extension to our study.
 
 \subsubsection*{Comment 6 -
 \color{RoyalBlue} The authors presented the results for the conductivity tensor's xx- and yy-components. They seem to be identical, apart of a dimensional factor $(eB)^2$ in the denominator. The equality of these two components is expected for isotropic systems. Does the polarization of the electromagnetic field break the isotropy? Do the two components of the conductivity remain equal even for an arbitrary direction of a linearly polarized field? Is there a non-Hall contribution to the xy-component?
