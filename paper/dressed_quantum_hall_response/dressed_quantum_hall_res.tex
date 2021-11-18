@@ -104,17 +104,21 @@ Endo \textit{et al.} \cite{endo09} presented the calculations of longitudinal a
 
 In contrast, we can observe more exciting phenomena by simultaneously applying a dressing field to a quantum Hall system already under a non-oscillating magnetic field.
 Whilst there exist several leading theories for calculating conductivity tensor elements in quantum Hall systems \cite{ando74_1,ando82,endo09}, these studies  have not been utilized to describe the optical manipulation of charge transport.
-{\color{Red}Recently, experimental research on the effects of microwave illumination of 2DEG systems revealed microwave-induced resistance oscillations (MIRO) under weak magnetic fields \cite{zudov01,mani02,zudov03,mani04}.
-This inspired investigations on theoretical description of MIROs, and several semiclassical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These analytical formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to photon absorption from low-frequency (microwave) fields.
-In contrast to that, high-frequency external illumination on a 2DEG quantum Hall system needs to be studied as a purely dressing (nonabsorbable) field.
-The impacts induced by a purely dressing field on magnetotransport properties of 2DEG quantum Hall system need to be described by a non absorption mechanism and it has escaped the researchers’ attention before.
-Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall system under high-frequency field.} However, they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system.
-{\color{Red}The authors of Ref.\cite{dini16} used the conductivity models from Refs. \cite{ando74_1,ando82}, and as mentioned in Endo \textit{et al.} \cite{endo09}, those models predict a semi-elliptical broadening against Fermi level for each Landau level and provide less agreement with the empirical results.}
+{\color{Red}
+Recently, experimental research on the effects of microwave illumination of 2DEG systems revealed microwave-induced resistance oscillations (MIRO) under weak magnetic fields \cite{zudov01,mani02,zudov03,mani04}.
+This inspired investigations on the theoretical description of MIROs, and several semiclassical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to photon absorption from low-frequency (microwave) fields.
+In contrast to that, high-frequency external illumination on a 2DEG quantum Hall system needs to be studied as a pure dressing (nonabsorbable) field.
+The influence of induced by a pure dressing field on
+magneto-transport properties of 2DEG quantum Hall system needs to be described by a non-absorption mechanism, and it has escaped the researchers’ attention before.
+Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall system subjected to a high-frequency field.}
+However, they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system.
+{\color{Red}
+The authors of Ref. \cite{dini16} used the conductivity models from Refs. \cite{ando74_1,ando82}, and as mentioned in Endo \textit{et al.} \cite{endo09}, those models predict a semi-elliptical broadening against Fermi level for each Landau level and provide less agreement with the empirical results.}
 
 In the present analysis, we introduce a robust mathematical model for a dressed two-dimensional electron gas (2DEG) subject to another nonoscillating magnetic field.
 A stationary magnetic field is applied perpendicularly across the surface of the 2DEG system. This causes the orbital motion of the electrons to be quantized, and a discrete energy spectrum with Landau splitting is observed \cite{landau30}.
 {\color{Red}
-It is important to note that, in this analysis, we consider the applied magnetic field at a range where the Anderson localization, the formation of the edge states, the spin splitting, and the electron-electron interactions can be neglected. The use of this assumption can also be found in the study done by Endo \textit{et al.} \cite{endo09}.
+It is important to note that, we limit the applied magnetic field to a range where we can neglect effects such as Anderson localization, formation of the edge states, spin splitting, the electron-electron interactions. This is not an overly restrictive assumption and others have used the same assumption in their work, e.g. see \textit{et al.} \cite{endo09}.
 } In this study, we explicitly calculate the longitudinal components ($\sigma^{xx},\sigma^{yy}$) of the conductivity tensor in a periodically driven quantum Hall system by developing a generalized analytical description using the Floquet-Drude conductivity \cite{wackerl20}.
 Finally, we demonstrate that our generalized model reproduces the results of the state-of-the-art conductivity model in Ref. \cite{endo09}, which was developed for the more specific case of quantum Hall systems without the external dressing field.
 Moreover, we find that the optical field can be used as a mechanism to regulate transport behavior in numerous 2D nanostructures which can serve as a basis for many useful nanoelectronic devices. We believe that our theoretical analysis and visual depictions of numerical results will lead to a better understanding of manipulating charge transport. Moreover, this will inspire advanced  developments in nanoscale quantum devices.
@@ -188,7 +192,8 @@ The exponential phase shifts in Eq.~(\ref{eq:2}) represent the influence of the 
 Symmetry conditions often give useful insights into the behaviors of physical quantum systems.
 For instance, the famous Bloch analysis of electrons in quantum systems introduces a mathematical explanation for quantum systems occupying a discrete translational symmetry in the configuration space. Similarly, Floquet theory gives a mathematical formalism that can be used for translational symmetry in time rather than in space \cite{floquet83,grifoni98,holthaus15}.
 The Floquet-Drude conductivity theory was employed recently by Wackerl \textit{et al.} \cite{wackerl20} as a method to analyze the transport properties of quantum systems exposed to strong radiation.
-{\color{Red}In their study \cite{wackerl20}, the authors have presented more accurate results than the former theoretical descriptions \cite{morina15,pervishko15} for the conductivity of nanoscale systems in the  presence of a dressing field.} Therefore, we apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
+{\color{Red}
+In their study \cite{wackerl20}, the authors have presented more accurate results than the former theoretical descriptions \cite{morina15,pervishko15} for the conductivity of nanoscale systems in the  presence of a dressing field.} Therefore, we apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
 
 First, we need to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq:2}). By factorizing the wave function into a linearly time-dependent part and a periodic time-dependent part, we present the quasienergies with
 \begin{equation} \label{eq:6}
@@ -284,11 +289,11 @@ With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,alt
 where $\varrho = \eta_{imp} L_x \left[\flatfrac{ V_{imp}}{\pi}\right]^{1/2}$, $\varepsilon$ is a given energy value, $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer order, and $\varepsilon_N$ is the energy of the $N$-th Landau level.
 A more detailed derivation is given in Appendix \ref{appendix_c}.
 {\color{Red}
-We modeled the effect caused by impurities in the considered system as a single short-range perturbation potential. Analyzing the electric properties for a specific impurity configuration is a rather formidable task and is not examined in this work since it is unlikely to have exactly the evaluated impurity configuration in an experiment.
+We have modeled the effect caused by impurities as a single short-range perturbation potential. Analyzing the electric properties for a specific impurity distribution is a rather formidable task. We do not consider a specific impurity distribution here as it is unlikely to represent a measured impurity configuration in an experiment.
 Therefore, in this study, we consider the statistically averaged properties of 2DEG over impurity configurations.
-Furthermore, we assumed that our perturbation potential is formed by a group of randomly distributed impurities under the Edwards impurity model \cite{akkermans10,wackerl20}.
-Thus, we represented the total scattering potential in the 2DEG as a sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$. Then we  approximate the impurity potential into a Gaussian white noise \cite{akkermans10,wackerl20}.
-Here $\eta_{imp}$ is the number of impurities in a unit area, $V_{imp} = \expval{|V_{{k'}_x,k_x}|^2}_{imp}$ with $V_{{k'}_x,k_x} = \mel**{k'_x}{\upsilon(x) }{k_x}$, and $\braket{x}{k_x} = e^{-ik_x x}$.
+Furthermore, we have assumed that a group of randomly distributed impurities forms our perturbation potential under the Edwards impurity model  \cite{akkermans10,wackerl20}.
+Essentially, all these assumptions mean that we can write the total scattering potential in the 2DEG as a sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$. This enables us to approximate the impurity potential as a Gaussian white noise \cite{akkermans10,wackerl20},
+where $\eta_{imp}$ is the number of impurities in a unit area, $V_{imp} = \expval{|V_{{k'}_x,k_x}|^2}_{imp}$ with $V_{{k'}_x,k_x} = \mel**{k'_x}{\upsilon(x) }{k_x}$, and $\braket{x}{k_x} = e^{-ik_x x}$.
 Moreover, in this analysis, $\expval{\cdot}_{imp}$ represents the average over the impurity disorder. In this derivation, we only considered the first order (the Born approximation) contribution from the impurity potential.
 }
 
@@ -384,7 +389,7 @@ In this calculation, we have assumed that the natural  broadening of $0$-th Land
 \end{figure}
 
 Next, we calculated the normalized energy band broadening against $x$-directional momentum component ${k_x}$ for different Landau levels ($N = 0,1,2,3,4$) for GaAs-based quantum well and the results are depicted in Fig.~\ref{fig:2} and Fig.~\ref{fig:3}. To make a comparison, we have selected the experiment parameters to match with analysis in Ref.~\cite{endo09}.
-{\color{Red}In the study presented in Ref.~\cite{endo09}, the authors have assumed that the effective mass of the electron in GaAs-based quantum well system is $m_e \approx 0.07\widetilde{m}_e$ where $\widetilde{m}_e$ is the mass of the electron \cite{endo09,winkler03,wackerl20}.} In addition, they used the broadening of the undressed $0$-th Landau level $\Gamma_0$ as $\SI{0.24}{\milli\eV}$. Therefore, in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = \SI{0.24}{\milli\eV}$.
+{\color{Red}In the study presented in Ref. \cite{endo09}, the authors have assumed that the effective mass of an electron in GaAs-based quantum well system is $m_e \approx 0.07\widetilde{m}_e$ where $\widetilde{m}_e$ is the mass of the electron \cite{endo09,winkler03,wackerl20}.} In addition, they used the broadening of the undressed $0$-th Landau level $\Gamma_0$ as $\SI{0.24}{\milli\eV}$. Therefore, in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = \SI{0.24}{\milli\eV}$.
 Here, we observe that the normalized energy broadening value for each Landau level is independent of the $x$-directional momentum $k_x$ value and we are able to manipulate it by the dressing field. When the dressing field's intensity increases, the energy broadening is reduced, which leads to changes in the transport properties of the dressed quantum Hall system.
 To analyze these adjustments in detail, we derive an analytical expression for the conductivity of a dressed quantum Hall system in the next section.
 %===============================================================================
@@ -667,11 +672,11 @@ However, by considering the condition that the center of the cyclotron orbit $y_
  -\flatfrac{m_e\omega_0 Ly}{(2\hbar)} \leq k_x \leq \flatfrac{m_e\omega_0 Ly}{(2\hbar)}.
 \end{equation}
 {\color{Red}
-Since we consider the dressed quantum Hall system under the off-resonant condition, the absorption of photons are avoided. Therefore, we select the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
+We consider a dressed quantum Hall system under off-resonant condition, where photon absorption does not happen. Therefore, we can select the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
 \begin{equation} \label{eq:33}
   f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
-where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature and $\varepsilon_F$ is the Fermi energy of the system. Under the low-temperature conditions ($k_BT \ll \varepsilon_F$), we can assume that the derivative of the Fermi-Dirac distribution is sharply peaked around the Fermi energy. This can be represented by the delta function \cite{endo09}
+where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature, and $\varepsilon_F$ is the Fermi energy of the system. At low-temperatures, i.e., $k_BT \ll \varepsilon_F$, the derivative of this distribution is sharply peaked around the Fermi energy, and can be approximated by a delta function
 \begin{equation} \label{eq:34}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F).
 \end{equation}
