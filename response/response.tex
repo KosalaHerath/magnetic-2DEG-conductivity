@@ -289,7 +289,7 @@ Although we have extended our general derivation given in Eq.~[31] into special 
 \color{RoyalBlue} The authors presented the results for the conductivity tensor's xx- and yy-components. They seem to be identical, apart of a dimensional factor $(eB)^2$ in the denominator. The equality of these two components is expected for isotropic systems. Does the polarization of the electromagnetic field break the isotropy? Do the two components of the conductivity remain equal even for an arbitrary direction of a linearly polarized field? Is there a non-Hall contribution to the xy-component?
 }
 
-We express our gratitude towards the reviewer for pointing out this inadvertent oversight done in the $yy$-component of the current operator calculation and this has led to an unexpected normalization factor in the yy-component of conductivity expression. Since we have only analyzed the normalized $xx$-component of the conductivity tensor, the remaining analysis is not affected by this change. After this change, we can predict that both xx-component and $yy$-component show the same conductivity behaviors. We added these amendments to the current operator calculations done in Appendix D and the longitudinal conductivity calculation under Section V.
+We express our gratitude towards the reviewer for pointing out this inadvertent oversight done in the $yy$-component of the current operator calculation. This has led to an unexpected normalization factor in the yy-component of the  conductivity expression. Since we have only used the normalized $xx$-component of the conductivity tensor for subsequent analysis, this oversight has no impact on the analysis reported in the  manuscsript. With this correction, we observe that both xx-component and $yy$-component show the same conductivity behaviors. We added these amendments to the current operator calculations done in Appendix D and the longitudinal conductivity calculation under Section V.
 
 \begin{itemize}
   \item Appendix D (page 16):\\
@@ -333,7 +333,7 @@ We express our gratitude towards the reviewer for pointing out this inadvertent 
       dy.
     \end{aligned}
   \end{equation}
-  Let $[y - y_0 - \zeta(t)] = \bar{y}$ and we can obtain
+  Let $[y - y_0 - \zeta(t)] = \bar{y}$, and we can obtain
   \begin{equation} \tag{D7}
     \begin{aligned}
       \left({j}_x \right)_{nm,n'm'} =
@@ -346,7 +346,7 @@ We express our gratitude towards the reviewer for pointing out this inadvertent 
       d\bar{y}.
     \end{aligned}
   \end{equation}
-  Using the following integral identities of the Floquet modes which are made up with Gauss-Hermite functions \cite{vedenyapin11,szego59}
+  Using the following integral identities of the Floquet modes that are made up of Gauss-Hermite functions \cite{vedenyapin11,szego59}
   \begin{equation} \tag{D8}
     \int
     \chi_{n}({y})
@@ -373,7 +373,7 @@ We express our gratitude towards the reviewer for pointing out this inadvertent 
       \right].
     \end{aligned}
   \end{equation}
-  Due to high complexity of extract solution, in this study we only consider the constant contribution. Therefore, we can identify the $0$-th component of the Fourier series as
+  Due to high complexity of extract solution, in this study we only consider the constant contribution from the Fourier series components of the above expression. Therefore, we can identify the $0$-th component of the Fourier series as
   \begin{equation} \tag{D11}
     \begin{aligned}
         \left({j}_x \right)_{nm,n'm'} =&
@@ -383,7 +383,7 @@ We express our gratitude towards the reviewer for pointing out this inadvertent 
         \delta_{n',n-1} \right).
     \end{aligned}
   \end{equation}
-  For a electric current operator, we can apply the electron's charge and the  effective mass of the electron to the above derived equation. This leads to
+  To calculate the electric current operator, we substitute the electron's charge and effective mass to the above derived equation. This leads to
   \begin{equation} \tag{D12}
     \begin{aligned}
         \Big({j}^x_{s=0}\Big)_{nm,n'm'}^{electron}  =&
@@ -487,9 +487,9 @@ We express our gratitude towards the reviewer for pointing out this inadvertent 
   }
 \end{itemize}
 
-If we applied an arbitrary directional polarized dressing field, we can derive an expression for the longitudinal conductivity components by considering dressing field contribution for each direction ($x$ and $y$) with the same steps presented in our analysis. This would change the amplitude of the considering dressing field ($E$) in each direction. Now there will be a new component in parallel to the considering conductivity component and this will modify the time-dependent Hamiltonian given in Eq.~[2]. Then, we need to solve the Schrödinger equation with the modified Hamiltonian to find the new Floquet modes for the new system. These will define the effect on the inverse scattering time matrix components. As mentioned in Ref. \cite{wackerl20} and our work, applied strong dressing field tends to change the quantum state of the considered system and creates novel states called Floquet states. The properties of these states depend on the characteristics of the applied dressing field. Therefore, the polarization method also changes the behavior of the Floquet states. These polarization-dependent conductivity behaviors in 2DEG systems can be found in references \cite{wackerl20,morina15} and in their work authors have illustrated the conductivity behavior with circular and linear polarized dressing fields. However, in a dressed quantum Hall system with a $y$-directional linear polarized field, we predict the same longitudinal conductivity behaviors in diagonal components of the conductivity tensor.
+Suppose we applied an arbitrary directional polarized dressing field. In thay case, we could derive an expression for the longitudinal conductivity components by considering dressing field contribution for each direction ($x$ and $y$) with the same steps presented in our analysis. This would change the amplitude of the considering dressing field ($E$) in each direction. There will be a new component in parallel to the considering conductivity component, which will modify the time-dependent Hamiltonian given in Eq.~[2]. Then, we need to solve the Schrödinger equation with the modified Hamiltonian to find the new Floquet modes for the new system. These will define the effect on the inverse scattering time matrix components. As mentioned in Ref. \cite{wackerl20} and our work, applied strong dressing field tends to change the quantum state of the considered system and creates novel states called Floquet states. The properties of these states depend on the characteristics of the applied dressing field. Therefore, the polarization method also changes the behavior of the Floquet states. These polarization-dependent conductivity behaviors in 2DEG systems can be found in references \cite{wackerl20,morina15} and in their work authors have illustrated the conductivity behavior with circular and linear polarized dressing fields. However, in a dressed quantum Hall system with a $y$-directional linear polarized field, we predict the same longitudinal conductivity behaviors in diagonal components of the conductivity tensor.
 
-For analyzing our system, we mainly employ the Floquet-Drude conductivity formula introduced by Wackerl \textit{et al.} \cite{wackerl20}. The Floquet-Drude conductivity formula was only developed for the diagonal components of the conductivity tensor of the considering system. In this analysis we were only focused on SdH oscillations in longitudinal conductivity components we analyzed the dressing field effect on two diagonal components of the conductivity tensor. Therefore we are unable to predict the off-diagonal component behavior of the system through our analysis and we need a novel formalism to handle these types of behaviors of dressed 2DEG quantum Hall systems.
+For analyzing our system, we mainly employ the diagonal components of the Floquet-Drude conductivity tensor introduced by Wackerl \textit{et al.} \cite{wackerl20}. As we mainly focus on SdH oscillations in longitudinal conductivity components, we limit our analysis to the dressing field on two diagonal components of the conductivity tensor. Therefore we are unable to predict the off-diagonal component behavior of the system.
 %
 % As mentioned in Ref.\cite{wackerl20} and our work, applied strong dressing field tends to change the quantum state of the consideirng system and creates novel states called Floquet states. The properties of these states are depends on the characteristics of applied dressing field. Therefore, the polarization method also change the behavior of the Floquet states.
 % These polarization dependent conductivity behaviors in 2DEG systems can be found in references \cite{wackerl20,morina15} and in their work authors have illustrated the conductivity behavior with circular and linear polarized dressing fields. In addition, they have mentioned the impact on the direction of the linearly polarization dressing field and this will break the isotropy behavior of the longitudinal conductivities in the consideirng system.
