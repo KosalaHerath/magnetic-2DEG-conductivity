@@ -104,28 +104,25 @@ Endo \textit{et al.} \cite{endo09} presented the calculations of longitudinal a
 
 In contrast, we can observe more exciting phenomena by simultaneously applying a dressing field to a quantum Hall system already under a non-oscillating magnetic field.
 Whilst there exist several leading theories for calculating conductivity tensor elements in quantum Hall systems \cite{ando74_1,ando82,endo09}, these studies  have not been utilized to describe the optical manipulation of charge transport.
-{\color{Red}
 Recently, experimental research on the effects of microwave illumination of 2DEG systems revealed microwave-induced resistance oscillations (MIROs) under weak magnetic fields \cite{zudov01,mani02,zudov03,mani04}.
 This inspired investigations on the theoretical description of MIROs, and several semiclassical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to photon absorption from low-frequency (microwave) electromagnetic fields.
 In contrast to that, high-frequency external illumination on a 2DEG quantum Hall system needs to be studied as a pure dressing (nonabsorbable) field.
 The influence induced by a pure dressing field on
 magneto-transport properties of 2DEG quantum Hall system needs to be described by a non-absorption mechanism, and it has escaped the researchers’ attention before.
-Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall system subjected to a high-frequency field.}
+Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall system subjected to a high-frequency field.
 However, they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system.
-{\color{Red}
-The authors of Ref. \cite{dini16} used the conductivity models from Refs. \cite{ando74_1,ando82}, and as mentioned in Endo \textit{et al.} \cite{endo09}, those models predict a semi-elliptical broadening against Fermi level for each Landau level and provide less agreement with the empirical results.}
+The authors of Ref. \cite{dini16} used the conductivity models from Refs. \cite{ando74_1,ando82}, and as mentioned in Endo \textit{et al.} \cite{endo09}, those models predict a semi-elliptical broadening against Fermi level for each Landau level and provide less agreement with the empirical results.
 
 In the present analysis, we introduce a robust mathematical model for a dressed two-dimensional electron gas (2DEG) subject to another nonoscillating magnetic field.
 A stationary magnetic field is applied perpendicularly across the surface of the 2DEG system. This causes the orbital motion of the electrons to be quantized, and a discrete energy spectrum with Landau splitting is observed \cite{landau30}.
-{\color{Red}
-It is important to note that, we limit the applied magnetic field to a range where we can neglect effects such as Anderson localization, formation of the edge states, spin splitting, and the electron-electron interactions. These are not overly restrictive assumptions, and other have successfully used same assumptions in their work, e.g. see Endo \textit{et al.} \cite{endo09}.} In this study, we explicitly calculate the longitudinal components ($\sigma^{xx},\sigma^{yy}$) of the conductivity tensor in a periodically driven quantum Hall system by developing a generalized analytical description using the Floquet-Drude conductivity \cite{wackerl20}.
+It is important to note that, we limit the applied magnetic field to a range where we can neglect effects such as Anderson localization, formation of the edge states, spin splitting, and the electron-electron interactions. These are not overly restrictive assumptions, and other have successfully used same assumptions in their work, e.g. see Endo \textit{et al.} \cite{endo09}. In this study, we explicitly calculate the longitudinal components ($\sigma^{xx},\sigma^{yy}$) of the conductivity tensor in a periodically driven quantum Hall system by developing a generalized analytical description using the Floquet-Drude conductivity \cite{wackerl20}.
 Finally, we demonstrate that our generalized model reproduces the results of the state-of-the-art conductivity model in Ref. \cite{endo09}, which was developed for the more specific case of quantum Hall systems without the external dressing field.
 Moreover, we find that the optical field can be used as a mechanism to regulate transport behavior in numerous 2D nanostructures which can serve as a basis for many useful nanoelectronic devices. We believe that our theoretical analysis and visual depictions of numerical results will lead to a better understanding of manipulating charge transport. Moreover, this will inspire advanced  developments in nanoscale quantum devices.
 
 The paper is organized as follows. Sec.  \ref{sec:schrodinger_problem} introduces our dressed quantum Hall system and the exact wave function solutions for the given configuration. Sec. \ref{sec:floquet_theory} provides the Floquet theory interpretation of these wave functions.
 We introduce Floquet-Fermi golden rule for a quantum Hall system in Sec. \ref{sec:inverse_scattering_time}, and use it in Sec. \ref{sec:floquet_drude_conductivity} to derive analytical expressions for longitudinal components of conductivity.
-The derived theoretical model is further analyzed numerically using empirical system parameters and compared with previous studies in Sec. \ref{sec:manipulate_conductivity}. {\color{Red}In Sec. \ref{sec:physical_significance}, we discuss the physical significance of our theoretical results and their possible use in future nanoelectronic devices.
-Finally, we summarize our findings and present our conclusions in Sec. \ref{sec:conclusions}.}
+The derived theoretical model is further analyzed numerically using empirical system parameters and compared with previous studies in Sec. \ref{sec:manipulate_conductivity}. In Sec. \ref{sec:physical_significance}, we discuss the physical significance of our theoretical results and their possible use in future nanoelectronic devices.
+Finally, we summarize our findings and present our conclusions in Sec. \ref{sec:conclusions}.
 %===============================================================================
 
 %===============================================================================
@@ -191,8 +188,7 @@ The exponential phase shifts in Eq.~(\ref{eq:2}) represent the influence of the 
 Symmetry conditions often give useful insights into the behaviors of physical quantum systems.
 For instance, the famous Bloch analysis of electrons in quantum systems introduces a mathematical explanation for quantum systems occupying a discrete translational symmetry in the configuration space. Similarly, Floquet theory gives a mathematical formalism that can be used for translational symmetry in time rather than in space \cite{floquet83,grifoni98,holthaus15}.
 The Floquet-Drude conductivity theory was employed recently by Wackerl \textit{et al.} \cite{wackerl20} as a method to analyze the transport properties of quantum systems exposed to strong radiation.
-{\color{Red}
-In their study \cite{wackerl20}, the authors have presented more accurate results than the former theoretical descriptions \cite{morina15,pervishko15} for the conductivity of nanoscale systems in the  presence of a dressing field.} Therefore, we apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
+In their study \cite{wackerl20}, the authors have presented more accurate results than the former theoretical descriptions \cite{morina15,pervishko15} for the conductivity of nanoscale systems in the  presence of a dressing field. Therefore, we apply the Floquet-Drude conductivity theory to analyze our 2DEG system which is subjected to both a stationary magnetic field and a dressing field.
 
 First, we need to identify the \textit{quasienergies} and time periodic \textit{Floquet modes} \cite{grifoni98} for the wave functions given in Eq.~(\ref{eq:2}). By factorizing the wave function into a linearly time-dependent part and a periodic time-dependent part, we present the quasienergies with
 \begin{equation} \label{eq:6}
@@ -287,14 +283,12 @@ With the help of $t-t'$ formalism \cite{wackerl20,grifoni98,sambe75,peskin93,alt
 \end{widetext}
 where $\varrho = \eta_{imp} L_x \left[\flatfrac{ V_{imp}}{\pi}\right]^{1/2}$, $\varepsilon$ is a given energy value, $J_l(\cdot)$ are Bessel functions of the first kind with $l$-th integer order, and $\varepsilon_N$ is the energy of the $N$-th Landau level.
 A more detailed derivation is given in Appendix \ref{appendix_c}.
-{\color{Red}
 We have modeled the effect caused by impurities as a single short-range perturbation potential. Analyzing the electric properties for a specific impurity distribution is a rather formidable task. We do not consider a specific impurity distribution here as it is unlikely to represent a measured impurity configuration in an experiment.
 Therefore, in this study, we consider the statistically averaged properties of 2DEG over impurity configurations.
 Furthermore, we have assumed that a group of randomly distributed impurities forms our perturbation potential under the Edwards impurity model  \cite{akkermans10,wackerl20}.
 Essentially, all these assumptions mean that we can write the total scattering potential in the 2DEG as a sum of uncorrelated single impurity potentials $\upsilon(\vb{r})$. This enables us to approximate the impurity potential as a Gaussian white noise \cite{akkermans10,wackerl20}.
 Here $\eta_{imp}$ is the number of impurities in a unit area, $V_{imp} = \expval{|V_{{k'}_x,k_x}|^2}_{imp}$ with $V_{{k'}_x,k_x} = \mel**{k'_x}{\upsilon(x) }{k_x}$, and $\braket{x}{k_x} = e^{-ik_x x}$.
 Moreover, in this analysis, $\expval{\cdot}_{imp}$ represents the average over the impurity disorder. In this derivation, we only considered the first order (the Born approximation) contribution from the impurity potential.
-}
 
 Next, we analyze the contribution of the inverse scattering time matrix elements on the transport properties of our system.
 Since the disorder in the system can not significantly alter the eigenenergy values of the undressed system \cite{wackerl20}, we can neglect the contribution of all off-diagonal elements in the inverse scattering time matrix. Subsequently, we consider only the central diagonal element (${l=l'=0}$) of the inverse scattering time matrix which has the largest contribution to the transport characteristics. Along with this assumption, we introduce a new parameter as the scattering-induced broadening of the $N$-th Landau level \cite{dini16,endo09}
@@ -388,7 +382,7 @@ In this calculation, we have assumed that the natural  broadening of $0$-th Land
 \end{figure}
 
 Next, we calculated the normalized energy band broadening against $x$-directional momentum component ${k_x}$ for different Landau levels ($N = 0,1,2,3,4$) for GaAs-based quantum well and the results are depicted in Fig.~\ref{fig:2} and Fig.~\ref{fig:3}. To make a comparison, we have selected the experiment parameters to match with analysis in Ref.~\cite{endo09}.
-{\color{Red}In the study presented in Ref. \cite{endo09}, the authors have assumed that the effective mass of an electron in GaAs-based quantum well system is $m_e \approx 0.07\widetilde{m}_e$ where $\widetilde{m}_e$ is the mass of the electron \cite{endo09,winkler03,wackerl20}.} In addition, they used the broadening of the undressed $0$-th Landau level $\Gamma_0$ as $\SI{0.24}{\milli\eV}$. Therefore, in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = \SI{0.24}{\milli\eV}$.
+In the study presented in Ref. \cite{endo09}, the authors have assumed that the effective mass of an electron in GaAs-based quantum well system is $m_e \approx 0.07\widetilde{m}_e$ where $\widetilde{m}_e$ is the mass of the electron \cite{endo09,winkler03,wackerl20}. In addition, they used the broadening of the undressed $0$-th Landau level $\Gamma_0$ as $\SI{0.24}{\milli\eV}$. Therefore, in our calculations, we assumed that the natural least Landau level broadening also has this value: $\Gamma^{00}_{N=0}|_{E=0} = \SI{0.24}{\milli\eV}$.
 Here, we observe that the normalized energy broadening value for each Landau level is independent of the $x$-directional momentum $k_x$ value and we are able to manipulate it by the dressing field. When the dressing field's intensity increases, the energy broadening is reduced, which leads to changes in the transport properties of the dressed quantum Hall system.
 To analyze these adjustments in detail, we derive an analytical expression for the conductivity of a dressed quantum Hall system in the next section.
 %===============================================================================
@@ -670,7 +664,6 @@ However, by considering the condition that the center of the cyclotron orbit $y_
 \begin{equation} \label{eq:32}
  -\flatfrac{m_e\omega_0 Ly}{(2\hbar)} \leq k_x \leq \flatfrac{m_e\omega_0 Ly}{(2\hbar)}.
 \end{equation}
-{\color{Red}
 We consider a dressed quantum Hall system under off-resonant condition, where photon absorption does not happen. Therefore, we can select the Fermi-Dirac distribution as our partial distribution function ($f$) for our system
 \begin{equation} \label{eq:33}
   f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1},
@@ -725,7 +718,6 @@ Following the same steps as above derivation, we can derive the longitudinal con
     \right].
   \end{aligned}
 \end{equation}
-}
 %===============================================================================
 
 %===============================================================================
@@ -739,7 +731,7 @@ We can identify the normalized $x$-directional longitudinal conductivity of dres
   \widetilde{\sigma}^{xx}(X_F,I) =
   \flatfrac{\sigma^{xx}}{\sigma_{0}},
 \end{equation}
-with {\color{Red}$\sigma_0 = \flatfrac{e^2l_0^2}{(\pi \hbar A)}$}, and we can express this as
+with $\sigma_0 = \flatfrac{e^2l_0^2}{(\pi \hbar A)}$, and we can express this as
 \begin{equation} \label{eq:38}
   \begin{aligned}
     \widetilde{\sigma}^{xx}(X_F,I) &=
@@ -766,7 +758,6 @@ As illustrated in Fig.~\ref{fig:4} and Fig.~\ref{fig:5}, we can manipulate the n
 For a given dressing field intensity, the longitudinal conductivity varies with  the Fermi level of the system showing sharp peaks at each Landau energy level.
 In quantum Hall systems, electrons are restricted to bear only the Landau energies. Thus, the conductivity reduces significantly when the Fermi level is not aligned with any of the Landau levels. In contrast, near each Landau level, the conductivity achieves excessive values compared to other areas. Moreover, as illustrates in Fig.~\ref{fig:4}, the peak value of the normalized longitudinal conductivity on each Landau level gets increased with the Landau level number.
 
-{\color{Red}
 By comparing the theoretical \cite{ando72,ando74_1,ando74_2,ando74_3,ando74_4,ando82,endo09} and experimental \cite{endo09,wakabayashi78,ochiai190,mancoff96,arapov02,grbic04,caviglia10} studies on the magnetoresistance of 2DEG quantum Hall systems when no radiation is present against our results, we can identify that longitudinal conductivity oscillations in Fig.~\ref{fig:4} are a repetition of the Shubnikov–de Haas(SdH) oscillations.
 As observed in the experimental work of Caviglia \textit{et al.} \cite{caviglia10}, the period of SdH oscillations depends only on the perpendicular component of the magnetic field to the plane of the 2DEG.
 Therefore, we can identify that many experiments on different types of 2DEGs at low-temperatures \cite{endo09,ochiai190,mancoff96,arapov02,grbic04,caviglia10} have analyzed these SdH oscillations against the applied magnetic field's amplitude.
@@ -776,9 +767,9 @@ Since the Landau level energy is only dependent on the cyclotron frequency, this
 Interestingly, this oscillatory behavior against applied gate voltage has been observed experimentally by Wakabayashi \textit{et al.} \cite{wakabayashi78} in an inversion layer on a silicon surface at low temperature.
 By comparing these observations against our results in Fig.~\ref{fig:4}, we can identify that our oscillations also show the same characteristic behavior; i.e  $\hbar\omega_0$ periodic SdH oscillations against the Fermi energy.
 Furthermore, when we increase the gate voltage, the Fermi level rises. As illustrated in Fig.~\ref{fig:4}, this will result in a higher conductivity peak value at the higher-order Landau levels. This same behavior was also observed in the experimental observations presented in Ref. \cite{wakabayashi78}.
-In our work, we provide analytical results describing the controllability of these conductivity regions using a dressing field.}
+In our work, we provide analytical results describing the controllability of these conductivity regions using a dressing field.
 
-{\color{Red}Considering the effects of the applied dressing field on the longitudinal conductivity of 2DEG, we can identify that the dressing field has sharpened the conductivity peaks.}
+Considering the effects of the applied dressing field on the longitudinal conductivity of 2DEG, we can identify that the dressing field has sharpened the conductivity peaks.
 When we increase the intensity level of the dressing field, the conductivity regions get weakened as illustrated in the Fig.~\ref{fig:5}.
 However, the peak value of the conductivity at each Landau level has the same value as the undressed system. This demonstrates our ability to tune the width of the conductivity regions in these quantum Hall systems with the help of a dressing field.
 
@@ -801,17 +792,14 @@ In our study of the transport properties of quantum Hall systems, we developed t
 The theory on the conductivity of quantum Hall systems in Ref.~\cite{endo09} provides an excellent agreement with the experimentally observed results in GaAs/AlGaAs 2DEG for the low magnetic field range.
 However, they have not considered the tunability that can be achieved with a dressing field. In this analysis, we account for both the magnetic and dressing field effects that can affect the transport properties of 2DEG, leading to a more generalized theory. Thus in this study, we were able to demonstrate that using Floquet-Drude conductivity method, one can derive a more generalized mathematical model which fits better with experiment for the charge transport properties of quantum Hall systems.
 
-{\color{Red}
 Lately, several experimental \cite{zudov01,mani02,zudov03,mani04} and theoretical \cite{durst03,dmitriev03,dmitriev05,dmitriev09} studies have uncovered various remarkable
 magneto-transport properties induced by microwave radiation on 2DEG quantum Hall systems. However, these experiments and theoretical models only analyzed the behavior of MIROs in 2DEG systems which are based on photon absorption from the applied low-frequency field.
 It is important to state that the difference between our SdH oscillations and MIROs \cite{zudov01,mani02,zudov03,mani04} by considering the frequency range of the applied electromagnetic field. In our case, the applied dressing field is in the off-resonant range, and it will only change the broadening of Landau levels, but avoid any contribution towards the photon absorptions. This will clearly describe the crucial difference between low-frequency illumination and high-frequency illumination effects on 2DEG quantum Hall systems. Therefore, our theoretical analysis can help to fill the gap in knowledge of the high-frequency dressing field effects on 2DEG quantum Hall systems.
-}
 %===============================================================================
 
 %===============================================================================
 % Section 07 : Physical significance of the outcome
 %===============================================================================
-{\color{Red}
 \section{\label{sec:physical_significance} Physical Significance of the Outcomes}
 With the realization of 2DEGs in Si-MOSFETs (Metal Oxide Semiconductor Field Effect Transistors) \citep{fowler66}, Klitzing \textit{et al.} \cite{klitzing80} made the first transport measurements on such systems to reveal the quantum Hall effect. The empirical discovery of these unusual properties marked the beginning of a whole new realm in condensed matter physics that continues to produce phenomenal advancements in electronic systems. The quantum Hall effects in a 2DEG under a static magnetic field are described by plateaus quantized to integer values of the conductivity quantum ($\flatfrac{e^2}{\hbar}$) in the off-diagonal conductivity, with simultaneous peaks at inter-plateau transition for the diagonal conductivity \cite{endo09}. This is due to the applied magnetic field and it changes the energy spectrum of 2DEG dramatically. The magnetic field causes the density of states in 2DEG to split up into a sequence of delta functions, separated by an energy $\hbar\omega_0$, with $\omega_0$ the cyclotron frequency which depends on the applied magnetic field.
 However, experimental results demonstrate that these Landau levels are broadened and the main source of these broadening at low temperatures is the disorders in materials \cite{ando85,dial07}. The broaden sequence of delta functions of the density of states implies the oscillating behavior in the experimental measurements of longitudinal conductivity which is known as SdH oscillations \cite{endo09,wakabayashi78}.
@@ -832,7 +820,6 @@ Furthermore, adopting the mechanism presented in Ref. \cite{hirakawa01}, we can 
 We envision these advances in nanoelectronics from our theoretical model and knowledge generated from the insight it provides to the underlying dependencies.
 Furthermore, this theoretical model will aid in the development of simulation tools that will design the quantum effects in
 magneto-transport properties of 2D nanostructures.
-}
 %===============================================================================
 
 %===============================================================================
@@ -840,13 +827,13 @@ magneto-transport properties of 2D nanostructures.
 %===============================================================================
 \section{\label{sec:conclusions} Conclusions}
 
-In this paper, we introduced a generalized mathematical model for predicting  charge transport properties in a 2DEG under a nonoscillating magnetic field and a high-intensity light. Under the uniform magnetic field, the charged particles can only settle in discrete energy values, which leads to the Landau quantization. We modeled the behavior of electrons in Landau levels under the dressing field utilizing the Floquet-Drude conductivity method. {\color{Red}
-We modeled the impurities in the material as a Gaussian random scattering potential, and restricted the applied magnetic field to a range where we can neglect effects of Anderson localization, formation of the edge states, spin splitting, and electron-electron interactions.} Finally, we derived analytical expressions for the diagonal components of electric conductivity tensor concerning the 2DEG quantum Hall system under low temperatures.
+In this paper, we introduced a generalized mathematical model for predicting  charge transport properties in a 2DEG under a nonoscillating magnetic field and a high-intensity light. Under the uniform magnetic field, the charged particles can only settle in discrete energy values, which leads to the Landau quantization. We modeled the behavior of electrons in Landau levels under the dressing field utilizing the Floquet-Drude conductivity method.
+We modeled the impurities in the material as a Gaussian random scattering potential, and restricted the applied magnetic field to a range where we can neglect effects of Anderson localization, formation of the edge states, spin splitting, and electron-electron interactions. Finally, we derived analytical expressions for the diagonal components of electric conductivity tensor concerning the 2DEG quantum Hall system under low temperatures.
 
 Our derived analytical expressions disclosed that we are able to control the transport characteristics of the dressed quantum Hall system by the applied dressing field’s intensity. Using detailed numerical calculations with empirical system parameters, we further analyzed the manipulation of conductivity components using the dressing field.
 We found that the graphical illustrations that we obtained from these numerical calculations are capable of producing the same behavior as experiments on quantum Hall systems in the absence of a dressing field.
-Furthermore, we identified that by increasing the intensity of the radiation, we can squeeze the conductivity regions near the Landau levels. {\color{Red}Despite this behavior being identified in the previous work of Dini \textit{et al.}  \cite{dini16}, they cannot fully account for the experimental observations of longitudinal conductivity components in undressed quantum Hall systems presented in Ref. \cite{endo09}. The authors of Ref. \cite{dini16} have used the conventional expression of longitudinal conductivity from Refs. \cite{ando74_1,ando82} and this theory yields a semi-elliptical broadening for the Landau levels. These predictions significantly deviate from the experimentally observed Landau level broadening \cite{endo09}.
-However, our generalized analysis on the conductivity of dressed quantum Hall systems provides a well-suited description for empirically observed behaviors of undressed quantum Hall systems as well.}
+Furthermore, we identified that by increasing the intensity of the radiation, we can squeeze the conductivity regions near the Landau levels. Despite this behavior being identified in the previous work of Dini \textit{et al.}  \cite{dini16}, they cannot fully account for the experimental observations of longitudinal conductivity components in undressed quantum Hall systems presented in Ref. \cite{endo09}. The authors of Ref. \cite{dini16} have used the conventional expression of longitudinal conductivity from Refs. \cite{ando74_1,ando82} and this theory yields a semi-elliptical broadening for the Landau levels. These predictions significantly deviate from the experimentally observed Landau level broadening \cite{endo09}.
+However, our generalized analysis on the conductivity of dressed quantum Hall systems provides a well-suited description for empirically observed behaviors of undressed quantum Hall systems as well.
 
 In summary, the primary purpose of this study was to broaden the modern descriptions on transport properties of dressed quantum Hall systems. Moreover, our detailed theoretical analysis showed that we can adapt the recently introduced Floquet-Drude conductivity model to extend the models that were used to describe the transport characteristics in quantum Hall systems. Owing to the ability to control the conductivity regions, high intensity external illumination may be used as a trigger for two-dimensional quantum switching devices, which are employed as the building blocks of next-generation nanoelectronic devices. As a concluding remark, we believe that our findings of this paper can be used towards understanding the 2D optoelectronic nanotransistors, enhancing their performance and inventing novel appliances.
 %===============================================================================
@@ -1664,7 +1651,6 @@ level as follows
 %===============================================================================
 % Appendix D :
 %===============================================================================
-{\color{Red}
 \section{\label{appendix_d} Current operators for a dressed quantum Hall system}
 
 In this section, we derive the current density operator for the $N$-th Landau level in a dressed quantum Hall system. We already found the exact solution for the time-dependent Schrödinger equation with the Hamiltonian give in Eq.~(\ref{eq:1}) and we identified them as the Floquet states in Eq.~(\ref{eq:14}). For the simplicity of notation, we can represent the Floquet modes derived in Eq.~(\ref{eq:10}) as quantum states using their corresponding quantum numbers as follows
@@ -1813,7 +1799,6 @@ and
     \right).
   \end{aligned}
 \end{equation}
-}
 %===============================================================================
 
 %===============================================================================
