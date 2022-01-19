@@ -105,10 +105,12 @@ Endo \textit{et al.} \cite{endo09} presented the calculations of longitudinal a
 In contrast, we can observe more exciting phenomena by simultaneously applying a dressing field to a quantum Hall system already under a non-oscillating magnetic field.
 Whilst there exist several leading theories for calculating conductivity tensor elements in quantum Hall systems \cite{ando74_1,ando82,endo09}, these studies  have not been utilized to describe the optical manipulation of charge transport.
 Recently, experimental research on the effects of microwave illumination of 2DEG systems revealed microwave-induced resistance oscillations (MIROs) under weak magnetic fields \cite{zudov01,mani02,zudov03,mani04}.
-This inspired investigations on the theoretical description of MIROs, and several semiclassical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to photon absorption from low-frequency (microwave) electromagnetic fields.
-In contrast to that, high-frequency external illumination on a 2DEG quantum Hall system needs to be studied as a pure dressing (nonabsorbable) field.
-The influence induced by a pure dressing field on
-magneto-transport properties of 2DEG quantum Hall system needs to be described by a non-absorption mechanism, and it has escaped the researchers’ attention before.
+{\color{Red}
+This inspired investigations on the theoretical description of MIROs, and several semi-classical and quantum kinetic equation formalisms have been proposed to address the underlying mechanism of MIROs \cite{durst03,dmitriev03,dmitriev05,dmitriev09}. These formalisms provide a proper explanation for the experimental observations of MIROs. However, these experimental and theoretical works have been linked to the effects of low-frequency (microwave) electromagnetic fields that increase the longitudinal conductivity.
+In contrast to that, high-frequency external illumination on a 2DEG quantum Hall system leads to different behavior that reduces the longitudinal conductivity \cite{dini16}.
+Since high-frequency radiation only contributes to the suppression of electron scattering, the driving field can be treated as a pure dressing (non-absorbable) field \cite{dini16}.
+Thus, the influence induced by a high-frequency pure dressing field on
+magneto-transport properties of 2DEG quantum Hall system need to be described by a non-absorption mechanism, and it has escaped the researchers’ attention before.}
 Lately, Dini \textit{et al.} \cite{dini16} have investigated the one-directional conductivity behavior of dressed quantum Hall system subjected to a high-frequency field.
 However, they have not adopted the state-of-the-art model to describe the conductivity in a quantum Hall system.
 The authors of Ref. \cite{dini16} used the conductivity models from Refs. \cite{ando74_1,ando82}, and as mentioned in Endo \textit{et al.} \cite{endo09}, those models predict a semi-elliptical broadening against Fermi level for each Landau level and provide less agreement with the empirical results.
@@ -669,12 +671,12 @@ However, a full description of a common dressed system requires a proper treatme
 As mentioned in Rudner \textit{et al.} \cite{rudner2020}, placing proper conditions on energy and time scales, the distribution function of a Floquet system can be assumed to be steady. By properly selecting the frequency of the radiation, we can ensure that the inter-band electron transitions are controlled. This leads to significantly suppressed heating rates.
 Let's consider our dressed quantum Hall system under off-resonant conditions \cite{rudner2020,wackerlthesis20}, where photon absorption does not happen. Thus, we can assume that the driving field only renormalizes the system's parameters rather than changing the particle distribution function.
 Additionally, we can select the Fermi-Dirac distribution as our partial distribution function ($f$) for our Floquet system
-\begin{equation} \tag{33}
+\begin{equation} \label{eq:33}
   f(\varepsilon) = \frac{1}{\exp[(\varepsilon - \varepsilon_F)/k_B T]+1},
 \end{equation}
 where $k_B$ is the Boltzmann constant, $T$ is the absolute temperature, and $\varepsilon_F$ is the Fermi energy of the system. To compare our results with the outcomes already known in the literature \cite{dini16,endo09}, we enforce the low-temperature conditions to the Fermi-Dirac distribution.
 At low-temperatures conditions, i.e., $k_BT \ll \varepsilon_F$, the derivative of this distribution is sharply peaked around the Fermi energy, and can be approximated by a delta function \cite{endo09}
-\begin{equation} \tag{34}
+\begin{equation} \label{eq:34}
   - \pdv{f(\varepsilon)}{\varepsilon} \approx \delta(\varepsilon - \varepsilon_F).
 \end{equation}
 }
@@ -764,6 +766,20 @@ As illustrated in Fig.~\ref{fig:4} and Fig.~\ref{fig:5}, we can manipulate the n
 For a given dressing field intensity, the longitudinal conductivity varies with  the Fermi level of the system showing sharp peaks at each Landau energy level.
 In quantum Hall systems, electrons are restricted to bear only the Landau energies. Thus, the conductivity reduces significantly when the Fermi level is not aligned with any of the Landau levels. In contrast, near each Landau level, the conductivity achieves excessive values compared to other areas. Moreover, as illustrates in Fig.~\ref{fig:4}, the peak value of the normalized longitudinal conductivity on each Landau level gets increased with the Landau level number.
 
+
+\begin{figure}[t]
+\includegraphics[scale=0.54]{fig_4_conductivity_with_fermi_level}
+\caption{ Normalized longitudinal conductivity $\widetilde{\sigma}^{xx}$ against Fermi level $X_F$ with different intensities $I$ of the external dressing field in a GaAs-based quantum well under a nonoscillating magnetic field with $B = \SI{1.2}{\tesla}$, dressing field with a  frequency of $\omega =\SI{2e12}{\radian\per\second}$ and $I_0 =\SI{100}{\watt\per\square\centi\metre}$. In this calculation, we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $\SI{0.24}{\milli\eV}$.}
+\label{fig:4}
+\end{figure}
+
+\begin{figure}[t]
+\includegraphics[scale=0.54]{fig_5_conductivity_with_fermi_level_zoomed}
+\caption{$3$rd Landau level’s normalized longitudinal conductivity $\widetilde{\sigma}^{xx}$ against Fermi level $X_F$ with different intensities $I$ of the external dressing field in a GaAs-based quantum well under a nonoscillating magnetic field with $B = \SI{1.2}{\tesla}$, dressing field with a frequency of $\omega =\SI{2e12}{\radian\per\second}$ and $I_0 =\SI{100}{\watt\per\square\centi\metre}$.
+In this calculation, we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $\SI{0.24}{\milli\eV}$.}
+\label{fig:5}
+\end{figure}
+
 By comparing the theoretical \cite{ando72,ando74_1,ando74_2,ando74_3,ando74_4,ando82,endo09} and experimental \cite{endo09,wakabayashi78,ochiai190,mancoff96,arapov02,grbic04,caviglia10} studies on the magnetoresistance of 2DEG quantum Hall systems when no radiation is present against our results, we can identify that longitudinal conductivity oscillations in Fig.~\ref{fig:4} are a repetition of the Shubnikov–de Haas(SdH) oscillations.
 As observed in the experimental work of Caviglia \textit{et al.} \cite{caviglia10}, the period of SdH oscillations depends only on the perpendicular component of the magnetic field to the plane of the 2DEG.
 Therefore, we can identify that many experiments on different types of 2DEGs at low-temperatures \cite{endo09,ochiai190,mancoff96,arapov02,grbic04,caviglia10} have analyzed these SdH oscillations against the applied magnetic field's amplitude.
@@ -779,19 +795,6 @@ Considering the effects of the applied dressing field on the longitudinal conduc
 When we increase the intensity level of the dressing field, the conductivity regions get weakened as illustrated in the Fig.~\ref{fig:5}.
 However, the peak value of the conductivity at each Landau level has the same value as the undressed system. This demonstrates our ability to tune the width of the conductivity regions in these quantum Hall systems with the help of a dressing field.
 
-\begin{figure}[t]
-\includegraphics[scale=0.54]{fig_4_conductivity_with_fermi_level}
-\caption{ Normalized longitudinal conductivity $\widetilde{\sigma}^{xx}$ against Fermi level $X_F$ with different intensities $I$ of the external dressing field in a GaAs-based quantum well under a nonoscillating magnetic field with $B = \SI{1.2}{\tesla}$, dressing field with a  frequency of $\omega =\SI{2e12}{\radian\per\second}$ and $I_0 =\SI{100}{\watt\per\square\centi\metre}$. In this calculation, we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $\SI{0.24}{\milli\eV}$.}
-\label{fig:4}
-\end{figure}
-
-\begin{figure}[t]
-\includegraphics[scale=0.54]{fig_5_conductivity_with_fermi_level_zoomed}
-\caption{$3$rd Landau level’s normalized longitudinal conductivity $\widetilde{\sigma}^{xx}$ against Fermi level $X_F$ with different intensities $I$ of the external dressing field in a GaAs-based quantum well under a nonoscillating magnetic field with $B = \SI{1.2}{\tesla}$, dressing field with a frequency of $\omega =\SI{2e12}{\radian\per\second}$ and $I_0 =\SI{100}{\watt\per\square\centi\metre}$.
-In this calculation, we have assumed that the natural  broadening of $0$-th Landau level $\Gamma_0$ is $\SI{0.24}{\milli\eV}$.}
-\label{fig:5}
-\end{figure}
-
 These characteristics align well with the outcomes demonstrated by Dini \textit{et al.} \cite{dini16}.
 However, we can distinguish that the shapes and behavior of the conductivity regions that illustrated in Fig.~\ref{fig:4} and Fig.~\ref{fig:5} are generally incompatible with the results reported in Ref.~\cite{dini16}. This is due to the selection of the conventional longitudinal conductivity theory of 2DEG from Refs.~\cite{ando74_1,ando82}. The semi-elliptical conductivity regions are  illustrated in Refs.~\cite{dini16,ando74_1,ando82}, have less consistency with the experimentally observed data for Landau levels \cite{endo09}.
 In our study of the transport properties of quantum Hall systems, we developed the conductivity expression starting from the Floquet-Drude conductivity \cite{wackerl20} and we achieved outcomes that align with the results depicted in Ref. \cite{endo09}.
@@ -799,8 +802,13 @@ The theory on the conductivity of quantum Hall systems in Ref.~\cite{endo09} pro
 However, they have not considered the tunability that can be achieved with a dressing field. In this analysis, we account for both the magnetic and dressing field effects that can affect the transport properties of 2DEG, leading to a more generalized theory. Thus in this study, we were able to demonstrate that using Floquet-Drude conductivity method, one can derive a more generalized mathematical model which fits better with experiment for the charge transport properties of quantum Hall systems.
 
 Lately, several experimental \cite{zudov01,mani02,zudov03,mani04} and theoretical \cite{durst03,dmitriev03,dmitriev05,dmitriev09} studies have uncovered various remarkable
-magneto-transport properties induced by microwave radiation on 2DEG quantum Hall systems. However, these experiments and theoretical models only analyzed the behavior of MIROs in 2DEG systems which are based on photon absorption from the applied low-frequency field.
-It is important to state that the difference between our SdH oscillations and MIROs \cite{zudov01,mani02,zudov03,mani04} by considering the frequency range of the applied electromagnetic field. In our case, the applied dressing field is in the off-resonant range, and it will only change the broadening of Landau levels, but avoid any contribution towards the photon absorptions. This will clearly describe the crucial difference between low-frequency illumination and high-frequency illumination effects on 2DEG quantum Hall systems. Therefore, our theoretical analysis can help to fill the gap in knowledge of the high-frequency dressing field effects on 2DEG quantum Hall systems.
+magneto-transport properties induced by microwave radiation on 2DEG quantum Hall systems.
+{\color{Red}
+However, these experiments and theoretical models only analyzed the behavior of MIROs in 2DEG systems which are based on low-frequency fields.}
+It is important to state that the difference between our SdH oscillations and MIROs \cite{zudov01,mani02,zudov03,mani04} by considering the frequency range of the applied electromagnetic field.
+{\color{Red}
+In our case, the applied dressing field is in the high-frequency regime where we can neglect the photon interactions. The only influence of the electromagnetic field is the suppression of electron scattering.}
+This will clearly describe the crucial difference between low-frequency illumination and high-frequency illumination effects on 2DEG quantum Hall systems. Therefore, our theoretical analysis can help to fill the gap in knowledge of the high-frequency dressing field effects on 2DEG quantum Hall systems.
 %===============================================================================
 
 %===============================================================================
@@ -2888,6 +2896,84 @@ and
   {Boyd}},\ }\href@noop {} {\emph {\bibinfo {title} {Dynamics of the equatorial
   ocean}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
   {2018})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Seetharam}\ \emph {et~al.}(2019)\citenamefont
+  {Seetharam}, \citenamefont {Bardyn}, \citenamefont {Lindner}, \citenamefont
+  {Rudner},\ and\ \citenamefont {Refael}}]{seetharam2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~I.}\ \bibnamefont
+  {Seetharam}}, \bibinfo {author} {\bibfnamefont {C.-E.}\ \bibnamefont
+  {Bardyn}}, \bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont {Lindner}},
+  \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont {Rudner}}, \ and\
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Refael}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev.B}\ }\textbf {\bibinfo
+  {volume} {99}},\ \bibinfo {pages} {014307} (\bibinfo {year}
+  {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rudner}\ and\ \citenamefont
+  {Lindner}(2020)}]{rudner2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+  {Rudner}}\ and\ \bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont
+  {Lindner}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nat.
+  Rev. Phys.}\ }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {229}
+  (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lindner}\ \emph {et~al.}(2017)\citenamefont
+  {Lindner}, \citenamefont {Berg},\ and\ \citenamefont {Rudner}}]{lindner2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont
+  {Lindner}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Berg}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont {Rudner}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. X}\
+  }\textbf {\bibinfo {volume} {7}},\ \bibinfo {pages} {011018} (\bibinfo {year}
+  {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bukov}\ \emph {et~al.}(2015)\citenamefont {Bukov},
+  \citenamefont {D'Alessio},\ and\ \citenamefont {Polkovnikov}}]{bukov2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Bukov}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {D'Alessio}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Polkovnikov}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Adv. Phys.}\
+  }\textbf {\bibinfo {volume} {64}},\ \bibinfo {pages} {139} (\bibinfo {year}
+  {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eckardt}\ and\ \citenamefont
+  {Anisimovas}(2015)}]{eckardt2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Eckardt}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Anisimovas}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {New J. Phys.}\ }\textbf {\bibinfo {volume} {17}},\ \bibinfo {pages} {093039}
+  (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kuwahara}\ \emph {et~al.}(2016)\citenamefont
+  {Kuwahara}, \citenamefont {Mori},\ and\ \citenamefont
+  {Saito}}]{kuwahara2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Kuwahara}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Mori}}, \
+  and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Saito}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Ann. Phys.}\
+  }\textbf {\bibinfo {volume} {367}},\ \bibinfo {pages} {96} (\bibinfo {year}
+  {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Abanin}\ \emph {et~al.}(2017)\citenamefont {Abanin},
+  \citenamefont {De~Roeck}, \citenamefont {Ho},\ and\ \citenamefont
+  {Huveneers}}]{abanin2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont
+  {Abanin}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {De~Roeck}},
+  \bibinfo {author} {\bibfnamefont {W.~W.}\ \bibnamefont {Ho}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {F.}~\bibnamefont {Huveneers}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys.Rev. B}\ }\textbf {\bibinfo
+  {volume} {95}},\ \bibinfo {pages} {014112} (\bibinfo {year}
+  {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mori}\ \emph {et~al.}(2018)\citenamefont {Mori},
+  \citenamefont {Ikeda}, \citenamefont {Kaminishi},\ and\ \citenamefont
+  {Ueda}}]{mori2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Mori}}, \bibinfo {author} {\bibfnamefont {T.~N.}\ \bibnamefont {Ikeda}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Kaminishi}}, \ and\
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ueda}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. B: At. Mol. Opt. Phys}\
+  }\textbf {\bibinfo {volume} {51}},\ \bibinfo {pages} {112001} (\bibinfo
+  {year} {2018})}\BibitemShut {NoStop}%
 \end{thebibliography}%
 %===============================================================================
 
